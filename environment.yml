@@ -1,0 +1,23 @@
+name: cs224n-final-project
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - huggingface_hub
+  - datasets
+  - transformers
+  - python=3.9
+  - pytorch
+  - numpy
+  - scipy
+  - tqdm
+  - docopt
+  - nltk
+  - torchvision
+  - pip
+  - ipykernel
+  - pip:
+    - sentencepiece
+    - lxml==5.0.0
+    - sacrebleu
+    - tensorboard
