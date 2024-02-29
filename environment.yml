@@ -1,4 +1,4 @@
-name: cs224n-final-project
+name: cs224n-project-env
 channels:
   - pytorch
   - defaults
@@ -16,6 +16,7 @@ dependencies:
   - torchvision
   - pip
   - ipykernel
+  - ipywidgets
   - pip:
     - sentencepiece
     - lxml==5.0.0
