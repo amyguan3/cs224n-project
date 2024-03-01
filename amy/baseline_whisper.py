@@ -5,6 +5,8 @@ import evaluate
 from transformers.models.whisper.english_normalizer import BasicTextNormalizer
 from tqdm import tqdm
 import os
+import torch
+import pickle
 
 # modified from a github repo: https://github.com/vasistalodagala/whisper-finetune/tree/master
 
@@ -82,7 +84,7 @@ def main():
     text_column_name = "sentence"
 
     dataset_total = dataset_total.shuffle(seed=42, buffer_size=10_000)
-    dataset_total = dataset_total.take(100) # 60k approx half of training # TODO: other 50k
+    dataset_total = dataset_total.take(10_000) # 60k approx half of training # TODO: other 50k
     dataset_total = dataset_total.cast_column("audio", Audio(sampling_rate=16000))
     dataset_total = dataset_total.map(normalise) # , num_proc=2
     dataset_total = dataset_total.filter(is_target_text_in_range, input_columns=[text_column_name]) # , num_proc=2
@@ -97,6 +99,8 @@ def main():
     norm_references = {}
 
     all_accents = []
+
+    i = 0
 
     for out in tqdm(whisper_asr(data(dataset_total), batch_size=16), desc='Decode Progress'):
         print(out)
@@ -116,7 +120,17 @@ def main():
             norm_predictions[accent].append(whisper_norm(out["text"]))
             norm_references[accent].append(out["norm_reference"][0])
 
-    # os.system(f"mkdir -p predictions/")
+            i += 1
+            if i % 100 == 0:
+                print(i)
+            with open('pred.pkl', 'wb') as f:
+                pickle.dump(predictions, f)
+            with open('norm_pred.pkl', 'wb') as f:
+                pickle.dump(references, f)
+            with open('ref.pkl', 'wb') as f:
+                pickle.dump(norm_predictions, f)
+            with open('norm_ref.pkl', 'wb') as f:
+                pickle.dump(norm_references, f)
 
     metrics = {}
 
@@ -152,10 +166,15 @@ def main():
         result_file.write('\nNORMALIZED WER: ' + str(norm_wer) + '\n')
         result_file.write('NORMALIZED CER: ' + str(norm_cer) + '\n\n\n')
 
-        for ref, hyp in zip(references[accent], predictions[accent]):
-            result_file.write('REF: ' + ref + '\n')
-            result_file.write('HYP: ' + hyp + '\n')
+        for ref, pred in zip(references[accent], predictions[accent]):
+            result_file.write(f"REF: {ref.encode('utf-8')}\n")
+            result_file.write(f"PRED: {pred.encode('utf-8')}\n")
             result_file.write("------------------------------------------------------" + '\n')
         result_file.close()
 
     print(metrics)
+
+
+if __name__ == "__main__":
+    print('starting')
+    main()
