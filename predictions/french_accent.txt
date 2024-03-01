@@ -1,0 +1,159 @@
+ACCENT: french accent
+
+WER: 33.33
+CER: 15.09
+
+NORMALIZED WER: 27.53
+NORMALIZED CER: 14.02
+
+
+REF: b'Ian Thomas and Karl Skala ran unopposed.'
+PRED: b' Ian Thomas and Carl Scala-Ran are in the post.'
+------------------------------------------------------
+REF: b'During the season he was utilised once more in the Eerste Divisie.'
+PRED: b' During the season he was utilized once more in the ears to deficit.'
+------------------------------------------------------
+REF: b'Mountain tundra of shrubs and lichens grows in the highest summits.'
+PRED: b' Mountain tendra of shrubs and lations grows in the highest cements.'
+------------------------------------------------------
+REF: b'It resulted in the resignation of health minister Julio Mazzoleni.'
+PRED: b' resulted in the resignation of Mr. Jolly and Ms. Alain.'
+------------------------------------------------------
+REF: b'After the season Kraemer transferred to Drake University.'
+PRED: b' After the season, crime had transferred to Drake University.'
+------------------------------------------------------
+REF: b'He is an editor of "Oxford Studies in Early Modern Philosophy".'
+PRED: b' He is an editor of Oxford Studies in early modern philosophy.'
+------------------------------------------------------
+REF: b'This species is on the wing from November to March.'
+PRED: b' This species is underway from November to March.'
+------------------------------------------------------
+REF: b'It is owned and operated by Far Eastern Group.'
+PRED: b' It is owned and operated by a far eastern group.'
+------------------------------------------------------
+REF: b'Adults have also been collected from the flowers of "Kunzea ericoides".'
+PRED: b' and also have also been collected from the flowers of Koenzea Erocoids.'
+------------------------------------------------------
+REF: b'During the first week of the offensive Lt.'
+PRED: b' during the first week of the Alphonseal LTE.'
+------------------------------------------------------
+REF: b'He also served as editor of "Pathfinder" magazine.'
+PRED: b' He also served as editor of Pathfinder magazine'
+------------------------------------------------------
+REF: b'Udai subsequently died in Dhaka.'
+PRED: b' Yiddish subsequently died in Dhaka.'
+------------------------------------------------------
+REF: b'Male drone body colour is very similar to the workers.'
+PRED: b' Male Drone Baricolor with Sparicin allowed to the workers.'
+------------------------------------------------------
+REF: b'She also works with the Pretrial Racial Justice Initiative.'
+PRED: b' She also works with the portrayal racial justice initiative.'
+------------------------------------------------------
+REF: b'God is a Consuming Fire'
+PRED: b' God is a consuming fire'
+------------------------------------------------------
+REF: b'In the scene where Capt.'
+PRED: b' In the same way caps.'
+------------------------------------------------------
+REF: b'It functions as an office building.'
+PRED: b' It functions as an office building.'
+------------------------------------------------------
+REF: b'The list is sorted in chronological order.'
+PRED: b' The list is sorted in chronological order.'
+------------------------------------------------------
+REF: b'The music video was filmed in the desert in California.'
+PRED: b' The music video was filmed in the desert in California.'
+------------------------------------------------------
+REF: b'An ancient burial place is located next to the village.'
+PRED: b' An ancient burial place is located next to the village.'
+------------------------------------------------------
+REF: b'She would take some time to persuade.'
+PRED: b' Should we take some time to persuade?'
+------------------------------------------------------
+REF: b'This icon was brought to be housed in this church.'
+PRED: b' This icon was brought to be housed in this church.'
+------------------------------------------------------
+REF: b'Country participated in every single world championships since.'
+PRED: b' Contrary participated in every single world championships since.'
+------------------------------------------------------
+REF: b'Joseph Leary was the sitting member for The Murrumbidgee.'
+PRED: b' Joseph Larry was the sitting member for the Merrin BG'
+------------------------------------------------------
+REF: b'This subspecies is only known from the Falls Creek Ski Village area.'
+PRED: b' This subspecies is unknown from the false Grease Kivillage area.'
+------------------------------------------------------
+REF: b'The pitched tile roof features fice dormer windows.'
+PRED: b' The bitch tile roof features five stormy windows.'
+------------------------------------------------------
+REF: b'Several times he was on sabbatical at the Institute for Advanced Study.'
+PRED: b" Several times he wasn't sabbatical at the Institute for Advanced Study."
+------------------------------------------------------
+REF: b'Shortly before her death she renounced the Lutheran faith of her birth.'
+PRED: b' Shortly before her death, she announced the Lutiram faith of her birth.'
+------------------------------------------------------
+REF: b'He would later return to the same university for his Degree.'
+PRED: b' He would like to return to the same university for his degree.'
+------------------------------------------------------
+REF: b'She is currently Uriel Weinreich Collegiate Professor of Linguistics at the University of Michigan.'
+PRED: b' She is, curiously, a real Vine Reich collegiate professor of linguistics at the University of Michigan.'
+------------------------------------------------------
+REF: b'Responses from the "Catechism" have been quoted in the Catholic press.'
+PRED: b' Responses from the catashas never been quoted in the catalogue price.'
+------------------------------------------------------
+REF: b'The monument features several inscriptions on the pedestal.'
+PRED: b' The monument features several inscriptions on the pedestal.'
+------------------------------------------------------
+REF: b'Subhan Quli Khan himself was the author of several works on medicine and astrology.'
+PRED: b' Subhan Koli Hanq himself was the actor of several works and medicine and astrology.'
+------------------------------------------------------
+REF: b'The duo left Asteras in May.'
+PRED: b' The duo left Asteris in May.'
+------------------------------------------------------
+REF: b'Ceramic works.'
+PRED: b' Serimic works.'
+------------------------------------------------------
+REF: b'Connacht and Leinster players have recognized the rivalry that exists between the two teams.'
+PRED: b' Conacht and Leinsteig players have recognized the rivalry that exists between the two teams.'
+------------------------------------------------------
+REF: b'The song was mixed by Shep Pettibone.'
+PRED: b' The song was mixed by Shepetibone.'
+------------------------------------------------------
+REF: b'Clarke\xe2\x80\x99s main interest was Victorian church architecture and the gothic revival.'
+PRED: b' Klox main interest with Vectorian chat, Archtactor and Gothic Revival.'
+------------------------------------------------------
+REF: b'Lupton retreated to Deim Zubeir.'
+PRED: b' Loops and recreated the game so better.'
+------------------------------------------------------
+REF: b'Her "oeuvre" has been described as exceptionally large and varied.'
+PRED: b' However, it has been described as exceptionally large and varied.'
+------------------------------------------------------
+REF: b'She lost against Deonna Purrazzo in the first round.'
+PRED: b' She lost against Diona Parazzo in the first round.'
+------------------------------------------------------
+REF: b'For the same reason it was being held without spectators (behind closed doors).'
+PRED: b' For the same reason it was being held without spectators behind closed doors.'
+------------------------------------------------------
+REF: b'Fujita produced all albums for both variations.'
+PRED: b' For that I produced all albums for both variations.'
+------------------------------------------------------
+REF: b'It is located along Oktyabrskaya Magistral.'
+PRED: b' It is located along Octia Briscaia Magistral.'
+------------------------------------------------------
+REF: b'This lake has five narrowing due to peninsulas that are close to each other.'
+PRED: b' This leg has 5 narrowing 2 dependent cells that are close to each other.'
+------------------------------------------------------
+REF: b'He served as president of the Magnificat Association.'
+PRED: b' He served as a president of the Magnificent Association.'
+------------------------------------------------------
+REF: b'Diaz Colon was also the executive director of the National Parks Company.'
+PRED: b' Diaz Col\xc3\xb3n was also the Executive Director of the National Parks Company.'
+------------------------------------------------------
+REF: b'There was no criminal sanction.'
+PRED: b' That was an incremental section.'
+------------------------------------------------------
+REF: b'Meshcherevo is the nearest rural locality.'
+PRED: b' Measure A was the nearest rural locality.'
+------------------------------------------------------
+REF: b'He participated in the founding of the National Council for Liberties in Tunisia.'
+PRED: b" He participated in the founding of the National Council for Leviton's Internies."
+------------------------------------------------------

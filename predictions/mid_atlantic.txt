@@ -1,0 +1,147 @@
+ACCENT: Mid-atlantic
+
+WER: 15.44
+CER: 5.68
+
+NORMALIZED WER: 11.06
+NORMALIZED CER: 4.89
+
+
+REF: b'It was only released to radio in Canada.'
+PRED: b' It was only released a video in Canada.'
+------------------------------------------------------
+REF: b'The front is adorned with five medieval heads.'
+PRED: b' The front is adorned with five medieval heads.'
+------------------------------------------------------
+REF: b'Sanchez finished school at University of New Mexico.'
+PRED: b' Sam just finished school at the University of New Mexico.'
+------------------------------------------------------
+REF: b'The dish can be served with its own gravy.'
+PRED: b' The dish can be served with its own gravy.'
+------------------------------------------------------
+REF: b'The organization pays bail for people who have been arrested and are awaiting trial.'
+PRED: b' The organization pays bail for people who have been arrested and are awaiting trial.'
+------------------------------------------------------
+REF: b'He obtained his baccalaureate in letters and left for the Sorbonne in Paris.'
+PRED: b' He obtained his bacular writing letters and left for the Sorbonne in Paris.'
+------------------------------------------------------
+REF: b'This published list was called the "Blue Book".'
+PRED: b' This published list was called the Blue Book.'
+------------------------------------------------------
+REF: b'More electronegative ligands correspond to more tetrahedral geometries.'
+PRED: b' More electronegative ligands correspond to more tetrahedral geometries.'
+------------------------------------------------------
+REF: b'Directed by Victor Saville it starred Evelyn Laye in the lead role.'
+PRED: b' Directed by Victor Saville, we start Evelin Lee in the lead role.'
+------------------------------------------------------
+REF: b'The space to the west of the main banking room measures wide and long.'
+PRED: b' The space to the west of the main banking room measures wide and long.'
+------------------------------------------------------
+REF: b'Oswald was consistently in opposition to the proposed union.'
+PRED: b' Oswald was consistently in opposition to the proposed union.'
+------------------------------------------------------
+REF: b'Enwonwu created seven sculptures in the "Daily Mirror" series.'
+PRED: b' And one wall created seven sculptures in the Daily Mirror series.'
+------------------------------------------------------
+REF: b'Muslim historians disagree regarding his name.'
+PRED: b' Muslim historians disagree regarding his name.'
+------------------------------------------------------
+REF: b'He taught American studies.'
+PRED: b' He taught American Studies.'
+------------------------------------------------------
+REF: b'Ernest Neill was the team captain.'
+PRED: b' Ernest Nile was a team captain.'
+------------------------------------------------------
+REF: b'He currently serves as Commander of British Forces Cyprus.'
+PRED: b' He currently serves as commander of British forces Cyprus.'
+------------------------------------------------------
+REF: b'Groups was announced at the technical meeting the day before the competition begins.'
+PRED: b' Groups was announced at the technical meeting the day before the competition begins.'
+------------------------------------------------------
+REF: b'The algorithm mostly stresses array lookup performance and basic logic and branching capabilities.'
+PRED: b' The algorithm mostly stresses array lookup performance and basic logic in branching capabilities.'
+------------------------------------------------------
+REF: b'The church describes the organ in its current specification as "immensely satisfying to play".'
+PRED: b' The Church describes the organ in its current specification as immensely satisfying to play.'
+------------------------------------------------------
+REF: b'It has bipinnate leaves on juvenile plants that are sometimes present on mature plants.'
+PRED: b' It has biker-made leaves and juvenile plants that are sometimes present in mature plants.'
+------------------------------------------------------
+REF: b'Scott is the son of Anitra and Eddie Scott.'
+PRED: b' Scott is the son of Anitra and Eddie Scott.'
+------------------------------------------------------
+REF: b'The current Personnel Secretary is Deepak Khandekar.'
+PRED: b' The current personnel secretary is Deepak Kandekar.'
+------------------------------------------------------
+REF: b'A street in the district of Dresden is named after him.'
+PRED: b' A street in the district of Dresden is named after him.'
+------------------------------------------------------
+REF: b'He was fined and got short custodial sentences.'
+PRED: b' He was fined and got short custodial sentences.'
+------------------------------------------------------
+REF: b'The institution is named after the medieval poet and scholar Ramai Pandit.'
+PRED: b' The institution is named after the medieval poet and scholar Ramai Pandit.'
+------------------------------------------------------
+REF: b'There is no limit to the number of bronze medals that may be awarded.'
+PRED: b' There is no limit to the number of bronze metals that may be awarded.'
+------------------------------------------------------
+REF: b'The mall features an equestrian statue of Paul Revere.'
+PRED: b' The mould features an equestrian statue of Paul Revere.'
+------------------------------------------------------
+REF: b'The walls of the temple contain frescos.'
+PRED: b' The walls of the temple contain frescoes.'
+------------------------------------------------------
+REF: b'Ahmed had become fugitive since then.'
+PRED: b' After that has become future-taste instead.'
+------------------------------------------------------
+REF: b'They fulfilled orders throughout Germany and abroad.'
+PRED: b' They fulfilled orders throughout Germany and abroad.'
+------------------------------------------------------
+REF: b'All later First Ladies automatically held this position.'
+PRED: b' All later first ladies automatically held this position.'
+------------------------------------------------------
+REF: b'The series is produced jointly by Tencent Penguin Pictures and Otters Studio.'
+PRED: b' The series is produced jointly by Tencent, Penguin Pictures and Otter Studio.'
+------------------------------------------------------
+REF: b'He also held the post of central treasurer at Rastriya Prajatantra Party.'
+PRED: b' He also held the post of Central Treasurer at Restria Prejudantre Party.'
+------------------------------------------------------
+REF: b'Fisher exhibited widely while based in Miami.'
+PRED: b' Fisherry Xebus is widely while based in Miami.'
+------------------------------------------------------
+REF: b'He went to Government College Umuahia for his secondary education.'
+PRED: b' You want to government college umwaya for a secondary education'
+------------------------------------------------------
+REF: b'It is presumed to feed on reptile eggs.'
+PRED: b' It is presumed to feed on reptile eggs.'
+------------------------------------------------------
+REF: b'No announcement of her death has been found in the papers of the time.'
+PRED: b' No announcement of her death has been found in the papers of the time.'
+------------------------------------------------------
+REF: b'Mallinson.'
+PRED: b' Melanson.'
+------------------------------------------------------
+REF: b'The young widow had many suitors.'
+PRED: b' The young widow had many suitors.'
+------------------------------------------------------
+REF: b'No sensitive or significant plant species are known to occur within the wilderness area.'
+PRED: b' No sensitive or significant plant species are known to occur within the wilderness area.'
+------------------------------------------------------
+REF: b'Hind tibial spurs are bifid.'
+PRED: b' Heimed tibial spurs are biped.'
+------------------------------------------------------
+REF: b'The video for the song was released on the same day as the song.'
+PRED: b' The video for the song was released on the same day as the song.'
+------------------------------------------------------
+REF: b'The house is made from red brick and is partly rendered in stucco.'
+PRED: b" The house is made from red brick and it's partly rendered in stucco."
+------------------------------------------------------
+REF: b'All colors were kept low key.'
+PRED: b' All colours were kept low key.'
+------------------------------------------------------
+REF: b'Its diet consist of zooplankton.'
+PRED: b' Its diet consists of zooplankton.'
+------------------------------------------------------
+REF: b'It is taken by mouth in the form of capsules.'
+PRED: b' It is taken by mouth in the form of capsules.'
+------------------------------------------------------

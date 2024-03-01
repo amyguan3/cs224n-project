@@ -1,0 +1,132 @@
+ACCENT: International Indian Accent
+
+WER: 14.72
+CER: 5.1
+
+NORMALIZED WER: 12.15
+NORMALIZED CER: 4.39
+
+
+REF: b'Many miners were arrested.'
+PRED: b' Many miners were arrested.'
+------------------------------------------------------
+REF: b'Bolsonaro already had four sons when his first daughter was born.'
+PRED: b' Both are now already had four sons when his first daughter was born.'
+------------------------------------------------------
+REF: b'Williams relied heavily on the Bible for his arguments.'
+PRED: b' William threw light heavily on the Bible for his arguments.'
+------------------------------------------------------
+REF: b'Boeing and Air France had also failed to inform the pilots of this feature.'
+PRED: b' Boeing in Air France had also failed to inform pilots of this feature.'
+------------------------------------------------------
+REF: b'It is skeptical of migration and European integration.'
+PRED: b' It is skeptical of migration and European integration.'
+------------------------------------------------------
+REF: b'From the north of the village passes through the Karakum Canal.'
+PRED: b' From the north of the village passes through the Karakam Canal.'
+------------------------------------------------------
+REF: b'This section will be removed when construction is complete.'
+PRED: b' This section will be removed when construction is complete.'
+------------------------------------------------------
+REF: b'Curiel was still in college when he started doing films.'
+PRED: b' Kareel was still in college when he started doing films.'
+------------------------------------------------------
+REF: b'However he ends up marrying Tithi accidentally.'
+PRED: b' However, he ended up marrying Tithi accidentally.'
+------------------------------------------------------
+REF: b'Barber also adopted one daughter.'
+PRED: b' Barbara also adopted one daughter.'
+------------------------------------------------------
+REF: b'Its flesh is considered to be of excellent quality and is marketed fresh.'
+PRED: b' Its flash is considered to be of excellent quality and is marketed fresh.'
+------------------------------------------------------
+REF: b'The stages were run on smooth gravel roads of Southern Estonia.'
+PRED: b' The stages were run on smooth gravel roads of southern Estonia.'
+------------------------------------------------------
+REF: b'Christian decides to assume Renato\xe2\x80\x99s identity.'
+PRED: b" Christian decides to assume Renato's identity."
+------------------------------------------------------
+REF: b'The railway proved to be the impetus for tourism to flourish at Kuranda.'
+PRED: b' The railway proves to be the impetus for tourism to flourish at Guranda.'
+------------------------------------------------------
+REF: b'Armed police officers also guarded police stations.'
+PRED: b' Armed police officers also guarded police stations.'
+------------------------------------------------------
+REF: b'The leaves are tomentose and measure up to long.'
+PRED: b' Believe that tormentors measure up too long.'
+------------------------------------------------------
+REF: b'The film is broadly based on true events.'
+PRED: b' The film is broadly braved on true events.'
+------------------------------------------------------
+REF: b'He also played for the Bridgeport Jets.'
+PRED: b' He also played for the Bridgeport Jets.'
+------------------------------------------------------
+REF: b'He was constantly changing allegiance between his stronger neighbours.'
+PRED: b' He was constantly changing allegiance between his stronger neighbors.'
+------------------------------------------------------
+REF: b'The school is an area where there are paddy fields growing rice.'
+PRED: b' The school is an area where there are paddy fields growing rice.'
+------------------------------------------------------
+REF: b'Observation posts were established forward of the trenches and reconnaissance patrols kept watch.'
+PRED: b' Observation posts were established forward of the trenches and reconnaissance patrols kept watch.'
+------------------------------------------------------
+REF: b'No teams were relegated.'
+PRED: b' No team for relegated.'
+------------------------------------------------------
+REF: b'A pair of beveled deltas flank the circular inscription.'
+PRED: b' A pair of beveled delta flags the circular inscription.'
+------------------------------------------------------
+REF: b'The adult moths are on the wing from October to April.'
+PRED: b' The adult moths are on the wings from October to April.'
+------------------------------------------------------
+REF: b'She is counsel in cases in the Supreme Court of Sri Lanka.'
+PRED: b' She has counsel in cases in the Supreme Court of Sri Lanka.'
+------------------------------------------------------
+REF: b'Perelman.'
+PRED: b' Berylman.'
+------------------------------------------------------
+REF: b'The following year he emigrated to the United States.'
+PRED: b' The following year he emigrated to the United States.'
+------------------------------------------------------
+REF: b'This bog is one of the largest in Estonia.'
+PRED: b' This bog is one of the largest in Estonia.'
+------------------------------------------------------
+REF: b'All of the paving inside the church is made up of Mintons tiles.'
+PRED: b' All of the bathing inside the church is made up of mint and styles.'
+------------------------------------------------------
+REF: b'Later they celebrate the Fourth of July together with Rachel and their friends.'
+PRED: b' Later, they celebrate the 4th of July together with Rachel and their friends.'
+------------------------------------------------------
+REF: b'The road from Kingston to Windward ran through the southern part of the plantation.'
+PRED: b' The road from Kingston to Windward ran through the southern part of the plantation.'
+------------------------------------------------------
+REF: b'The Deogarh fort is said to be built by cutting large rocky mountains.'
+PRED: b' The Deogar Fort is set to be built by cutting large rocky mountains.'
+------------------------------------------------------
+REF: b'Each ministry was called "Krom" and the ministers held the rank of "Khun".'
+PRED: b' Each ministry was called Chrom and the ministers held the rank of Khan.'
+------------------------------------------------------
+REF: b'She conducted research mainly on comparative criminal justice and law enforcement systems.'
+PRED: b' She conducted research mainly on comparative criminal justice and law enforcement systems.'
+------------------------------------------------------
+REF: b'Coleman also translated various French works for American publishers.'
+PRED: b' Goldman also translated various French words for American publishers.'
+------------------------------------------------------
+REF: b'Formerly there was an automatic weather station in the bay.'
+PRED: b' formerly there was an automatic weather station in the bay'
+------------------------------------------------------
+REF: b'Thrane personally knew one of those hanged.'
+PRED: b' 3 and personally knew one of those hands.'
+------------------------------------------------------
+REF: b'He was commissioned to do so by "Last Week Tonight".'
+PRED: b' He was commissioned to do so by last week tonight.'
+------------------------------------------------------
+REF: b'Philip goes to Norway and reconciles with Thelma.'
+PRED: b' Philip goes to Norway and reconciles with Telma.'
+------------------------------------------------------
+REF: b'The junction stood nearby with no crossover points.'
+PRED: b' The junction stood nearby with no crossover points.'
+------------------------------------------------------
+REF: b'Recent observations suggest that "Oxalis ambigua" is currently primarily found in South Africa.'
+PRED: b' Recent observations suggest that Oaxalith and Bigua is currently primarily found in South Africa.'
+------------------------------------------------------

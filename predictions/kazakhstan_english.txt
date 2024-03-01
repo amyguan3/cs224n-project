@@ -1,0 +1,153 @@
+ACCENT: Kazakhstan English
+
+WER: 11.61
+CER: 3.34
+
+NORMALIZED WER: 6.41
+NORMALIZED CER: 2.47
+
+
+REF: b'The Tulsa recording studio was housed in the historic The Church Studio.'
+PRED: b' The Tulsa recording studio was housed in the historic The Church studio.'
+------------------------------------------------------
+REF: b'To the north of the area is the Union Canal.'
+PRED: b' To the north of the area is the Union Canal.'
+------------------------------------------------------
+REF: b'Lo and Burkhart even tagged the subscapularis tendon hypercritically as the "forgotten tendon".'
+PRED: b' Low and Burkhard even tacked the subscapularis tendon hypercritically as the forgotten tendon.'
+------------------------------------------------------
+REF: b'Christopher Newport University in Newport News, Virginia, was named in his honor.'
+PRED: b' Christopher Newport University in Newport News, Virginia was named in his honor.'
+------------------------------------------------------
+REF: b"Epstein's group decided to attack with twelve men."
+PRED: b" Epstein's group decided to attack with 12 men."
+------------------------------------------------------
+REF: b'He lives in the village of Harbury, just south of Leamington Spa, Warwickshire.'
+PRED: b' He lives in the village of Harbury, the south of Lamington Spa, Warwickshire.'
+------------------------------------------------------
+REF: b'This was the first finals meeting between these two teams.'
+PRED: b' This was the first finals meeting between these two teams.'
+------------------------------------------------------
+REF: b"Williams was born in Saint David's Hospital, Bangor, Gwynedd, Wales."
+PRED: b" Williams was born in St. David's Hospital, Bangor, Gwyneth, Wales."
+------------------------------------------------------
+REF: b'Each race is run over three laps.'
+PRED: b' Each race is run over three laps.'
+------------------------------------------------------
+REF: b'Quark stars that contain strange matter are called strange stars.'
+PRED: b' Quark stars that contain strange matter are called strange stars.'
+------------------------------------------------------
+REF: b"McCarville's improved as the season went along."
+PRED: b' My carvels improved as the season went along.'
+------------------------------------------------------
+REF: b'It has been designated a National Historic Landmark for its architectural integrity and significance.'
+PRED: b' It has been designated a national historic landmark for its architectural integrity and significance.'
+------------------------------------------------------
+REF: b'In the end, his son Josias, as engineer, used the latter.'
+PRED: b' In the end, his son Josias, as engineer, used the latter.'
+------------------------------------------------------
+REF: b'It almost completely surrounds the town of Englehart.'
+PRED: b' It almost completely surrounds the town of Angleheart.'
+------------------------------------------------------
+REF: b'He played college football at Bowling Green.'
+PRED: b' He played college football at Bowling Green.'
+------------------------------------------------------
+REF: b'The Rural Fire Service has a volunteer station.'
+PRED: b' The rural fire service has a volunteer station.'
+------------------------------------------------------
+REF: b'Stella Cunliffe was the first female president.'
+PRED: b' Stella Conleith was the first female president.'
+------------------------------------------------------
+REF: b'For their own purposes role-playing games sometimes use a different definition of low fantasy.'
+PRED: b' For their own purposes, role-playing games sometimes use a different definition of low fantasy.'
+------------------------------------------------------
+REF: b'Aces are low.'
+PRED: b' Asus are low.'
+------------------------------------------------------
+REF: b'Both the citywide government and the municipal districts have elected councils and mayors.'
+PRED: b' Both the citywide government and the municipal districts have elected councils and mayors.'
+------------------------------------------------------
+REF: b'His scowl crinkled like crushed paper.'
+PRED: b' His scowl crinkled like crushed paper.'
+------------------------------------------------------
+REF: b'In high school, he played running back, defensive end, cornerback and placekicker.'
+PRED: b' In high school, he played running back, defensive end, cornerback and place kicker.'
+------------------------------------------------------
+REF: b'All of Wolverine Lake is zoned to Walled Lake Central High School.'
+PRED: b' All of Wolverine Lake is shone to Walled Lake Central High School.'
+------------------------------------------------------
+REF: b'Both daughters are actresses.'
+PRED: b' Both daughters are actresses.'
+------------------------------------------------------
+REF: b"He was England's second ever player to score at the new Wembley Stadium."
+PRED: b" He was England's second-ever player to score at the new Wembley Stadium."
+------------------------------------------------------
+REF: b'At one point, their dispute even erased reality altogether.'
+PRED: b' At one point, there a dispute even erased reality altogether.'
+------------------------------------------------------
+REF: b'The ride height can be adjusted through a self-leveling air suspension.'
+PRED: b' The right height can be adjusted through a self-leveling air suspension.'
+------------------------------------------------------
+REF: b'Their rights to refuse such things should be respected as well.'
+PRED: b' Their rights to refuse such things should be respected as well.'
+------------------------------------------------------
+REF: b'Thomas Nagel posed the question What is it like to be a bat?'
+PRED: b' Thomas Nigel posed the question, what is it like to be a bat?'
+------------------------------------------------------
+REF: b"However, due to the new component architecture's dynamic binding, the internal architecture was modified."
+PRED: b" However, due to the new component architecture's dynamic binding, the internal architecture was modified."
+------------------------------------------------------
+REF: b'He was originally from Bukhara.'
+PRED: b' He was originally from Buhara.'
+------------------------------------------------------
+REF: b'She remained on the farm for twenty years before returning to Raleigh.'
+PRED: b' She remained on the farm for 20 years before returning to Riley.'
+------------------------------------------------------
+REF: b'The town is also served by the Aransas County Public Library, located in Rockport.'
+PRED: b' The town is also served by the Aransas County Public Library, located in Rockport.'
+------------------------------------------------------
+REF: b'The new Spanish ownership restructured contracts and made Club Necaxa solvent.'
+PRED: b' The new Spanish ownership restructured contracts and made Club Necaxa solvent.'
+------------------------------------------------------
+REF: b'She was educated at Aksaray University.'
+PRED: b' She was educated at Aksarai University.'
+------------------------------------------------------
+REF: b'The Museum maintained they were unaware of any legal implications surrounding the artifacts.'
+PRED: b' The museum maintained they were unaware of any illegal implications surrounding the artifacts.'
+------------------------------------------------------
+REF: b'The site can be regarded as a window on Taiwan for French speaking readers.'
+PRED: b' The site can be regarded as a window on Taiwan for French-speaking readers.'
+------------------------------------------------------
+REF: b'There is also a floorball division.'
+PRED: b' There is also a floorball division.'
+------------------------------------------------------
+REF: b'The fortunes of the new city quickly rose to be a place of importance.'
+PRED: b' The fortunes of the new city quickly arose to be a place of importance.'
+------------------------------------------------------
+REF: b'The handball was not seen by referee Emidio Morganti.'
+PRED: b' The handball was not seen by referee Emidio Marganti.'
+------------------------------------------------------
+REF: b'The northern half of the station without the mezzanine has very high ceilings.'
+PRED: b' The northern half of the station without the mezzanine has very high ceilings.'
+------------------------------------------------------
+REF: b'The plot is similar to that of Jack London\'s "Call of the Wild".'
+PRED: b" The blood is similar to that of Jack London's Call of the Wild."
+------------------------------------------------------
+REF: b'Bum Rush the Show.'
+PRED: b' Bum, rush the show.'
+------------------------------------------------------
+REF: b'Delta is designed for candidates with previous English language teaching experience.'
+PRED: b' Delta is designed for candidates with previous English language teaching experience.'
+------------------------------------------------------
+REF: b'The basilica is dedicated to the Christian martyrs, known and unknown.'
+PRED: b' The Basilica is dedicated to the Christian martyrs, known and unknown.'
+------------------------------------------------------
+REF: b'Sour Base also has covered Despre Tine.'
+PRED: b' Sour Bays also has covered this pre-tined.'
+------------------------------------------------------
+REF: b'Reruns of the show were aired on both The Disney Channel and Toon Disney.'
+PRED: b' reruns of the show were aired on both the Disney Channel and Toon Disney.'
+------------------------------------------------------
+REF: b'In business, the business owner traditionally occupied the pinnacle of the organization.'
+PRED: b' In business, the business owner traditionally occupied the pinnacle of the organization.'
+------------------------------------------------------

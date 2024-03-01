@@ -1,0 +1,165 @@
+ACCENT: little latino
+
+WER: 15.35
+CER: 6.6
+
+NORMALIZED WER: 12.39
+NORMALIZED CER: 5.88
+
+
+REF: b'This season marks the fifth season in the Big Ten Conference.'
+PRED: b' This season marks the fifth season in the Big Ten Conference.'
+------------------------------------------------------
+REF: b'Pasche\xe2\x80\x99s version was used internationally.'
+PRED: b' but this version was used internationally.'
+------------------------------------------------------
+REF: b'The area is predominantly residential.'
+PRED: b' The area is predominantly residential.'
+------------------------------------------------------
+REF: b'A smaller number of derivational affixes are used than in Indonesian.'
+PRED: b' A smaller number of derivational affixes are used than in Indonesian.'
+------------------------------------------------------
+REF: b'Google took the app down after Kaspersky reported its findings.'
+PRED: b' Google took the help down after Kaspersky reported its findings.'
+------------------------------------------------------
+REF: b'He is an ethnic Lezgin.'
+PRED: b" He's an ethnic lesbian."
+------------------------------------------------------
+REF: b'It stars Meghana Lokesh and Siddharth Varma.'
+PRED: b' It is stars Megana Locish and Seaguard Barbon.'
+------------------------------------------------------
+REF: b'Per source.'
+PRED: b" Bear's Source"
+------------------------------------------------------
+REF: b'Ford attended North Cobb High School.'
+PRED: b' for attended North Coghayskoum.'
+------------------------------------------------------
+REF: b'The castle belonged to the Homes.'
+PRED: b' And Castile belongs to the Fominums.'
+------------------------------------------------------
+REF: b'She is clinical professor of medicine and medical oncology at Thomas Jefferson University.'
+PRED: b" She's clinical professor of medicine and medical oncology at Thomas Jefferson University."
+------------------------------------------------------
+REF: b'This has been built on the already built garden in Palika Bazaar.'
+PRED: b' This has been built on the already built garden in Palico de San.'
+------------------------------------------------------
+REF: b'David Koh was elected as the acting position during the same meeting.'
+PRED: b' EditCore was selected as the acting position during the same meeting.'
+------------------------------------------------------
+REF: b'Halliday voters ultimately voted down the plan.'
+PRED: b' Halliday borders ultimately booted down the plan.'
+------------------------------------------------------
+REF: b'The northern slope of the lake is mountainous.'
+PRED: b' The nurturing slope of the lake is mountainous.'
+------------------------------------------------------
+REF: b'Luis emerges from under the pushed stone.'
+PRED: b' Luis emerges from under the pushed stone.'
+------------------------------------------------------
+REF: b'A dam was also nearby.'
+PRED: b' A dam was also nearby.'
+------------------------------------------------------
+REF: b'He was one of seven children.'
+PRED: b' He was one of seven children.'
+------------------------------------------------------
+REF: b'Right here in our backyard.'
+PRED: b' Right here in our backyard.'
+------------------------------------------------------
+REF: b'Abdul started rap music at the age of nine.'
+PRED: b' Abdul started rap music at the age of nine.'
+------------------------------------------------------
+REF: b'Imagine That!'
+PRED: b' Imagine that!'
+------------------------------------------------------
+REF: b'Born to parents Revd.'
+PRED: b' born to parents, left.'
+------------------------------------------------------
+REF: b'Napoleon vs.'
+PRED: b' Napoleon versus'
+------------------------------------------------------
+REF: b'Appearing at either event would require her to travel across the Atlantic Ocean.'
+PRED: b' Appearing at either event would require her to travel across the Atlantic Ocean.'
+------------------------------------------------------
+REF: b'The incident was captured on video.'
+PRED: b' The incident was captured on video.'
+------------------------------------------------------
+REF: b'The communities of Aberdeen and Birch Creek underwent mandatory evacuations.'
+PRED: b' The communities of Aberdeen and Beech Creek underwent mandatory evacuations.'
+------------------------------------------------------
+REF: b'Another contributor was Refik Halit Karay.'
+PRED: b' Another contributory was Refik Halit Karay.'
+------------------------------------------------------
+REF: b'Both his books were included in the school curriculum of Puri Zilla School.'
+PRED: b' All his books were included in the school curriculum of Pui Sengle school.'
+------------------------------------------------------
+REF: b'This genus is endemic to New Zealand.'
+PRED: b' This genus is endemic to New Zealand.'
+------------------------------------------------------
+REF: b'The pitched roof is tiled in slate.'
+PRED: b' The pitch roof is titled in slate.'
+------------------------------------------------------
+REF: b'Legend states that the spear is capable of melting mountains and splitting oceans.'
+PRED: b' Legend states that the spear is capable of melting mountains and splitting oceans.'
+------------------------------------------------------
+REF: b'He introduces himself to the emperor as Lohengrin.'
+PRED: b' He introduces himself to the Emperor as Lohengrin.'
+------------------------------------------------------
+REF: b'The song reached number one on Entertainment Monitoring Africa.'
+PRED: b' The song reached No. 1 on entertainment monitoring in Africa.'
+------------------------------------------------------
+REF: b'Matrona mourns for her friend.'
+PRED: b' Matrona mourns for her friend.'
+------------------------------------------------------
+REF: b'Goethe compares the soul of man to water.'
+PRED: b' Yet compares the soul of man to water.'
+------------------------------------------------------
+REF: b'Both men had had their skulls caved in with an axe.'
+PRED: b' Both men had their skulls kept in with an axe.'
+------------------------------------------------------
+REF: b'It contained political and military news from Italy and abroad.'
+PRED: b' It contained political and military news from Italy and abroad.'
+------------------------------------------------------
+REF: b'An internal adobe wall divides each floor into two rooms.'
+PRED: b' An internal Adobe wall divides each floor into two rooms.'
+------------------------------------------------------
+REF: b'Klopfer and Wainwright later became longtime colleagues at Duke University.'
+PRED: b' Klopfer and Wainwright later became long-time colleagues at Duke University.'
+------------------------------------------------------
+REF: b'He played college basketball for the North Dakota Fighting Hawks.'
+PRED: b' She played college basketball for the North Dakota Fighting Hawks.'
+------------------------------------------------------
+REF: b'Edmund Nelson and sister of Admiral Lord Nelson.'
+PRED: b' Edmund Nelson, and sister of Admiral Lord Nelson.'
+------------------------------------------------------
+REF: b'There are various versions of the exact origin of the flag.'
+PRED: b' There are various versions of the exact origin of the flag.'
+------------------------------------------------------
+REF: b'The initial divisional commander was Kurt Renner.'
+PRED: b' The initial division on what commander was Kurt Renner.'
+------------------------------------------------------
+REF: b'The life history of this species is unknown.'
+PRED: b' The life history of this species is unknown.'
+------------------------------------------------------
+REF: b'She was placed Best in Math at the time.'
+PRED: b' She was placed best in math at the time.'
+------------------------------------------------------
+REF: b'This was the first of many times that the Belmont Syndicate would face opposition.'
+PRED: b' This was the first of many times that the Belmont syndicate would face opposition.'
+------------------------------------------------------
+REF: b'One civilian was also killed and two others were wounded in the clash.'
+PRED: b' One civilian was also killed and two others were wounded in the clash.'
+------------------------------------------------------
+REF: b'They will also colonise newly disturbed ground like cleared woodland plots and former quarries.'
+PRED: b' They will also colonize newly disturbed ground like cleared woodland plots and former quarries.'
+------------------------------------------------------
+REF: b'Each stream is broken down to its core components.'
+PRED: b' Each stream is broken down to its core components.'
+------------------------------------------------------
+REF: b'Chief Rabbi Paul Chaim Eisenberg said prayers in Hebrew and German.'
+PRED: b' Chief Rabbi Paul Scheinung Eisenberg set prayers in Hebron and German.'
+------------------------------------------------------
+REF: b'They did not win any seats and finished in second in four ridings.'
+PRED: b' They did not win any seats and finished in second in four ridings.'
+------------------------------------------------------
+REF: b'The site was backfilled after excavation and replanted with rice.'
+PRED: b' The site was backfilled after excavation and replanted with rice.'
+------------------------------------------------------
