@@ -61,7 +61,7 @@ def main():
 
     # device 0 for gpu, device -1 for cpu?
     whisper_asr = pipeline(
-        "automatic-speech-recognition", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor, device="cuda"
+        "automatic-speech-recognition", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor, device=0
     ) # "openai/whisper-small"
 
     whisper_asr.model.config.forced_decoder_ids = (
@@ -74,17 +74,21 @@ def main():
         language="english", task="transcribe"
     )
 
+    print("processor/model loaded")
+
     # iterable dataset
     dataset_total = load_dataset("mozilla-foundation/common_voice_16_1", "en", split="train", token=True, trust_remote_code=True, streaming=True)
     # dataset_total = load_dataset("mozilla-foundation/common_voice_16_1", "en", split="train", token=True, trust_remote_code=True, streaming=True)
     text_column_name = "sentence"
 
     dataset_total = dataset_total.shuffle(seed=42, buffer_size=10_000)
-    dataset_total = dataset_total.take(10_000) # 60k approx half of training # TODO: other 50k
+    dataset_total = dataset_total.take(100) # 60k approx half of training # TODO: other 50k
     dataset_total = dataset_total.cast_column("audio", Audio(sampling_rate=16000))
     dataset_total = dataset_total.map(normalise) # , num_proc=2
     dataset_total = dataset_total.filter(is_target_text_in_range, input_columns=[text_column_name]) # , num_proc=2
     dataset_total = dataset_total.filter(lambda example: example['accent'] != '')
+
+    print("dataset loaded")
 
     # make these specific per accent?
     predictions = {}
@@ -95,8 +99,8 @@ def main():
     all_accents = []
 
     for out in tqdm(whisper_asr(data(dataset_total), batch_size=16), desc='Decode Progress'):
+        print(out)
         for accent in out["accents"][0]: # will skip if empty
-            # print(out["accents"])
             if accent not in all_accents:
                 all_accents.append(accent)
             if accent not in predictions:
