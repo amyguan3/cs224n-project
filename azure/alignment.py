@@ -47,6 +47,8 @@ from data_utils import (DataCollatorSpeechSeq2SeqWithPadding,
 import csv
 
 # Setup 
+os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
+os.system("pip install -q git+https://github.com/huggingface/peft.git@main")
 current = os.path.dirname(os.path.realpath(__file__))  # name of this directory
 parent = os.path.dirname(current)  # parent directory
 sys.path.append(parent)  # add parent directory to sys.path
@@ -58,7 +60,7 @@ check_min_version("4.21.0")  # calls an error if minimal version of Transformers
 
 
 
-class SavePeftModelCallback(TrainerCallback):
+class SavePeftCallback(TrainerCallback):
     def on_save(
         self,
         args: TrainingArguments,
@@ -86,7 +88,7 @@ class SavePeftModelCallback(TrainerCallback):
 
 def main():
     # log in to huggingface to save model as you go
-    notebook_login()
+    # notebook_login()
 
     # load whisper feature extractor, tokenizer, processor
     model_path = "openai/whisper-base"
@@ -105,6 +107,10 @@ def main():
     target_dialect = 'usa'
     source_dialect = 'ind_n'
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
+    
+    print(sd_qa['dev'][0])
+    sd_qa['dev'] = sd_qa['dev'].select([0,1,2,3,4,5])
+    sd_qa['test']= sd_qa['test'].select([0,1,2,3,4,5])
 
     # prepare data
     def prepare_source_data(data):
@@ -123,9 +129,7 @@ def main():
             with torch.no_grad():
                 outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
             last_hidden_state = outputs.encoder_hidden_states[-1]
-            target_embeddings.extend(
-                [embedding.flatten() for embedding in last_hidden_state]
-            )
+            target_embeddings.extend([embedding for embedding in last_hidden_state])
         data["target_embeddings"] = target_embeddings
         return data
 
@@ -174,24 +178,14 @@ def main():
         eval_dataset=None,
         data_collator=data_collator,
         tokenizer=processor.feature_extractor,
-        callbacks=[SavePeftModelCallback],
+        callbacks=[SavePeftCallback],
     )
-    
+
     trainer.train()
     peft_model_id = "azure-224n/whisper-base-alignment"
     model.push_to_hub(peft_model_id)
 
     
-
-
-
-
-
-
-
-    
-
-
 
 if __name__ == "__main__":
     main()

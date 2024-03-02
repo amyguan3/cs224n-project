@@ -12,8 +12,10 @@ class DataCollatorSpeechSeq2SeqWithPadding:
         # convert source inputs to pytorch tensors
         input_features = {"input_features": data["source_input_features"]} 
         batch = self.processor.feature_extractor.pad(input_features, return_tensors="pt")
-
-        batch["target_embeddings"] = data["target_embeddings"]
+        
+        # format target embeddings
+        target_embeddings = torch.stack([torch.tensor(embedding) for embedding in data["target_embeddings"]])
+        batch["target_embeddings"] = target_embeddings
 
         return batch
 
