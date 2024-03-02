@@ -44,6 +44,8 @@ from data_utils import (DataCollatorSpeechSeq2SeqWithPadding,
                         load_sd_qa_dataset, 
                         filter_data)
 
+import csv
+
 # Setup 
 current = os.path.dirname(os.path.realpath(__file__))  # name of this directory
 parent = os.path.dirname(current)  # parent directory
@@ -72,6 +74,13 @@ class SavePeftModelCallback(TrainerCallback):
         pytorch_model_path = os.path.join(checkpoint_folder, "pytorch_model.bin")
         if os.path.exists(pytorch_model_path):
             os.remove(pytorch_model_path)
+
+        # record the losses
+        loss_file = os.path.join(args.output_dir, 'loss.csv')
+        with open(loss_file, 'a') as f:
+            writer = csv.writer(f)
+            writer.writerow([state.global_step, state.log_history["loss"][-1]]) # iter, loss
+
         return control
 
 
@@ -171,6 +180,8 @@ def main():
     trainer.train()
     peft_model_id = "azure-224n/whisper-base-alignment"
     model.push_to_hub(peft_model_id)
+
+    
 
 
 
