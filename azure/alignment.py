@@ -112,8 +112,6 @@ def main():
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
     
     print(sd_qa['dev'][0])
-    sd_qa['dev'] = sd_qa['dev'].select([0,1,2,3,4,5])
-    sd_qa['test']= sd_qa['test'].select([0,1,2,3,4,5])
 
     # prepare data
     def prepare_source_data(data):
