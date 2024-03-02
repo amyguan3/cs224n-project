@@ -6,6 +6,11 @@ Alignment Whisper embeddings of source input language to target input language
 import logging
 import os
 import sys
+
+# Setup 
+os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
+os.system("pip install -q git+https://github.com/huggingface/peft.git@main")
+
 import json
 import random
 import numpy as np
@@ -46,9 +51,7 @@ from data_utils import (DataCollatorSpeechSeq2SeqWithPadding,
 
 import csv
 
-# Setup 
-os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
-os.system("pip install -q git+https://github.com/huggingface/peft.git@main")
+
 current = os.path.dirname(os.path.realpath(__file__))  # name of this directory
 parent = os.path.dirname(current)  # parent directory
 sys.path.append(parent)  # add parent directory to sys.path
