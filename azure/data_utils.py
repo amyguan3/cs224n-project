@@ -8,13 +8,15 @@ import sys
 class DataCollatorSpeechSeq2SeqWithPadding:
     processor: Any
 
-    def __call__(self, features: List[Dict[str, Union[List[int], torch.Tensor]]]) -> Dict[str, torch.Tensor]:
+    def __call__(self, data: List[Dict[str, Union[List[int], torch.Tensor]]]) -> Dict[str, torch.Tensor]:
         # convert source inputs to pytorch tensors
-        input_features = [{"input_features": [feature["source_input_features"], feature["target_input_features"]]} 
-                          for feature in features]
+        input_features = {"input_features": data["source_input_features"]} 
         batch = self.processor.feature_extractor.pad(input_features, return_tensors="pt")
 
+        batch["target_embeddings"] = data["target_embeddings"]
+
         return batch
+
 
 # Functions for loading, processing data
 def load_sd_qa_dataset():
@@ -32,20 +34,4 @@ def filter_data(data, source, target):
         print("Error: source or target language not found in dialect options.")
         sys.exit(1) 
     data = data.select_columns(['id', source, target])
-    return data
-
-def prepare_target_embeddings(data, model):
-    # compute log-Mel input features from target audio array
-    batch_size = 128
-    target_embeddings = []
-    decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
-    for i in range(0, len(data["target_input_features"]), batch_size):
-        input_features = torch.tensor(data["target_input_features"][i: i + batch_size])
-        with torch.no_grad():
-            outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
-        last_hidden_state = outputs.encoder_hidden_states[-1]
-        target_embeddings.extend(
-            [embedding.flatten() for embedding in last_hidden_state]
-        )
-    data["target_embeddings"] = target_embeddings
     return data

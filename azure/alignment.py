@@ -128,9 +128,6 @@ def main():
     # data_collator
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
-    
-
-
     #----------LORA PART------------
     target_modules = ['k_proj', 'v_proj', 'q_proj', 'out_proj', 'fc1', 'fc2']
     config = LoraConfig(r=32, # rank, adjust this
@@ -145,7 +142,7 @@ def main():
 
     # Define training configuration
     training_args = Seq2SeqTrainingArguments(
-        output_dir="azure-224n/whisper-base-aligned",  # change to a repo name of your choice
+        output_dir="azure-224n/test",  # change to a repo name of your choice
         per_device_train_batch_size=8,
         gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
         learning_rate=1e-3,
@@ -172,6 +169,8 @@ def main():
     )
     
     trainer.train()
+    peft_model_id = "azure-224n/whisper-base-alignment"
+    model.push_to_hub(peft_model_id)
 
 
 
