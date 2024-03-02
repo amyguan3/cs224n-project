@@ -121,7 +121,7 @@ def main():
         return data
 
     def prepare_target_embeddings(data):
-        # compute log-Mel input features from target audio array
+        # compute hidden state/embeddings of target dialect
         batch_size = 128
         target_embeddings = []
         decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
