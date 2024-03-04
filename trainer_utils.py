@@ -14,7 +14,9 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
 
   def compute_loss(self, model, inputs, return_outputs=False):
     # labels = inputs.get("labels")
+    device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
     decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
+    decoder_input_ids = decoder_input_ids.to(device)
 
     # Get first (source) hidden representation
     # input_features = {"input_features": inputs["input_features"]}
