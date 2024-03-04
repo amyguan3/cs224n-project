@@ -10,6 +10,7 @@ class DataCollatorSpeechSeq2SeqWithPadding:
 
     def __call__(self, data: List[Dict[str, Union[List[int], torch.Tensor]]]) -> Dict[str, torch.Tensor]:
         # convert source inputs to pytorch tensors
+        print(len(data))
         input_features = {"input_features": data["source_input_features"]} 
         batch = self.processor.feature_extractor.pad(input_features, return_tensors="pt")
         

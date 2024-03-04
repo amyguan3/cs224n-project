@@ -139,17 +139,13 @@ def main():
         data["target_embeddings"] = target_embeddings
         return data
     
-    print(type(sd_qa['dev']))
-    print(sd_qa['dev'].keys())
-    sys.exit()
-
     sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source dialect"
                       ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
 
 
     # define an evaluation function !!!
     print(type(sd_qa))
-    print(sd_qa.keys())
+    print(sd_qa)
     # data_collator
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
