@@ -17,7 +17,8 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
 
     # Get first (source) hidden representation
-    output = model(**inputs, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
+    input_features = {"input_features": inputs["input_features"]}
+    output = model(**input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
     source_hidden_state = output.encoder_hidden_states[-1].flatten()
 
     # # Get second (target) hidden_representation
