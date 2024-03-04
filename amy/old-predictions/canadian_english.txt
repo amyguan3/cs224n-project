@@ -1,0 +1,18 @@
+ACCENT: Canadian English
+
+WER: 19.35
+CER: 3.54
+
+NORMALIZED WER: 6.25
+NORMALIZED CER: 1.38
+
+
+REF: An african american female in a silver knee length skirt walking.
+HYP:  An African American female in a silver knee length skirt walking.
+------------------------------------------------------
+REF: Jewish mothers, "cheapness", hypochondria, and other stereotyped habits are all common subjects.
+HYP:  Jewish mothers, cheapness, hypochondria, and other stereotype habits are all common subjects.
+------------------------------------------------------
+REF: He belonged to the small Gujarati-speaking Zoroastrian community.
+HYP:  He belonged to the small kuharati speaking Zoroastrian community.
+------------------------------------------------------

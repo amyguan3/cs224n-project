@@ -1,0 +1,1074 @@
+ACCENT: Filipino
+
+WER: 19.37
+CER: 7.14
+
+NORMALIZED WER: 14.05
+NORMALIZED CER: 5.74
+
+
+REF: b'They were Divided and could not Effect it.'
+PRED: b' They were divided and could not affect it.'
+------------------------------------------------------
+REF: b'There is a minor jog at Eglinton, via Trethewey Drive and Yore Road.'
+PRED: b' There is a minor jog at Edmonton via Tretheweigh Drive in York Road.'
+------------------------------------------------------
+REF: b"McBride has appeared twice on Criss Angel's show MindFreak."
+PRED: b' McBride disappeared lies and please seem to have showed my truth.'
+------------------------------------------------------
+REF: b'His parents were both musicians.'
+PRED: b' His parents were both musicians.'
+------------------------------------------------------
+REF: b'The entrance door is flanked by two Doric columns.'
+PRED: b' The entrance door is flagged by two Dori columns.'
+------------------------------------------------------
+REF: b'His research won more than ten provincial and ministerial awards.'
+PRED: b' His research won more than 10 Provincial and Ministerial awards.'
+------------------------------------------------------
+REF: b'They are still in place.'
+PRED: b' They are still in place.'
+------------------------------------------------------
+REF: b'They lived in southern Mesopotamia under the rule of the Sassanid dynasty.'
+PRED: b' They lived in southern Mesopotamia under the rule of the Sassanid dynasty.'
+------------------------------------------------------
+REF: b'The shutdown lasted two weeks.'
+PRED: b' The shutdown lasted two weeks.'
+------------------------------------------------------
+REF: b'There are other Roman survivals in the crypt.'
+PRED: b" There are other ropeman's revivals in the crypt."
+------------------------------------------------------
+REF: b'In an upset, Young defeated Bricker.'
+PRED: b' In an upset, young defeated breaker.'
+------------------------------------------------------
+REF: b'Naval Research Laboratory before returning to an academic career.'
+PRED: b' Naval Research Laboratory before returning to an academic career.'
+------------------------------------------------------
+REF: b'A study by Lala "et al".'
+PRED: b' Study by Lala et al.'
+------------------------------------------------------
+REF: b'To the east, the bay is bounded by the Resurrection Peninsula and Day Harbor.'
+PRED: b' To these, the bay is bounded by the resurrection peninsula in David Harbour.'
+------------------------------------------------------
+REF: b'He was the last known descendant of Schiller.'
+PRED: b' He was the last known descendant of Skiller.'
+------------------------------------------------------
+REF: b'Among his books are "Cannibals" and among his poems are "Masada".'
+PRED: b' Among his books are cannibals and among his poems are Masada.'
+------------------------------------------------------
+REF: b'She expressed solidarity with the farmers at an event at Press Club of India.'
+PRED: b' She expressed solidarity with the farmers at an event at Press Club of India.'
+------------------------------------------------------
+REF: b'He also worked in Calicut All India Radio station.'
+PRED: b' He also worked in Calicut all-India radio station.'
+------------------------------------------------------
+REF: b'It is usually celebrated in the month of September or October.'
+PRED: b' It is usually celebrated in the month of September or October.'
+------------------------------------------------------
+REF: b'She was known as the "mistress of life and death".'
+PRED: b' She was known as the Mistress of Life and Death.'
+------------------------------------------------------
+REF: b'He was married twice and had two daughters.'
+PRED: b' He was married twice and had two daughters.'
+------------------------------------------------------
+REF: b'Additional classes, learning suites and an enlarged school hall were added to the school.'
+PRED: b' Additional classes, learning suites, and an enlarged school hall were added to the school.'
+------------------------------------------------------
+REF: b'He is the Comptroller General of South Carolina.'
+PRED: b' He is the Comptroller General of South Carolina.'
+------------------------------------------------------
+REF: b'She was soon replaced by Miss Carrie Fay, who arrived from nearby Prairie Farm.'
+PRED: b' She was so happy that she was crying for you. You are asked to near by 30 for her.'
+------------------------------------------------------
+REF: b"Numerous adventures follow as they meet up with Breck's family, friends and foes alike."
+PRED: b' Numerous adventures follow as they meet up with Brax family friends and close alike.'
+------------------------------------------------------
+REF: b'She wrote many journal articles on women writers and contributed essays on Fredrika Bremer.'
+PRED: b' She wrote many journal articles on women writers and contributed essays on Fredrica Bremer.'
+------------------------------------------------------
+REF: b'There have been two crashes involving fatalities at the airfield since it was established.'
+PRED: b' There have been two crashes involving fatalities at the airfield since it was established.'
+------------------------------------------------------
+REF: b'The last treatise was prepared for printing by Father Sebastian Couto.'
+PRED: b' The last treatise was prepared for printing by Father Sebastian Cotto.'
+------------------------------------------------------
+REF: b'Credits are adapted from Genius.'
+PRED: b' Credits are adapted from Genius.'
+------------------------------------------------------
+REF: b"Bartlett's main specialty was the chemistry of fluorine and of compounds containing fluorine."
+PRED: b" Barclad's main specialty was the chemistry of fluorine and compounds within fluorine."
+------------------------------------------------------
+REF: b'One thousand copies were printed of one issue.'
+PRED: b' 1,000 copies were printed of one issue.'
+------------------------------------------------------
+REF: b'West also held psychic demonstrations here with the psychic Richard Ireland.'
+PRED: b' West also held psychic demonstrations here with the psychic Richard Ireland.'
+------------------------------------------------------
+REF: b'A plaque commemorates the abductees on the wall of the building.'
+PRED: b' A plaque commemorates the abductees on the wall of the building.'
+------------------------------------------------------
+REF: b'He spent most of his youth career at Lega Pro club Como.'
+PRED: b' He spent most of his youth career at Legapro Club Como.'
+------------------------------------------------------
+REF: b'Criminal charges are pending for members of the fraternity.'
+PRED: b' Criminal charges are pending. Members of the fraternity.'
+------------------------------------------------------
+REF: b'These stores continued to trade under the names "Cavendish" or "Woodhouse".'
+PRED: b" He starts the thing you can trade at the name's cabinet or woodhouse."
+------------------------------------------------------
+REF: b'Such moments of prayer would bring comfort to many of her patients.'
+PRED: b' Such moments of prayer would bring comfort to many of her patients.'
+------------------------------------------------------
+REF: b'Mirage was raped by her former lover Deathwing and became pregnant with his child.'
+PRED: b' Mirage was reformed over deathbed and became pregnant with his child.'
+------------------------------------------------------
+REF: b'The street long lay within the close of York Minster.'
+PRED: b' The street long lay within the close of York Minster.'
+------------------------------------------------------
+REF: b'He also serves as Director of Capabilities and Assessments.'
+PRED: b' He also serves as Director of Capabilities and Accessories.'
+------------------------------------------------------
+REF: b'The Windows Registry is finally deleted, and the boot options changed.'
+PRED: b' The Windows registry is finally deleted, but the boot options changed.'
+------------------------------------------------------
+REF: b'Three locomotives from the class suffered from boiler explosions.'
+PRED: b' Three locomotives from the class suffer from boiler explosions.'
+------------------------------------------------------
+REF: b'Another well-known maker was Metters Limited of Adelaide, Perth and Sydney.'
+PRED: b' Another hormone beaker was markers limited of adelaide, grape, and cinnamon.'
+------------------------------------------------------
+REF: b'He served as the Commandant of Armed Forces Medical Institute.'
+PRED: b' He served as the commandant of Armed Forces Medical Institute.'
+------------------------------------------------------
+REF: b'The "second route" varied after Bellevue proceeding to Chidlow.'
+PRED: b' The second route varied after Bellevue, proceeding to Chidlow.'
+------------------------------------------------------
+REF: b'Prince Faisal also served as an adviser to the Royal Court of Saudi Arabia.'
+PRED: b' Prince Faisal also served as an advisor to the Royal Court of Saudi Arabia.'
+------------------------------------------------------
+REF: b'It is one of the renowned stinky tofu in Southern China.'
+PRED: b' It is one of the renounced Tinky Tofu in southern China.'
+------------------------------------------------------
+REF: b'He was buried at Lakeview Cemetery in Burlington.'
+PRED: b' He was buried at Lakeview Cemetery in Burlington.'
+------------------------------------------------------
+REF: b"Although results had improved, the team's style did not make him popular."
+PRED: b" Although our thoughts have improved, the team's style did not make it popular."
+------------------------------------------------------
+REF: b'The Computer Center provides free internet access to the students.'
+PRED: b' The Computer Center provides free internet access to the students.'
+------------------------------------------------------
+REF: b'They blocked roads and armed police had to intervene to restore peace.'
+PRED: b' They blocked roads and armed police had to intervene to restore peace.'
+------------------------------------------------------
+REF: b'Here the lichen was discovered growing on the bark of "Alnus viridis" subsp.'
+PRED: b" Here, the lichen was discovered growing on the bark of alu's verity subspecies."
+------------------------------------------------------
+REF: b'Borodino is the nearest rural locality.'
+PRED: b' Borodino is the nearest rural locality.'
+------------------------------------------------------
+REF: b'The White House declined to comment.'
+PRED: b' The white house defined the omnit.'
+------------------------------------------------------
+REF: b'Schizer is occasionally mentioned as a potential future United States Supreme Court nominee.'
+PRED: b' Shizir is occasionally mentioned as a potential future in the United States to claim part number.'
+------------------------------------------------------
+REF: b'It portrays issues related to living in the Lekki axis.'
+PRED: b' It portrays issues related to living in the leaky axis.'
+------------------------------------------------------
+REF: b'If they need more water they must go down to Giba River.'
+PRED: b' If they need more water, they must go down to give a river.'
+------------------------------------------------------
+REF: b'They searched for gold along with others.'
+PRED: b' They searched for gold along with others.'
+------------------------------------------------------
+REF: b'Desipramine is primarily used for the treatment of depression.'
+PRED: b" This is a premium. It's primarily used for the treatment of depression."
+------------------------------------------------------
+REF: b'It operates on the Newcastle, Main North and North Coast lines.'
+PRED: b' It operates on the Newcastle, Main North and North Coast lines.'
+------------------------------------------------------
+REF: b"And as a 'large shell' for junk bashing and countering fast attack craft."
+PRED: b" And that's a large show for jump fashion, encountering fast attack craft."
+------------------------------------------------------
+REF: b'This vegetation provides shelter for the nesting birds.'
+PRED: b' This vegetation provides shelter for their nesting birds.'
+------------------------------------------------------
+REF: b"Noted vexillologist Whitney Smith was involved in developing the flag's design."
+PRED: b' Now the taxulology of Stripney Smith was involved in developing the fax design.'
+------------------------------------------------------
+REF: b'Big Blood released two collaborative albums that same year.'
+PRED: b' Big Blood released two collaborative albums that same year.'
+------------------------------------------------------
+REF: b'Alexander Belov is entrusted with the work of their wardrobe by world famous people.'
+PRED: b' Alexander Belov is entrusted with the work of their wardrobe by world famous people.'
+------------------------------------------------------
+REF: b'This is one of the first steam rollers manufactured by Tatas for Western Railway.'
+PRED: b" This is one of the first steam rollers manufactured by Tata's for a Western Railway."
+------------------------------------------------------
+REF: b'It was originally issued independently as "Bi Furu".'
+PRED: b' It was originally issued independently as before.'
+------------------------------------------------------
+REF: b'Another drawback is that it is not normally possible to efficiently nest virtual machines.'
+PRED: b' Another drawback is that it is not normally possible to efficiently nest virtual machines.'
+------------------------------------------------------
+REF: b'These permissions can usually be adjusted only after authenticating with the password.'
+PRED: b' These permissions can usually be adjusted only after authenticating with the password.'
+------------------------------------------------------
+REF: b'Both stations were owned by the Oklahoma City, Oklahoma-based Griffin Television.'
+PRED: b' Both stations were owned by the Oklahoma City, Oklahoma Base for Film Coalition.'
+------------------------------------------------------
+REF: b'Beau was also qualified.'
+PRED: b' View was also qualified.'
+------------------------------------------------------
+REF: b"The name means 'mountain of almonds'."
+PRED: b' The name means mountain of almonds.'
+------------------------------------------------------
+REF: b'However, in other words they seem to merely mark the boundaries between morphemes.'
+PRED: b' However, in other words, they seem to merely mark the boundaries between more themes.'
+------------------------------------------------------
+REF: b'The mass media sometimes uses the term "militant" in the context of terrorism.'
+PRED: b' The mass media sometimes uses the term militant in the context of terrorism.'
+------------------------------------------------------
+REF: b"Effectiveness in the treatment of both Hodgkin's Disease and leukemia were discovered instead."
+PRED: b" Effectiveness in the treatment of both Hodgkin's disease and leukemia were discovered instead."
+------------------------------------------------------
+REF: b'When the band dissolved, the Chatmon brothers gave up music and returned to farming.'
+PRED: b' When the band dissolved, the Chapman brothers would give up music and return to farming.'
+------------------------------------------------------
+REF: b'He underwent Tommy John surgery to repair a torn ligament in his right elbow.'
+PRED: b' He underwent Tommy John surgery to repair his torn ligament in his right elbow.'
+------------------------------------------------------
+REF: b'Chief Electoral Officers forfeit their right to vote in elections they oversee.'
+PRED: b' Chief electoral officers forfeit their right to vote in elections they oversee.'
+------------------------------------------------------
+REF: b"North Truro is also home to Highland Links Golf Course, Massachusetts's oldest links course."
+PRED: b" Northruro is also home to Highland Link's golf course. Massachusetts all this links course."
+------------------------------------------------------
+REF: b'This is because the formation of the backfill and floor happened later.'
+PRED: b' This is because the formation of the backfill and floor happened later.'
+------------------------------------------------------
+REF: b'Clients sometimes could attempt to supplant their patron.'
+PRED: b' Clients sometimes could attempt to splant their patron.'
+------------------------------------------------------
+REF: b'There are many explanations as to how the belting voice quality is produced.'
+PRED: b' There are many explanations as to how the belting voice quality is produced.'
+------------------------------------------------------
+REF: b'Modern alternatives to bone char include activated carbon and ion-exchange resins.'
+PRED: b' Modern alternatives to bone char include activated carbon and iron exchange resins.'
+------------------------------------------------------
+REF: b'Below is a list of possible uses.'
+PRED: b' Below is a list of possible users.'
+------------------------------------------------------
+REF: b"Carolgees' name was mentioned in the March episode of the podcast WeReddit."
+PRED: b" Carol G's name was mentioned in the March episode of the podcast we read it."
+------------------------------------------------------
+REF: b'Keasbey was originally known as Florida Grove due to its picnic areas and beaches.'
+PRED: b' Keysby was originally known as Florida Groove due to its picnic areas and beaches.'
+------------------------------------------------------
+REF: b'Downing, stiffening like a pointer, called his name.'
+PRED: b' Downing, sniffing like a pointer, called his name.'
+------------------------------------------------------
+REF: b'In Jefferson Parish, were flooded for as long as two weeks.'
+PRED: b' In Jefferson Parish were flooded first-long estuaries.'
+------------------------------------------------------
+REF: b'It is associated with Ovilla Road Baptist Church.'
+PRED: b' It is associated with the Villa Road Baptist Church.'
+------------------------------------------------------
+REF: b'Her parents, William and Mary, were Irish immigrants.'
+PRED: b' Her parents, William and Mary, were Irish immigrants.'
+------------------------------------------------------
+REF: b'For this action both men were awarded the Victoria Cross.'
+PRED: b' For this action, both men were awarded the Victoria Cross.'
+------------------------------------------------------
+REF: b'He was son of William Strutt and the grandson of the inventor Jedediah Strutt.'
+PRED: b' He was Sunday the Williams Struct and the grandson of Inventory, J. D. I. Struct.'
+------------------------------------------------------
+REF: b'Sawyer took over from interim mayor David Duvall Orr.'
+PRED: b' Sawyer took over from Interim Mayor David DeVal or'
+------------------------------------------------------
+REF: b'The actor identified with his character, often dressing as a cowboy in public.'
+PRED: b' The actor identified with his character, often dressing as a cowboy in public.'
+------------------------------------------------------
+REF: b"Hall studied at Christ's College, Cambridge, and the University of Edinburgh."
+PRED: b' Hall studied at Christ College, Cambridge and the University of Edinburgh.'
+------------------------------------------------------
+REF: b'She did not divulge any additional information to police.'
+PRED: b' She did not divulge any additional information to police.'
+------------------------------------------------------
+REF: b'It is still available as a free download on some music sites.'
+PRED: b' It is still available as a free download on some music sites.'
+------------------------------------------------------
+REF: b'Like most Latin American leagues, it crowns two separate champions in each season.'
+PRED: b' Like most Latin American leagues, it crowns two separate champions in each season.'
+------------------------------------------------------
+REF: b'He was again near death, but survived.'
+PRED: b' He was again near death, but survived.'
+------------------------------------------------------
+REF: b'The Borough is served by the East Penn School District.'
+PRED: b' The borough is served by the East Penn School District.'
+------------------------------------------------------
+REF: b'This paradigm is also called "Independence" architectures.'
+PRED: b' The paradigm is also called independence architectures.'
+------------------------------------------------------
+REF: b'The song has been used often as entrance music in sports.'
+PRED: b' The song has been used often as engine music in sports.'
+------------------------------------------------------
+REF: b'Hits with the entire blade or point are valid.'
+PRED: b' Hits with entire blade or point are valid.'
+------------------------------------------------------
+REF: b'An ancient German version of the name was Hildegardis.'
+PRED: b' An ancient German version of the name was Snowdeck Artists.'
+------------------------------------------------------
+REF: b'The writing of Helena Rutherfurd Ely, C. Z.'
+PRED: b' The writing of Helena Rutherford Deli, C.D.'
+------------------------------------------------------
+REF: b'The bridge and after superstructure were lowered.'
+PRED: b' The bridge and after superstructure were lowered.'
+------------------------------------------------------
+REF: b'Most of the lines of this part seems as an extract from Akilam.'
+PRED: b' Most of the lights of this part seems as an extract from Aphillum.'
+------------------------------------------------------
+REF: b'His main competition was that of right-wing candidate Terry Kilrea.'
+PRED: b' His main competition was that of Freud, Queen, Candidate, Terry, Hillary.'
+------------------------------------------------------
+REF: b'In the south, it runs onto Drakeford Drive as it enters Kambah.'
+PRED: b' In the south, the trans onto Drake 4 Drive as it enters Canva.'
+------------------------------------------------------
+REF: b'This information may then be used by the client to validate the subject certificate.'
+PRED: b' This information may then be used by the client to validate the subject certificate.'
+------------------------------------------------------
+REF: b'Raja Ram has occasionally accompanied these sets with live flute performances.'
+PRED: b' Roger Ramm has occasionally accompanied the sets with live-food performances.'
+------------------------------------------------------
+REF: b"He reaffirmed Fiji's support for the One China policy."
+PRED: b" Can you refer Fiji's support for the One China policy?"
+------------------------------------------------------
+REF: b'Stateburg is located within the larger Stateburg Historic District.'
+PRED: b' Stateburg is located within the larger Stateburg Historic District.'
+------------------------------------------------------
+REF: b'A small part of the eastern border of the township touches Jefferson County.'
+PRED: b' A small part of the eastern border of the township Dutchesdiffussen County.'
+------------------------------------------------------
+REF: b'It was named by John James Audubon in honor of John Stevens Henslow.'
+PRED: b' It was named by John James Audubon in honour of John Stevens Henslow.'
+------------------------------------------------------
+REF: b'When creating a prototype, outsourcing a board takes time.'
+PRED: b' When creating a prototype, outsourcing a board takes time.'
+------------------------------------------------------
+REF: b"Nena's contributions are her disparate accounts of various episodes in her life."
+PRED: b" Nela's contributions are heard this period accounts of various episodes in her life."
+------------------------------------------------------
+REF: b'However, unlike the Hamiltonian, the position operator lacks proper eigenfunctions.'
+PRED: b' However, unlike the hammer-grooming, the position operator lacks proper eigenfunctions.'
+------------------------------------------------------
+REF: b'At the Battle of Perryville, he was again wounded.'
+PRED: b' At the Battle of Perryville, he was again wounded.'
+------------------------------------------------------
+REF: b'He also accepted small roles on other popular television shows.'
+PRED: b' He also accepted small roles on other popular television shows.'
+------------------------------------------------------
+REF: b'Albert Speer however remembered that Goebbels mocked Alfred Rosenberg.'
+PRED: b' Albert Spear, however, remembered that Goobels mock Alfred Rosenberg.'
+------------------------------------------------------
+REF: b'The last Commissioner for Railways was Neil McCusker.'
+PRED: b' The last commissioner for railways was Neil McCasker.'
+------------------------------------------------------
+REF: b'It has its headquarters in the Central Administration Building in Dover.'
+PRED: b' It has its headquarters in the Central Administration Building in Dover.'
+------------------------------------------------------
+REF: b'The following year the project made a partial recovery.'
+PRED: b' The following year the project made a partial recovery.'
+------------------------------------------------------
+REF: b'This resort has Olympic-standard slalom runs and some long black pistes.'
+PRED: b' This resort has olympic standard slalom runs and some long black peasts.'
+------------------------------------------------------
+REF: b'Altsys also published Metamorphosis for Macintosh, a font utility.'
+PRED: b' Old sizzles are published in Metamorphosis for Macintosh, a font utility.'
+------------------------------------------------------
+REF: b'Many places in the novel are actual locations in Old Wethersfield, Connecticut.'
+PRED: b' Many places in the Norval are actual locations in Old Weathersfield, Connecticut.'
+------------------------------------------------------
+REF: b'Carl Christian was born in Munich, Bavaria, Germany.'
+PRED: b' Karl Christian was born in Munich, Bavaria, Germany.'
+------------------------------------------------------
+REF: b'His sons included Marcus Beresford, George Beresford and John Claudius Beresford.'
+PRED: b' His sons included Marcus Bassford, George Bassford and John Claudius Bassford.'
+------------------------------------------------------
+REF: b'Some traces of the oldest authentic myths may have survived in runic songs.'
+PRED: b' Some traces of the oldest authentic myths may have survived in unique songs.'
+------------------------------------------------------
+REF: b'The station is on the Merseyrail City Line.'
+PRED: b' The station is on the Mercy Rail City Line.'
+------------------------------------------------------
+REF: b'The Princeton High School mascot was Princeton Orioles.'
+PRED: b' The Princeton High School mascot was Princeton Orioles.'
+------------------------------------------------------
+REF: b'Roane State has nine satellite campuses and centers, including the main campus.'
+PRED: b' The rain state has nine satellite campuses and centers including the main campus.'
+------------------------------------------------------
+REF: b'"Kung Fu Panda" was also well received in China.'
+PRED: b' Kung Fu Panda was also well received in China.'
+------------------------------------------------------
+REF: b'He was working on a "History of Birds of Prey" when he died.'
+PRED: b' He was working on a history of birds of prey when he died.'
+------------------------------------------------------
+REF: b'Islam is the main religion of the islanders.'
+PRED: b' Islam is the main religion of the islanders.'
+------------------------------------------------------
+REF: b'He was buried at Spring Hill Cemetery in Lynchburg, Virginia.'
+PRED: b' He was buried at Spring Hill Cemetery in Ledgebrook, Virginia.'
+------------------------------------------------------
+REF: b'As teenagers their romantic relationships with others suffer as a result of their dares.'
+PRED: b' As teenagers, the romantic relationships with others suffer as a result of their dares.'
+------------------------------------------------------
+REF: b"This wasn't discovered because of the logistics of the testing process and overall haste."
+PRED: b' This was simply discovered because of the logistics of the testing process and overall needs.'
+------------------------------------------------------
+REF: b'Huntingdon was founded by the Anglo-Saxons and Danes.'
+PRED: b' Fanking done is founded by the Anglo Saxons and Pigs.'
+------------------------------------------------------
+REF: b'The ad features a doo-wop quartet singing a cappella.'
+PRED: b' The ad features a dual quartet singing a capella.'
+------------------------------------------------------
+REF: b"Marie, Michigan market that isn't owned by Sovereign Communications or Darby Advertising."
+PRED: b" Marie, Michigan market that isn't owned by sovereign communications or Darby advertising."
+------------------------------------------------------
+REF: b'"Strewth," gasped one of them, "so that\'s what they\'re like!'
+PRED: b" Struth cast one of them, so that's what they're like."
+------------------------------------------------------
+REF: b'Its county seat is Prince George.'
+PRED: b" Let's count the seat, it's Prince George."
+------------------------------------------------------
+REF: b'It is part of the Jefferson City, Missouri Metropolitan Statistical Area.'
+PRED: b' It is part of the Jefferson City, Missouri metropolitan statistical area.'
+------------------------------------------------------
+REF: b'Its juices are acrid and bitter and the bark possesses tonic properties.'
+PRED: b" It's due to the record and bitter, and the mark possesses tonic properties."
+------------------------------------------------------
+REF: b'He was the first to publish the theory that chess originated in India.'
+PRED: b' He was the first to publish the theory that Jess originated in India.'
+------------------------------------------------------
+REF: b'Study skills, such as time management and problem solving, are taught and practiced.'
+PRED: b' Study scales such as time management and problem solving are taught in practice.'
+------------------------------------------------------
+REF: b'The mini-series was three issues.'
+PRED: b' The mini series was story issues.'
+------------------------------------------------------
+REF: b'This usually happens at card parties when there are other pairs waiting to play.'
+PRED: b' This usually happens at card parties when there are other pairs waiting to pay.'
+------------------------------------------------------
+REF: b'This theory is further demonstrated by the external appearance of the adjoining stable block.'
+PRED: b' This theory is further demonstrated by the external appearance of the adjoining stable block.'
+------------------------------------------------------
+REF: b'The presenter of the show played the part of a technician maintaining the computer.'
+PRED: b' The presenter of the show played the part of a technician maintaining the computer.'
+------------------------------------------------------
+REF: b'It is also responsible for coining the term "homo superior".'
+PRED: b' It is also responsible for pointing the term almost superior.'
+------------------------------------------------------
+REF: b"The Carnegie Library now houses the Society's research library, rotating exhibits, and offices."
+PRED: b" The Carnegie Library now houses the Society's research library, rotating exhibits and offices."
+------------------------------------------------------
+REF: b'Flight Lieutenant Learoyd was one of the pilots briefed to bomb.'
+PRED: b" Flight Lieutenant Leroy was one of the pilots' briefed bomb."
+------------------------------------------------------
+REF: b'Rail yards at Hagerstown were also expanded.'
+PRED: b" Brailiards with Hager's down were also expanded."
+------------------------------------------------------
+REF: b'The twins were absorbed back into Mephisto, which temporarily drives the Scarlet Witch insane.'
+PRED: b' The twins were absorbed back into my fist though, which temporarily drives the scarlet witch insane.'
+------------------------------------------------------
+REF: b'There were three parishes, an Indian mission, and one priest Samuel Charles Mazzuchelli.'
+PRED: b' There were three parishes and Indian mission and one priest Samuel Charles Matsukedi.'
+------------------------------------------------------
+REF: b'He was also a comedian and television producer.'
+PRED: b' He was also comedian and television producer.'
+------------------------------------------------------
+REF: b'Narrabeen is opposite on the southern shore of the lagoon.'
+PRED: b' Marappine is opposite to the Southern Shore of the lagoon.'
+------------------------------------------------------
+REF: b'His dialogues on divorce and against the Trinity were also considered heretical.'
+PRED: b' His dialogues on divorce and against the Trinity were also considered heretical.'
+------------------------------------------------------
+REF: b'The number of scolopidia varies between species.'
+PRED: b' The number of scolopidia varies between species.'
+------------------------------------------------------
+REF: b'Oh, I don\xe2\x80\x99t like that name, either.'
+PRED: b" Oh, I don't like that name either."
+------------------------------------------------------
+REF: b'He suffered from dysentery for twenty days and then died.'
+PRED: b' He suffered from dysentery for twenty days and then died.'
+------------------------------------------------------
+REF: b'Nodes are represented by a single parent node.'
+PRED: b' Nodes are represented by a single parent node.'
+------------------------------------------------------
+REF: b'For the very first game the club played in jerseys borrowed from Boroughmuir.'
+PRED: b' For the very first team, the club play-in jersey is borrowed from World Review.'
+------------------------------------------------------
+REF: b'Allouez ministered to the local Native Americans.'
+PRED: b" I'll the West minister to the local Native Americans."
+------------------------------------------------------
+REF: b'Cameron was considered one of the first great rushing and scoring defencemen.'
+PRED: b' Cameron was considered one of the first great rushing and scoring defensemen.'
+------------------------------------------------------
+REF: b'She could not move a step.'
+PRED: b' She could not move a step.'
+------------------------------------------------------
+REF: b'Many of the oases had significant populations of haratin or shurfa.'
+PRED: b' Many of the Uasis had significant populations of Heriton or Shurfa.'
+------------------------------------------------------
+REF: b'The name later was used for a Jeep model.'
+PRED: b' The name later was used for a cheap model.'
+------------------------------------------------------
+REF: b'They then had a dull gray appearance but were not dirty by any means.'
+PRED: b' The event under dull grey appearance but were not dirty by any means.'
+------------------------------------------------------
+REF: b'Unable to care for him, his father sent him to an orphanage in Cincinnati.'
+PRED: b' Unable to care for him, his father sent him to Monor village in Cincinnati.'
+------------------------------------------------------
+REF: b'However, the pilot was reshot and Fenn was replaced by Debra Messing.'
+PRED: b' However, the pilot was reshot and Fen was replaced by Deborah Messing.'
+------------------------------------------------------
+REF: b'It is served by the Wheaton Post Office.'
+PRED: b' It is served by the Weedon Post Office.'
+------------------------------------------------------
+REF: b'Nadi proposed to use pistols, which Mangiarotti declined.'
+PRED: b' Nadi proposed to his pistols, which Manjarotti declined.'
+------------------------------------------------------
+REF: b'Vogler primarily worked in German film and television, often typecast as authority figures.'
+PRED: b' Vogler primarily worked in German film and television, often typecast as the Puerdi figures.'
+------------------------------------------------------
+REF: b'Maximian had two children with his Syrian wife, Eutropia: Maxentius and Fausta.'
+PRED: b' Maximian had two children with a Syrian wife, Eutropia, Maxentius and Fausta.'
+------------------------------------------------------
+REF: b'Petty promised his mother not to accept alcohol sponsorship.'
+PRED: b' Petty promises Mother not to accept our core sponsorship.'
+------------------------------------------------------
+REF: b'Henrys Lake is a popular destination for sport fishing.'
+PRED: b" Henry's Lake is a popular destination for sport fishing."
+------------------------------------------------------
+REF: b'Thermal Receipt Printers are very efficient and quick.'
+PRED: b' Thermal receipt printers are very efficient and quick.'
+------------------------------------------------------
+REF: b'The College has exchange programs with overseas universities.'
+PRED: b' The college has exchange programs with overseas universities.'
+------------------------------------------------------
+REF: b'I believe he should have been given more time.'
+PRED: b' I believe he should have been given more time.'
+------------------------------------------------------
+REF: b'After returning, he made quick progress through the youth teams.'
+PRED: b' After returning, he made quick progress through the youth teams.'
+------------------------------------------------------
+REF: b"The operator will then transfer the call to the appropriate service's own call-taker."
+PRED: b" The operator will then transfer the call to the appropriate service's end call taker."
+------------------------------------------------------
+REF: b'Most of his works in Romanian have been published by Humanitas.'
+PRED: b' Most of his works in Romanian has been published by Humanitas.'
+------------------------------------------------------
+REF: b'A park that is mainly focused at water and swimming.'
+PRED: b' A park that is mainly focused on water and swimming.'
+------------------------------------------------------
+REF: b'They received poor critical reviews although the performance was popular with their fans.'
+PRED: b' They received poor critical reviews, although the performance was popular with their fans.'
+------------------------------------------------------
+REF: b'It is located in Dubuque, Iowa.'
+PRED: b' It is located in Dubuque, Iowa.'
+------------------------------------------------------
+REF: b'They were also used in a number of colonies of the British Empire.'
+PRED: b' They were also used in a number of colonies of the British Empire.'
+------------------------------------------------------
+REF: b'The nascent open source movement eventually filled the void.'
+PRED: b' The nascent open source movement eventually filled the void.'
+------------------------------------------------------
+REF: b'It soon became one of the ten most visited Skynetblogs in Belgium.'
+PRED: b' It soon became one of the 10 most visited skyline blocks in Belgium.'
+------------------------------------------------------
+REF: b'This binary relation is called the "accessibility relation".'
+PRED: b' This binary relation is called the accessibility relation.'
+------------------------------------------------------
+REF: b'The future of the movie was then put on hold.'
+PRED: b' The future of the movie was in put and hold.'
+------------------------------------------------------
+REF: b'North of this interchange, the Kilpatrick Turnpike crosses the North Canadian River.'
+PRED: b' North of the center change, the Kilpatrick turn by crosses the North Canadian River.'
+------------------------------------------------------
+REF: b'In optical tests, incidentally, it is not certain that the quantum correlation is well-defined.'
+PRED: b' In optical tests, incidentally, it is not certain that the quantum correlation is well defined.'
+------------------------------------------------------
+REF: b'Empty piles cannot be refilled.'
+PRED: b' Empty files cannot be refilled.'
+------------------------------------------------------
+REF: b'A second season has been announced.'
+PRED: b' A second season has been announced.'
+------------------------------------------------------
+REF: b'"Lanzenkirchen": The name comes from a German settler who built a church.'
+PRED: b' Lanzin Kirchen, the name comes from a German settler who built a church.'
+------------------------------------------------------
+REF: b'Analogously, a monk who is a priest is known as a hieromonk.'
+PRED: b' Analogously, a monk who is a priest is known as a hieromilk.'
+------------------------------------------------------
+REF: b'He is buried in Rosehill Cemetery in Minot, North Dakota.'
+PRED: b' He is buried in Rose Hill Cemetery in Minow, North Dakota.'
+------------------------------------------------------
+REF: b'Parker of Short Brothers.'
+PRED: b' Parker Upshark feathers.'
+------------------------------------------------------
+REF: b'Clifford Park was a mess.'
+PRED: b' Clifford Park was a miss.'
+------------------------------------------------------
+REF: b"Day, I was trapped by an adult's sexual appetite and abused out of innocence."
+PRED: b' Day, I was trapped by an adult sexual appetite and abused out of innocence.'
+------------------------------------------------------
+REF: b'The scripts are transferred to the mail server in a server-dependent way.'
+PRED: b' The scripts are transferred to the mail server in a server dependent way.'
+------------------------------------------------------
+REF: b"The Potgieters' daughter Elsie Maria Aletta married reverend Ds."
+PRED: b" The potgiver's daughter, Elsie Maria Aleta, married Reverend Deese."
+------------------------------------------------------
+REF: b'After the fall of France he became a radio reporter for the Vichy government.'
+PRED: b' After the fall of France, he became a radio reporter for the Vichy government.'
+------------------------------------------------------
+REF: b'It plays like the last record\xe2\x80\x99s darker shadow.'
+PRED: b" It plays like the last record's darker shadow."
+------------------------------------------------------
+REF: b'It is bordered to the east by Mount Repose.'
+PRED: b' It is bordered to the east by Mount Rapose.'
+------------------------------------------------------
+REF: b'Goodman later described "North Star" as his favourite episode of the series.'
+PRED: b' Goodman later described North Star as his favorite episode of the series.'
+------------------------------------------------------
+REF: b'Despite waning in popularity, the signs have entered the American lexicon.'
+PRED: b' Despite waning in popularity, the science have entered the American lexicon.'
+------------------------------------------------------
+REF: b'Their starts are related to equinoxes and solstices.'
+PRED: b' Their starts are related to equinoxes and stools dysis.'
+------------------------------------------------------
+REF: b'An uncommon but significant complication of dextran osmotic effect is acute renal failure.'
+PRED: b' An uncommon but significant complication of dextran osmotic effect is acute renal failure.'
+------------------------------------------------------
+REF: b'The flag itself does not conform to the rule of tincture.'
+PRED: b' The flag itself does not conform to the rule of tincture.'
+------------------------------------------------------
+REF: b'The sixth, "The Dispossessed", is the earliest novel in the Hainish Cycle, chronologically.'
+PRED: b' The sixth, the dispossessed, is the earliest novel in the heinous cycle, chronologically.'
+------------------------------------------------------
+REF: b'They also have long-standing relationships with composers Maury Yeston and Ricky Ian Gordon.'
+PRED: b' They also have long-standing relationships with composers Mara Yesden and Ricky Ian Gordon.'
+------------------------------------------------------
+REF: b'She is a faculty member at The Frost Place Poetry Seminar.'
+PRED: b' She is a faculty member at the Frost Place Poetry Seminar.'
+------------------------------------------------------
+REF: b'The majority of the population are Zulus.'
+PRED: b' The majority of the population are Zulus.'
+------------------------------------------------------
+REF: b'She is the third modern Makar, the Scottish poet laureate.'
+PRED: b' She is the third modern Makar, the Scottish poet laureate.'
+------------------------------------------------------
+REF: b"The stream's confluence with the Great Miami River is in Deeds Park."
+PRED: b" The stream's confluence with the Great Miami River is indeed spark."
+------------------------------------------------------
+REF: b'As a result, some politicians resigned from the Nationalist Party, including John Hume.'
+PRED: b' As a result, some politicians were signed from the Nationalist Party, including John Hume.'
+------------------------------------------------------
+REF: b"Hilbert's basis theorem has some immediate corollaries."
+PRED: b" Hilbert's base theorem has some immediate corollaries."
+------------------------------------------------------
+REF: b'The Battle of Havana demonstrated the importance of tactical cohesion within a unit.'
+PRED: b' The Battle of Havana demonstrated the importance of tactical cohesion within a unit.'
+------------------------------------------------------
+REF: b'But before the marriage could take place, Lorenz was murdered.'
+PRED: b' But before the marriage could take place, Lawrence was murdered.'
+------------------------------------------------------
+REF: b'It was developing mainly as an agricultural and trading settlement.'
+PRED: b' It was developing mainly as an agricultural and trading settlement.'
+------------------------------------------------------
+REF: b'Contemporary worship is both recorded and performed during church services.'
+PRED: b' Contemporary worship is both recorded and performed during church services.'
+------------------------------------------------------
+REF: b'Pomar was raised as a Christian but learned Aztec tradition from his mother.'
+PRED: b' Pomar was raised as a Christian, but learned as tech tradition from his mother.'
+------------------------------------------------------
+REF: b'The question is if the intention was to impose a punishment or "civil proceedings".'
+PRED: b' The question is if the intention was to impose a punishment for civil proceedings.'
+------------------------------------------------------
+REF: b'Marylanders visit Ocean City.'
+PRED: b' Marylanders visit Ocean City.'
+------------------------------------------------------
+REF: b'He was born at Bern.'
+PRED: b' He was born at Burn.'
+------------------------------------------------------
+REF: b"Both Oregon and California lost their New Year's Day bowl games."
+PRED: b" Both Oregon and California lost their New Year's Day bowl games."
+------------------------------------------------------
+REF: b"The Western Alzheimer's Foundation which promotes awareness of the disease is headquartered in Ballindine."
+PRED: b" The Western Alzheimer's Foundation, which promotes awareness of the disease, is headquartered in Ballin Dine."
+------------------------------------------------------
+REF: b'They were winners of this league at their first attempt.'
+PRED: b' They were winners of this league at their first attempt.'
+------------------------------------------------------
+REF: b"The city is located along the county's eastern border, between Butler and Bremer counties."
+PRED: b" The city is located along the county's eastern border between Butler and Bremer counties."
+------------------------------------------------------
+REF: b'He also studied at Peking University and Fudan University in Shanghai.'
+PRED: b' He also studied in Peking University and Fudan University in Shanghai.'
+------------------------------------------------------
+REF: b'He became the first Mexican to play for an English club.'
+PRED: b' He became the first Mexican to play for an English club.'
+------------------------------------------------------
+REF: b'They rekindled their friendship years later.'
+PRED: b' They rekindled their friendship years later.'
+------------------------------------------------------
+REF: b'The region became a centre of the automobile industry, and other businesses moved in.'
+PRED: b' The region became a center of the automobile industry and other businesses moved in.'
+------------------------------------------------------
+REF: b'Some of the programmes are taught completely in English.'
+PRED: b' Some of the programs are taught completely in English.'
+------------------------------------------------------
+REF: b"Lauda thus took his second title, and Ferrari took their third consecutive Constructor's Championship."
+PRED: b" Lauda took his second title and Ferrari took their third consecutive Constructors' Championship."
+------------------------------------------------------
+REF: b'The Opera House quickly became known as "the entertainment center of the Midlands".'
+PRED: b' The Opera House quickly became known as the Entertainment Centre of the Midlands.'
+------------------------------------------------------
+REF: b'McKinnie played college football for two years at Lackawanna College in Scranton, Pennsylvania.'
+PRED: b' McKinney played college football for two years in Lackawanna College in Scranton, Pennsylvania.'
+------------------------------------------------------
+REF: b'He established himself at Whithorn where he built a church of stone, "Candida Casa".'
+PRED: b' He established himself at Whithorn, where he built a church of stone, Candida Casa.'
+------------------------------------------------------
+REF: b'Volodymyr Korolyuk has been awarded a number of scientific prizes.'
+PRED: b' The loading may correlate has been awarded a number of scientific prizes.'
+------------------------------------------------------
+REF: b'He was survived by his son, Henry, and three daughters, Anne, Frances and Katherine.'
+PRED: b' He was survived by some Henry and three daughters Anne, Francis and Catherine.'
+------------------------------------------------------
+REF: b'Toda Seigen was a master of the "kodachi".'
+PRED: b' Toya Seigen was a master of the Kodachi.'
+------------------------------------------------------
+REF: b'The victory was followed up with an attack on the city of Dublin.'
+PRED: b' The victory was followed up within a second in the city of Dublin.'
+------------------------------------------------------
+REF: b'Its members are concerned with creating a better future for children through libraries.'
+PRED: b' Its members are concerned with creating a better future for children through libraries.'
+------------------------------------------------------
+REF: b'Also in that year, he was elected as an alderman to Vancouver City Council.'
+PRED: b' Also in that year, he was elected as an alderman to Vancouver City Council.'
+------------------------------------------------------
+REF: b'It is also called a test set, butt set, or buttinski.'
+PRED: b' It is also called a test set, Budset or Batinski.'
+------------------------------------------------------
+REF: b'Let be a morphism of integral locally Noetherian schemes.'
+PRED: b' Let be a morphism of integral locally noetherian schemes.'
+------------------------------------------------------
+REF: b'Henri retold the story to "Golf World" "I wanted to know his reaction.'
+PRED: b' Henry retold the story to Gulfworld. I wanted to know his reaction.'
+------------------------------------------------------
+REF: b'Part of the east town line is marked by Saratoga Lake.'
+PRED: b' Part of the east down line is marked by Saratoga Lake.'
+------------------------------------------------------
+REF: b'Portions of recorded conferences are shown Sundays.'
+PRED: b' Portions of recorded conferences are shown Sundays.'
+------------------------------------------------------
+REF: b'In his work, Alhazen discussed theories on the motion of a body.'
+PRED: b' In his work, Alhazad discussed theories and the motion of a body.'
+------------------------------------------------------
+REF: b'Thus the Roman Forum was to be recreated in the verdant English countryside.'
+PRED: b' Thus, the Roman form was to be recreated in the verdant English countryside.'
+------------------------------------------------------
+REF: b'This common passerine is typically found in open woodland and cultivation.'
+PRED: b' This common passerine is typically found in open woodland and cultivation.'
+------------------------------------------------------
+REF: b'Many telescopic sights used on rifles have reticles that are marked in mils.'
+PRED: b' Many telescopic sights used in rifles have graticles that are marked in mils.'
+------------------------------------------------------
+REF: b'The game begins with the player given three lives.'
+PRED: b' The game begins with a player given three lives.'
+------------------------------------------------------
+REF: b'It also sets out what would normally be considered reasonable behaviour prior to issue.'
+PRED: b' It also sets out what would normally be considered reasonable behavior prior to issue.'
+------------------------------------------------------
+REF: b'"Crazy lace agate", found in Mexico, is often brightly colored and complexly patterned.'
+PRED: b' Crazy lace agate found in Mexico is often brightly colored and complexly patterned.'
+------------------------------------------------------
+REF: b'Downdraft hoods in the intro and inorganic chemistry spaces help to maintain air quality.'
+PRED: b' Down-draft hoods in the intro and inorganic chemistry spaces help to maintain air quality.'
+------------------------------------------------------
+REF: b'Lilliput, meanwhile, was divided among several petty kingdoms.'
+PRED: b' Liliput meanwhile was divided into several petrific kingdoms.'
+------------------------------------------------------
+REF: b'However, the format has appeared to have died off.'
+PRED: b' However the format is appear to have died off.'
+------------------------------------------------------
+REF: b'Erotic materials produced by the agency were distributed over the Internet to various countries.'
+PRED: b' Erotic materials produced by the agency were distributed over the internet to various countries.'
+------------------------------------------------------
+REF: b'He said it should have been done years ago, everybody knew it.'
+PRED: b' He said it should have been done years ago. Everybody knew it.'
+------------------------------------------------------
+REF: b'The "Life" of Adalbert is not rich in fact.'
+PRED: b' The life of Adelbert is not rich in fact.'
+------------------------------------------------------
+REF: b'At this rate, the lake emptied in about half an hour.'
+PRED: b' At this rate, the lake emptied in about half an hour.'
+------------------------------------------------------
+REF: b'The word "bushido" is Japanese and means "Way of the Warrior".'
+PRED: b' The word Bushido is Japanese and means way of the warrior.'
+------------------------------------------------------
+REF: b'The largest club at Centerville High School is Octagon Club, a service-based organization.'
+PRED: b' The largest club at Centerville High School is Optagon Club, a service-based organization.'
+------------------------------------------------------
+REF: b'The mutineers were to seize control of the islands and disable the British garrison.'
+PRED: b' The mutineers were to seize control of the islands and disable the British garrison.'
+------------------------------------------------------
+REF: b'Many rural citizens earn their incomes by weaving straw fences.'
+PRED: b' Many rural citizens are under income spending with strong finances.'
+------------------------------------------------------
+REF: b'The most famous among the caves is the Lenyadri complex.'
+PRED: b' The most famous among the caves is the Laniadri complex.'
+------------------------------------------------------
+REF: b'Nambu was also a strong sprinter.'
+PRED: b' Nambe was also his trans printer.'
+------------------------------------------------------
+REF: b'Bronislava acted as his guinea-pig, trying out dances and positions.'
+PRED: b' Bronislava acted as his guinea pig, trying out dances and positions.'
+------------------------------------------------------
+REF: b'Ramsoomair said that all of his characters "relate" to him "at some point.'
+PRED: b' From Sumer said that all of these characters relate to him at some point.'
+------------------------------------------------------
+REF: b'The two lakes were nearly the same level and no change of altitude.'
+PRED: b' The two lakes were nearly the same level and no change of altitude.'
+------------------------------------------------------
+REF: b'Most boat access sites for the lake are located in Gladwin County.'
+PRED: b' Most boat access sites for the lake are located in Gladwin County.'
+------------------------------------------------------
+REF: b'He shared many ideas with radical writers of the time.'
+PRED: b' He shared many ideas with radical writers of the time.'
+------------------------------------------------------
+REF: b'Their muzzles are short and their ears are round and hairy.'
+PRED: b' The mussels are short and the rears are round and hairy.'
+------------------------------------------------------
+REF: b'He endeavored to address some of these dilemmas, using allusions taken from the Bible.'
+PRED: b' He endeavored to address some of these dilemmas using allusions taken from the Bible.'
+------------------------------------------------------
+REF: b'Ferrar responded twice to the charges made against him at Carmarthen.'
+PRED: b' Farrar responded twice to the charges made against him at Carr Martin.'
+------------------------------------------------------
+REF: b"He was the brother of writer Erin O'Brien."
+PRED: b" He was the brother of writer Aaron O'Brien."
+------------------------------------------------------
+REF: b'D. Anjaneylu mentions that it is a notable work.'
+PRED: b' D and Janelu mentioned that it is a notable work.'
+------------------------------------------------------
+REF: b'This strategy is also used in a man down situation in lacrosse.'
+PRED: b' This strategy is also used in a Mandant situation in La Crosse.'
+------------------------------------------------------
+REF: b'Thus he established Naval Reserve Divisions in every major Canadian city.'
+PRED: b' Thus, he established naval reserve divisions in every major Canadian city.'
+------------------------------------------------------
+REF: b'The majority of these engines are formed by coupling multiple smaller engines together.'
+PRED: b' The majority of these engines are formed by coupling multiple smaller engines together.'
+------------------------------------------------------
+REF: b"The song has not yet become a fixture in the band's live rotation, however."
+PRED: b" This song has not yet begun fixturing the band's live rotation, however."
+------------------------------------------------------
+REF: b'She has also set to music many poems by Rudyard Kipling.'
+PRED: b' She has also said to music many poems about Rudyard Kipling.'
+------------------------------------------------------
+REF: b'Foyles became increasingly popular with customers and members of the public throughout the world.'
+PRED: b' Foils became increasingly popular with customers and members of the public throughout the world.'
+------------------------------------------------------
+REF: b'The average song length on this album is around six minutes.'
+PRED: b' The average song length on this album is around 6 minutes.'
+------------------------------------------------------
+REF: b"Only few demos were uploaded onto Doda's official YouTube channel and her official website."
+PRED: b" Only few demos were uploaded onto Doda's official YouTube channel and her official website."
+------------------------------------------------------
+REF: b'It is enclosed by a compound wall which has four gopuras or towers.'
+PRED: b' It is enclosed by a compound wall which is for Gopuras or towers.'
+------------------------------------------------------
+REF: b'Farhang Sara is the eastern end-station of Tehran Metro network.'
+PRED: b' Para Hang Sara is the eastern end station of Teran Metro Network.'
+------------------------------------------------------
+REF: b'If olivine is present, the rock may be classified as an olivine nephelinite.'
+PRED: b' If olive wine is present, the rock may be classified as an olive wine nephelenite.'
+------------------------------------------------------
+REF: b'There are nine snake species found in Central Oregon.'
+PRED: b' There are nine snake species found in Central Oregon.'
+------------------------------------------------------
+REF: b'Elliott has served on the board of directors of the Vancouver International Film Festival.'
+PRED: b' Elliot has served on the board of directors of the Vancouver International Film Festival.'
+------------------------------------------------------
+REF: b'They aim to improve microtargeting by providing better web-enabled media targeting.'
+PRED: b' They aim to improve micro-targeting by providing better web-enabled media targeting.'
+------------------------------------------------------
+REF: b'The Type One was certainly doomed from the start.'
+PRED: b' The type 1 was certainly doing from the start.'
+------------------------------------------------------
+REF: b'However, access to some of the climbs themselves can be quite rough and time-consuming.'
+PRED: b' However, access to some of the climbs themselves can be quite rough and time consuming.'
+------------------------------------------------------
+REF: b'Other parts of the tree have been used traditionally as remedies and medicines.'
+PRED: b' Other parts of the tree have been used traditionally as remedies and medicines.'
+------------------------------------------------------
+REF: b'Setanta Sports will broadcast rugby league matches in Canada.'
+PRED: b' Sitanta Sports will broadcast rugby league matches in Canada.'
+------------------------------------------------------
+REF: b'Dimensional lumber is commonly used but creates thermal bridging and lowers insulation values.'
+PRED: b' Dimensional lumber is commonly used but creates thermal bridging and lowers insulation values.'
+------------------------------------------------------
+REF: b'Still Arthur was puzzled.'
+PRED: b' Still, Arthur was puzzled.'
+------------------------------------------------------
+REF: b'It was from here that he intended to make his speeches.'
+PRED: b' It was from here that he intended to make his speeches.'
+------------------------------------------------------
+REF: b'The Three Emperors Hall enshrines statues of Fuxi, Shennong, and the Yellow Emperor.'
+PRED: b" The Three Emperor's Hall enshrines statues of Fushi, Shenong, and the Yellow Emperor."
+------------------------------------------------------
+REF: b'In general, "Voyage" received mixed reviews upon its release.'
+PRED: b' In general, Voyage received mixed reviews upon its release.'
+------------------------------------------------------
+REF: b"Meiji University's baseball team belongs to the Tokyo Big Six league."
+PRED: b" Meiji University's baseball team belongs to the Tokyo Big Six League."
+------------------------------------------------------
+REF: b'Chalmers is the partner of former singer-songwriter Barbra Amesbury.'
+PRED: b' Chalmers is the partner of former singer-songwriter Marvara Ingsbeard.'
+------------------------------------------------------
+REF: b'Train running information is provide by timetable posters and telephone.'
+PRED: b' Train running information is provided by timetable posters and telephone.'
+------------------------------------------------------
+REF: b'He subsequently apologized after both incidents.'
+PRED: b' He subsequently apologized after both incidents.'
+------------------------------------------------------
+REF: b'After the war, he worked as an archivist and town clerk.'
+PRED: b' After the war, he worked as an archivist and town clerk.'
+------------------------------------------------------
+REF: b'National patents are available in all European countries.'
+PRED: b' National patents are available in all European countries.'
+------------------------------------------------------
+REF: b'Consequently, cars with run-flats are not equipped with a spare tire.'
+PRED: b' Consequently, cars with the run flats are not equipped to the spear tyre.'
+------------------------------------------------------
+REF: b'He also wanted them to be inexpensive, intuitive, small, and simple.'
+PRED: b' He also wanted them to be inexpensive, intuitive, small, and simple.'
+------------------------------------------------------
+REF: b'It includes the villages of Broomhaugh and Riding Mill.'
+PRED: b' It includes the villages of Broom Ha and Riding Mill.'
+------------------------------------------------------
+REF: b'Statistical data of comorbid pathology, based on these sections, are mainly devoid of subjectivism.'
+PRED: b' Statistical data of co-morbid pathology based on these sections are mainly devoid of subjectivism.'
+------------------------------------------------------
+REF: b'Holden and Co became "Holden and Frost Ltd".'
+PRED: b' Holding and company became holding and frost limited.'
+------------------------------------------------------
+REF: b'The old ratings and new ratings are smoothly connected with a linear formula.'
+PRED: b' The old ratings and new ratings are smoothly connected with a linear formula.'
+------------------------------------------------------
+REF: b'The plan was to use off-the-shelf Gemini spacecraft.'
+PRED: b' The plan was to use off-the-shelf Gemini spacecraft.'
+------------------------------------------------------
+REF: b'There is also no regulation for international students tuition fees in the framework.'
+PRED: b' There is also no regulation for international student tuition fees in the framework.'
+------------------------------------------------------
+REF: b'It was to have been of stainless steel, and with gullwing doors.'
+PRED: b' It was to have been of stainless steel and with gullwing doors.'
+------------------------------------------------------
+REF: b'The acorns of the chestnut oak are a valuable wildlife food.'
+PRED: b' The acorns of the chestnut oak are a valuable wildlife food.'
+------------------------------------------------------
+REF: b'Anilao is from Iloilo City.'
+PRED: b' Anilao is from Ilo Ilo City.'
+------------------------------------------------------
+REF: b'His remains were buried at New Park Cemetery in Memphis, Tennessee.'
+PRED: b' His remains were buried at the New Park Cemetery in Memphis, Tennessee.'
+------------------------------------------------------
+REF: b'This waiver must be renewed every six months and traditionally it has been.'
+PRED: b' This waiver must be renewed every six months and traditionally it has been.'
+------------------------------------------------------
+REF: b"Leicestershire's external boundaries have changed little since the Domesday Survey."
+PRED: b' Lest the shirts external boundaries have changed little since the Boomsday survey.'
+------------------------------------------------------
+REF: b'At the centre of Geulhem is its oldest building - the Geulhemmer watermill.'
+PRED: b' At the center of Gulham is its oldest building, the Gulhammer Water Mill.'
+------------------------------------------------------
+REF: b'The reservoir is near the village of Pitsford, from which it is named.'
+PRED: b' The reservoir is near the village of Pittsburgh from which it is named.'
+------------------------------------------------------
+REF: b'Ordinance no.'
+PRED: b' Ordinance number.'
+------------------------------------------------------
+REF: b'I shall see Baghdad, the Tigris, Mossul, Babylon.'
+PRED: b' I shall see back by the Tegris Mosul Babylon.'
+------------------------------------------------------
+REF: b'Bena is a type of bird mentioned in the poem "The Song of Hiawatha".'
+PRED: b' Beena is a type of bird mentioned in the poem, The South Hayawata.'
+------------------------------------------------------
+REF: b'The Clavis consists of two parts.'
+PRED: b' The clavis consists of two parts.'
+------------------------------------------------------
+REF: b'Maimonides wrote "The Guide for the Perplexed" - his most influential philosophic work.'
+PRED: b' My monedies wrote, the guide for the perplexed, his most influential, philosophic work.'
+------------------------------------------------------
+REF: b'Her work took her to Namibia where she discovered Miocene fossils amongst others.'
+PRED: b' her work took her to Namibia where she discovered myseying fossils amongst others'
+------------------------------------------------------
+REF: b'Good accused the executives of polluting the environment.'
+PRED: b' Good accused executives of polluting the environment.'
+------------------------------------------------------
+REF: b'Davis has also served on the board of Boots.'
+PRED: b' Davis has also served on the board of boots.'
+------------------------------------------------------
+REF: b'Clitic doubling occurs in Degema, as it does in Romance and Slavic languages.'
+PRED: b' Clipic doubling occurs in the drama as it does in romance and Slavic languages.'
+------------------------------------------------------
+REF: b'The first was an adjustment to the eastern terminus.'
+PRED: b' The first was an adjustment to the Eastern Terminus.'
+------------------------------------------------------
+REF: b'A work may be subject to rights in one country'
+PRED: b' A work may be subject to rights in one country.'
+------------------------------------------------------
+REF: b'It is part of the Wauwatosa School District.'
+PRED: b' It is part of the Wallatosa School District.'
+------------------------------------------------------
+REF: b'She currently resides in Englewood, Colorado.'
+PRED: b' She currently resides in Englewood, Colorado.'
+------------------------------------------------------
+REF: b'"One Life to Live" was the inspiration to write his first novel.'
+PRED: b' One life to live was the inspiration to write his first novel.'
+------------------------------------------------------
+REF: b'Subsequent exhaustive efforts to find a relict population have been entirely unsuccessful.'
+PRED: b' Subsequent exhaustive efforts to find the relic population have been entirely unsuccessful.'
+------------------------------------------------------
+REF: b'Ratu George was a Freemason.'
+PRED: b' Ratu George was a free mason.'
+------------------------------------------------------
+REF: b'Brighton State Park is located in the Northern Piedmont.'
+PRED: b' Brighton State Park is located in the Northern Piedmont.'
+------------------------------------------------------
+REF: b'Last year the number was so low that they let us put tax exempt'
+PRED: b' Last year the number was so low that they let us put tax exempt.'
+------------------------------------------------------
+REF: b'All credits adapted from liner notes.'
+PRED: b' All credits adopted from Liner Notes.'
+------------------------------------------------------
+REF: b'A vocational and technical college is located in Thief River Falls.'
+PRED: b' A vocational and technical college is located in Thief River Falls.'
+------------------------------------------------------
+REF: b'Her description of the man was enough to identify Straffen immediately as the suspect.'
+PRED: b' Her description of the man was enough to identify Strafen immediately as the suspect.'
+------------------------------------------------------
+REF: b'This was announced in the Goan clubs Club House.'
+PRED: b" This was announced in the growing club's clubhouse."
+------------------------------------------------------
+REF: b'Also missing is "The Storm on the Sea of Galilee", Rembrandt\'s only known seascape.'
+PRED: b" Also missing is the storm on the Sea of Galilee, Rembrandt's only known seascape."
+------------------------------------------------------
+REF: b'The most common technique employed is a restrictor plate.'
+PRED: b' The most common technique employed is a restrictor plate.'
+------------------------------------------------------
+REF: b'Flora is the main character of the ballet "The Awakening of Flora".'
+PRED: b' Flora is the main character of the ballet, The Awakening of Flora.'
+------------------------------------------------------
+REF: b'We all went a bit too far.'
+PRED: b' We all went a bit too far.'
+------------------------------------------------------
