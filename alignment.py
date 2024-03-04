@@ -179,7 +179,7 @@ def main():
         per_device_eval_batch_size=8,
         generation_max_length=128,
         logging_steps=100,
-        max_steps=100, # only for testing purposes, remove this from your final run :)
+        # max_steps=100, # only for testing purposes, remove this from your final run :)
         remove_unused_columns=False,  # required as the PeftModel forward doesn't have the signature of the wrapped model's forward
     )
 
