@@ -131,12 +131,11 @@ def main():
         target_embeddings = []
         decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
         # for i in range(0, len(data["target_input_features"]), batch_size):
-        for line in tqdm(data["target_input_features"]):
-            input_features = torch.tensor(data["target_input_features"])
-            with torch.no_grad():
-                outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
-            last_hidden_state = outputs.encoder_hidden_states[-1]
-            target_embeddings.extend([embedding for embedding in last_hidden_state])
+        input_features = torch.tensor(data["target_input_features"]).to(device)
+        with torch.no_grad():
+            outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
+        last_hidden_state = outputs.encoder_hidden_states[-1]
+        target_embeddings = [embedding for embedding in last_hidden_state]
         data["target_embeddings"] = target_embeddings
         return data
 
