@@ -1,0 +1,48 @@
+ACCENT: Russian
+
+WER: 15.32
+CER: 5.83
+
+NORMALIZED WER: 12.1
+NORMALIZED CER: 5.4
+
+
+REF: b'Political relations between Italy and Portugal remain close.'
+PRED: b' Political relations between Italy and Portugal remain close.'
+------------------------------------------------------
+REF: b'Howlett was twice National Champion when boxing for the Army.'
+PRED: b' Howlett was twice national champion when boxing for the army.'
+------------------------------------------------------
+REF: b'A further whereabouts in the premises is unclear.'
+PRED: b' A further whereabouts in the premises is unclear.'
+------------------------------------------------------
+REF: b'It is believed to be member of Fornax Cluster.'
+PRED: b' It is believed to be member of the Fonax Cluster.'
+------------------------------------------------------
+REF: b'A police complaint was registered against the director about the brutal eve teasing.'
+PRED: b' A police complaint was registered against the director about the brutal euthese.'
+------------------------------------------------------
+REF: b'She was active in state and national library and education associations.'
+PRED: b' She was active in state and national library and education associations.'
+------------------------------------------------------
+REF: b'The artwork for the game was done by Steve Hendricks.'
+PRED: b' The artwork for the game was done by Steve Hendrix.'
+------------------------------------------------------
+REF: b'The flowers are arranged on pedicels long with bracteoles long near the base.'
+PRED: b' The flowers are arranged on pedestals along with rectangles along near the base'
+------------------------------------------------------
+REF: b'Lysenko claimed that racism and fascism were part of the philosophy of genetics.'
+PRED: b' Lisenko claims that racism and fascism were part of the philosophy of genetics.'
+------------------------------------------------------
+REF: b'He represented the sports club in Adelboden.'
+PRED: b' Here represented the sports club and Adelboton.'
+------------------------------------------------------
+REF: b'Koerner spent three seasons with Clemson Tigers.'
+PRED: b' Kerrach spent three seasons with Clemson Tigers.'
+------------------------------------------------------
+REF: b'Weather can change rapidly on the islands.'
+PRED: b' Weather can change rapidly on the islands.'
+------------------------------------------------------
+REF: b'Little River formed its southern and eastern boundaries.'
+PRED: b' Little River formed its southern and eastern boundaries.'
+------------------------------------------------------

@@ -1,0 +1,153 @@
+ACCENT:  Jamaica
+
+WER: 12.6
+CER: 3.58
+
+NORMALIZED WER: 9.14
+NORMALIZED CER: 2.71
+
+
+REF: b'Each of the three selection methods presented above yields a different distribution of midpoints.'
+PRED: b' Each of the three selection methods presented above yields a different distribution of midpoints.'
+------------------------------------------------------
+REF: b'The crater floor is uneven and covered in hilly ripples.'
+PRED: b' The crater floor is uneven and covered in hilly ripples.'
+------------------------------------------------------
+REF: b'Peasants who migrated to large Asian cities often worked first as a rickshaw runner.'
+PRED: b' Bezins who migrated to large Asian cities often worked first as a rickshaw runner.'
+------------------------------------------------------
+REF: b'The Jack Nicholson film "The Last Detail" was also partially filmed at the hotel.'
+PRED: b' The Jack Nicholson film The Last Detail was also partially filmed at the hotel.'
+------------------------------------------------------
+REF: b'Hastened ovarian aging has been observed after endometrial ablation.'
+PRED: b' Hastent ovarian aging has been observed after endometrial ablation.'
+------------------------------------------------------
+REF: b'Kearny first issued a ban against American smuggling and then reviewed the reparations claims.'
+PRED: b' Kearney first issued a ban against Americans smuggling and then reviewed the reparations claims.'
+------------------------------------------------------
+REF: b'He lives with his family in Johannesburg and Los Angeles.'
+PRED: b' He lives with his family in Johannesburg and Los Angeles.'
+------------------------------------------------------
+REF: b'Passing these courses was not yet a prerequisite for promotion.'
+PRED: b' Passing these courses was not yet a prerequisite for promotion.'
+------------------------------------------------------
+REF: b'The flip side featured the song Trust in Me.'
+PRED: b' The flip side featured the song Trust in Me.'
+------------------------------------------------------
+REF: b'Stackelberg was also relieved of his command by Kuropatkin, and charged with insubordination.'
+PRED: b' Stackelberg was also relieved of his command by Kuro Batkin and charged with insubordination.'
+------------------------------------------------------
+REF: b'The Garand was selected instead.'
+PRED: b' The ground was selected instead.'
+------------------------------------------------------
+REF: b'Top Ryde City is a major shopping centre there.'
+PRED: b' Top Ride City is a major shopping center there.'
+------------------------------------------------------
+REF: b'Persistent or recurrent hypoglycemia after surgery tends to occur in patients with multiple tumours.'
+PRED: b' Persistent or recurrent hypoglycemia after surgery tends to occur in patients with multiple tumors.'
+------------------------------------------------------
+REF: b"Niall Garve's brothers and hundreds of followers also joined him in supporting the Crown."
+PRED: b' Nile Garves brothers and hundreds of followers also joined him in supporting the crown.'
+------------------------------------------------------
+REF: b'She has been arrested on several occasions for shoplifting, drug possession and assault.'
+PRED: b' She has been arrested on several occasions for shoplifting, drug position and assault.'
+------------------------------------------------------
+REF: b"Nothing now known supports the Lieutenant Commander's forecast."
+PRED: b" Nothing now known supports the Lieutenant Commander's forecast."
+------------------------------------------------------
+REF: b'The town was named for A. L. Osgood, a railroad official.'
+PRED: b' The town was named for Al Asgut, a railroad official.'
+------------------------------------------------------
+REF: b'This class is run by Mrs. Cari Strange.'
+PRED: b' This class is run by Mrs. Carrie Strange.'
+------------------------------------------------------
+REF: b'Riffle and pool habitats are favorable for many cold water fish species.'
+PRED: b' Rifle and pool habitats are favorable for many cold water fish species.'
+------------------------------------------------------
+REF: b'They create risk environments that have little historical reference, and are therefore largely unpredictable.'
+PRED: b' They create risk environments that have little historical reference and are therefore largely unpredictable.'
+------------------------------------------------------
+REF: b'For this purpose, the center has a medium security general population unit.'
+PRED: b' For this purpose, the center has a medium security general population unit.'
+------------------------------------------------------
+REF: b'Fishnets can then be handled without putting the boat at risk.'
+PRED: b' Fishnets can then be handled without putting the boat at risk.'
+------------------------------------------------------
+REF: b'During his career, Buckley was primarily interested in unexplored territory.'
+PRED: b' During his career, Berkeley was primarily interested in unexplored territory.'
+------------------------------------------------------
+REF: b'He also teaches cartooning classes at the School of Visual Arts.'
+PRED: b' He also teaches cartooning classes at the School of Visual Arts.'
+------------------------------------------------------
+REF: b'The tail is used for stability during flight.'
+PRED: b' The tail is used for stability during flight.'
+------------------------------------------------------
+REF: b'See subobject for more.'
+PRED: b' See sub-object for more.'
+------------------------------------------------------
+REF: b'That year the band toured North America with Eye-HateGod and Byzantine.'
+PRED: b' That year the band toured North America with I Hate God and Byzantine.'
+------------------------------------------------------
+REF: b'Bellville was named for Thomas B.'
+PRED: b' Belleville was named for Thomas B.'
+------------------------------------------------------
+REF: b'Physicists distinguish between trivial and nontrivial fixed points.'
+PRED: b' Physicists distinguish between trivial and non-trivial fixed points.'
+------------------------------------------------------
+REF: b'The Tiebout model relies on a set of basic assumptions.'
+PRED: b' The type out model relies on a set of basic assumptions.'
+------------------------------------------------------
+REF: b'It is conducted every year in the month of April and May.'
+PRED: b' It is conducted every year in the month of April and May.'
+------------------------------------------------------
+REF: b'It is the administrative headquarters of Raebareli District.'
+PRED: b' It is the administrative headquarters of Raybury Lee District.'
+------------------------------------------------------
+REF: b'It used cable grip cars called "dummies" and un-powered trailer cars.'
+PRED: b' It used cable grip cars called dummies and unpowered trillel cars.'
+------------------------------------------------------
+REF: b'Some women preferred to commit suicide over slavery, killing themselves.'
+PRED: b' Some women prefer to commit suicide over slavery, killing themselves.'
+------------------------------------------------------
+REF: b'Smartphones use hall sensors to determine if the Flip Cover accessory is closed.'
+PRED: b' Smartphones use hall sensors to determine if the flip cover accessory is closed.'
+------------------------------------------------------
+REF: b'Additionally, workspaces refer to the grouping of windows in some window managers.'
+PRED: b' Additionally, workspace is referred to the grouping of windows in some window managers.'
+------------------------------------------------------
+REF: b'In ancient times it was an important city.'
+PRED: b' In ancient times it was an important city.'
+------------------------------------------------------
+REF: b'They were invented by Lieutenant Colonel Burton Kaplan during the Vietnam War.'
+PRED: b' They were invented by Lieutenant Colonel Berton Kaplan during the Vietnam War.'
+------------------------------------------------------
+REF: b'This rail is currently utilized for short-turning some modern services.'
+PRED: b' This rail is currently utilized for short turning some modern services.'
+------------------------------------------------------
+REF: b'He was released only after tendering an apology to the Chief Minister.'
+PRED: b' He was released only after tendering an apology to the chief minister.'
+------------------------------------------------------
+REF: b'West Church and the Roman Catholic Church of Saint John.'
+PRED: b' Vest Church and the Roman Catholic Church of St John'
+------------------------------------------------------
+REF: b'The sides are a slightly speckled, lighter grey.'
+PRED: b' The sides are slightly speckled light gray.'
+------------------------------------------------------
+REF: b'Born in Brooklyn, New York, Gardner was the son of a bar owner.'
+PRED: b' Born in Brooklyn, New York, Gardner was the son of a buyer owner.'
+------------------------------------------------------
+REF: b'His efforts in both areas were judged highly successful.'
+PRED: b' His efforts in both areas were judged highly successful.'
+------------------------------------------------------
+REF: b'The first cargo of "Deal boards, Pig-Lead and Meal" reached Bath in December.'
+PRED: b' The first cargo of deal boards, pig lead and meal reached Bath in December.'
+------------------------------------------------------
+REF: b'However, vetiver grass alone, unlike its extracts, cannot be used to repel termites.'
+PRED: b' However, vertebral grass alone, unlike its extracts, cannot be used to repel termites.'
+------------------------------------------------------
+REF: b"These are ossified portions of cartilage-called Meckel's cartilage-that are attached to the jaw."
+PRED: b" These are ossified portions of cartilage called Michele's cartilage that are attached to the jaw."
+------------------------------------------------------
+REF: b'It has played a vital role in the development of Russian national identity.'
+PRED: b' It has played a vital role in the development of Russian national identity.'
+------------------------------------------------------

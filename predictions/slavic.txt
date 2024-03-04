@@ -1,0 +1,183 @@
+ACCENT: Slavic
+
+WER: 11.95
+CER: 3.99
+
+NORMALIZED WER: 7.29
+NORMALIZED CER: 3.0
+
+
+REF: b'It is still presented by the American Lung Association of Virginia.'
+PRED: b' It is still presented by the American Lang Association of Virginia.'
+------------------------------------------------------
+REF: b'Turkey denied these claims.'
+PRED: b' Turkey denied these claims.'
+------------------------------------------------------
+REF: b'The title of his PhD thesis was "Cosmic strings in black hole spacetimes".'
+PRED: b' The title of his PhD thesis was Cosmic Strings in Black Hole Spacetimes.'
+------------------------------------------------------
+REF: b'Dunphy later joined the faculty of University of Technology Sydney.'
+PRED: b' Dan Fylater joined the Faculty of University of Technology Sydney.'
+------------------------------------------------------
+REF: b'At his own expense he went to Paris.'
+PRED: b' At his own expense, he went to Paris.'
+------------------------------------------------------
+REF: b'The chain also utilizes servers in the dining area of the restaurants.'
+PRED: b' The chain also utilizes servers in the dining area of the restaurants.'
+------------------------------------------------------
+REF: b'Special attacks can also be used by consuming mana in the form of pieces.'
+PRED: b' Special attacks can also be used by consuming mana in the form of pieces.'
+------------------------------------------------------
+REF: b'Flowering occurs from February to August.'
+PRED: b' Flowering occurs from February to August.'
+------------------------------------------------------
+REF: b'Head elongate and transverse.'
+PRED: b' Head elongate and transverse.'
+------------------------------------------------------
+REF: b'Prunty suffers with arthritis.'
+PRED: b' Pranthi suffers with arthritis.'
+------------------------------------------------------
+REF: b'It received generally mixed reviews from critics.'
+PRED: b' It received generally mixed reviews from critics.'
+------------------------------------------------------
+REF: b'The first two qualifying round runs counted toward the team competition.'
+PRED: b' The first two qualifying round runs counted towards the team competition.'
+------------------------------------------------------
+REF: b'He exhibited his Algerian subjects at art fairs in Antwerp and Brussels.'
+PRED: b' He exhibited his Algerian subjects at art fairs in Antwerp and Brussels.'
+------------------------------------------------------
+REF: b'He painted mostly with oil paints and watercolours.'
+PRED: b' He painted mostly with oil paints and watercolors.'
+------------------------------------------------------
+REF: b'His paintings often featured skies in his distinctive vibrant blue.'
+PRED: b' His paintings often featured skies in his distinctive vibrant blue.'
+------------------------------------------------------
+REF: b'It probably preferred moist habitats.'
+PRED: b' It probably preferred moist habitats.'
+------------------------------------------------------
+REF: b'In the first years the discotheque recorded peak sales.'
+PRED: b' In the first years, the Discord tech recorded peak sales.'
+------------------------------------------------------
+REF: b'Ethics of science and technology.'
+PRED: b' Ethics of science and technology'
+------------------------------------------------------
+REF: b'It\xe2\x80\x99s food.'
+PRED: b" It's food."
+------------------------------------------------------
+REF: b'He has collected pigments in the desert to create his own paints.'
+PRED: b' He has collected pigments in the desert to create his own paints.'
+------------------------------------------------------
+REF: b'There are several lakes and parks along the Bayswater Brook.'
+PRED: b' There are several lakes and parks along the base waterbrook.'
+------------------------------------------------------
+REF: b'Architect Benjamin Brown designed the theatre in the Art Deco style.'
+PRED: b' Architect Benjamin Brown designed the theater in the art deco style.'
+------------------------------------------------------
+REF: b'His compositional output consists largely of chamber music.'
+PRED: b' His compositional output consists largely of chamber music.'
+------------------------------------------------------
+REF: b'Look.'
+PRED: b' Look.'
+------------------------------------------------------
+REF: b'Political relations between Italy and Portugal remain close.'
+PRED: b' Political relations between Italy and Portugal remain close.'
+------------------------------------------------------
+REF: b'Hare was the seventeenth president of the American Society of Landscape Architects.'
+PRED: b' Here was the 17th President of the American Society of Landscape Architects.'
+------------------------------------------------------
+REF: b'In the second volume he documented cases of patients being cured by carbohydrate restriction.'
+PRED: b' In the second volume, he documented cases of patients being cured by carbohydrate restriction.'
+------------------------------------------------------
+REF: b'Clair introduced innovations that other companies did not offer.'
+PRED: b' Claire introduced innovations that other companies did not offer.'
+------------------------------------------------------
+REF: b'Howlett was twice National Champion when boxing for the Army.'
+PRED: b' Howlett was twice national champion when boxing for the army.'
+------------------------------------------------------
+REF: b'They live in Sydney and the Southern Highlands of New South Wales.'
+PRED: b' They live in Sydney and the southern highlands of New South Wales.'
+------------------------------------------------------
+REF: b'A further whereabouts in the premises is unclear.'
+PRED: b' A further whereabouts in the premises is unclear.'
+------------------------------------------------------
+REF: b'This chain was transferred to Swire Resources.'
+PRED: b' This chain was transferred to Swire Resources.'
+------------------------------------------------------
+REF: b'Leroy also served as the Mayor.'
+PRED: b' Leroy also served as the mayor.'
+------------------------------------------------------
+REF: b'It is believed to be member of Fornax Cluster.'
+PRED: b' It is believed to be member of the Fonax Cluster.'
+------------------------------------------------------
+REF: b'It is up to in length.'
+PRED: b' It is up to in length.'
+------------------------------------------------------
+REF: b'This led to the construction of many amusement parks in Asia.'
+PRED: b' This led to the construction of many amusement parks in Asia.'
+------------------------------------------------------
+REF: b'Moon missions.'
+PRED: b' Moon missions.'
+------------------------------------------------------
+REF: b'A police complaint was registered against the director about the brutal eve teasing.'
+PRED: b' A police complaint was registered against the director about the brutal euthese.'
+------------------------------------------------------
+REF: b'It is native to mountainous regions of the Iberian Peninsula and the Balearic Islands.'
+PRED: b' It is native to mountainous regions of the Iberian Peninsula and the Balaric Islands.'
+------------------------------------------------------
+REF: b'That same year he joined the faculty of the Tennessee Banjo Institute.'
+PRED: b" That same year he joined the faculty of the Tien Nhi's Banjo Institute."
+------------------------------------------------------
+REF: b'She was active in state and national library and education associations.'
+PRED: b' She was active in state and national library and education associations.'
+------------------------------------------------------
+REF: b'The artwork for the game was done by Steve Hendricks.'
+PRED: b' The artwork for the game was done by Steve Hendrix.'
+------------------------------------------------------
+REF: b'The flowers are arranged on pedicels long with bracteoles long near the base.'
+PRED: b' The flowers are arranged on pedestals along with rectangles along near the base'
+------------------------------------------------------
+REF: b'Rayburn also maintained gear for Electric Lady Studios.'
+PRED: b' Rayburn also maintained gear for electric ladies studios.'
+------------------------------------------------------
+REF: b'Credits adapted from Genius.'
+PRED: b' Credits adapted from GNews'
+------------------------------------------------------
+REF: b'Lysenko claimed that racism and fascism were part of the philosophy of genetics.'
+PRED: b' Lisenko claims that racism and fascism were part of the philosophy of genetics.'
+------------------------------------------------------
+REF: b'He represented the sports club in Adelboden.'
+PRED: b' Here represented the sports club and Adelboton.'
+------------------------------------------------------
+REF: b'She began modeling and soon fell into acting while in Canada.'
+PRED: b' She began modeling and soon fell into acting while in Canada.'
+------------------------------------------------------
+REF: b'Two of "Princess of Wales"s crew drowned at Amsterdam Island.'
+PRED: b" Two of Princess of Wales's crew drowned at Amsterdam Island."
+------------------------------------------------------
+REF: b'Koerner spent three seasons with Clemson Tigers.'
+PRED: b' Kerrach spent three seasons with Clemson Tigers.'
+------------------------------------------------------
+REF: b'It was only the second kickboxing loss of his career.'
+PRED: b' It was only the second kickboxing loss of his career.'
+------------------------------------------------------
+REF: b'His father was an accountant in Dublin.'
+PRED: b' His father was an accountant in Dublin.'
+------------------------------------------------------
+REF: b'He spent one year there before leaving for Alabama State University.'
+PRED: b' He spent one year there before living for Alabama State University.'
+------------------------------------------------------
+REF: b'Weather can change rapidly on the islands.'
+PRED: b' Weather can change rapidly on the islands.'
+------------------------------------------------------
+REF: b'Why was Larkin not asked to tone down the tribal rhetoric?'
+PRED: b' Why was Larkin not asked to tone down the tribal rhetoric?'
+------------------------------------------------------
+REF: b'Little River formed its southern and eastern boundaries.'
+PRED: b' Little River formed its southern and eastern boundaries.'
+------------------------------------------------------
+REF: b'He joined the battles of Tikrit and Ramadi.'
+PRED: b' He joined the battles of Tikirit and Tramadi.'
+------------------------------------------------------
+REF: b'The funds were raised through bodies such as the Friends of the Bog.'
+PRED: b' The funds were raised through bodies such as the Friends of the Bog.'
+------------------------------------------------------

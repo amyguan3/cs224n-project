@@ -1,0 +1,429 @@
+ACCENT: Malaysian English
+
+WER: 15.09
+CER: 5.57
+
+NORMALIZED WER: 11.52
+NORMALIZED CER: 4.65
+
+
+REF: b'Fordham finished fifth in the Patriot League.'
+PRED: b' 4 of them finish 5th in the Patriot League.'
+------------------------------------------------------
+REF: b'Friedl has three older sisters.'
+PRED: b' Friday has 3 older sisters'
+------------------------------------------------------
+REF: b'He also graduated from the Salamanca School of legal practice.'
+PRED: b' He also graduated from the Samankha School of Legal Practice.'
+------------------------------------------------------
+REF: b'The songs are vibrant and bursting in style.'
+PRED: b' The songs are vibrant and bursting in style.'
+------------------------------------------------------
+REF: b'His father James Whiting had emigrated from Britain and settled in Gloucester County.'
+PRED: b' His father, James Whiting, had emigrated from Britain and settled in Glowcaster County.'
+------------------------------------------------------
+REF: b'He was elected as president of the Student association of Peru.'
+PRED: b' He was elected as president of the Student Association of Peru.'
+------------------------------------------------------
+REF: b'Alfred Hayes.'
+PRED: b' Alfred Hayes'
+------------------------------------------------------
+REF: b'He previously served as the British Ambassador to Algeria.'
+PRED: b' He previously served as the British Ambassador to Algeria.'
+------------------------------------------------------
+REF: b'Chaudhary joined the Pakistani Drama industry while she was studying in Comsat University.'
+PRED: b' Chaudhary joined the Pakistani drama industry while she was studying in Komset University.'
+------------------------------------------------------
+REF: b'Maris Vijay was born and raised up in Chennai.'
+PRED: b' Maris Vijay was born and raised up in Chennai.'
+------------------------------------------------------
+REF: b'It is named in honour of the racehorse Dubai Millennium.'
+PRED: b' It is named in honor of the rich horse Dubai Millennium.'
+------------------------------------------------------
+REF: b'Beroe also saw cases of coronavirus among its players.'
+PRED: b' Barrow also saw cases of coronavirus among its players.'
+------------------------------------------------------
+REF: b'He obtained his diploma from the Medical faculty of Ss.'
+PRED: b' He obtained his diploma from the medical faculty of ASSES.'
+------------------------------------------------------
+REF: b'In other centres they were succeeded by bus transport.'
+PRED: b' In other centers, they were succeeded by bus transport.'
+------------------------------------------------------
+REF: b'Health Freedom Idaho members heckled legislators and several were arrested.'
+PRED: b' Health Freedom Idaho members, heckled legislators and several were arrested.'
+------------------------------------------------------
+REF: b'His father Md.'
+PRED: b' His father, MD.'
+------------------------------------------------------
+REF: b'This was their second championship title overall and their second title in succession.'
+PRED: b' This was their second championship title overall and their second title in succession.'
+------------------------------------------------------
+REF: b'Musicological work is an important part of his artistic work.'
+PRED: b' Musicological work is an important part of his artistic work.'
+------------------------------------------------------
+REF: b'The headquarters is in Tegucigalpa.'
+PRED: b' The headquarters is in Toguchi, Gapa.'
+------------------------------------------------------
+REF: b'It occurs from sea level to elevation.'
+PRED: b' It occurs from sea level to elevation.'
+------------------------------------------------------
+REF: b'Wazir is the first former refugee to serve in the New Hampshire State House.'
+PRED: b' Wazir is the first former refugee to serve in the new Hampshire State House.'
+------------------------------------------------------
+REF: b'His grandfather was the politician Samuel Farmer.'
+PRED: b' His grandfather was the politician Samuel Farmer.'
+------------------------------------------------------
+REF: b'Their duo jump is "Lovely Marionette" and their Prism act is "Love Mix Concerto".'
+PRED: b' Their duo-jump is lovely marionette and their prism act is love mix concerto.'
+------------------------------------------------------
+REF: b'The toponyms "Lake Thompson" and "Thompson River" are linked.'
+PRED: b' The topper names Lake Thompson and Thompson River are linked.'
+------------------------------------------------------
+REF: b'Demenevo is the nearest rural locality.'
+PRED: b' DEMONEVO is the nearest rural locality.'
+------------------------------------------------------
+REF: b'This style is still up to date in autograph books of (primarily) young girls.'
+PRED: b' This style is still up to date in autographed books of primarily young girls.'
+------------------------------------------------------
+REF: b'The new spire was high.'
+PRED: b' The new spire was high.'
+------------------------------------------------------
+REF: b'Kushi completes her education in Bangalore and is ready to head back to Karwar.'
+PRED: b' Kushi completes her education in Bangalore and is ready to head back to Karawar.'
+------------------------------------------------------
+REF: b'This would make up about two more columns.'
+PRED: b' This would make up about 2 more columns.'
+------------------------------------------------------
+REF: b'She is head of the developmental genomics group.'
+PRED: b' She is head of the Developmental Genomex Group.'
+------------------------------------------------------
+REF: b'The list below includes some of the films that did not air on Fridays.'
+PRED: b' The list below includes some of the films that did not air on Fridays.'
+------------------------------------------------------
+REF: b'He played for South of Scotland District against North of Scotland District.'
+PRED: b' She played for south of Scotland district against north of Scotland district.'
+------------------------------------------------------
+REF: b'Company was government own security service company.'
+PRED: b' Company was government-owned security service company.'
+------------------------------------------------------
+REF: b'The adult males are only slightly prickly and often almost completely brown in color.'
+PRED: b' The adult males are only slightly prickly and often almost completely brown in color.'
+------------------------------------------------------
+REF: b'Then they go to an old ship and fight there as gangs of pirates.'
+PRED: b' Then they go to an old ship and fight their ass kings of pirates.'
+------------------------------------------------------
+REF: b'He worked with the economists John Jewkes and Harry Campion.'
+PRED: b' He worked with the economists John Jukes and Harry Campion.'
+------------------------------------------------------
+REF: b'His older brother was actor Rein Aren.'
+PRED: b' This older brother was actor Rain Aaron.'
+------------------------------------------------------
+REF: b'It is native to Colombia and Peru.'
+PRED: b' It is native to Colombia and Peru.'
+------------------------------------------------------
+REF: b'The plants grow on sandy gravel soils.'
+PRED: b' The plants grow on sandy gravel soils.'
+------------------------------------------------------
+REF: b'Antenna has four antennomeres.'
+PRED: b' Antenna is for antenna mirrors.'
+------------------------------------------------------
+REF: b'The match was for the Les Lees Challenge Cup.'
+PRED: b' The match was for the last Lease challenge cover.'
+------------------------------------------------------
+REF: b'The magazine quickly achieved international success again.'
+PRED: b' The magazine quickly achieved international success again.'
+------------------------------------------------------
+REF: b'She is also funded by the Wellcome Trust and the European Research Council.'
+PRED: b' She is also funded by the Wellcome Trust and the European Research Council.'
+------------------------------------------------------
+REF: b'Many stories are told about the origins of the Pearl Cannon.'
+PRED: b' Many stories are told about the origins of Pearl Canon.'
+------------------------------------------------------
+REF: b'There is an ice box that can be stowed under the companionway ladder.'
+PRED: b' There is an icebox that can be stowed under the companion-way ladder.'
+------------------------------------------------------
+REF: b'Finally he transforms into the Devil and disappears into thin air.'
+PRED: b' Finally, he transforms into the devil and disappears into thin air.'
+------------------------------------------------------
+REF: b'The submarines of the class displaced on the surface and submerged.'
+PRED: b' The submarines of the class displays on the surface and submerged.'
+------------------------------------------------------
+REF: b'Always think about it before you do something.'
+PRED: b' Always think about it before you do something.'
+------------------------------------------------------
+REF: b'The champions of the Apertura and Clausura play the direct promotion playoff every year.'
+PRED: b' The champions of the Apitura and Klausura played the direct promotion playoff every year.'
+------------------------------------------------------
+REF: b'She had one child.'
+PRED: b' She had one child.'
+------------------------------------------------------
+REF: b'He belonged to the Bubi people.'
+PRED: b' She belongs to the booby people.'
+------------------------------------------------------
+REF: b'The current regiment claims lineage with this unit.'
+PRED: b' The current regimen claims lineage with this unit.'
+------------------------------------------------------
+REF: b'Spain has an embassy in Libreville.'
+PRED: b' Spain has an embassy in Libreville.'
+------------------------------------------------------
+REF: b'It measured to wide on the bottom and narrowed upwards.'
+PRED: b' It measured to white on the bottom and narrowed upwards.'
+------------------------------------------------------
+REF: b'One performer from each of the two challenged teams performed.'
+PRED: b' 1 performer from each of the 2 challenge teams perform.'
+------------------------------------------------------
+REF: b'Walls and ceiling were painted in moderation.'
+PRED: b' Wolves and ceiling were painted in moderation.'
+------------------------------------------------------
+REF: b'Fita was one of his primary informants on the project.'
+PRED: b' Vita was one of his primary informants on the project.'
+------------------------------------------------------
+REF: b'Soucek was born in Velletri on the outskirts of Rome.'
+PRED: b' So Jack was born in Velotree on the outskirts of Rome.'
+------------------------------------------------------
+REF: b'The Nazis preferred to justify the killing of Jews rather than deny it entirely.'
+PRED: b' The Nazis prefer to justify the killing of Jews rather than deny it entirely.'
+------------------------------------------------------
+REF: b'She has five siblings.'
+PRED: b' She has 5 siblings'
+------------------------------------------------------
+REF: b'But the Police Commission did not provide approval.'
+PRED: b' But the police commission did not provide approval.'
+------------------------------------------------------
+REF: b'Other versions exist but are no longer accompanied by wings.'
+PRED: b' Other versions exist but are no longer accompanied by wings.'
+------------------------------------------------------
+REF: b'It is designed to specifically train members of the garrison.'
+PRED: b' It is designed to specifically train members of the garrison.'
+------------------------------------------------------
+REF: b'During this time the organization moved towards advocacy for professional development for librarians.'
+PRED: b' During this time, the organization moves towards advocacy for professional development for librarians.'
+------------------------------------------------------
+REF: b'The nave seats four hundred fifty people.'
+PRED: b' The NAV seats 450 people.'
+------------------------------------------------------
+REF: b'The stock was also painted green.'
+PRED: b' This top was also painted green.'
+------------------------------------------------------
+REF: b'The mine has five active working pits.'
+PRED: b' The mine has 5 active working pits.'
+------------------------------------------------------
+REF: b'Robert is married with four children.'
+PRED: b' Robert is married with four children.'
+------------------------------------------------------
+REF: b'Cherenkov radiation detectors are used.'
+PRED: b' Cherenkov radiation detectors are used.'
+------------------------------------------------------
+REF: b'This was part of the British War Department.'
+PRED: b' This was part of the British War Department.'
+------------------------------------------------------
+REF: b'Besides stage roles he has also participated on several films.'
+PRED: b' Besides stage roles, he has also participated on several films.'
+------------------------------------------------------
+REF: b'Goldfarb is married with two daughters.'
+PRED: b' Goldfarp is married with two daughters.'
+------------------------------------------------------
+REF: b'She also wrote for religious papers and magazines.'
+PRED: b' She also wrote for religious papers and magazines.'
+------------------------------------------------------
+REF: b'A child with an orange backpack holding a green and red painted bird house.'
+PRED: b' A child with an orange backpack holding a green and red painted workhouse.'
+------------------------------------------------------
+REF: b'Common occupations among Hawaiian migrants included fur trapping and sailing.'
+PRED: b' Common occupations among Hawaii migrants included fur trapping and sailing.'
+------------------------------------------------------
+REF: b'Backwards compatible games are excluded.'
+PRED: b' Backwards compatible games are excluded.'
+------------------------------------------------------
+REF: b'Three white dogs are near a black llama.'
+PRED: b' Three white dogs are near a blank llama.'
+------------------------------------------------------
+REF: b'a woman with a shopping cart is rummaging through a trashcan.'
+PRED: b' A woman with a shopping cart is rummaging through a trash can.'
+------------------------------------------------------
+REF: b'He also regularly wrote reviews of the Yiddish theatre.'
+PRED: b' He also regularly wrote reviews of the Yiddish theater.'
+------------------------------------------------------
+REF: b'This was established by students of the Colombo Plan to gain experience.'
+PRED: b' This was established by students of the Colombo plan to gain experience.'
+------------------------------------------------------
+REF: b'It was shot at the Spandau Studios in Berlin and on location in Copenhagen.'
+PRED: b' It was shot at the Spandau Studios in Berlin and on location in Copenhagen.'
+------------------------------------------------------
+REF: b'A father with his son on his shoulders walking through a park.'
+PRED: b' A father with his hand on his shoulders walking through a park.'
+------------------------------------------------------
+REF: b'The mountain consists of granite of Lee Vining Canyon.'
+PRED: b' The mountain consists of granite of Lee Vining Canyon.'
+------------------------------------------------------
+REF: b'His older brother Harry also emigrated to Australia.'
+PRED: b' His older brother Harry also immigrated to Australia.'
+------------------------------------------------------
+REF: b'Edward Michael Smith was the master on this voyage.'
+PRED: b' Edward Michael Smith was the master on this voyage.'
+------------------------------------------------------
+REF: b'A woman stands behind a clear counter behind a large display of desserts.'
+PRED: b' A woman stands behind a clear counter behind a large display of dessert.'
+------------------------------------------------------
+REF: b'A girl is making a painting on the sidewalk with people watching'
+PRED: b' A girl is making a painting on the sidewalk with people watching.'
+------------------------------------------------------
+REF: b'The name of the ballpark of the Ellsworth minor league teams is not referenced.'
+PRED: b' The name of the ballpark of the Ellsworth minor league teams is not referenced.'
+------------------------------------------------------
+REF: b'It is run by the Enosburg Falls Lions Club.'
+PRED: b' It is run by the Enos Bird Falls Lions Club.'
+------------------------------------------------------
+REF: b'The main body of water turns out to be Delaunay Lake.'
+PRED: b' The main body of water turns out to be the Lonnie Lake.'
+------------------------------------------------------
+REF: b'A bunch of people are standing or sitting in a snow valley.'
+PRED: b' A bunch of people are standing or sitting in a snow relay.'
+------------------------------------------------------
+REF: b'Man in white cleans the floor.'
+PRED: b' Man in white cleans the floor.'
+------------------------------------------------------
+REF: b'An artist is working on a canvas next to a handpainted car.'
+PRED: b' An artist is working on a canvas next to a hand-painted car.'
+------------------------------------------------------
+REF: b'A dirt biker rides up a rocky hill on a motorized dirt bike.'
+PRED: b' A dirt biker rides up a rocky hill on a motorized dirt bike.'
+------------------------------------------------------
+REF: b'Older man in blue shirt rest on a bench.'
+PRED: b' Older men in blue share the rest on the bench.'
+------------------------------------------------------
+REF: b'Someone washing dishes with latex gloves on in a metal sink.'
+PRED: b" Someone washing dishes with rattach's gloves on in a medicine."
+------------------------------------------------------
+REF: b'A person running down the road'
+PRED: b' A person running down the road.'
+------------------------------------------------------
+REF: b'A fluffy dog looking at a yellow chew toy.'
+PRED: b' A fluffy dog looking at a yellow chew toy.'
+------------------------------------------------------
+REF: b'a group of young people about to perform in front of an audience.'
+PRED: b' a group of young people about to perform in front of an audience.'
+------------------------------------------------------
+REF: b'Two young girls talking to a man in a van.'
+PRED: b' Two young girls talking to a man in a van.'
+------------------------------------------------------
+REF: b'Sara is at an island bar and is getting ready to head home.'
+PRED: b' Sarah is at an island bar and is getting ready to head home.'
+------------------------------------------------------
+REF: b'Dog with big collar running.'
+PRED: b' Dog with big collar running.'
+------------------------------------------------------
+REF: b'A man is falling off of his surfboard as he falls into a wave in the ocean.'
+PRED: b' A man is falling off of his surfboard as he flows into a wave in the ocean.'
+------------------------------------------------------
+REF: b'Shirtless man wearing blue pants painting bottom of swimming pool.'
+PRED: b' Shallow man wearing blue pants painting bottom of swimming pool'
+------------------------------------------------------
+REF: b'A man shines shoes on a busy sidewalk.'
+PRED: b' A man shines shoes on a busy sidewalk.'
+------------------------------------------------------
+REF: b'Two dogs run through a field.'
+PRED: b' Two dogs run through a field.'
+------------------------------------------------------
+REF: b'A man is holding a Santa Clause statue over his head.'
+PRED: b' A man is holding a sandal cloud statue over his head.'
+------------------------------------------------------
+REF: b'A man is getting ready to hit a tennis ball.'
+PRED: b' A man is getting ready to hit a tennis ball.'
+------------------------------------------------------
+REF: b'She then found that the names coincided with places in Scotland.'
+PRED: b' She then found that the names coincided with places in Scotland.'
+------------------------------------------------------
+REF: b'A bunch of young girls are walking in the sand.'
+PRED: b' A bunch of young girls are walking in the sand.'
+------------------------------------------------------
+REF: b'The young child in the black shirt and jeans ran down the path.'
+PRED: b' The Yang Chao in the Black Shirt and Jin Ren down the path.'
+------------------------------------------------------
+REF: b'A boy pointing at the number one and gesturing the number one with his finger.'
+PRED: b' A boy pointing at the number one and gesturing the number one with his finger.'
+------------------------------------------------------
+REF: b'Two young men are playing a board game with tiles and colorful pieces.'
+PRED: b' Two young men are playing a board game with towels and colorful pieces.'
+------------------------------------------------------
+REF: b'Workers in the London Underground.'
+PRED: b' Walkers in the Land and Ground'
+------------------------------------------------------
+REF: b'A boy standing next to a small field fire and a boy running away from it.'
+PRED: b' A boy standing next to a small fuel fire and a boy running away from it.'
+------------------------------------------------------
+REF: b'A woman is smiling as she plays around with another woman.'
+PRED: b' A woman is smiling as she plays a role with another woman.'
+------------------------------------------------------
+REF: b'A man and woman are birdwatching.'
+PRED: b' For men and women are bird watching.'
+------------------------------------------------------
+REF: b'Relatives interpreted the identity of the perpetrators as Ethiopian soldiers.'
+PRED: b' Relatives interpreted the identity of the perpetrators as Ethiopian soldiers.'
+------------------------------------------------------
+REF: b'Surveillance cameras are placed strategically around airports to ensure the safety of everyone.'
+PRED: b' Surveillance cameras are placed strategically around airports to ensure the safety of everyone.'
+------------------------------------------------------
+REF: b'Three men enjoying alcohol and food.'
+PRED: b' 3 men enjoying alcohol and food.'
+------------------------------------------------------
+REF: b'There is a man singing and a guy playing guitar in front of a crowd.'
+PRED: b' There is a man singing and a guy playing guitar in front of a crowd.'
+------------------------------------------------------
+REF: b'A black dog and a white dog run across a field behind a house.'
+PRED: b' A blank door and a white door run across a few behind a house.'
+------------------------------------------------------
+REF: b'A man with a backpack climbs over many rocks.'
+PRED: b' A man with a backpack climbs over many rocks.'
+------------------------------------------------------
+REF: b'Girl with crossed arms stands in stone corridor, seated figure in background.'
+PRED: b' Go with cross arms, stand in the stone corridor, sit figure in background.'
+------------------------------------------------------
+REF: b'Tweet has taken some major stylistic leaps in this book.'
+PRED: b' Tweet has taken some major stylistic lips in this book.'
+------------------------------------------------------
+REF: b'A group of people are rafting on river rapids.'
+PRED: b' A growth of people are rafting on river rapids.'
+------------------------------------------------------
+REF: b'A man walking in front of a black cement wall with a bag on his shoulder.'
+PRED: b' A man walking in front of a black cement wall with a bag on his shoulder.'
+------------------------------------------------------
+REF: b'People outside in a field harvesting something.'
+PRED: b' People outside in a few harvesting something.'
+------------------------------------------------------
+REF: b'Four musicians performing on the street.'
+PRED: b' Four musicians performing on the street.'
+------------------------------------------------------
+REF: b'He later apologised for his comments and accepted criticism he had received for them.'
+PRED: b' He later apologized for his comments and accepted criticism he had received for them.'
+------------------------------------------------------
+REF: b'The blond woman in the jean jacket clenched her fists as she walked away.'
+PRED: b' The blonde woman in the Jean Jacket clenched her feet as she walked away.'
+------------------------------------------------------
+REF: b'A man with his back turned standing on some stairs.'
+PRED: b' A man with his back turns standing on some steps.'
+------------------------------------------------------
+REF: b'Young man with a blue shirt on and rollerblades performs a trick off the wall.'
+PRED: b' Young men with a blue shirt on and a rollerblades performed a prank of the war.'
+------------------------------------------------------
+REF: b'A man is rising an unusual stepping bike outside in front of a firetruck.'
+PRED: b' A man is rising and unusual stepping by outside in front of a fire truck.'
+------------------------------------------------------
+REF: b'A woman in a white dress sits while another woman blow dries her hair.'
+PRED: b" A woman in a white dress, she's well another woman blow dry her hair."
+------------------------------------------------------
+REF: b'An Asian woman working for UPS packaging, her job.'
+PRED: b' An Asian woman working for UPS packaging her job.'
+------------------------------------------------------
+REF: b'A girl leaping into the air in front of the White house.'
+PRED: b' A girl leaping into the air in front of the White House.'
+------------------------------------------------------
+REF: b'Two people in a canoe on the waterside during sunset.'
+PRED: b' Two people in a canoe on the water side during sunset.'
+------------------------------------------------------
+REF: b'She entered the contest and obtained an honorary mention.'
+PRED: b' She entered the contest and obtained an honorary mention.'
+------------------------------------------------------
+REF: b'There are no aquatic plants.'
+PRED: b' There are no aquatic plants.'
+------------------------------------------------------
