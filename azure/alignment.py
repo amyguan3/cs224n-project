@@ -42,6 +42,7 @@ from peft import (prepare_model_for_int8_training,
                   get_peft_model)
 from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
 from transformers.utils import check_min_version
+from tqdm import tqdm
 import re
 
 from trainer_utils import AlignmentSeq2SeqTrainer
@@ -127,11 +128,10 @@ def main():
     def prepare_target_embeddings(data):
         # compute log-Mel input features from target audio array
         # batch_size = 128
-        # target_embeddings = []
-
+        target_embeddings = []
         decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
         # for i in range(0, len(data["target_input_features"]), batch_size):
-        input_features = torch.tensor(data["target_input_features"])
+        input_features = torch.tensor(data["target_input_features"]).to(device)
         with torch.no_grad():
             outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
         last_hidden_state = outputs.encoder_hidden_states[-1]
