@@ -16,8 +16,7 @@ import random
 import numpy as np
 from dataclasses import dataclass, field
 from typing import Optional
-from huggingface_hub import notebook_login
-
+import evaluate
 from datasets import load_dataset, DatasetDict
 from transformers import (WhisperFeatureExtractor, 
                           WhisperTokenizer, 
@@ -51,6 +50,7 @@ from data_utils import (DataCollatorSpeechSeq2SeqWithPadding,
                         filter_data)
 
 import csv
+import matplotlib.pyplot as plt
 
 
 current = os.path.dirname(os.path.realpath(__file__))  # name of this directory
@@ -65,6 +65,19 @@ check_min_version("4.21.0")  # calls an error if minimal version of Transformers
 
 
 class SavePeftCallback(TrainerCallback):
+    def __init__(self):
+        self.training_losses =[]
+    
+    def on_step(self, trainer):
+        self.training_losses.append(trainer.state.loss)
+    
+    def plot_loss(self):
+        plt.plot(self.training_losses)
+        plt.xlabel("training step")
+        plt.ylabel("loss")
+        plt.title("loss over training steps")
+        plt.show()
+
     def on_save(
         self,
         args: TrainingArguments,
@@ -91,9 +104,12 @@ class SavePeftCallback(TrainerCallback):
 
 
 def main():
-    # log in to huggingface to save model as you go
-    # notebook_login()
+    # log in to huggingface with huggingface-cli login
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
+
+    #------------------------------------#
+    #---------------MODEL----------------#
+    #------------------------------------#
 
     # load whisper feature extractor, tokenizer, processor
     model_path = "openai/whisper-base"
@@ -104,21 +120,18 @@ def main():
 
     # load pre-trained model checkpoint
     model = WhisperForConditionalGeneration.from_pretrained(model_path)
-    # model = prepare_model_for_int8_training(model)
-    # model = prepare_model_for_int8_training(model, output_embedding_layer_name="proj_out")
-    model.config.forced_decoder_ids = None  # no tokens forced for decoder outputs
+    model.config.forced_decoder_ids = None  # possibly this needs editing
     model.config.suppress_tokens = []
     model = model.to(device)
-    # def make_inputs_require_grad(module, input, output):
-    #     output.requires_grad_(True)
-    # model.model.encoder.conv1.register_forward_hook(make_inputs_require_grad)
 
-    
+    #------------------------------------#
+    #----------------DATA----------------#
+    #------------------------------------#
+
     # load data
     target_dialect = 'gbr'
     source_dialect = 'ind_n'
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
-    
     print(sd_qa['dev'][0])
 
     # prepare data
@@ -126,22 +139,23 @@ def main():
         # compute log-Mel input features from audio arrays
         data["source_input_features"] = feature_extractor(data[source_dialect]["array"], sampling_rate=data[source_dialect]["sampling_rate"]).input_features[0]
         data["target_input_features"] = feature_extractor(data[target_dialect]["array"], sampling_rate=data[target_dialect]["sampling_rate"]).input_features[0]
+        
+        # encode question text to label ids
+        # data["labels"] = tokenizer(data[source_dialect]["question"]).input_ids
         return data
 
     # prepare targets
     def prepare_target_embeddings(data):
         # compute encoder embedding from target audio array
-        target_embeddings = []
         decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
         decoder_input_ids = decoder_input_ids.to(device)
-        # for i in range(0, len(data["target_input_features"]), batch_size):
         input_features = torch.tensor(data["target_input_features"]).unsqueeze(0).to(device)
-        # print(input_features.shape)
+
         with torch.no_grad():
             outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
         last_hidden_state = outputs.encoder_hidden_states[-1]
-        target_embeddings = [embedding for embedding in last_hidden_state]
-        data["target_embeddings"] = target_embeddings
+
+        data["target_embeddings"] = [embedding for embedding in last_hidden_state]
         return data
     
     sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source dialect"
@@ -149,13 +163,15 @@ def main():
 
 
     # define an evaluation function !!!
-    
+    # metric = evaluate.load("wer")
+
     print(sd_qa)
-    # data_collator
     sd_qa.remove_columns('id')
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
-    #----------LORA PART------------
+    #------------------------------------#
+    #--------------TRAINING--------------#
+    #------------------------------------#
     target_modules = ['k_proj', 'v_proj', 'q_proj', 'out_proj', 'fc1', 'fc2']
     config = LoraConfig(r=32, # rank, adjust this
                     lora_alpha=64, 
@@ -174,16 +190,17 @@ def main():
         gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
         learning_rate=1e-3,
         warmup_steps=50,
+        # max_steps=100  # for testing
         num_train_epochs=3,
-        # evaluation_strategy="steps",
-        fp16=True,
-        per_device_eval_batch_size=8,
+        # evaluation_strategy="steps",  # disregard since using commonvoice to eval
+        # per_device_eval_batch_size=8,
+        fp16=True,  # don't think we need this tbh
+
         generation_max_length=128,
         logging_steps=100,
-        # max_steps=100, # only for testing purposes, remove this from your final run :)
         remove_unused_columns=False, 
     )
-
+    peftcallback = SavePeftCallback()
     trainer = AlignmentSeq2SeqTrainer(
         args=training_args,
         model=model,
@@ -191,12 +208,14 @@ def main():
         eval_dataset=sd_qa['test'],
         data_collator=data_collator,
         tokenizer=processor.feature_extractor,
-        callbacks=[SavePeftCallback],
+        callbacks=[peftcallback],
     )
 
     trainer.train()
-    peft_model_id = "azure-224n/whisper-base-alignment"
+    peft_model_id = "224n-whisper-base-alignment-milestone"
     model.push_to_hub(peft_model_id)
+    peftcallback.plot_loss()
+
 
     
 
