@@ -11,7 +11,7 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
   """
   def __init__(self, *args, **kwargs):
     super().__init__(*args, **kwargs)
-    sinkhorn_loss = SamplesLoss(loss="sinkhorn", p=2)
+    self.sinkhorn_loss = SamplesLoss(loss="sinkhorn", p=2)
 
   def compute_loss(self, model, inputs, return_outputs=False):
     # labels = inputs.get("labels")
