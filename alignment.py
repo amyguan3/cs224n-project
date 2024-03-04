@@ -144,7 +144,6 @@ def main():
 
 
     # define an evaluation function !!!
-    print(type(sd_qa))
     print(sd_qa)
     # data_collator
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
