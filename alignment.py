@@ -133,7 +133,7 @@ def main():
         decoder_input_ids = decoder_input_ids.to(device)
         # for i in range(0, len(data["target_input_features"]), batch_size):
         input_features = torch.tensor(data["target_input_features"]).unsqueeze(0).to(device)
-        print(input_features.shape)
+        # print(input_features.shape)
         with torch.no_grad():
             outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
         last_hidden_state = outputs.encoder_hidden_states[-1]
@@ -147,7 +147,8 @@ def main():
 
 
     # define an evaluation function !!!
-
+    print(type(sd_qa))
+    print(sd_qa.keys())
     # data_collator
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
