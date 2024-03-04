@@ -36,6 +36,7 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     # Get sinkhorn/earthmover loss
     sinkhorn_loss = SamplesLoss(loss="sinkhorn", p=2)
     loss = sinkhorn_loss(source_hidden_state, target_hidden_state)
+    print(loss)
 
     return (loss, output) if return_outputs else loss
 
