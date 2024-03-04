@@ -103,8 +103,8 @@ def main():
     processor = WhisperProcessor.from_pretrained(model_path, task=task)
 
     # load pre-trained model checkpoint
-    model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True)
-    model = prepare_model_for_int8_training(model)
+    model = WhisperForConditionalGeneration.from_pretrained(model_path)
+    # model = prepare_model_for_int8_training(model)
     # model = prepare_model_for_int8_training(model, output_embedding_layer_name="proj_out")
     model.config.forced_decoder_ids = None  # no tokens forced for decoder outputs
     model.config.suppress_tokens = []
