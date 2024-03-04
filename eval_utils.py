@@ -100,11 +100,12 @@ def get_mini_cv():
     text_column_name = "sentence"
 
     dataset_total = dataset_total.shuffle(seed=42, buffer_size=10_000)
-    dataset_total = dataset_total.take(100) # 60k approx half of training
+    dataset_total = dataset_total.take(500) # 60k approx half of training
     dataset_total = dataset_total.cast_column("audio", Audio(sampling_rate=16000))
     dataset_total = dataset_total.map(normalise) # , num_proc=2
     dataset_total = dataset_total.filter(is_target_text_in_range, input_columns=[text_column_name]) # , num_proc=2
-    dataset_total = dataset_total.filter(lambda example: example['accent'] != '')
+    # lol this is so jank
+    dataset_total = dataset_total.filter(lambda example: 'Scottish English' in example['accent'] or 'India and South Asia (India' in example['accent'])
 
     print("MINI CV (ITERABLE) DATASET LOADED")
     return dataset_total
