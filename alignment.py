@@ -212,7 +212,7 @@ def main():
     )
 
     trainer.train()
-    peft_model_id = "224n-whisper-base-alignment-milestone"
+    peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
     model.push_to_hub(peft_model_id)
     peftcallback.plot_loss()
 
