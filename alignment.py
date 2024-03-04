@@ -103,11 +103,16 @@ def main():
     processor = WhisperProcessor.from_pretrained(model_path, task=task)
 
     # load pre-trained model checkpoint
-    model = WhisperForConditionalGeneration.from_pretrained(model_path)
-    # model.hf_device_map = {" ":0}  # not super sure what to map to here
+    model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True)
+    model = prepare_model_for_int8_training(model)
+    # model = prepare_model_for_int8_training(model, output_embedding_layer_name="proj_out")
     model.config.forced_decoder_ids = None  # no tokens forced for decoder outputs
     model.config.suppress_tokens = []
     model = model.to(device)
+    # def make_inputs_require_grad(module, input, output):
+    #     output.requires_grad_(True)
+    # model.model.encoder.conv1.register_forward_hook(make_inputs_require_grad)
+
     
     # load data
     target_dialect = 'usa'

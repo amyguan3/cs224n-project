@@ -20,9 +20,9 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     # input_features = {"input_features": inputs["input_features"]}
     print("input features", inputs["input_features"].shape)
     print("target embeddings", inputs["target_embeddings"].shape)
-    # output = model(**input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
-    output = model(input_features = inputs["input_features"], output_hidden_states=True)
-    source_hidden_state = output.encoder_hidden_states[-1].flatten()
+    output = model(input_features = inputs["input_features"], decoder_input_ids=decoder_input_ids, output_hidden_states=True)
+    source_hidden_state = output.encoder_hidden_states[-1]
+    print("source hidden state", source_hidden_state.shape)
 
     # # Get second (target) hidden_representation
     # input_2 = {"input_features": inputs["input_features"][1:]}  # Remove first element
