@@ -123,11 +123,9 @@ def main():
         data["target_input_features"] = feature_extractor(data[target_dialect]["array"], sampling_rate=data[target_dialect]["sampling_rate"]).input_features[0]
         return data
 
-    # move to gpu
-    # run everything at once -> no for loop
+    # prepare targets
     def prepare_target_embeddings(data):
-        # compute log-Mel input features from target audio array
-        # batch_size = 128
+        # compute encoder embedding from target audio array
         target_embeddings = []
         decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
         decoder_input_ids = decoder_input_ids.to(device)
@@ -140,8 +138,11 @@ def main():
         target_embeddings = [embedding for embedding in last_hidden_state]
         data["target_embeddings"] = target_embeddings
         return data
-
-
+    
+    print(type(sd_qa))
+    print(sd_qa.keys())
+    sys.exit()
+    
     sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source dialect"
                       ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
 
