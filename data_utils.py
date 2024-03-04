@@ -16,7 +16,6 @@ class DataCollatorSpeechSeq2SeqWithPadding:
         # format target embeddings
         target_embeddings = torch.cat([torch.tensor(example["target_embeddings"]) for example in data], axis = 0)
         batch["target_embeddings"] = target_embeddings
-        print(batch.keys())
 
         return batch
 

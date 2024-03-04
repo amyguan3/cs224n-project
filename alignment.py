@@ -168,7 +168,7 @@ def main():
 
     # Define training configuration
     training_args = Seq2SeqTrainingArguments(
-        output_dir="azure-224n/test",  # change to a repo name of your choice
+        output_dir="azure-224n/test",  
         per_device_train_batch_size=8,
         gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
         learning_rate=1e-3,
@@ -180,14 +180,14 @@ def main():
         generation_max_length=128,
         logging_steps=100,
         # max_steps=100, # only for testing purposes, remove this from your final run :)
-        remove_unused_columns=False,  # required as the PeftModel forward doesn't have the signature of the wrapped model's forward
+        remove_unused_columns=False, 
     )
 
     trainer = AlignmentSeq2SeqTrainer(
         args=training_args,
         model=model,
         train_dataset=sd_qa['dev'],
-        eval_dataset=None,
+        eval_dataset=sd_qa['test'],
         data_collator=data_collator,
         tokenizer=processor.feature_extractor,
         callbacks=[SavePeftCallback],
