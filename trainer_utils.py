@@ -18,7 +18,8 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
 
     # Get first (source) hidden representation
     input_features = {"input_features": inputs["input_features"]}
-    output = model(**input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
+    # output = model(**input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
+    output = model(**input_features, output_hidden_states=True)
     source_hidden_state = output.encoder_hidden_states[-1].flatten()
 
     # # Get second (target) hidden_representation
