@@ -92,6 +92,7 @@ class SavePeftCallback(TrainerCallback):
 def main():
     # log in to huggingface to save model as you go
     # notebook_login()
+    device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
 
     # load whisper feature extractor, tokenizer, processor
     model_path = "openai/whisper-base"
@@ -105,6 +106,7 @@ def main():
     # model.hf_device_map = {" ":0}  # not super sure what to map to here
     model.config.forced_decoder_ids = None  # no tokens forced for decoder outputs
     model.config.suppress_tokens = []
+    model = model.to(device)
     
     # load data
     target_dialect = 'usa'
@@ -120,22 +122,27 @@ def main():
         data["target_input_features"] = feature_extractor(data[target_dialect]["array"], sampling_rate=data[target_dialect]["sampling_rate"]).input_features[0]
         return data
 
+    # move to gpu
+    # run everything at once -> no for loop
     def prepare_target_embeddings(data):
-        # compute hidden state/embeddings of target dialect
-        batch_size = 128
-        target_embeddings = []
+        # compute log-Mel input features from target audio array
+        # batch_size = 128
+        # target_embeddings = []
+
         decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
-        for i in range(0, len(data["target_input_features"]), batch_size):
-            input_features = torch.tensor(data["target_input_features"][i: i + batch_size])
-            with torch.no_grad():
-                outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
-            last_hidden_state = outputs.encoder_hidden_states[-1]
-            target_embeddings.extend([embedding for embedding in last_hidden_state])
+        # for i in range(0, len(data["target_input_features"]), batch_size):
+        input_features = torch.tensor(data["target_input_features"])
+        with torch.no_grad():
+            outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
+        last_hidden_state = outputs.encoder_hidden_states[-1]
+        target_embeddings = [embedding for embedding in last_hidden_state]
         data["target_embeddings"] = target_embeddings
         return data
 
-    sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source dialect"  # num_processor removed
-                      ).map(prepare_target_embeddings,batched=True,desc="Original hidden embeddings for target dialect")
+
+    sd_qa = sd_qa.map(prepare_source_data, num_proc=2, desc="Extract features for source dialect"
+                      ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
+
 
     # define an evaluation function !!!
 
