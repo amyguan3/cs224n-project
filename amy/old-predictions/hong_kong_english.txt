@@ -1,0 +1,12 @@
+ACCENT: Hong Kong English
+
+WER: 0.0
+CER: 0.0
+
+NORMALIZED WER: 0.0
+NORMALIZED CER: 0.0
+
+
+REF: It was later republished with the alternative title Death Comes at Christmas.
+HYP:  It was later republished with the alternative title Death Comes at Christmas.
+------------------------------------------------------

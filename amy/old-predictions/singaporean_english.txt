@@ -1,0 +1,12 @@
+ACCENT: Singaporean English
+
+WER: 9.09
+CER: 1.54
+
+NORMALIZED WER: 0.0
+NORMALIZED CER: 0.0
+
+
+REF: Bainton's father was a pacifist, and he himself married a Quaker.
+HYP:  Bainton's father was a pacifist and he himself married a Quaker.
+------------------------------------------------------

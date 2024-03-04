@@ -1,0 +1,12 @@
+ACCENT: Polish English
+
+WER: 50.0
+CER: 15.09
+
+NORMALIZED WER: 30.0
+NORMALIZED CER: 12.0
+
+
+REF: Another text speaks of a crown as a "great magician."
+HYP:  Another text picks over crown as a great magician.
+------------------------------------------------------

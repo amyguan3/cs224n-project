@@ -1,0 +1,471 @@
+ACCENT: Singaporean English
+
+WER: 17.3
+CER: 5.54
+
+NORMALIZED WER: 11.17
+NORMALIZED CER: 4.19
+
+
+REF: b'The band\'s name is an abbreviation of the phrase "Definite Diva".'
+PRED: b" The band's name is an abbreviation of the phrase definite diva."
+------------------------------------------------------
+REF: b'Typically, the newsgroup is focused on a particular topic of interest.'
+PRED: b' Typically, the news group is focused on a particular topic of interest.'
+------------------------------------------------------
+REF: b'She stated It was fun to bop again, to move again.'
+PRED: b' She stated it was fun to bob again to move again.'
+------------------------------------------------------
+REF: b'It is headquartered at Osan Air Base, South Korea.'
+PRED: b' It is headquartered at Osan Airways South Korea.'
+------------------------------------------------------
+REF: b'Experts say that cats generally prefer sisal or corrugated cardboard surfaces.'
+PRED: b' Experts say that cats generally prefer to sow or corrugated cardboard surfaces.'
+------------------------------------------------------
+REF: b'Its council is based in Dorking.'
+PRED: b' Its console is based in Dorking.'
+------------------------------------------------------
+REF: b'He is also a keen sports person, enjoying cricket, golf and quite naturally yachting.'
+PRED: b' He is also a keen sportsperson, enjoying cricket, golf and quite naturally yatting.'
+------------------------------------------------------
+REF: b'Marketing management employs a variety of metrics to measure progress against objectives.'
+PRED: b' Marketing management employs a variety of metrics to measure progress against objectives.'
+------------------------------------------------------
+REF: b'There was also a nightly television highlight programme.'
+PRED: b' There was also a nightly television highlight program.'
+------------------------------------------------------
+REF: b'In the financial markets, the term has been associated with the Dot-com bubble.'
+PRED: b' In the financial markets, the term has been associated with the dot-com bubble.'
+------------------------------------------------------
+REF: b'Madras must have housed a small but a thriving Armenian population.'
+PRED: b' Madras must have housed a small but thriving Armenian population.'
+------------------------------------------------------
+REF: b'The hero carries a Bible in "Sunday Funday", but not in "Menace Beach".'
+PRED: b' The hero carries a Bible in Sunday Fun Day, but not in Menace Beach.'
+------------------------------------------------------
+REF: b'He has also co-produced Mint Condition\'s entire debut album "Meant to Be Mint".'
+PRED: b" He has co-produced Mint Conditions' entire debut album, meant to be Mint."
+------------------------------------------------------
+REF: b'These crossbands are edged by fine, irregular, beige spots.'
+PRED: b' These cross bands are etched by fine irregular beige spots.'
+------------------------------------------------------
+REF: b'Projections also go to the entorhinal cortex.'
+PRED: b' Projections also go to the entire Hino context.'
+------------------------------------------------------
+REF: b'He also incorporated hypnosis alongside his bodywork with patients and students.'
+PRED: b' He also incorporated hypnosis alongside his body work with patients and students.'
+------------------------------------------------------
+REF: b'There are categories for movies, television, literature, games, and the fan community.'
+PRED: b' There are categories for movies, television, literature, games, and the fan community.'
+------------------------------------------------------
+REF: b'Before July, when it came under Polish command.'
+PRED: b' Before July, when it came under Polis command,'
+------------------------------------------------------
+REF: b'He was also noted to having a very steady and elegant style.'
+PRED: b' He was also noted to having a very steady and elegant style.'
+------------------------------------------------------
+REF: b'This is from the Old English "mos" meaning \'marsh\' or \'moss\'.'
+PRED: b' This is from the old English moss, meaning marsh or moss.'
+------------------------------------------------------
+REF: b'However a number of studies suggest that the disorder is common.'
+PRED: b' However, a number of studies suggest that the disorder is common.'
+------------------------------------------------------
+REF: b'Henry Patillo, pastor of Hawfields Presbyterian Church.'
+PRED: b' Henry Partilot, pastor of Houghviews Presbyterian Church'
+------------------------------------------------------
+REF: b'Prenton Golf Club is to the south of the suburb.'
+PRED: b' Trenton Golf Club is to the south of the suburb.'
+------------------------------------------------------
+REF: b'Reruns are distributed by Paramount Domestic Television.'
+PRED: b" reruns are distributed by Paramount's domestic television."
+------------------------------------------------------
+REF: b"The Marauders' main rival is Canisius High School."
+PRED: b" The Marauder's main rival is Kinesios High School."
+------------------------------------------------------
+REF: b'The Grimm anthology has been a source of inspiration for artists and composers.'
+PRED: b' The Grimm anthology has been a source of inspiration for artists and composers.'
+------------------------------------------------------
+REF: b'There will be no consequences.'
+PRED: b' There will be no consequences.'
+------------------------------------------------------
+REF: b'There are four subspecies of yellow oriole, of which three are restricted to islands.'
+PRED: b' There are four subspecies of yellow oriole, of which three are restricted islands.'
+------------------------------------------------------
+REF: b'They are mostly electric.'
+PRED: b' They are mostly electric.'
+------------------------------------------------------
+REF: b"Percy Grainger includes the bass oboe in Children's March and The Warriors."
+PRED: b" Percy Granger includes the base oboe in Children's March and the Warriors."
+------------------------------------------------------
+REF: b'McCallum played junior football with the Surrey Rams of the Canadian Junior Football League.'
+PRED: b' Matt Callum played junior football with the Surrey Rams of the Canadian Judo Football League.'
+------------------------------------------------------
+REF: b'He pleads for her help.'
+PRED: b' He pleads for her help.'
+------------------------------------------------------
+REF: b'Eddy regularly performs in Austin, Texas with the Salvage Vanguard Theater.'
+PRED: b' Eddie regularly performs in Austin, Texas with the Selvidge Vanguard Theatre.'
+------------------------------------------------------
+REF: b'He corresponded with Charles Darwin.'
+PRED: b' He corresponded with Charles Darwin.'
+------------------------------------------------------
+REF: b'In the corner room, three Madonna and Children paintings are on display.'
+PRED: b' In the corner room, three Madonna and Chorgen paintings are on display.'
+------------------------------------------------------
+REF: b"Goemon's most often seen pastime is meditation."
+PRED: b' Goldman most often seen pastime as meditation.'
+------------------------------------------------------
+REF: b'This means that the theft was, in such cases, not premeditated.'
+PRED: b' This means that the theft was in such cases not premeditated.'
+------------------------------------------------------
+REF: b'Somewhat to the south and west, it was bordered by the Baden culture.'
+PRED: b' somewhat to the south and west it was bordered by the budden culture'
+------------------------------------------------------
+REF: b'This was the tenth general election in the history of the Canadian Northwest Territories.'
+PRED: b' This was the 10th general election in the history of the Canadian Northwest Territories.'
+------------------------------------------------------
+REF: b'The crew of perished in the accident.'
+PRED: b" The crew of Parish's accident."
+------------------------------------------------------
+REF: b'He gave up rowing when his studies interfered.'
+PRED: b' He gave up rowing when his studies interfered.'
+------------------------------------------------------
+REF: b"The event is hosted by the Michigan-based herbal bodycare company: Gabriel's Garden."
+PRED: b" The event is hosted by the Michigan based herbal body hair company Gabriel's Garden."
+------------------------------------------------------
+REF: b"The highway's trumpet interchange with Columbia Gateway Drive opened with Little Patuxent Parkway."
+PRED: b' The highways trumpet interchange with Columbia Gateway Drive open with little Patuzzi Parkway.'
+------------------------------------------------------
+REF: b'One could sense the struggle going on within.'
+PRED: b' One could sense the struggle going on within.'
+------------------------------------------------------
+REF: b'Apple, Google, Amazon and Facebook are often described as tech giants.'
+PRED: b' Apple, Google, Amazon and Facebook are often described as tech giants.'
+------------------------------------------------------
+REF: b'It was originally developed by Alias Systems Corporation, but is now owned by Autodesk.'
+PRED: b' It was originally developed by Alias Systems Corporation, but is now owned by Autodesk.'
+------------------------------------------------------
+REF: b"His older sister Peggy was a singer in Gerald Wilson's orchestra."
+PRED: b" His older sister Peggy was a singer in Gerald Wilson's orchestra."
+------------------------------------------------------
+REF: b'The archive of back-issues available on line is being updated on an ongoing basis.'
+PRED: b' The archive of back issues available online is being updated on an ongoing basis.'
+------------------------------------------------------
+REF: b"They're currently not signed to any major label."
+PRED: b" They're currently not signed to any major label."
+------------------------------------------------------
+REF: b'I have a dreadful headache.'
+PRED: b' I have a dreadful headache.'
+------------------------------------------------------
+REF: b'At present, these are Brian Hollywood, Stephen Walker, Darragh MacIntyre and Bobby Friedman.'
+PRED: b' At present, these are Brian Hollywood, Stephen Walker, Darah McIntyre and Bobby Friedman.'
+------------------------------------------------------
+REF: b'In the final phase, hill stations reached their zenith in the late nineteenth century.'
+PRED: b' In the final phase, hill stations reached the zenith in the late 19th century.'
+------------------------------------------------------
+REF: b'Hunt was born in Culver City, California.'
+PRED: b' Hunt was born in Calvars City, California.'
+------------------------------------------------------
+REF: b'The Docklands Stadium hosted two Australia internationals.'
+PRED: b' The Tockeland Stadium hosted two Australia Internationals.'
+------------------------------------------------------
+REF: b'Time must multiply the derangement of strata, in the ratio of antiquity.'
+PRED: b' Time must multiply the derangement or strata in the ratio of antiquity.'
+------------------------------------------------------
+REF: b'Subsequently, he was a Watson Fellow.'
+PRED: b' Subsequently, he was a Watson Fellow.'
+------------------------------------------------------
+REF: b'The American loss is uncertain.'
+PRED: b' The American loss is uncertain.'
+------------------------------------------------------
+REF: b'The Green River, a tributary of the Buffalo, flows through Waynesboro.'
+PRED: b' The Green River, a tributary of the Buffalo, flows through Wainsboro.'
+------------------------------------------------------
+REF: b'His small output is currently sold directly from home.'
+PRED: b' Its more output is currently sold directly from home.'
+------------------------------------------------------
+REF: b'The series was written by J. M. DeMatteis and illustrated by Kent Williams.'
+PRED: b' The series was written by J.M. Dimitres and illustrated by Kent Williams.'
+------------------------------------------------------
+REF: b'It carries the Cornish Main Line railway in and out of Cornwall.'
+PRED: b' It carries the Cornish mainline railway in and out of Cornwall.'
+------------------------------------------------------
+REF: b'An "attribute" is simply a name-value pair.'
+PRED: b' An attribute, a simply a name value pair.'
+------------------------------------------------------
+REF: b'It was not altogether forgetfulness.'
+PRED: b' It was not altogether forgetfulness.'
+------------------------------------------------------
+REF: b'These services were usually offered to children of working and poor Chicano women.'
+PRED: b' These services were usually offered to children of working and poor Chicano women.'
+------------------------------------------------------
+REF: b'Burke is a founder of the Special Olympics.'
+PRED: b' Burke is a founder of the Special Olympics.'
+------------------------------------------------------
+REF: b'Whale sharks and manta rays also visit the area.'
+PRED: b' Whale sharks and mantar rays also visit the area.'
+------------------------------------------------------
+REF: b'Now in Heliocentric orbit.'
+PRED: b' Now in Helios centric orbit.'
+------------------------------------------------------
+REF: b'He inspected the photograph for a moment with growing gloom.'
+PRED: b' He inspected the photograph for a moment with growing bloom.'
+------------------------------------------------------
+REF: b'He loves Angela, I tell you.'
+PRED: b' He loves Angela, I tell you.'
+------------------------------------------------------
+REF: b'He gave the door handle an apologetic rattle.'
+PRED: b' He gave the door handle an apologetic rattle.'
+------------------------------------------------------
+REF: b'An energetic, flexible and highly interactive jazz playground.'
+PRED: b' An energetic, flexible and highly interactive jazz playground.'
+------------------------------------------------------
+REF: b'They were replaced by Trevor Horn and Geoffrey Downes of the Buggles.'
+PRED: b' They were replaced by Trevor Horn and Jeffrey Downs of the Bugles.'
+------------------------------------------------------
+REF: b"As noted in Input-Process-Output Model a team's work pattern develops over time."
+PRED: b" As noted in input process output model, a team's work pattern develops over time."
+------------------------------------------------------
+REF: b'There they flatly asked why they were still staying in Germany.'
+PRED: b' that they flatly asked why they were still staying in Germany.'
+------------------------------------------------------
+REF: b'Civil protection plans were not implemented yet.'
+PRED: b' Silver protection plans were not implemented yet.'
+------------------------------------------------------
+REF: b'De Silva was a fellow of the Sri Lanka Institute of Architects.'
+PRED: b' This silver was the fellow of the Sri Lanka Institute of Architects.'
+------------------------------------------------------
+REF: b'His judgments were similarly caustic, causing Sholes to lose his patience and temper.'
+PRED: b' His judgements were similarly caustic, causing shawls to lose his patience and temper.'
+------------------------------------------------------
+REF: b'The handbook is a guide to all arachnids including scorpions, and not just spiders.'
+PRED: b' The Handbook is a guide to all arregnites including scorpions and not just spiders.'
+------------------------------------------------------
+REF: b'Once again, Schoenberg is expressing his real life difficulties.'
+PRED: b' Once again, Schoenberg is expressing his real-life difficulties.'
+------------------------------------------------------
+REF: b'Reception is not compulsory.'
+PRED: b' Reception is not compulsory.'
+------------------------------------------------------
+REF: b'Two nights later the theater presented its first public performance, John Galsworthy\'s "The Forest".'
+PRED: b" Two next later, the theatre presented its first public performance, Don Gelsworthy's The Forest."
+------------------------------------------------------
+REF: b'A shuttle runs between the two campuses on weekdays.'
+PRED: b' A shuttle runs between the two campuses on width days.'
+------------------------------------------------------
+REF: b'The badge is depicted suspended from the collar.'
+PRED: b' The badge is depicted suspended from the collar.'
+------------------------------------------------------
+REF: b'You do not understand.'
+PRED: b' You do not understand.'
+------------------------------------------------------
+REF: b'Jet black butterfly with row of white spots along the middle part of hindwing.'
+PRED: b' Get Black Butterfly with very white spots along the middle part of hind wing.'
+------------------------------------------------------
+REF: b'Many crew members subsequently die horribly, but some escape.'
+PRED: b' Many crew members subsequently died horribly but some escaped.'
+------------------------------------------------------
+REF: b'The two bright red spots on each berry are vestiges of this process.'
+PRED: b' The two bright red spots on each barrier vestiges of this process.'
+------------------------------------------------------
+REF: b'She is the daughter of the poet Allen Grossman and the novelist Judith Grossman.'
+PRED: b" She's the daughter of the poet Ellen Grossman and the novelist Judith Grossman."
+------------------------------------------------------
+REF: b'It is a resident breeder endemic to the Bahamas.'
+PRED: b' It is a resident breeder and damage to the Bahamas.'
+------------------------------------------------------
+REF: b'Her brother fled for his life.'
+PRED: b' A brother flat for his life.'
+------------------------------------------------------
+REF: b'Each flight was like going to the altitude chamber.'
+PRED: b' Each flight was like going to the altitude chamber.'
+------------------------------------------------------
+REF: b'"I have come for my brains," remarked the Scarecrow, a little uneasily.'
+PRED: b' I have come for my brains. Remark this cake row a little uneasily.'
+------------------------------------------------------
+REF: b"Rassiner's book was the first published."
+PRED: b' Resonance Book was the first published.'
+------------------------------------------------------
+REF: b'Since then the traditional Hutterites and the Bruderhof are separate groups.'
+PRED: b' Since then, the traditional Hutterites and the Bruderhof are separate groups.'
+------------------------------------------------------
+REF: b'Tamoxifen citrate is used in some cases of severe breast pain.'
+PRED: b' Homoxyfen citrate is used in some cases of severe breast pain.'
+------------------------------------------------------
+REF: b"Levy's on-screen rapport with weatherman Paul Hudson has made him a popular local figure."
+PRED: b" Levi's onscreen rapport with whether men Paul Hudson has made him a popular local figure."
+------------------------------------------------------
+REF: b'Many rumours persist among Fulham fans of past tenants of Craven Cottage.'
+PRED: b' Many rumors persist among thulham fans of past tenants of Craven Cottage.'
+------------------------------------------------------
+REF: b'He also became an advocate for fitness and health.'
+PRED: b' He also became an advocate for fitness and health.'
+------------------------------------------------------
+REF: b"It's when we try to put everything together that it all goes wrong."
+PRED: b" It's when we try to put everything together that all goes wrong."
+------------------------------------------------------
+REF: b'Tiger started flights from Brisbane to Darwin after starting its Brisbane base.'
+PRED: b' Tiger started flights from Brisbane to Darwin after starting its Brisbane base.'
+------------------------------------------------------
+REF: b"He also buys Lionel and tricks him into revealing the truth about Peter's death."
+PRED: b" He also buys Lionel and tricks him into revealing the truth about Peter's death."
+------------------------------------------------------
+REF: b'They lay eggs like other fowls, and they are good to eat.'
+PRED: b' They lay eggs like other fowls and they are good to eat.'
+------------------------------------------------------
+REF: b'He then proceeded to take his own life, with the same rifle.'
+PRED: b' He then proceeded to take his own life of the same rifle.'
+------------------------------------------------------
+REF: b"The door on the right leads to the building's main staircase."
+PRED: b" The door on the right leads to the building's main staircase."
+------------------------------------------------------
+REF: b'He broke out into a paroxysm of coughing.'
+PRED: b' He broke out into a paroxysm of coughing.'
+------------------------------------------------------
+REF: b'It was a finalist for a Pulitzer Prize.'
+PRED: b' It was a finalist for Pulitzer Prize.'
+------------------------------------------------------
+REF: b'Through the tunnel, it was the West Shore Railroad.'
+PRED: b' Through the tunnel, it was the West Shore Railroad.'
+------------------------------------------------------
+REF: b'Afterwards he received command of a frigate.'
+PRED: b' Afterwards, he received command of a frigate.'
+------------------------------------------------------
+REF: b'It is classified an endangered species in Mexico.'
+PRED: b' It is classified an endangered species in Mexico.'
+------------------------------------------------------
+REF: b'However, subsequent weight loss led to her being re-signed as their spokesperson.'
+PRED: b' However, subsequent weight loss led to her being resigned as a spokesperson.'
+------------------------------------------------------
+REF: b'Love relationship are ludicrous, painful, and gigantically disappointing.'
+PRED: b' Love relationship are ludicrous, painful and gigantically disappointing.'
+------------------------------------------------------
+REF: b'Domeykite, being a minor copper ore is used for obtaining copper.'
+PRED: b' Domikite being a minor copper ore is used for obtaining copper.'
+------------------------------------------------------
+REF: b'As a result of these protests, the tuition freeze remained in effect.'
+PRED: b' As a result of these protests, the tuition fees remained in effect.'
+------------------------------------------------------
+REF: b'The two routes together lead southwest to their split at Wylliesburg.'
+PRED: b' The two roots together let south west to desperate at Willisburg'
+------------------------------------------------------
+REF: b'"Finnegans Wake" comprises seventeen chapters, divided into four Parts or Books.'
+PRED: b" Finnegan's weight comprises 17 chapters divided into four parts or books."
+------------------------------------------------------
+REF: b'Three mountain ranges come under the Patkai.'
+PRED: b' Pre-mountain ranges come under the pet guide.'
+------------------------------------------------------
+REF: b'He was succeeded by Stephen J. Adler of "The Wall Street Journal".'
+PRED: b' He was succeeded by Stephen J. Adler of the Wall Street Journal.'
+------------------------------------------------------
+REF: b'It has since been replicated around the world.'
+PRED: b' It has since been replicated around the world.'
+------------------------------------------------------
+REF: b'His footballing career started at non-league Billingham Town.'
+PRED: b' His footballing career started at Non-League, Billingham Town.'
+------------------------------------------------------
+REF: b'Only when Caradocus arrived was peace restored.'
+PRED: b' Only when Caradocas arrived was peace restored.'
+------------------------------------------------------
+REF: b'She would later use these skills to design her own jewelry.'
+PRED: b' She would later use these skills to design her own jewelry.'
+------------------------------------------------------
+REF: b'Gabriela Lopez The archeologist survives the horrors of Peru.'
+PRED: b' Gabriela Lopez, the archaeologist, survives the horrors of Peru.'
+------------------------------------------------------
+REF: b'But, the plane never turned left again.'
+PRED: b' But the clay never turned left again.'
+------------------------------------------------------
+REF: b'In October, Lopez released her fourteenth fragrance, Love and Glamour.'
+PRED: b' In October Lopez released a 14 fragrance Love and Glamour'
+------------------------------------------------------
+REF: b'She initially wanted to be a somewhat theatrical performer.'
+PRED: b' She initially wanted to be a somewhat theatrical performer.'
+------------------------------------------------------
+REF: b'It later had the name "Dystelegh".'
+PRED: b' It later had the name Distalic.'
+------------------------------------------------------
+REF: b'Pango-processed text will appear similar under different operating systems.'
+PRED: b' Pango process text will appear similar under different operating systems.'
+------------------------------------------------------
+REF: b'A commemorative plaque situated outside the college office remembers their generous contribution.'
+PRED: b' A commemorative plaque situated outside the college office remembers their generous contribution.'
+------------------------------------------------------
+REF: b'He sees that she is delusional, but he feels no pity for her.'
+PRED: b" He sees that she's delusional, but he feels no pity for her."
+------------------------------------------------------
+REF: b'If it does, the umpire shall award the point to the opposing pair.'
+PRED: b' If it does, the umpire shall award the point to the posing panel.'
+------------------------------------------------------
+REF: b'Subsequent awards for the Coast Guard E ribbon are denoted by a gold star.'
+PRED: b' Subsequent awards for the Coast Guard E-Reven are denoted by a gold star.'
+------------------------------------------------------
+REF: b"The school's foundation stone was laid in this year."
+PRED: b" The school's foundation stone was laid in this year."
+------------------------------------------------------
+REF: b'"Kodama" trains generally run over shorter distances than "Nozomi" and "Hikari" trains.'
+PRED: b' Kodama trains generally run over shorter distances than Nozomi and Hikari trains.'
+------------------------------------------------------
+REF: b'Later, after an experienced cadre was developed, the Russians assumed the responsibility.'
+PRED: b' Later, after an experienced cadre was developed, the Russians assumed their responsibility.'
+------------------------------------------------------
+REF: b'The main character of the novel is James Bond.'
+PRED: b' The main character of the novel is James Bond.'
+------------------------------------------------------
+REF: b"This doesn't mean it's bad to any extent, but I would've enjoyed some originality."
+PRED: b" This doesn't mean it's bad to any extent but I would have enjoyed some originality."
+------------------------------------------------------
+REF: b'They are often associated with echinoderms.'
+PRED: b' They are often associated with achenoderms.'
+------------------------------------------------------
+REF: b'If the hat fits, then wear it!'
+PRED: b' If the hat fits, then wear it.'
+------------------------------------------------------
+REF: b'He is a self-taught guitar player.'
+PRED: b" He's a self-taught guitar player."
+------------------------------------------------------
+REF: b'The pretty white funnel-shaped flowers are night-opening, long and in diameter.'
+PRED: b' The pretty white funnel-shaped flowers are night-opening, long and in diameter.'
+------------------------------------------------------
+REF: b'So many flashes mean a certain thing.'
+PRED: b' So many flashes mean a certain thing.'
+------------------------------------------------------
+REF: b'Symbiotic relationships are sometimes, but not always, mutualistic.'
+PRED: b' Symbiotic relationships are sometimes but not always neutralistic.'
+------------------------------------------------------
+REF: b'The division, however, was made under certain stipulations of the deceased count.'
+PRED: b' The division however was made under certain stipulations of the deceased count.'
+------------------------------------------------------
+REF: b'Mortenson tagged the station "The Light".'
+PRED: b' Mortensen tagged the station the light.'
+------------------------------------------------------
+REF: b'It inspired the naming of towns, hotels, steamboats, and a cigar brand.'
+PRED: b' It inspired the naming of towns, hotels, steamboats, and a cigar brand.'
+------------------------------------------------------
+REF: b'Unlike Radio Paris, Radio Rennes Bretagne never broadcast outright Nazi propaganda.'
+PRED: b" Unlike Radio Paris, Radio Rene's Bhutan never broadcasts outright Nazi propaganda."
+------------------------------------------------------
+REF: b'Some Hindu communities in India prohibit cousin marriages.'
+PRED: b' Some Hindu communities in India prohibit cousin marriages.'
+------------------------------------------------------
+REF: b'However, this is only a persona, as discussions on Mecha-Mecha Iketeru!'
+PRED: b' However, this is only a persona as discussions on Mecha Mecha Iketeru.'
+------------------------------------------------------
+REF: b'Sprouting saxifrage bore the same unnatural hues as the cabbages.'
+PRED: b' Sprouting sexy fridge bought the same unnatural hues as the cabbages.'
+------------------------------------------------------
+REF: b'Khat is much more water-intensive to grow than other crops.'
+PRED: b' Cat is much more water-intensive to grow than other crops.'
+------------------------------------------------------
+REF: b'Porter was born in Los Angeles and raised in mountainous Idaho.'
+PRED: b' Porto was born in Los Angeles and raised in the mountainous Idaho.'
+------------------------------------------------------
+REF: b'Ensembles are generally made up of electric guitars, keyboards and a drum kit.'
+PRED: b' Ensembles are generally made up of electric guitars, keyboards and a drum kit.'
+------------------------------------------------------
+REF: b'In Japan he became an expert in both classical Japanese and Ainu.'
+PRED: b' In Japan, he became an expert in both classical Japanese and Aino.'
+------------------------------------------------------
+REF: b'This transliteration is also used throughout the Muslim world.'
+PRED: b' This transliteration is also used throughout the Muslim world.'
+------------------------------------------------------

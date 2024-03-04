@@ -1,0 +1,24 @@
+ACCENT: England English
+
+WER: 21.74
+CER: 4.98
+
+NORMALIZED WER: 8.51
+NORMALIZED CER: 2.55
+
+
+REF: He played college football for Appalachian State.
+HYP:  He played college football for Appalachian State.
+------------------------------------------------------
+REF: After the disclosure of the doping scandal the winner was deprived of the gold medal.
+HYP:  After the disclosure of the doping scandal, the winner was deprived of the gold medal.
+------------------------------------------------------
+REF: under the Inquisition
+HYP:  under the inquisition.
+------------------------------------------------------
+REF: Zgrass used a more advanced full-screen editor that eliminated this need.
+HYP:  Grass used a more advanced full screen editor that eliminated this need.
+------------------------------------------------------
+REF: Another text speaks of a crown as a "great magician."
+HYP:  Another text picks over crown as a great magician.
+------------------------------------------------------
