@@ -175,7 +175,7 @@ def main():
         learning_rate=1e-3,
         warmup_steps=50,
         num_train_epochs=3,
-        evaluation_strategy="steps",
+        # evaluation_strategy="steps",
         fp16=True,
         per_device_eval_batch_size=8,
         generation_max_length=128,
