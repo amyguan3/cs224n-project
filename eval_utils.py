@@ -1,3 +1,10 @@
+"""
+EXAMPLE USAGE: (on common voice, iterable dataset ver)
+dataset = get_half_cv()
+metrics = evaluate_asr(model, processor, dataset)
+
+note: handles the accent column very specifically, so on SD-QA, either want to reformat to match with CV, or modify this code
+"""
 from huggingface_hub import interpreter_login
 from datasets import load_dataset, Audio
 from transformers import WhisperProcessor, WhisperForConditionalGeneration, pipeline
@@ -49,6 +56,7 @@ def normalise(batch):
     return batch
 
 def data(dataset):
+    # MODIFY THIS FOR SD-QA SINCE GET_ACCENTS WON'T WORK
     for i, item in enumerate(dataset):
         yield {**item["audio"], "reference": get_text(item), "norm_reference": item["norm_text"], "accents": get_accents(item)}
 
