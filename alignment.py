@@ -156,7 +156,7 @@ def main():
                     target_modules = target_modules, 
                     lora_dropout=0.05, 
                     bias="none",
-                    task_type=TaskType.FEATURE_EXTRACTION,  # check this???
+                    # task_type=TaskType.FEATURE_EXTRACTION,  # check this???
                     )  
     model = get_peft_model(model, config)
     model.print_trainable_parameters()
@@ -176,7 +176,6 @@ def main():
         logging_steps=100,
         max_steps=100, # only for testing purposes, remove this from your final run :)
         remove_unused_columns=False,  # required as the PeftModel forward doesn't have the signature of the wrapped model's forward
-        label_names=["labels"],  # same reason as above
     )
 
     trainer = AlignmentSeq2SeqTrainer(
