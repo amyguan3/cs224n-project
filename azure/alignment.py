@@ -128,6 +128,7 @@ def main():
         # compute log-Mel input features from target audio array
         # batch_size = 128
         # target_embeddings = []
+
         decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
         # for i in range(0, len(data["target_input_features"]), batch_size):
         input_features = torch.tensor(data["target_input_features"])
@@ -138,8 +139,10 @@ def main():
         data["target_embeddings"] = target_embeddings
         return data
 
+
     sd_qa = sd_qa.map(prepare_source_data, num_proc=2, desc="Extract features for source dialect"
                       ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
+
 
     # define an evaluation function !!!
 
