@@ -76,7 +76,7 @@ class SavePeftCallback(TrainerCallback):
         plt.xlabel("training step")
         plt.ylabel("loss")
         plt.title("loss over training steps")
-        plt.show()
+        plt.savefig("loss_output_plot.png")
 
     def on_save(
         self,
