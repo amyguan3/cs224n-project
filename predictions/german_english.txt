@@ -1,0 +1,156 @@
+ACCENT: German English
+
+WER: 13.93
+CER: 4.05
+
+NORMALIZED WER: 7.6
+NORMALIZED CER: 2.92
+
+
+REF: b'Portions of the two sessions also appear in the film "Rattle and Hum".'
+PRED: b' Portions of the two sessions also appear in the film Radle and Hum.'
+------------------------------------------------------
+REF: b'Cappelletti also is a classic car enthusiast.'
+PRED: b' Capiletti is also a classic car enthusiast.'
+------------------------------------------------------
+REF: b'These labourers had grown increasingly resentful over the established patrician oligarchy.'
+PRED: b' These laborers had grown increasingly resentful over the established patrician oligarchy.'
+------------------------------------------------------
+REF: b"However, Callie's relationship with Easy is quickly deteriorating."
+PRED: b" However, Kelly's relationship with Easy is quickly deteriorating."
+------------------------------------------------------
+REF: b'The animals were then transported by truck to the exhibition grounds.'
+PRED: b' animals were then transported by truck to the exhibition grounds.'
+------------------------------------------------------
+REF: b'A slightly easier to operate remote-control gear-change was provided.'
+PRED: b' A slightly easier to operate remote control gear change was provided.'
+------------------------------------------------------
+REF: b'Thereafter, his outstanding contributions were in the novel and in a stage comedy.'
+PRED: b' Thereafter, his outstanding contributions were in the novel and in a staged comedy.'
+------------------------------------------------------
+REF: b"The four Council members elected by the Institute's membership must be members themselves."
+PRED: b" The four council members elected by the institute's membership must be members themselves."
+------------------------------------------------------
+REF: b'It would have been the first bilateral series between the two sides.'
+PRED: b' It would have been the first bilateral series between the two sides.'
+------------------------------------------------------
+REF: b'He is now retired and lives in Mecklenburg-Vorpommern.'
+PRED: b' He is now retired and lives in Mecklenburg, Faupermann.'
+------------------------------------------------------
+REF: b'It is in the southeast part of the county, south of Syracuse.'
+PRED: b' It is in the southeast part of the country, south of Syracuse.'
+------------------------------------------------------
+REF: b'Publishing false information is also persecuted as corporate crime.'
+PRED: b' Publishing false information is also persecuted as corporate crime.'
+------------------------------------------------------
+REF: b'In the first segment, clouds can be seen moving behind Zeus.'
+PRED: b' In the first segment, clouds can be seen moving behind Zeus.'
+------------------------------------------------------
+REF: b'The album features guest appearances by Cody Carnes.'
+PRED: b' The album features guest appearances by Cody Carnes.'
+------------------------------------------------------
+REF: b'Conjunction search is much slower than feature search and requires conscious attention and effort.'
+PRED: b' Conjunction search is much slower than feature search and requires conscious attention and effort.'
+------------------------------------------------------
+REF: b"Descartes' vortices were not a hypothesis."
+PRED: b' The cards vortices were not a hypothesis.'
+------------------------------------------------------
+REF: b'It also oversees The Body Shop, the on-campus fitness center.'
+PRED: b' It also oversees the body shop, the on-campus fitness center.'
+------------------------------------------------------
+REF: b'David Hassinger was the engineer for the album.'
+PRED: b' David Hessinger was the engineer for the album.'
+------------------------------------------------------
+REF: b"Plastic surgeon Gerard H. Pitman says, you can't have cleavage with an A cup."
+PRED: b" Plastic surgeon Jared H. Pittman says you can't have cleavage vision A cup."
+------------------------------------------------------
+REF: b'In the Senate, he was a supporter of the Kubitschek government.'
+PRED: b' In the Senate, he was a supporter of the Kubicek government.'
+------------------------------------------------------
+REF: b'Arthur Cohen directed the film, which was produced by Bill Randle himself.'
+PRED: b' Arthur Cohen directed the film which was produced by Bill Randall himself.'
+------------------------------------------------------
+REF: b'It was written by Haruko Nagatsu, Shen Wei, and Yee Chin-yen.'
+PRED: b' It was written by Haruku Nagatsu, Shen Wei and Yi Xin Yang.'
+------------------------------------------------------
+REF: b'"Gauge" refers to the distance between the inside edges of the load-bearing rails.'
+PRED: b' Gage refers to the distance between the inside edges of the load bearing rails.'
+------------------------------------------------------
+REF: b'LaSardo was born in Brooklyn, New York.'
+PRED: b' Lazardo was born in Brooklyn, New York.'
+------------------------------------------------------
+REF: b'North Sea is a community in the Town of Southampton.'
+PRED: b' North Sea is a community in the town of Southampton.'
+------------------------------------------------------
+REF: b'The station is also a founding member of the Grassroots Radio Coalition.'
+PRED: b' The station is also a founding member of the grassroots radio coalition.'
+------------------------------------------------------
+REF: b'The Governor of Zamfara State is elected using the plurality voting system.'
+PRED: b' The governor of Samfara state is elected using the plurality voting system.'
+------------------------------------------------------
+REF: b'Turner was a founding mainstay of Dirty Three.'
+PRED: b' Turner was the founding mainstay of 33.'
+------------------------------------------------------
+REF: b'Earlier chemical element symbols stem from classical Latin and Greek vocabulary.'
+PRED: b' Earlier chemical element symbols stem from classical Latin and Greek vocabulary.'
+------------------------------------------------------
+REF: b'He committed to Illinois State shortly thereafter.'
+PRED: b' He committed to Illinois State shortly thereafter.'
+------------------------------------------------------
+REF: b'Swasey was born near Exeter, New Hampshire to Nathaniel and Abigail Swasey.'
+PRED: b' Swayze was born near Exeter, New Hampshire to Nathaniel and Abigail Swayze.'
+------------------------------------------------------
+REF: b'It is policed by the New York City Parks Enforcement Patrol.'
+PRED: b' It is policed by the New York City Parks enforcement patrol.'
+------------------------------------------------------
+REF: b'Lysippos was also famous for his bronze sculptures of Zeus and Herakles.'
+PRED: b' Lycipos was also famous for his bronze sculptures of Zeus and Heraclus.'
+------------------------------------------------------
+REF: b'The official reporter of the Illinois Supreme Court is "Illinois Reports".'
+PRED: b' The official reporter of the Illinus Supreme Court is Illinois Reports.'
+------------------------------------------------------
+REF: b'The village contains one primary school, Ropley CofE Primary School.'
+PRED: b' The village contains one primary school, Robley CFE Primary School.'
+------------------------------------------------------
+REF: b'These include many organic artifacts preserved in permafrost.'
+PRED: b' These include many organic artifacts preserved in permafrost.'
+------------------------------------------------------
+REF: b'The group effectively disbanded shortly afterward due to political repression.'
+PRED: b' The group effectively disbanded shortly afterwards due to political repression.'
+------------------------------------------------------
+REF: b'Rainfall is very irregular but with heavy showers common in September and October.'
+PRED: b' Rainfall is very irregular but with heavy showers common in September and October.'
+------------------------------------------------------
+REF: b'Towards its east, district Chattarpur is situated.'
+PRED: b' Towards its east district, Chattarpur is situated.'
+------------------------------------------------------
+REF: b'Smog is a serious problem in many cities and continues to harm human health.'
+PRED: b' Smog is a serious problem in many cities and continues to harm human health.'
+------------------------------------------------------
+REF: b'Stenberg is a member of the Republican Party.'
+PRED: b' Stan Berg is a member of the Republican Party.'
+------------------------------------------------------
+REF: b'Formatting information is then displayed in the normal text area displacing the actual text.'
+PRED: b' Formatting information is then displayed in the normal text area, displacing the actual text.'
+------------------------------------------------------
+REF: b'The Bahing also worship in Nature.'
+PRED: b' The Bahing also worship in nature.'
+------------------------------------------------------
+REF: b'Winder spoke several languages including Sanskrit and Buddhist Pali.'
+PRED: b' Winder spoke several languages including Sanskrit and Buddhist Pali.'
+------------------------------------------------------
+REF: b'Most of the inhabitants live in coastal areas rather than the mountainous interior.'
+PRED: b' Most of the inhabitants live in coastal areas rather than the mountainous interior.'
+------------------------------------------------------
+REF: b'Their first international tour then began, including countries of Europe and Latin America.'
+PRED: b' Their first international tour then began, including countries of Europe and Latin America.'
+------------------------------------------------------
+REF: b'United of Manchester after being released from Wrexham earlier that year.'
+PRED: b' United of Manchester after being released from Raxham earlier that year.'
+------------------------------------------------------
+REF: b'Next to this cavalry was the bulk of the infantry.'
+PRED: b' Next to this cavalry was the bulk of the infantry.'
+------------------------------------------------------
+REF: b'It is however unclear if he was the first one to build a telescope.'
+PRED: b' It is, however, unclear if he was the first one to build a telescope.'
+------------------------------------------------------

@@ -1,0 +1,171 @@
+ACCENT: Indonesian
+
+WER: 15.13
+CER: 6.3
+
+NORMALIZED WER: 11.3
+NORMALIZED CER: 4.8
+
+
+REF: b'Banning State Park is nearby.'
+PRED: b' Bending State Park is nearby.'
+------------------------------------------------------
+REF: b'During the public execution, Rhetoric asks to go first.'
+PRED: b' During the public execution, Krathorik asks to go first.'
+------------------------------------------------------
+REF: b'Old Portmuthians are alumni of The Portsmouth Grammar School.'
+PRED: b' All Potnifians are alumni of the Portsmouth Grammar School.'
+------------------------------------------------------
+REF: b'So I just checked out.'
+PRED: b' So I just checked it out.'
+------------------------------------------------------
+REF: b'He worked in the garden until a week before his death.'
+PRED: b' He worked in the garden until a week before his death.'
+------------------------------------------------------
+REF: b'Both need one another.'
+PRED: b' Both need one another.'
+------------------------------------------------------
+REF: b'LeBaron Colt attended the public schools and Williston Seminary.'
+PRED: b' LaBaron Cold attended the public schools and Williston Seminary.'
+------------------------------------------------------
+REF: b'In such stationary cases, these estimators are also referred to as Wiener-Kolmogorov filters.'
+PRED: b' In such stationary cases, these estimators are also referred to as Wainer-Komogorov filters.'
+------------------------------------------------------
+REF: b'All Soul products are Bluetooth compatible.'
+PRED: b' Also, products are Bluetooth compatible.'
+------------------------------------------------------
+REF: b'The house is made up of seven sections.'
+PRED: b' The house is made up of 7 sections.'
+------------------------------------------------------
+REF: b'He also began to liaise with the Italian Communist Party in Naples.'
+PRED: b' He also began to liaise with the Italian Communist Party in Naples.'
+------------------------------------------------------
+REF: b'The number of substantial buildings on campus doubled.'
+PRED: b' The number of substantial buildings on campus doubled.'
+------------------------------------------------------
+REF: b'To the north, the region continues from Virginia into central Maryland and southeastern Pennsylvania.'
+PRED: b' To the north, the region continues from Virginia into Central Maryland and southeastern Pennsylvania.'
+------------------------------------------------------
+REF: b"By November, the situation of Guderian's Panzer Group was dire."
+PRED: b' By November, the situation of Qudairi and Spencer Group was dire.'
+------------------------------------------------------
+REF: b'Berry describes many people and places in his poems and stories.'
+PRED: b' Perry describes many people and places in his poems and stories.'
+------------------------------------------------------
+REF: b'These were very professional and skilled players.'
+PRED: b' These were very professional and skilled players.'
+------------------------------------------------------
+REF: b'On stage she bantered with the audience and sang songs while playing the lute.'
+PRED: b' On stage, she bantered with the audience and sang songs while playing the lute.'
+------------------------------------------------------
+REF: b'Nevertheless, "Saint Vicent Panels" is seen as the highest peak of Portuguese antique art.'
+PRED: b' Nevertheless, same vision panels is seen as the highest peak of Portuguese antique art.'
+------------------------------------------------------
+REF: b'Extradosed bridges are not included.'
+PRED: b' Extra those bridges are not included.'
+------------------------------------------------------
+REF: b'Born to a Dutch Jewish family, Gerard Philips became interested in electronics and engineering.'
+PRED: b' Born to a Dutch Jewish family, Gerald Phillips became interested in electronics and engineering.'
+------------------------------------------------------
+REF: b'Influential leaders of opinion warn us against materialism, secularism, unbelief.'
+PRED: b" Influential leaders of opinion weren't asked against materialism, secularism, unbelief."
+------------------------------------------------------
+REF: b'Lighting is often arranged in studio portraits specifically to create attractive catch lights.'
+PRED: b' Lighting is often arranged in studio portraits specifically to create attractive catchlights.'
+------------------------------------------------------
+REF: b'Team are not penalized points.'
+PRED: b' Team are not penalized points.'
+------------------------------------------------------
+REF: b'These were on its back, neck, and possibly above or under the tail.'
+PRED: b' These were on its back, neck, and possibly above or under the tail.'
+------------------------------------------------------
+REF: b'Recordings from two of the Copenhagen dates appear on "Old Stuff".'
+PRED: b' Recordings from two of the Copenhagen dates appear on old stuff.'
+------------------------------------------------------
+REF: b'The specific "caudatus" is Latin and is derived from "cauda", "tail".'
+PRED: b' The specific code is 11 and is derived from code tail.'
+------------------------------------------------------
+REF: b'He was signed to Capitol Records.'
+PRED: b' He was signed to capital records.'
+------------------------------------------------------
+REF: b'The Raja Kechil Besar, becomes Raja di-Hilir, and so on.'
+PRED: b' Three small kings became kings of the hill and so on.'
+------------------------------------------------------
+REF: b'I live in postmortem... daily life, daily death.'
+PRED: b' I live in post-modern daily life daily death'
+------------------------------------------------------
+REF: b'The Tristan da Cunha boats are single banked.'
+PRED: b' The Tristan-Dakun-Ha boats are single banked.'
+------------------------------------------------------
+REF: b'She has a buff face and throat.'
+PRED: b' She has a buff face and throat.'
+------------------------------------------------------
+REF: b'He tried to start political reconciliation.'
+PRED: b' He tried to start political reconciliation.'
+------------------------------------------------------
+REF: b'This brought better communications to the city and conspired to its growth.'
+PRED: b' This brought better communications to the city and conspired to its growth.'
+------------------------------------------------------
+REF: b'The mother must remove the breast milk.'
+PRED: b' The mother must remove the breast milk.'
+------------------------------------------------------
+REF: b'This was the final occasion on which he stood for parliament.'
+PRED: b' This was the final occasion on which he stood for parliament.'
+------------------------------------------------------
+REF: b'This seminal American work will be displayed at both institutions on a rotating basis.'
+PRED: b' This seminal American work will be displayed at both institutions on a rotating basis.'
+------------------------------------------------------
+REF: b'The album was the only heavy metal album on the list.'
+PRED: b' The album was the only heavy metal album on the list.'
+------------------------------------------------------
+REF: b'Its motto is "True and Sure".'
+PRED: b' Its motto is through and sure.'
+------------------------------------------------------
+REF: b'However, her mother has revealed that he was an African-American soldier, Master-Sergeant Robert Barkley.'
+PRED: b' However, her mother has revealed that he was an African-American soldier, Master Sergeant Robert Barclay.'
+------------------------------------------------------
+REF: b'It was the only episode of the series directed by Kim Manners.'
+PRED: b' It was the only episode of the series directed by Kim Manners.'
+------------------------------------------------------
+REF: b'The Patio was privately restored and showing first-run movies.'
+PRED: b' The patio was privately restored and showing first-run movies.'
+------------------------------------------------------
+REF: b'McDonald High School was closed through school unification.'
+PRED: b' MacDonald High School was closed through school unification.'
+------------------------------------------------------
+REF: b'Marin County officials cited Carr for "multiple zoning, safety, and health violations".'
+PRED: b' Merlin County official cited car for multiple zoning, safety and health violations.'
+------------------------------------------------------
+REF: b'Government House in Nassau is the official residence of governors-general.'
+PRED: b" Government House in the South is the official residence of Governor's General."
+------------------------------------------------------
+REF: b'The community is north of the Hudson River.'
+PRED: b' The community is north of the Hudson River.'
+------------------------------------------------------
+REF: b'Pierre Werner was also a member of the National Ethics Committee of Luxembourg.'
+PRED: b' Pierre Werner was also a member of the National FX Committee of Luxembourg.'
+------------------------------------------------------
+REF: b'Mr. Naik brought Premier to profitability in his first quarter with the company.'
+PRED: b' Mr. Naik wrote Premier to profitability in his first quarter with the company.'
+------------------------------------------------------
+REF: b'The stories are generally based around a moral message.'
+PRED: b' These stories are generally based around a moral message.'
+------------------------------------------------------
+REF: b'The museum conducts regular excursions for all age categories.'
+PRED: b' The museum conducts regular excursions for all age categories.'
+------------------------------------------------------
+REF: b'He graduated from high school with an diploma.'
+PRED: b' He graduated from high school with a diploma.'
+------------------------------------------------------
+REF: b"This is the final verse of the Sermon's discussion of alms giving."
+PRED: b" This is the final verse of the sermon's discussion of arms giving."
+------------------------------------------------------
+REF: b'Between these main groups there were waverers and compromisers.'
+PRED: b' Between these main groups there were weverers and compromisers.'
+------------------------------------------------------
+REF: b'He now holds the position of Shadow Minister for Africa and the Middle East.'
+PRED: b' He now holds the position of Shadow Minister for Africa and the Middle East.'
+------------------------------------------------------
+REF: b'The "translator\'s note" signed "B.'
+PRED: b" The translator's note, sign B."
+------------------------------------------------------

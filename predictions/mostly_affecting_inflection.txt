@@ -1,0 +1,165 @@
+ACCENT:  mostly affecting inflection
+
+WER: 10.82
+CER: 3.91
+
+NORMALIZED WER: 7.55
+NORMALIZED CER: 3.14
+
+
+REF: b'Both "Night Garden" and "Snail" received music videos to support their release.'
+PRED: b' Both Nightgarden and Snail received music videos to support their release.'
+------------------------------------------------------
+REF: b'Additional vocals were provided by The Jordanaires and The Amigos.'
+PRED: b' Additional vocals were provided by the Jordanaires and the MEU.'
+------------------------------------------------------
+REF: b'The animal is grey to black.'
+PRED: b' The animal is gray to black.'
+------------------------------------------------------
+REF: b'Vasantha Lakshmi is sent on to investigate more about that village by the editor.'
+PRED: b' Wasansa Lakshmi is sent on to investigate more about that village by the editor.'
+------------------------------------------------------
+REF: b'Nakodar Town is the administrative headquarter of Nakodar subdivision under Jalandhar district.'
+PRED: b' Nakodar Town is the administrative headquarters of Nakodar subdivision under the Jalandar district.'
+------------------------------------------------------
+REF: b'It serves large portions of the Great Neck Peninsula and portions of Manhasset.'
+PRED: b' It serves large portions of the Great Neck Peninsula and portions of Manhase.'
+------------------------------------------------------
+REF: b'One housemate from the losing team will leave the game.'
+PRED: b' One housemate from the losing team will leave the game.'
+------------------------------------------------------
+REF: b'It is the first talk show that got streamed on Aha.'
+PRED: b' It is the first talk show that got streamed on AHA.'
+------------------------------------------------------
+REF: b'The following sixteen teams will contest in the tournament.'
+PRED: b' The following 16 teams will contest in the tournament.'
+------------------------------------------------------
+REF: b'His body was among those put on display in Piazzale Loreto in Milan.'
+PRED: b' His body was among those put on display in the Pizale Loretto in Milan.'
+------------------------------------------------------
+REF: b'Saliba develops innovative materials and methods to study atmospheric pollutants.'
+PRED: b' Saliba develops innovative materials and methods to study atmospheric pollutants.'
+------------------------------------------------------
+REF: b'Wimmer is an outspoken critic of military interventions.'
+PRED: b' Wimmer is an outspoken critic of military interventions.'
+------------------------------------------------------
+REF: b'The architect is believed to have been Sir Edward Lovett Pearce.'
+PRED: b' The architect is believed to have been Sir Edward Lovett Pierce.'
+------------------------------------------------------
+REF: b'The authorities only reported fourteen deaths hiding the real figure.'
+PRED: b' The authorities only reported 14 deaths hiding the real figure.'
+------------------------------------------------------
+REF: b'He joined the government of Hassan Diab as an independent.'
+PRED: b' He joined the government of Hassan Diyab as an independent.'
+------------------------------------------------------
+REF: b'Walter would recall the event years later.'
+PRED: b' Walter would recall the event years later.'
+------------------------------------------------------
+REF: b'Yakovlev and other.'
+PRED: b' Yakovlev and other.'
+------------------------------------------------------
+REF: b'She was also an art collector.'
+PRED: b' She was also an art collector.'
+------------------------------------------------------
+REF: b'The effect was meant to resemble medieval armor.'
+PRED: b' The effect was meant to resemble medieval armor.'
+------------------------------------------------------
+REF: b'He is known for portraits and allegories.'
+PRED: b' He is known for portraits and allegories.'
+------------------------------------------------------
+REF: b'She is the General Secretary of Quran Sunnat Society.'
+PRED: b' She is the General Secretary of Karam Senate Society.'
+------------------------------------------------------
+REF: b'An elaborate baroque frame behind the main altar frames the icon.'
+PRED: b' An elaborate Baroque frame behind the main altar frames the icon.'
+------------------------------------------------------
+REF: b'After completing his studies in England he returned to America and settled in Philadelphia.'
+PRED: b' After completing his studies in England, he returned to America and settled in Philadelphia.'
+------------------------------------------------------
+REF: b'He sings in the Northern Norwegian dialect.'
+PRED: b' He sings in the northern Norwegian dialect.'
+------------------------------------------------------
+REF: b'He also co wrote "Fundamentals of Judo".'
+PRED: b' He also co-wrote Fundamentals of Judo.'
+------------------------------------------------------
+REF: b'He currently lives and works in Bogota.'
+PRED: b' He currently lives and works in Bogota.'
+------------------------------------------------------
+REF: b'His second album "Safar" was released in collaboration with composer and arranger Behnam Abtahi.'
+PRED: b' His second album, Safar, was released in collaboration with composer and arranger Ben Hum Abtaki.'
+------------------------------------------------------
+REF: b'Rothman is married and has five children.'
+PRED: b' Rothman is married and has five children.'
+------------------------------------------------------
+REF: b'Five people faced criminal charges.'
+PRED: b' Five people faced criminal charges.'
+------------------------------------------------------
+REF: b'It is later claimed that the Anatolian Turkmens carried out the attack.'
+PRED: b' It is later claimed that the Anatolian Turkmens carried out the attack.'
+------------------------------------------------------
+REF: b'The show lasted one season consisting of five episodes on The History Channel.'
+PRED: b' The show lasted one season consisting of five episodes on the History Channel.'
+------------------------------------------------------
+REF: b'It is light brown to cream with darkish marks.'
+PRED: b' It is light brown to cream with darkish marks.'
+------------------------------------------------------
+REF: b'Kardon was featured on the album with his remix of the song "Vault".'
+PRED: b' Cardin was featured on the album with the remix of the song Vault.'
+------------------------------------------------------
+REF: b'It is assumed that some of the ornaments stem from the Magdalenian.'
+PRED: b' It is assumed that some of the ornaments stem from the Magdalenian.'
+------------------------------------------------------
+REF: b'The bronze scuplpture is placed on an granite pedestal.'
+PRED: b' The bronze sculpture is placed on a granite pedestal.'
+------------------------------------------------------
+REF: b'Successive commissioners had tried to provide more modern transport.'
+PRED: b' Successive commissioners had tried to provide more modern transport.'
+------------------------------------------------------
+REF: b'This was Zhaoyi.'
+PRED: b' This was Jolly.'
+------------------------------------------------------
+REF: b'It also received several awards and nominations.'
+PRED: b' They also received several awards and nominations.'
+------------------------------------------------------
+REF: b'The participants assembled at Panjim Promenade and made their way to Miramar Beach.'
+PRED: b' The participants assembled at Panjim Promenade and made their way to Miramar Beach.'
+------------------------------------------------------
+REF: b'Glentoran won the league for the eighth time.'
+PRED: b' Glenter and won the league for the eighth time.'
+------------------------------------------------------
+REF: b'Antennae testaceous brown.'
+PRED: b' Antenna Testatius Brown'
+------------------------------------------------------
+REF: b'The clump is anchored to the seabed by stolons.'
+PRED: b' The clump is anchored to the seabed by stolons.'
+------------------------------------------------------
+REF: b'He wrote about his field experience as articles and short stories in the press.'
+PRED: b' He wrote about his field experience as articles and short stories from the press.'
+------------------------------------------------------
+REF: b'He also is an alumnus of the London International School of Performing Arts.'
+PRED: b' He is also an alumnus of the London International School of Performing Arts.'
+------------------------------------------------------
+REF: b'Jesus promises Jacob to resurrect him.'
+PRED: b' Jesus promises Jacob to resurrect him.'
+------------------------------------------------------
+REF: b'Embroidered designs with metal thread are rare.'
+PRED: b' Embroider designs with metal thread are rare.'
+------------------------------------------------------
+REF: b'The team with the most points were declared winners.'
+PRED: b' The teams with the most points were declared winners.'
+------------------------------------------------------
+REF: b'He also trained students of several colleges in Odisha.'
+PRED: b' He also trained students of several colleges in Odisha.'
+------------------------------------------------------
+REF: b'Vidya shoots herself dead and Vicky unties her and returns home.'
+PRED: b' Vidya shoots herself dead and Vicky unties her and returns home.'
+------------------------------------------------------
+REF: b'The station building is open on all days of the week.'
+PRED: b' The station building is open on all days of the week.'
+------------------------------------------------------
+REF: b'Their father taught all of them to ride.'
+PRED: b' Their father taught all of them to ride.'
+------------------------------------------------------
+REF: b'Drexel Burnham Lambert Realty was the management company of the condo.'
+PRED: b' Drexel Burnham Lampert Realty was the management company of the condo.'
+------------------------------------------------------

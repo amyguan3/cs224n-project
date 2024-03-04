@@ -1,0 +1,162 @@
+ACCENT: Transatlantic English
+
+WER: 16.39
+CER: 4.32
+
+NORMALIZED WER: 8.75
+NORMALIZED CER: 2.87
+
+
+REF: b'The borough is located along Elk Creek, which flows west to Lake Erie.'
+PRED: b' The borough is located along Elk Creek which flows west to Lake Erie.'
+------------------------------------------------------
+REF: b'In addition, many secular works of national history, mythology, and hagiography were also written.'
+PRED: b' In addition, many secular works of national history, mythology, and hagiography were also written.'
+------------------------------------------------------
+REF: b'Tempsky was brought up in Liegnitz in Lower Silesia.'
+PRED: b' Tamski was brought up in Lignits in Lower Staligia.'
+------------------------------------------------------
+REF: b'Herbal preparations are regulated as foods, rather than as drugs, in the United States.'
+PRED: b' Herbal preparations are regulated as foods rather than as drugs in the United States.'
+------------------------------------------------------
+REF: b'There are two lighthouses in Rameswaram, the Pamban lighthouse and Rameswaram lighthouse.'
+PRED: b' There are two lighthouses and Ramaswaram, the Palm Bend Lighthouse and Ramaswaram Lighthouse.'
+------------------------------------------------------
+REF: b'To marry Andrea would be to make her real, material.'
+PRED: b' to marry Andrea would be to make her real material'
+------------------------------------------------------
+REF: b'Dance to the beat of the drum.'
+PRED: b' Dance to the beat of the drum.'
+------------------------------------------------------
+REF: b'A constitution was adopted and a full slate of officers were elected.'
+PRED: b' A constitution was adopted and a full slate of officers were elected.'
+------------------------------------------------------
+REF: b'Traffic signals facing vehicles in turn lanes often have arrow-shaped indications.'
+PRED: b' Traffic signals facing vehicles in turn lines often have arrow shaped indications.'
+------------------------------------------------------
+REF: b'In summer, adults have long neck feathers.'
+PRED: b' In summer adults have long neck feathers.'
+------------------------------------------------------
+REF: b'The compiler can target a wide variety of platforms.'
+PRED: b' The compiler can target a wide variety of platforms.'
+------------------------------------------------------
+REF: b'Santander lies fifty kilometres to the east.'
+PRED: b' Centandan lies 50 kilometres to the east.'
+------------------------------------------------------
+REF: b'In Japan, hijiki is normally eaten with other foods such as vegetables or fish.'
+PRED: b' In Japan, hijikiya is normally eaten with other foods such as vegetables or fish.'
+------------------------------------------------------
+REF: b'The military regime censored journalists and repressed and tortured dissidents.'
+PRED: b' The military regime censored journalists and repressed and tortured dissidents.'
+------------------------------------------------------
+REF: b'Emma was born in Stockholm, Sweden.'
+PRED: b' Emma was born in Stockholm, Sweden.'
+------------------------------------------------------
+REF: b'The reason for excluding strangers from the village at these times is religious.'
+PRED: b' The reason for excluding strangers from the village at these times is religious.'
+------------------------------------------------------
+REF: b'Unit-procedures are organized into operations, and operations may be further organized into phases.'
+PRED: b' Unit procedures are organized into operations and operations may be further organized into phases.'
+------------------------------------------------------
+REF: b'It is a truism to say that all magic is necessarily false and barren.'
+PRED: b' It is a truism to say that all magic is necessarily false and barren.'
+------------------------------------------------------
+REF: b'It is the only species in genus Vitellaria, and is indigenous to Africa.'
+PRED: b' It is the only species in genus Vitalaria and is indigenous to Africa.'
+------------------------------------------------------
+REF: b'Intense jaundice appears in the first days of life and persists thereafter.'
+PRED: b' Intense jaundice appears in the first days of life and persists thereafter.'
+------------------------------------------------------
+REF: b"Entertainment and in Europe in September through Germany's Armageddon Music."
+PRED: b" Entertainment and in Europe in September through Germany's Armageddon Music."
+------------------------------------------------------
+REF: b'They live in the suburb of Taylors Hill, in Melbourne, Victoria.'
+PRED: b" They live in the suburb of Taylor's Hill in Melbourne, Victoria."
+------------------------------------------------------
+REF: b'The swingarm is similar in design to the old one, but was strengthened.'
+PRED: b' The swing arm is similar in design to the old one but was strengthened.'
+------------------------------------------------------
+REF: b'There is currently an elementary school in southwest Chicago named after him.'
+PRED: b' There is currently an elementary school in southwest Chicago named after him.'
+------------------------------------------------------
+REF: b'It is constituted by a "Regional Assembly".'
+PRED: b' It is constituted by a regional assembly.'
+------------------------------------------------------
+REF: b'Carelessness in this respect has caused havoc to many flocks.'
+PRED: b' Carelessness in this respect has caused havoc to many flocks.'
+------------------------------------------------------
+REF: b'Vladimir Nabokov in briefly mentions a poet named Max Mispel, "another botanical name".'
+PRED: b' Vladimir Nebikov in briefly mentions a poet named Max Miss Bell, another botanical name.'
+------------------------------------------------------
+REF: b'Assume that each element on the support of "M" has at most rank "r".'
+PRED: b' Assume that each element on the support of M has at most rank R.'
+------------------------------------------------------
+REF: b'Scunthorpe eventually achieved promotion that season under succeeding manager Allan Clarke.'
+PRED: b' Skin Thought eventually achieved promotion that season under succeeding manager Alan Clark.'
+------------------------------------------------------
+REF: b'The blood is sometimes applied outwardly as well as inwardly.'
+PRED: b' The blood is sometimes applied outwardly as well as inwardly.'
+------------------------------------------------------
+REF: b'The lake shoreline is heavily developed and homesites cover almost the entire shoreline.'
+PRED: b' The Lake Shoreline is heavily developed in home sites cover almost the entire shoreline.'
+------------------------------------------------------
+REF: b'They squirt the water into the air, making a fine mist.'
+PRED: b' They squirt the water into the air making a fine mist.'
+------------------------------------------------------
+REF: b'It contains one of the few remaining examples of Celtic Plainchant.'
+PRED: b' It contains one of the few remaining examples of Celtic plain chant.'
+------------------------------------------------------
+REF: b'The exterior and interior of the objects are typically the same colour.'
+PRED: b' The exterior and interior of the objects are typically the same colour.'
+------------------------------------------------------
+REF: b"Another source of wealth was the kingdom's ports, such as Dion, Pella, Thessalonica, Cassandreia."
+PRED: b" Another source of wealth was the kingdom's ports such as Dion Pella, Thessalonica, Cassandria."
+------------------------------------------------------
+REF: b'Doncaster also constructed the carriages for the last of these.'
+PRED: b' Don Caster also constructed the carriages for the last of these.'
+------------------------------------------------------
+REF: b'According to other sources, it was among best-sellers, albeit not second-best-selling.'
+PRED: b' According to other sources, it was among best sellers, albeit not second best selling.'
+------------------------------------------------------
+REF: b'At standard temperature and pressure, ethane is a colorless, odorless gas.'
+PRED: b' Standard temperature and pressure ethane is a colourless, odourless gas.'
+------------------------------------------------------
+REF: b'The original theater building was used for various purposes after its closure.'
+PRED: b' The original theatre building was used for various purposes after its closure.'
+------------------------------------------------------
+REF: b'A draught of this wonderful mead imparted to Odin a knowledge of all things.'
+PRED: b' A draught of this wonderful mead imparted to Odin a knowledge of all things.'
+------------------------------------------------------
+REF: b'Toshiba is headquartered in Minato-ku, Tokyo, Japan and has operations worldwide.'
+PRED: b" Toshiba's had courted in Minnetoku, Tokyo, Japan and has operations worldwide."
+------------------------------------------------------
+REF: b'Intuitively, it is not "consistently defined independently of dimension".'
+PRED: b' Intuitively, it is not consistently defined independently of dimension.'
+------------------------------------------------------
+REF: b"The afterbirth is wrapped up in plantain leaves and buried by the child's mother."
+PRED: b" The afterbirth is wrapped up in plantain leaves and buried by the child's mother."
+------------------------------------------------------
+REF: b'Eventually, he and his wife returned to London.'
+PRED: b' Eventually, he and his wife returned to London.'
+------------------------------------------------------
+REF: b'Johnson became prominent in his new state through the farming community.'
+PRED: b' Johnson became prominent in his new state through the farming community.'
+------------------------------------------------------
+REF: b'Thomas Tallis, Thomas Morley, and John Dowland were other leading English composers.'
+PRED: b' Thomas Tallis, Thomas Morley and John Dallin were other leading English composers.'
+------------------------------------------------------
+REF: b'Murdock.'
+PRED: b' Meh doc.'
+------------------------------------------------------
+REF: b'"Rolling Stone" described the circus as an "absolute must-see act".'
+PRED: b' Rolling Stone described the circus as an absolute must-see act.'
+------------------------------------------------------
+REF: b'It develops and of torque.'
+PRED: b' It develops and of torque.'
+------------------------------------------------------
+REF: b'This allows winnowing of crops that are not shelled, including rice, maize, and sorghum.'
+PRED: b' This allows winnowing of crops that are not shelled including rice, maize and sorghum.'
+------------------------------------------------------
+REF: b"Homeothermy's opposite is poikilothermy."
+PRED: b' Pomeothermies or Pestidious Poichillo Thermae'
+------------------------------------------------------
