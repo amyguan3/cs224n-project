@@ -139,8 +139,10 @@ def main():
         data["target_embeddings"] = target_embeddings
         return data
 
+
     sd_qa = sd_qa.map(prepare_source_data, num_proc=2, desc="Extract features for source dialect"
                       ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
+
 
     # define an evaluation function !!!
 
