@@ -111,7 +111,8 @@ def main():
     #------------------------------------#
 
     # load whisper feature extractor, tokenizer, processor
-    model_path = "openai/whisper-base"
+    # model_path = "openai/whisper-base"
+    model_path = "openai/whisper-large-v2"
     task = "transcribe"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_path)
     tokenizer = WhisperTokenizer.from_pretrained(model_path, task=task)
@@ -184,7 +185,7 @@ def main():
 
     # Define training configuration
     training_args = Seq2SeqTrainingArguments(
-        output_dir="model_checkpoints",  
+        output_dir="model_checkpoints_large",  
         per_device_train_batch_size=8,
         gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
         learning_rate=1e-3,
@@ -210,7 +211,7 @@ def main():
     )
 
     trainer.train()
-    peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
+    peft_model_id = "asyzhou/224n-whisper-large-alignment-test"
     model.push_to_hub(peft_model_id)
     peftcallback.plot_loss()
 
