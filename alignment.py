@@ -111,7 +111,6 @@ def main():
     #------------------------------------#
 
     # load whisper feature extractor, tokenizer, processor
-    # model_path = "openai/whisper-base"
     model_path = "openai/whisper-large-v2"
     task = "transcribe"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_path)
@@ -152,7 +151,6 @@ def main():
         decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
         decoder_input_ids = decoder_input_ids.to(device)
         input_features = torch.tensor(data["target_input_features"]).unsqueeze(0).to(device)
-        # print(input_features.shape)
 
         with torch.no_grad():
             outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
@@ -166,7 +164,6 @@ def main():
     
     sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source dialect"
                       ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
-
 
 
     # define an evaluation function !!!
@@ -212,7 +209,7 @@ def main():
     trainer = AlignmentSeq2SeqTrainer(
         args=training_args,
         model=model,
-        embedding_save_folder = "base-embeddings",
+        embedding_save_folder=embedding_save_folder,
         train_dataset=sd_qa['dev'],
         eval_dataset=sd_qa['test'],
         data_collator=data_collator,
