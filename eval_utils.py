@@ -25,23 +25,17 @@ def is_target_text_in_range(ref):
         return ref.strip() != ""
     
 def get_text(sample):
-    # can replace with just return sample["sentence"]?
-    if "text" in sample:
-        return sample["text"]
-    elif "sentence" in sample:
+    if "sentence" in sample: # COMMON VOICE
         return sample["sentence"]
-    elif "normalized_text" in sample:
-        return sample["normalized_text"]
-    elif "transcript" in sample:
-        return sample["transcript"]
-    elif "transcription" in sample:
-        return sample["transcription"]
+    elif "question" in sample: # SD-QA
+        return sample["question"]
     else:
         raise ValueError(
-            f"Expected transcript column of either 'text', 'sentence', 'normalized_text' or 'transcript'. Got sample of "
+            f"Expected transcript column of either 'sentence' or 'question'. Got sample of "
             ".join{sample.keys()}. Ensure a text column name is present in the dataset."
         )
-    
+
+# prob won't need this in the cleaned CV dataset bc the data's been exploded
 def get_accents(sample):
     if "accent" in sample:
         # can remove the india comma outlier thing
@@ -51,20 +45,23 @@ def get_accents(sample):
             f"Expected transcript column of accent. Ensure an accent column is present in the dataset."
         )
 
-def normalise(batch):
+def normalize(batch):
     batch["norm_text"] = whisper_norm(get_text(batch))
     return batch
 
 def data(dataset):
     # MODIFY THIS FOR SD-QA SINCE GET_ACCENTS WON'T WORK
     for i, item in enumerate(dataset):
-        yield {**item["audio"], "reference": get_text(item), "norm_reference": item["norm_text"], "accents": get_accents(item)}
+        if "accents" in item: # CV # TODO: switch this later
+            yield {**item["audio"], "reference": get_text(item), "norm_reference": item["norm_text"], "accents": get_accents(item)}
+        elif "question" in item: # SD-QA
+            yield {**item[source_dialect]["array"], "reference": get_text(item), "norm_reference": item["norm_text"], "accents": get_accents(item)}
 
 def model_pipeline(model, processor, verbose=True):
-    device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
+    # device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
     whisper_asr = pipeline(
-        "automatic-speech-recognition", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor, device=device
-    )
+        "automatic-speech-recognition", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor
+    ) # , device=device # discard device object when model uses the accelerate library
     whisper_asr.model.config.forced_decoder_ids = (
         whisper_asr.tokenizer.get_decoder_prompt_ids(
             language="english", task="transcribe"
@@ -86,7 +83,7 @@ def get_half_cv():
     dataset_total = dataset_total.shuffle(seed=42, buffer_size=10_000)
     dataset_total = dataset_total.take(60_000) # 60k approx half of training
     dataset_total = dataset_total.cast_column("audio", Audio(sampling_rate=16000))
-    dataset_total = dataset_total.map(normalise) # , num_proc=2
+    dataset_total = dataset_total.map(normalize) # , num_proc=2
     dataset_total = dataset_total.filter(is_target_text_in_range, input_columns=[text_column_name]) # , num_proc=2
     dataset_total = dataset_total.filter(lambda example: example['accent'] != '')
 
@@ -100,9 +97,9 @@ def get_mini_cv():
     text_column_name = "sentence"
 
     dataset_total = dataset_total.shuffle(seed=42, buffer_size=10_000)
-    dataset_total = dataset_total.take(500) # 60k approx half of training
+    dataset_total = dataset_total.take(1_000) # 60k approx half of training
     dataset_total = dataset_total.cast_column("audio", Audio(sampling_rate=16000))
-    dataset_total = dataset_total.map(normalise) # , num_proc=2
+    dataset_total = dataset_total.map(normalize) # , num_proc=2
     dataset_total = dataset_total.filter(is_target_text_in_range, input_columns=[text_column_name]) # , num_proc=2
     # lol this is so jank
     dataset_total = dataset_total.filter(lambda example: 'Scottish English' in example['accent'] or 'India and South Asia (India' in example['accent'])
@@ -196,11 +193,6 @@ def evaluate_asr(model, processor, dataset, verbose=True):
     for accent in all_accents:
         wer = 100 * wer_metric.compute(references=references[accent], predictions=predictions[accent])
         norm_wer = 100 * wer_metric.compute(references=norm_references[accent], predictions=norm_predictions[accent])
-
-        # print("\nACCENT: ", accent)
-        # print("\nWER : ", wer)
-        # print("\nNORMALIZED WER : ", norm_wer)
-
         save_metrics(metrics, references, predictions, accent, wer, norm_wer)
         
     if verbose:
@@ -215,8 +207,9 @@ def evaluate_asr(model, processor, dataset, verbose=True):
 
 def main():
     # LOAD MODEL
-    processor = WhisperProcessor.from_pretrained("openai/whisper-small", language="English", task="transcribe")
-    model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-small")
+    model_name = "openai/whisper-base"
+    processor = WhisperProcessor.from_pretrained(model_name, language="English", task="transcribe")
+    model = WhisperForConditionalGeneration.from_pretrained(model_name)
     print("WHISPER PROCESSOR/MODEL LOADED")
 
     # GET DATA
