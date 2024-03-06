@@ -8,8 +8,10 @@ import os
 import sys
 
 # Setup 
+print("Executing pip installs ...")
 os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
 os.system("pip install -q git+https://github.com/huggingface/peft.git@main")
+print("Print installs done!")
 
 import json
 import random
@@ -110,6 +112,8 @@ def main():
     #---------------MODEL----------------#
     #------------------------------------#
 
+    print("Loading model...")
+
     # load whisper feature extractor, tokenizer, processor
     model_path = "openai/whisper-large-v2"
     task = "transcribe"
@@ -127,6 +131,7 @@ def main():
     #----------------DATA----------------#
     #------------------------------------#
 
+    print("Loading data...")
     # load data
     target_dialect = 'gbr'
     source_dialect = 'ind_n'
@@ -177,7 +182,7 @@ def main():
     #--------------TRAINING--------------#
     #------------------------------------#
     
-
+    print("Starting training...")
     target_modules = ['k_proj', 'v_proj', 'q_proj', 'out_proj', 'fc1', 'fc2']
     config = LoraConfig(r=32, # rank, adjust this
                     lora_alpha=64, 
@@ -219,6 +224,8 @@ def main():
 
     trainer.train()
     peft_model_id = "asyzhou/224n-whisper-large-alignment-test"
+
+    print("Done with training! Pushing to hub...")
     model.push_to_hub(peft_model_id)
     peftcallback.plot_loss()
 
