@@ -8,10 +8,10 @@ import os
 import sys
 
 # Setup 
-print("Executing pip installs ...")
-os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
-os.system("pip install -q git+https://github.com/huggingface/peft.git@main")
-print("Print installs done!")
+# print("Executing pip installs ...")
+# os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
+# os.system("pip install -q git+https://github.com/huggingface/peft.git@main")
+# print("Print installs done!")
 
 import json
 import random
