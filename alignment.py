@@ -111,7 +111,8 @@ def main():
     #------------------------------------#
 
     # load whisper feature extractor, tokenizer, processor
-    model_path = "openai/whisper-base"
+    # model_path = "openai/whisper-base"
+    model_path = "openai/whisper-large-v2"
     task = "transcribe"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_path)
     tokenizer = WhisperTokenizer.from_pretrained(model_path, task=task)
@@ -142,7 +143,7 @@ def main():
         # data["labels"] = tokenizer(data[source_dialect]["question"]).input_ids
         return data
 
-    embedding_save_folder = "base-embeddings"
+    embedding_save_folder = "large-v2-embeddings"
     os.makedirs(embedding_save_folder, exist_ok=True)
 
     # prepare targets
