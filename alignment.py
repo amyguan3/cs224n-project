@@ -77,7 +77,7 @@ class SavePeftCallback(TrainerCallback):
     ):
         self.training_losses.append([state.global_step, state.log_history["loss"][-1]])
         print("hi, we reached on step")
-        print(state.loss)
+        print(self.training_loss[-1])
     
     def plot_loss(self):
         plt.plot(self.training_losses)
