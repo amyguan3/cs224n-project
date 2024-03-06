@@ -75,9 +75,7 @@ class SavePeftCallback(TrainerCallback):
         control: TrainerControl,
         **kwargs,
     ):
-        print(len(state.log_history))
-        if self.is_world_process_zero():
-            self.training_losses.append([state.global_step, state.log_history[-1]["loss"]])
+        self.training_losses.append([state.global_step, state.log_history[-1]["loss"]])
         print("hi, we reached on step")
         print(self.training_losses[-1])
     
