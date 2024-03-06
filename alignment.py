@@ -154,6 +154,7 @@ def main():
         with torch.no_grad():
             outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
         last_hidden_state = outputs.encoder_hidden_states[-1]
+        print(last_hidden_state.shape)
 
         data["target_embeddings"] = [embedding for embedding in last_hidden_state]
         return data
