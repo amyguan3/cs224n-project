@@ -70,6 +70,8 @@ class SavePeftCallback(TrainerCallback):
     
     def on_step(self, trainer):
         self.training_losses.append(trainer.state.loss)
+        print("hi, we reached on step")
+        print(trainer.state.loss)
     
     def plot_loss(self):
         plt.plot(self.training_losses)
@@ -86,20 +88,12 @@ class SavePeftCallback(TrainerCallback):
         **kwargs,
     ):
         checkpoint_folder = os.path.join(args.output_dir, f"{PREFIX_CHECKPOINT_DIR}-{state.global_step}")
-
         peft_model_path = os.path.join(checkpoint_folder, "adapter_model")
         kwargs["model"].save_pretrained(peft_model_path)
 
         pytorch_model_path = os.path.join(checkpoint_folder, "pytorch_model.bin")
         if os.path.exists(pytorch_model_path):
             os.remove(pytorch_model_path)
-
-        # record the losses
-        loss_file = os.path.join(args.output_dir, 'loss.csv')
-        with open(loss_file, 'a') as f:
-            writer = csv.writer(f)
-            writer.writerow([state.global_step, state.log_history["loss"][-1]]) # iter, loss
-
         return control
 
 
@@ -185,7 +179,7 @@ def main():
 
     # Define training configuration
     training_args = Seq2SeqTrainingArguments(
-        output_dir="azure-224n/test",  
+        output_dir="model_checkpoints",  
         per_device_train_batch_size=8,
         gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
         learning_rate=1e-3,
@@ -197,7 +191,7 @@ def main():
         fp16=True,  # don't think we need this tbh
 
         generation_max_length=128,
-        logging_steps=100,
+        logging_steps=20,
         remove_unused_columns=False, 
     )
     peftcallback = SavePeftCallback()
