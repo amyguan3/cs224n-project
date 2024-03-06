@@ -149,8 +149,8 @@ def main():
     def prepare_target_embeddings(data):
         # compute encoder embedding from target audio array
         decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
-        decoder_input_ids = decoder_input_ids  #.to(device)
-        input_features = torch.tensor(data["target_input_features"]).unsqueeze(0)  #.to(device)
+        decoder_input_ids = decoder_input_ids.to(device)
+        input_features = torch.tensor(data["target_input_features"]).unsqueeze(0).to(device)
         print(input_features.shape)
 
         with torch.no_grad():
