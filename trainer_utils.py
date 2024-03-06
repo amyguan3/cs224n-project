@@ -9,9 +9,10 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
   """
   Trainer with custom earthmover loss
   """
-  def __init__(self, *args, **kwargs):
+  def __init__(self, embedding_save_folder, *args, **kwargs):
     super().__init__(*args, **kwargs)
     self.sinkhorn_loss = SamplesLoss(loss="sinkhorn", p=2)
+    self.embedding_save_folder = embedding_save_folder
 
   def compute_loss(self, model, inputs, return_outputs=False):
     # labels = inputs.get("labels")

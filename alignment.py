@@ -8,8 +8,8 @@ import os
 import sys
 
 # Setup 
-os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
-os.system("pip install -q git+https://github.com/huggingface/peft.git@main")
+# os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
+# os.system("pip install -q git+https://github.com/huggingface/peft.git@main")
 
 import json
 import random
@@ -149,38 +149,37 @@ def main():
     def prepare_target_embeddings(data):
         # compute encoder embedding from target audio array
         decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
-        decoder_input_ids = decoder_input_ids.to(device)
-        input_features = torch.tensor(data["target_input_features"]).unsqueeze(0) # .to(device)
+        decoder_input_ids = decoder_input_ids  #.to(device)
+        input_features = torch.tensor(data["target_input_features"]).unsqueeze(0)  #.to(device)
+        print(input_features.shape)
 
         with torch.no_grad():
             outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
         last_hidden_state = outputs.encoder_hidden_states[-1]
-        # print(last_hidden_state.shape)
-        print(last_hidden_state.shape)
+
         id = data["id"]
         embedding_save_path =  f"{embedding_save_folder}/{id}.pt"
         torch.save(last_hidden_state, embedding_save_path)
-        sys.exit()
-        for i in range(len(last_hidden_state)):
-            last_hidden_state[i,:,:]
-
-        data["target_embeddings"] = [embedding for embedding in last_hidden_state]
+        # data["target_embeddings"] = [embedding for embedding in last_hidden_state]
         return data
     
     sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source dialect"
                       ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
 
 
+
     # define an evaluation function !!!
     # metric = evaluate.load("wer")
 
     print(sd_qa)
-    sd_qa.remove_columns('id')
+    # sd_qa.remove_columns('id')
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
     #------------------------------------#
     #--------------TRAINING--------------#
     #------------------------------------#
+    
+
     target_modules = ['k_proj', 'v_proj', 'q_proj', 'out_proj', 'fc1', 'fc2']
     config = LoraConfig(r=32, # rank, adjust this
                     lora_alpha=64, 
@@ -212,6 +211,7 @@ def main():
     trainer = AlignmentSeq2SeqTrainer(
         args=training_args,
         model=model,
+        embedding_save_folder = "base-embeddings",
         train_dataset=sd_qa['dev'],
         eval_dataset=sd_qa['test'],
         data_collator=data_collator,
