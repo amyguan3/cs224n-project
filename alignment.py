@@ -68,16 +68,18 @@ class SavePeftCallback(TrainerCallback):
     def __init__(self):
         self.training_losses =[]
     
-    def on_step_end(
+    def on_log(
         self,
         args: TrainingArguments,
         state: TrainerState,
         control: TrainerControl,
         **kwargs,
     ):
-        self.training_losses.append([state.global_step, state.log_history[-1]["loss"]])
+        print(len(state.log_history))
+        if self.is_world_process_zero():
+            self.training_losses.append([state.global_step, state.log_history[-1]["loss"]])
         print("hi, we reached on step")
-        print(self.training_loss[-1])
+        print(self.training_losses[-1])
     
     def plot_loss(self):
         plt.plot(self.training_losses)
