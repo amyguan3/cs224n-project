@@ -76,8 +76,7 @@ class SavePeftCallback(TrainerCallback):
         **kwargs,
     ):
         self.training_losses.append([state.global_step, state.log_history[-1]["loss"]])
-        print("hi, we reached on step")
-        print(self.training_losses[-1])
+
     
     def plot_loss(self):
         plt.plot(self.training_losses)
@@ -194,8 +193,7 @@ def main():
         num_train_epochs=3,
         # evaluation_strategy="steps",  # disregard since using commonvoice to eval
         # per_device_eval_batch_size=8,
-        fp16=True,  # don't think we need this tbh
-
+        # fp16=True,  # don't think we need this
         generation_max_length=128,
         logging_steps=20,
         remove_unused_columns=False, 
