@@ -68,7 +68,7 @@ class SavePeftCallback(TrainerCallback):
     def __init__(self):
         self.training_losses =[]
     
-    def on_step(
+    def on_step_end(
         self,
         args: TrainingArguments,
         state: TrainerState,
