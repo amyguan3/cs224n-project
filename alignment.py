@@ -111,8 +111,7 @@ def main():
     #------------------------------------#
 
     # load whisper feature extractor, tokenizer, processor
-    # model_path = "openai/whisper-base"
-    model_path = "openai/whisper-large-v2"
+    model_path = "openai/whisper-base"
     task = "transcribe"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_path)
     tokenizer = WhisperTokenizer.from_pretrained(model_path, task=task)
@@ -132,29 +131,38 @@ def main():
     target_dialect = 'gbr'
     source_dialect = 'ind_n'
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
-    print(sd_qa['dev'][0])
+    # print(sd_qa['dev'][0])
 
     # prepare data
     def prepare_source_data(data):
         # compute log-Mel input features from audio arrays
         data["source_input_features"] = feature_extractor(data[source_dialect]["array"], sampling_rate=data[source_dialect]["sampling_rate"]).input_features[0]
         data["target_input_features"] = feature_extractor(data[target_dialect]["array"], sampling_rate=data[target_dialect]["sampling_rate"]).input_features[0]
-        
         # encode question text to label ids
         # data["labels"] = tokenizer(data[source_dialect]["question"]).input_ids
         return data
+
+    embedding_save_folder = "base-embeddings"
+    os.makedirs(embedding_save_folder, exist_ok=True)
 
     # prepare targets
     def prepare_target_embeddings(data):
         # compute encoder embedding from target audio array
         decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
         decoder_input_ids = decoder_input_ids.to(device)
-        input_features = torch.tensor(data["target_input_features"]).unsqueeze(0).to(device)
+        input_features = torch.tensor(data["target_input_features"]).unsqueeze(0) # .to(device)
 
         with torch.no_grad():
             outputs = model(input_features, decoder_input_ids=decoder_input_ids, output_hidden_states=True)
         last_hidden_state = outputs.encoder_hidden_states[-1]
+        # print(last_hidden_state.shape)
         print(last_hidden_state.shape)
+        id = data["id"]
+        embedding_save_path =  f"{embedding_save_folder}/{id}.pt"
+        torch.save(last_hidden_state, embedding_save_path)
+        sys.exit()
+        for i in range(len(last_hidden_state)):
+            last_hidden_state[i,:,:]
 
         data["target_embeddings"] = [embedding for embedding in last_hidden_state]
         return data
