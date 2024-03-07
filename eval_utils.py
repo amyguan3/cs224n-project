@@ -97,7 +97,7 @@ def get_mini_cv():
     text_column_name = "sentence"
 
     dataset_total = dataset_total.shuffle(seed=42, buffer_size=10_000)
-    dataset_total = dataset_total.take(1_000) # 60k approx half of training
+    dataset_total = dataset_total.take(100) # 60k approx half of training
     dataset_total = dataset_total.cast_column("audio", Audio(sampling_rate=16000))
     dataset_total = dataset_total.map(normalize) # , num_proc=2
     dataset_total = dataset_total.filter(is_target_text_in_range, input_columns=[text_column_name]) # , num_proc=2
