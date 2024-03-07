@@ -63,8 +63,8 @@ def data(dataset):
 def model_pipeline(model, processor, verbose=True):
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
     whisper_asr = pipeline(
-        "automatic-speech-recognition", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor, device=device
-    )
+        "automatic-speech-recognition", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor
+    ) # , device=device
     whisper_asr.model.config.forced_decoder_ids = (
         whisper_asr.tokenizer.get_decoder_prompt_ids(
             language="english", task="transcribe"
