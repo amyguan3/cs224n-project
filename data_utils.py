@@ -14,8 +14,8 @@ class DataCollatorSpeechSeq2SeqWithPadding:
         batch = self.processor.feature_extractor.pad(input_features, return_tensors="pt")
         
         # format target embeddings
-        target_embeddings = torch.cat([torch.tensor(example["target_embeddings"]) for example in data], axis = 0)
-        batch["target_embeddings"] = target_embeddings
+        # target_embeddings = torch.cat([torch.tensor(example["target_embeddings"]) for example in data], axis = 0)
+        # batch["target_embeddings"] = target_embeddings
 
         # # format question labels
         # label_features = [{"input_ids": example["labels"]} for example in data]
@@ -31,10 +31,12 @@ class DataCollatorSpeechSeq2SeqWithPadding:
 
 
 # Functions for loading, processing data
-def load_sd_qa_dataset():
+def load_sd_qa_dataset(split):
     sd_qa = DatasetDict()
-    sd_qa["dev"] = load_dataset("WillHeld/SD-QA", split="dev", token=True)
-    sd_qa["test"] = load_dataset("WillHeld/SD-QA", split="test", token=True)
+    if split == "dev":
+        sd_qa["dev"] = load_dataset("WillHeld/SD-QA", split="dev", token=True)
+    elif split == "test":
+        sd_qa["test"] = load_dataset("WillHeld/SD-QA", split="test", token=True)
     return sd_qa
 
 def filter_data(data, source, target):

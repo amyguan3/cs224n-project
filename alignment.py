@@ -135,7 +135,7 @@ def main():
     # load data
     target_dialect = 'gbr'
     source_dialect = 'ind_n'
-    sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
+    sd_qa = filter_data(load_sd_qa_dataset(split="dev"), source=source_dialect, target=target_dialect)
     # print(sd_qa['dev'][0])
 
     # prepare data
