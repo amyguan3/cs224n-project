@@ -135,7 +135,7 @@ def main():
 
     def objective(trial):
         # Define hyperparameters to optimize
-        learning_rate = trial.suggest_loguniform('learning_rate', 1e-6, 1e-3)
+        learning_rate = trial.suggest_float('learning_rate', 1e-6, 1e-3, log=True)
 
         # Initialize wandb # TODO: here, or below?
         wandb.init(project="base_test", config={"learning_rate": learning_rate})
@@ -167,8 +167,9 @@ def main():
 
         # TODO: LINES BELOW ARE FOR TESTING ON A MINI VERSION
         load_data = load_dataset("WillHeld/SD-QA", split="dev", token=True)
-        load_data = load_data.select(range(10))
-        sd_qa = filter_data(load_data, source=source_dialect, target=target_dialect)
+        load_data = load_data.select(range(16))
+        sd_qa = DatasetDict()
+        sd_qa["dev"] = filter_data(load_data, source=source_dialect, target=target_dialect)
         print(sd_qa['dev'][0])
 
         # prepare data
@@ -219,7 +220,7 @@ def main():
 
         # Define training configuration
         training_args = Seq2SeqTrainingArguments(
-            output_dir="azure-224n/test",  
+            output_dir="amy-224n/test",  
             per_device_train_batch_size=8,
             gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
             learning_rate=learning_rate, # TODO: ???
@@ -238,7 +239,7 @@ def main():
             args=training_args,
             model=model,
             train_dataset=sd_qa['dev'],
-            eval_dataset=sd_qa['test'],
+            eval_dataset=sd_qa['dev'],
             data_collator=data_collator,
             tokenizer=processor.feature_extractor,
             callbacks=[peftcallback],
@@ -260,12 +261,14 @@ def main():
 
         dataset = get_mini_cv() # .to(device)
         eval_result = evaluate_asr(model, processor, dataset, True)
+        print(f'eval_result: {eval_result}')
+        # print(f'key[0]: {eval_result.keys()[0]}')
 
         # Log metrics to wandb
         # TODO: fix this later
-        wandb.log({"trial": trial.number, "eval_wer": eval_result['india_and_south_asia_india']})
+        wandb.log({"trial": trial.number, "eval_wer": eval_result['india_and_south_asia_india']['wer']})
 
-        return eval_result['india_and_south_asia_india']
+        return eval_result['india_and_south_asia_india']['wer']
 
     # Define Optuna study
     study = optuna.create_study(direction='minimize')
