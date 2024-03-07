@@ -261,12 +261,14 @@ def main():
 
         dataset = get_mini_cv() # .to(device)
         eval_result = evaluate_asr(model, processor, dataset, True)
+        print(f'eval_result: {eval_result}')
+        print(f'key[0]: {eval_result.keys()[0]}')
 
         # Log metrics to wandb
         # TODO: fix this later
-        wandb.log({"trial": trial.number, "eval_wer": eval_result['india_and_south_asia_india']})
+        wandb.log({"trial": trial.number, "eval_wer": eval_result[eval_result.keys()[0]]})
 
-        return eval_result['india_and_south_asia_india']
+        return eval_result[eval_result.keys()[0]]
 
     # Define Optuna study
     study = optuna.create_study(direction='minimize')
