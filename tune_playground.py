@@ -135,7 +135,7 @@ def main():
 
     def objective(trial):
         # Define hyperparameters to optimize
-        learning_rate = trial.suggest_loguniform('learning_rate', 1e-6, 1e-3)
+        learning_rate = trial.suggest_float('learning_rate', 1e-6, 1e-3, log=True)
 
         # Initialize wandb # TODO: here, or below?
         wandb.init(project="base_test", config={"learning_rate": learning_rate})
