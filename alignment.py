@@ -216,7 +216,7 @@ def main():
         model=model,
         embedding_save_folder=embedding_save_folder,
         train_dataset=sd_qa['dev'],
-        eval_dataset=sd_qa['test'],
+        eval_dataset=sd_qa['dev'],
         data_collator=data_collator,
         tokenizer=processor.feature_extractor,
         callbacks=[peftcallback],

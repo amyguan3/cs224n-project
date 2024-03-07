@@ -35,7 +35,7 @@ def load_sd_qa_dataset(split):
     sd_qa = DatasetDict()
     if split == "dev":
         sd_qa["dev"] = load_dataset("WillHeld/SD-QA", split="dev", token=True)
-        sd_qa["test"] = load_dataset("WillHeld/SD-QA", split="test", token=True)
+        # sd_qa["test"] = load_dataset("WillHeld/SD-QA", split="test", token=True)
     elif split == "test":
         sd_qa["test"] = load_dataset("WillHeld/SD-QA", split="test", token=True)
     return sd_qa
