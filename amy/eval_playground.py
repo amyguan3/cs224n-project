@@ -11,6 +11,7 @@ import torch
 from torch.utils.data import DataLoader
 from accelerate import Accelerator
 import pickle
+import tqdm
 
 
 @dataclass
@@ -21,16 +22,7 @@ class DataCollatorSpeechSeq2SeqWithPadding:
         input_features = [{"input_features": feature["input_features"]} for feature in features]
         batch = self.processor.feature_extractor.pad(input_features, return_tensors="pt")
 
-        # label_features = [{"input_ids": feature["labels"]} for feature in features]
-        # labels_batch = self.processor.tokenizer.pad(label_features, return_tensors="pt")
-        # batch["labels"] = labels_batch
-
         batch["labels"] = [feature["labels"] for feature in features]
-
-        # if bos token is appended in previous tokenization step,
-        # cut bos token here as it's append later anyways
-        # if (labels[:, 0] == self.processor.tokenizer.bos_token_id).all().cpu().item():
-        #     labels = labels[:, 1:]
 
         return batch
     
@@ -82,7 +74,6 @@ def main():
         # compute log-Mel input features from input audio array
         batch["input_features"] = feature_extractor(audio["array"], sampling_rate=audio["sampling_rate"]).input_features[0]
 
-        # encode target text to label ids
         # batch["labels"] = tokenizer(batch["sentence"]).input_ids
         batch["labels"] = batch["sentence"]
         return batch
@@ -138,7 +129,8 @@ def main():
 
     all_predictions, all_references = [], []
 
-    for batch in eval_dataloader:
+    # for batch in eval_dataloader:
+    for _, batch in enumerate(tqdm(eval_dataloader)):
         with torch.no_grad(): # run inference
             predicted_ids = model.generate(**batch)
 
