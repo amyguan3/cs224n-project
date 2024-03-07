@@ -266,9 +266,9 @@ def main():
 
         # Log metrics to wandb
         # TODO: fix this later
-        wandb.log({"trial": trial.number, "eval_wer": eval_result['india_and_south_asia_india']})
+        wandb.log({"trial": trial.number, "eval_wer": eval_result['india_and_south_asia_india']['wer']})
 
-        return eval_result['india_and_south_asia_india']
+        return eval_result['india_and_south_asia_india']['wer']
 
     # Define Optuna study
     study = optuna.create_study(direction='minimize')
