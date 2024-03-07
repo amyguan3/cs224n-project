@@ -262,7 +262,7 @@ def main():
         dataset = get_mini_cv() # .to(device)
         eval_result = evaluate_asr(model, processor, dataset, True)
         print(f'eval_result: {eval_result}')
-        print(f'key[0]: {eval_result.keys()[0]}')
+        # print(f'key[0]: {eval_result.keys()[0]}')
 
         # Log metrics to wandb
         # TODO: fix this later
