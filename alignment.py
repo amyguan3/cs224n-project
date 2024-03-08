@@ -129,6 +129,7 @@ def main():
     model.config.forced_decoder_ids = None  # possibly this needs editing
     model.config.suppress_tokens = []
     model = model.to(device)
+    print("Model saved to device:", device)
 
     #------------------------------------#
     #----------------DATA----------------#
