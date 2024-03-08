@@ -16,7 +16,7 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     self.embedding_save_folder = embedding_save_folder
 
   def compute_loss(self, model, inputs, return_outputs=False):
-    print(input.keys())
+    print(inputs.keys())
     sys.exit()
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
     decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
