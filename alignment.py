@@ -34,7 +34,8 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Union
 from peft import (prepare_model_for_int8_training,
                   LoraConfig, 
-                  PeftModel, 
+                  PeftModel,
+                  PeftConfig, 
                   LoraModel, 
                   LoraConfig, 
                   TaskType,
@@ -51,6 +52,8 @@ from data_utils import (DataCollatorSpeechSeq2SeqWithPadding,
 
 import csv
 import matplotlib.pyplot as plt
+from eval_utils import (evaluate_asr,
+                    get_mini_cv)
 
 
 current = os.path.dirname(os.path.realpath(__file__))  # name of this directory
@@ -216,6 +219,16 @@ def main():
     model.push_to_hub(peft_model_id)
     peftcallback.plot_loss()
 
+    peft_config = PeftConfig.from_pretrained(peft_model_id)
+    model = WhisperForConditionalGeneration.from_pretrained(
+        peft_config.base_model_name_or_path, device_map="auto"
+    )
+    model = PeftModel.from_pretrained(model, peft_model_id) # attaches the PEFT module to the Whisper model
+    model.config.use_cache = True
+
+    dataset = get_mini_cv() # .to(device)
+    metrics = evaluate_asr(model, processor, dataset, True)
+    print(metrics)
 
     
 
