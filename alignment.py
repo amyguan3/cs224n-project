@@ -110,6 +110,9 @@ class SavePeftCallback(TrainerCallback):
 def main():
     # log in to huggingface with huggingface-cli login
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
+    print("Torch cuda is available?", torch.cuda.is_available())
+    if torch.cuda.is_available():
+        print("Torch cuda current device?", torch.cuda.current_device())
 
     #------------------------------------#
     #---------------MODEL----------------#
