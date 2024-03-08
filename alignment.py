@@ -111,7 +111,8 @@ def main():
     #------------------------------------#
 
     # load whisper feature extractor, tokenizer, processor
-    model_path = "openai/whisper-base"
+    # model_path = "openai/whisper-base"
+    model_path = "openai/whisper-large-v2"
     task = "transcribe"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_path)
     tokenizer = WhisperTokenizer.from_pretrained(model_path, task=task)
@@ -210,7 +211,8 @@ def main():
     )
 
     trainer.train()
-    peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
+    # peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
+    peft_model_id = "asyzhou/224n-whisper-large-alignment-test"
     model.push_to_hub(peft_model_id)
     peftcallback.plot_loss()
 
