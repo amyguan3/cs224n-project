@@ -115,7 +115,8 @@ def main():
     print("Loading model...")
 
     # load whisper feature extractor, tokenizer, processor
-    model_path = "openai/whisper-large-v2"
+    # model_path = "openai/whisper-large-v2"
+    model_path = "openai/whisper-base"
     task = "transcribe"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_path)
     tokenizer = WhisperTokenizer.from_pretrained(model_path, task=task)
@@ -147,7 +148,8 @@ def main():
         # data["labels"] = tokenizer(data[source_dialect]["question"]).input_ids
         return data
 
-    embedding_save_folder = "large-v2-embeddings"
+    # embedding_save_folder = "large-v2-embeddings"
+    embedding_save_folder = "base-embeddings"
     os.makedirs(embedding_save_folder, exist_ok=True)
 
     # prepare targets
@@ -196,7 +198,8 @@ def main():
 
     # Define training configuration
     training_args = Seq2SeqTrainingArguments(
-        output_dir="model_checkpoints_large",  
+        # output_dir="model_checkpoints_large",  
+        output_dir="model_checkpoints_base",  
         per_device_train_batch_size=1,
         gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
         learning_rate=1e-3,
