@@ -4,6 +4,7 @@ from transformers import (Seq2SeqTrainer,
                           TrainingArguments, 
                           TrainerState)
 from geomloss import SamplesLoss
+import sys
 
 class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
   """
@@ -15,6 +16,8 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     self.embedding_save_folder = embedding_save_folder
 
   def compute_loss(self, model, inputs, return_outputs=False):
+    print(input.keys())
+    sys.exit()
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
     decoder_input_ids = torch.tensor([[1, 1]]) * model.config.decoder_start_token_id
     decoder_input_ids = decoder_input_ids.to(device)
