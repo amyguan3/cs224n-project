@@ -8,8 +8,10 @@ import os
 import sys
 
 # Setup 
+print("Executing pip installs ...")
 os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
 os.system("pip install -q git+https://github.com/huggingface/peft.git@main")
+print("Print installs done!")
 
 import json
 import random
@@ -112,6 +114,7 @@ def main():
     #------------------------------------#
     #---------------MODEL----------------#
     #------------------------------------#
+    print("Loading model...")
 
     # load whisper feature extractor, tokenizer, processor
     # model_path = "openai/whisper-base"
@@ -130,6 +133,7 @@ def main():
     #------------------------------------#
     #----------------DATA----------------#
     #------------------------------------#
+    print("Loading data...")
 
     # load data
     target_dialect = 'gbr'
@@ -175,6 +179,8 @@ def main():
     #------------------------------------#
     #--------------TRAINING--------------#
     #------------------------------------#
+
+    print("Starting training...")
     target_modules = ['k_proj', 'v_proj', 'q_proj', 'out_proj', 'fc1', 'fc2']
     config = LoraConfig(r=32, # rank, adjust this
                     lora_alpha=64, 
@@ -215,20 +221,21 @@ def main():
 
     trainer.train()
     # peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
+    print("Done with training! Pushing to hub...")
     peft_model_id = "asyzhou/224n-whisper-large-alignment-test"
     model.push_to_hub(peft_model_id)
     peftcallback.plot_loss()
 
-    peft_config = PeftConfig.from_pretrained(peft_model_id)
-    model = WhisperForConditionalGeneration.from_pretrained(
-        peft_config.base_model_name_or_path, device_map="auto"
-    )
-    model = PeftModel.from_pretrained(model, peft_model_id) # attaches the PEFT module to the Whisper model
-    model.config.use_cache = True
+    # peft_config = PeftConfig.from_pretrained(peft_model_id)
+    # model = WhisperForConditionalGeneration.from_pretrained(
+    #     peft_config.base_model_name_or_path, device_map="auto"
+    # )
+    # model = PeftModel.from_pretrained(model, peft_model_id) # attaches the PEFT module to the Whisper model
+    # model.config.use_cache = True
 
-    dataset = get_mini_cv() # .to(device)
-    metrics = evaluate_asr(model, processor, dataset, True)
-    print(metrics)
+    # dataset = get_mini_cv() # .to(device)
+    # metrics = evaluate_asr(model, processor, dataset, True)
+    # print(metrics)
 
     
 
