@@ -70,9 +70,11 @@ def model_pipeline(model, processor, verbose=True):
             language="english", task="transcribe"
         )
     )
+    print(f'decoder config: {whisper_asr.model.config.forced_decoder_ids}')
     whisper_asr.model.generation_config.forced_decoder_ids = processor.tokenizer.get_decoder_prompt_ids(
         language="english", task="transcribe"
     )
+    print(f'forced decoder config: {whisper_asr.model.config.forced_decoder_ids}')
     if verbose:
         print("MODEL PIPELINE SET UP")
     return whisper_asr
@@ -214,13 +216,15 @@ def main():
     model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-base")
     print("WHISPER PROCESSOR/MODEL LOADED")
 
-    # GET DATA
-    print("LOADING DATA")
-    # dataset = get_half_cv()
-    dataset = get_mini_cv()
+    model_pipeline(model, processor)
 
-    metrics = evaluate_asr(model, processor, dataset, True)
-    print(metrics)
+    # # GET DATA
+    # print("LOADING DATA")
+    # # dataset = get_half_cv()
+    # dataset = get_mini_cv()
+
+    # metrics = evaluate_asr(model, processor, dataset, True)
+    # print(metrics)
 
 
 if __name__ == "__main__":

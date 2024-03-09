@@ -6,8 +6,8 @@ from transformers import (WhisperProcessor,
 import torch
 from peft import (PeftModel, 
                   PeftConfig)
-from eval_utils import (evaluate_asr,
-                        get_mini_cv)
+from eval_utils_new import (evaluate_asr,
+                        get_cv_split_mini)
 
 os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
 os.system("pip install -q git+https://github.com/huggingface/peft.git@main")
@@ -35,10 +35,10 @@ def main():
     model.config.use_cache = True
 
     print('GETTING DATASET')
-    dataset = get_mini_cv() # .to(device)
+    dataset = get_cv_split_mini() # .to(device)
 
     print('EVALUATING')
-    metrics = evaluate_asr(model, processor, dataset, True)
+    metrics = evaluate_asr(model, processor, dataset["train"], True)
     print(metrics)
 
 if __name__ == "__main__":
