@@ -54,7 +54,8 @@ def main():
 
     # prepare data
     # cv = load_dataset("mozilla-foundation/common_voice_16_1", "hi", split="validation", token=True)
-    cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True)
+    # cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True)
+    cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
     print(f'Length: {len(cv_all)}')
 
     # data split
