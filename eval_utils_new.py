@@ -54,7 +54,7 @@ def normalise(batch):
 def data(dataset):
     # MODIFY THIS FOR SD-QA SINCE GET_ACCENTS WON'T WORK
     for i, item in enumerate(dataset):
-        yield {"array": np.asarray(item["audio"]["array"]), "reference": get_text(item), "norm_reference": item["norm_text"], "accents": get_accents(item)}
+        yield {"raw": np.asarray(item["audio"]["array"]), "sampling_rate": item["audio"]["sampling_rate"], "reference": get_text(item), "norm_reference": item["norm_text"], "accents": get_accents(item)}
 
 def model_pipeline(model, processor, baseline=False, verbose=True):
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
