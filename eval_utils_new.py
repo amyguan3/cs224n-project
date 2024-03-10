@@ -96,13 +96,12 @@ def get_cv_split():
 
 def get_cv_split_mini():
     cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
-    # cv_all = cv_all.select(range(32))
-    # cv_all = cv_all.map(normalise)
-    # print(f'Length of: {len(cv_all)}')
 
     # data split
     cv_split = cv_all.train_test_split(test_size=0.999, seed=42)
-    cv_split["train"] = cv_split["train"].map(normalise)
+    cv_split["train"] = cv_split["train"].cast_column("audio", Audio(sampling_rate=16000))
+    cv_split["train"] = cv_split["train"].map(normalise) # , num_proc=2
+    cv_split["train"] = cv_split["train"].filter(is_target_text_in_range, input_columns=["sentence"]) # , num_proc=2
     # cv = cv_split["train"]
 
     print("CV DATASET LOADED")
