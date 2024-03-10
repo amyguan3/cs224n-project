@@ -125,6 +125,7 @@ def get_cv_split_mini(accents=ACCENTS):
     # for row in dataset_total:
     #     print(f'AUDIO TYPE BEFORE: {type(row["audio"]["array"])}')
     #     break
+    dataset_total = dataset_total.select(range(24))
     dataset_total = dataset_total.map(reformat_audio)
     # dataset_total = dataset_total.cast_column("audio", Audio(sampling_rate=16000))
     # dataset_total = dataset_total.map(normalise) # , num_proc=2
