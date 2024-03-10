@@ -198,7 +198,7 @@ def main():
     # Define training configuration
     training_args = Seq2SeqTrainingArguments(
         output_dir="model_checkpoints",  
-        per_device_train_batch_size=8,
+        per_device_train_batch_size=4,
         gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
         learning_rate=1e-3,
         warmup_steps=50,
