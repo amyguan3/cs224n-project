@@ -96,7 +96,7 @@ def get_cv_split():
 
 def get_cv_split_mini():
     cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
-    cv_all = cv_all.select(range(32))
+    # cv_all = cv_all.select(range(32))
     cv_all = cv_all.map(normalise)
     # print(f'Length of: {len(cv_all)}')
 
