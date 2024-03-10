@@ -128,10 +128,10 @@ def main():
     processor = WhisperProcessor.from_pretrained(model_path, task=task)
 
     # load pre-trained model checkpoint
-    model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True, )
+    model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True, device_map="auto")
     model.config.forced_decoder_ids = None  # possibly this needs editing
     model.config.suppress_tokens = []
-    model = model.to(device)
+    # model = model.to(device)  # doesn't work with 8bit
     print("Model saved to device:", device)
 
     #------------------------------------#
