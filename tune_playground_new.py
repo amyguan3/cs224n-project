@@ -82,9 +82,9 @@ def tune(accents):
         print(f'==================TRIAL {trial.number}==================')
 
         # Define hyperparameters to optimize
-        learning_rate = trial.suggest_uniform('learning_rate', 0.001, 0.1)
-        batch_size = trial.suggest_categorical('batch_size', [8, 16]) # TODO: FIX THIS
-        rank = trial.suggest_categorical('rank', [32, 64, 128]) # TODO: FIX THIS
+        learning_rate = trial.suggest_uniform('learning_rate', 0.001, 0.005)
+        batch_size = trial.suggest_categorical('batch_size', [16, 32, 64])
+        rank = trial.suggest_categorical('rank', [32, 64, 128])
         param_config = ParamConfig(learning_rate=learning_rate, batch_size=batch_size, rank=rank)
         print(f'Hyperparameters for trial {trial.number}:\nlearning rate: {learning_rate}, batch size: {batch_size}, rank: {rank}')
 
@@ -124,12 +124,14 @@ def tune(accents):
 
     # Define Optuna study
     study = optuna.create_study(direction='minimize')
+    # can increase number of trials later
     study.optimize(objective, n_trials=3)
 
     # Get the best hyperparameters
     best_params = study.best_params
     print("Best hyperparameters:", best_params)
 
+    # extra stuff below
     importances = optuna.importance.get_param_importances(study)
     print("Importances: {importances}")
 

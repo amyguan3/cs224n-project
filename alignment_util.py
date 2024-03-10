@@ -92,7 +92,9 @@ class SavePeftCallback(TrainerCallback):
             os.remove(pytorch_model_path)
         return control
 
-
+### TODO: MOVE TARGET AND SOURCE TO PARAMETERS OF GET EMBEDDINGS ###
+### with default of usa and ind_n
+### define a mapping of sd-qa to cv names in data_utils
 def get_embeddings(mini=False):
     # log in to huggingface with huggingface-cli login
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
@@ -226,6 +228,7 @@ def train_adapter(processor, data_collator, sd_qa, param_config):
     trainer.train()
     # DELETE LATER
     print("Done with training! Pushing to hub...")
+    # TODO: CUSTOMIZE THIS WHEN WE RUN THINGS CONCURRENTLY
     peft_model_id = "amyguan/large-tune-test"
     model.push_to_hub(peft_model_id)
 
