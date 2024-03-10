@@ -128,7 +128,7 @@ def main():
     processor = WhisperProcessor.from_pretrained(model_path, task=task)
 
     # load pre-trained model checkpoint
-    model = WhisperForConditionalGeneration.from_pretrained(model_path)
+    model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True, )
     model.config.forced_decoder_ids = None  # possibly this needs editing
     model.config.suppress_tokens = []
     model = model.to(device)
@@ -184,6 +184,13 @@ def main():
     #------------------------------------#
 
     print("Starting training...")
+    model = prepare_model_for_int8_training(model, output_embedding_layer_name="proj_out")
+
+    def make_inputs_require_grad(module, input, output):
+        output.requires_grad_(True)
+    model.model.encoder.conv1.register_forward_hook(make_inputs_require_grad)
+
+
     target_modules = ['k_proj', 'v_proj', 'q_proj', 'out_proj', 'fc1', 'fc2']
     config = LoraConfig(r=32, # rank, adjust this
                     lora_alpha=64, 
@@ -204,7 +211,7 @@ def main():
         gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
         learning_rate=1e-3,
         warmup_steps=50,
-        # max_steps=100  # for testing
+        # gradient_checkpointing=True, # just added
         num_train_epochs=3,
         # evaluation_strategy="steps",  # disregard since using commonvoice to eval
         # per_device_eval_batch_size=8,
