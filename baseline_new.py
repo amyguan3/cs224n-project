@@ -10,7 +10,7 @@ def main():
     # load whisper feature extractor, tokenizer, processor
     model_path = "openai/whisper-large-v2"
     model = WhisperForConditionalGeneration.from_pretrained(model_path)
-    processor = WhisperProcessor.from_pretrained(model_path, language="English", task="transcribe")
+    processor = WhisperProcessor.from_pretrained(model_path, language="English", task="transcribe", load_in_8bit=True, device_map="auto")
 
     pipe = model_pipeline(model, processor, baseline=True, verbose=True)
 
