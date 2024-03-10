@@ -94,20 +94,35 @@ def get_cv_split():
     return cv_split
 
 
-def get_cv_split_mini():
-    cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
+def get_cv_split_mini(accents=[]):
+    # iterable dataset
+    dataset_total = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357") # , streaming=True)
+    print(dataset_total["accents"].unique())
+    # text_column_name = "sentence"
 
-    # data split
-    cv_split = cv_all.train_test_split(test_size=0.9995, seed=42) # 28 samples in train
-    print('casting audio column')
-    cv_split["train"] = cv_split["train"].cast_column("audio", Audio(sampling_rate=16000))
-    print('normalizing')
-    cv_split["train"] = cv_split["train"].map(normalise) # , num_proc=2
-    cv_split["train"] = cv_split["train"].filter(is_target_text_in_range, input_columns=["sentence"]) # , num_proc=2
-    # cv = cv_split["train"]
+    # dataset_total = dataset_total.shuffle(seed=42, buffer_size=10_000)
+    # dataset_total = dataset_total.take(28432) # half of total dataset
+    # dataset_total = dataset_total.cast_column("audio", Audio(sampling_rate=16000))
+    # dataset_total = dataset_total.map(normalise) # , num_proc=2
+    # dataset_total = dataset_total.filter(is_target_text_in_range, input_columns=[text_column_name]) # , num_proc=2
+    # dataset_total = dataset_total.filter(lambda example: example['accents'] in accents)
 
-    print("CV DATASET LOADED")
-    return cv_split
+    # print("HALF CV DATASET LOADED")
+    # return dataset_total
+
+    # cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
+
+    # # data split
+    # cv_split = cv_all.train_test_split(test_size=0.9995, seed=42) # 28 samples in train
+    # print('casting audio column')
+    # cv_split["train"] = cv_split["train"].cast_column("audio", Audio(sampling_rate=16000))
+    # print('normalizing')
+    # cv_split["train"] = cv_split["train"].map(normalise) # , num_proc=2
+    # cv_split["train"] = cv_split["train"].filter(is_target_text_in_range, input_columns=["sentence"]) # , num_proc=2
+    # # cv = cv_split["train"]
+
+    # print("CV DATASET LOADED")
+    # return cv_split
 
 
 def pickle_dump(predictions, references, norm_predictions, norm_references):

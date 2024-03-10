@@ -48,4 +48,5 @@ def main():
     print(metrics)
 
 if __name__ == "__main__":
-    main()
+    get_cv_split_mini()
+    # main()
