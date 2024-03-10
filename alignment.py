@@ -54,7 +54,7 @@ from data_utils import (DataCollatorSpeechSeq2SeqWithPadding,
 
 import csv
 import matplotlib.pyplot as plt
-from eval_utils import (evaluate_asr,
+from amy.old.eval_utils import (evaluate_asr,
                     get_mini_cv)
 
 

@@ -12,6 +12,7 @@ from torch.utils.data import DataLoader
 from accelerate import Accelerator
 import pickle
 import tqdm
+import random
 
 
 @dataclass
@@ -28,23 +29,23 @@ class DataCollatorSpeechSeq2SeqWithPadding:
     
 
 def main():
-    accelerator = Accelerator()
-    # device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
+    # accelerator = Accelerator()
+    device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
 
-    dialects = [0] # switch to smth like "scottish_english" later
+    dialects = [] # switch to smth like "scottish_english" later
 
     metric = evaluate.load("wer")
 
     # LOAD MODEL
-    model_name = "openai/whisper-base"
+    model_name = "openai/whisper-large-v2"
     task = "transcribe"
-    language = "Hindi" # "English"
+    language = "English"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_name)
     tokenizer = WhisperTokenizer.from_pretrained(model_name, language=language, task=task)
     processor = WhisperProcessor.from_pretrained(model_name, language=language, task=task)
     model = WhisperForConditionalGeneration.from_pretrained(model_name)
     model.generation_config.forced_decoder_ids = processor.tokenizer.get_decoder_prompt_ids(
-        language="hi", task="transcribe"
+        language="en", task="transcribe"
     )
     print("WHISPER PROCESSOR/MODEL LOADED")
 
@@ -52,11 +53,19 @@ def main():
     print("PREPARING DATA")
 
     # prepare data
-    cv = load_dataset("mozilla-foundation/common_voice_16_1", "hi", split="validation", token=True)
-    # cv = load_dataset("mozilla-foundation/common_voice_16_1", "en", split="train", token=True)
+    # cv = load_dataset("mozilla-foundation/common_voice_16_1", "hi", split="validation", token=True)
+    # cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True)
+    cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
+    print(f'Length: {len(cv_all)}')
+
+    # data split
+    cv_split = cv_all.train_test_split(test_size=0.5, seed=42)
+    cv = cv_split["train"]
+
+    print(cv)
     
     # for testing purposes
-    cv = cv.select(range(20))
+    # cv = cv.select(range(20))
 
     cv = cv.cast_column("audio", Audio(sampling_rate=16000))
 
@@ -64,7 +73,7 @@ def main():
         if not dialects: # no dialect filtering, evaluate all
             return True
         # for testing purposes # TODO: fix this
-        return example['down_votes'] in dialects
+        return example['accents'] in dialects
 
     cv.filter(keep_dialect)
 
@@ -143,13 +152,13 @@ def main():
 
     def save_items():
         os.system(f"mkdir -p pickles")
-        with open('pickles/hi_pred.pkl', 'wb') as f:
+        with open('pickles/pred.pkl', 'wb') as f:
             pickle.dump(all_predictions, f)
-        with open('pickles/hi_ref.pkl', 'wb') as f:
+        with open('pickles/ref.pkl', 'wb') as f:
             pickle.dump(all_references, f)
 
         os.system(f"mkdir -p evaluation")
-        op_file = f"evaluation/hindi_test.txt"
+        op_file = f"evaluation/metrics.txt"
         result_file = open(op_file, 'w')
         result_file.write('\nWER: ' + str(wer) + '\n')
 

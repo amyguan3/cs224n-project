@@ -1,0 +1,74 @@
+ACCENT: Hong Kong English
+
+WER: 16.444444444444446
+
+NORMALIZED WER: 10.526315789473683
+REF: b'The surgery would sideline him for the rest of the season.'
+PRED: b' The surgery will sign him for the rest of the season.'
+------------------------------------------------------
+REF: b'Divine elements "fall" into the material realm, and are locked within human beings.'
+PRED: b' The mind elements fall into the material realm and are locked within human beings.'
+------------------------------------------------------
+REF: b'Morris was born in Radcliffe, Lancashire.'
+PRED: b' Morris was born in Radcliffe, Lancashire.'
+------------------------------------------------------
+REF: b'There are approximately forty Polynesian languages.'
+PRED: b' There are approximately 40 Polynesian languages.'
+------------------------------------------------------
+REF: b'I have my own, my parents have theirs, and my brothers have theirs.'
+PRED: b' I have my own, my parents have theirs, and my brothers have theirs.'
+------------------------------------------------------
+REF: b'The accident killed two of three crewmembers and five of nine passengers.'
+PRED: b' The accident killed two of three crew members and five of nine passengers.'
+------------------------------------------------------
+REF: b'She was only the second educational psychologist to hold this position.'
+PRED: b' She was only the second educational psychologist to her disposition.'
+------------------------------------------------------
+REF: b'Reynolds grew up supporting and sold lollies outside Princes Park on match days.'
+PRED: b' Reynolds grew up supporting and sold lollies outside Princess Park on match days.'
+------------------------------------------------------
+REF: b'These minelayers can carry several thousand mines and manoeuvre with high precision.'
+PRED: b' These mine layers can carry several thousand mines and maneuver with high precision.'
+------------------------------------------------------
+REF: b'English and Foreign Languages University is located close to the railway station.'
+PRED: b' English and foreign languages university is located close to the railway station.'
+------------------------------------------------------
+REF: b'This department is now under Toronto Community Services department.'
+PRED: b' This department is now under the Toronto Community Services Department.'
+------------------------------------------------------
+REF: b'Its main products are beer, rice wine, and mineral water.'
+PRED: b' Its main products are beer, rice, wine, and mineral water.'
+------------------------------------------------------
+REF: b'The result was the Atlantic Charter.'
+PRED: b' The result was the Atlantic Charter.'
+------------------------------------------------------
+REF: b"The organization was originally known as the Commandant's Warfighting Laboratory."
+PRED: b' The organization is originally known as the Commodon Warfighting Laboratory.'
+------------------------------------------------------
+REF: b'Wi-Fi is often used for remote monitoring and control.'
+PRED: b' Wi-Fi is often used for remote monitoring and control.'
+------------------------------------------------------
+REF: b'Under community nests there are many broken eggs.'
+PRED: b' Under Community Nests, there are many broken eggs.'
+------------------------------------------------------
+REF: b'Over the next four years he collected previously undisclosed records and documents.'
+PRED: b' Over the next 4 years, he collected previously undisclosed records and documents.'
+------------------------------------------------------
+REF: b'She is also a tattooist and actor for film and television.'
+PRED: b' She is also a tattooist and actor for film and television.'
+------------------------------------------------------
+REF: b'Coordinated by Alexander Enrico Haliday were four Academic Associates.'
+PRED: b' coordinated by Alexander and Rico Halliday with four academic associates.'
+------------------------------------------------------
+REF: b'It is strongly migratory, wintering in tropical Africa.'
+PRED: b' It is strongly migratory, wintering in tropical Africa.'
+------------------------------------------------------
+REF: b'One day passes are also available.'
+PRED: b' One day passes are also available.'
+------------------------------------------------------
+REF: b'Nowadays, other communities have started celebrating this kind of a family-bonding festival.'
+PRED: b' Nowadays, other communities have started celebrating this kind of family bonding festival.'
+------------------------------------------------------
+REF: b'The film received generally negative reviews.'
+PRED: b' The film received generally negative reviews.'
+------------------------------------------------------

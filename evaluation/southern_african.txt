@@ -1,0 +1,260 @@
+ACCENT: Southern African (South Africa, Zimbabwe, Namibia)
+
+WER: 14.510278113663846
+
+NORMALIZED WER: 10.739856801909307
+REF: b'Plays are staged both for adults and children.'
+PRED: b' Plays are staged for both adults and children.'
+------------------------------------------------------
+REF: b'Many residents of Peck work in nearby Orofino, Idaho.'
+PRED: b' Many residents of PEC work in nearby Orofino, Idaho.'
+------------------------------------------------------
+REF: b'Katowice International Airport is constantly developing.'
+PRED: b' Katoa is international airport is constantly developing.'
+------------------------------------------------------
+REF: b"No sign of the Sewell's Point battery exists today."
+PRED: b" No sign of the Sewell's point battery exists today."
+------------------------------------------------------
+REF: b'She represents the accomplished female practitioner.'
+PRED: b' She represents the accomplished female practitioner.'
+------------------------------------------------------
+REF: b'The division fought on Peleliu for one month before being relieved.'
+PRED: b' The division fought on Peleliu for one month before being relieved.'
+------------------------------------------------------
+REF: b'Hawke did not exceed his cap.'
+PRED: b' Hulk did not exceed his cap.'
+------------------------------------------------------
+REF: b'It is the oldest continuously published monthly magazine in the United States.'
+PRED: b' It is the oldest continuously published monthly magazine in the United States.'
+------------------------------------------------------
+REF: b'The symbol is also an ancient symbol for good fortune.'
+PRED: b' The symbol is also an ancient symbol for good fortune.'
+------------------------------------------------------
+REF: b'They had been runaway leaders for much of the season.'
+PRED: b' They had been runaway leaders for much of the season.'
+------------------------------------------------------
+REF: b"Over the mantel-piece had been charcoaled 'Rascal'; over the pier-table, 'Abolitionist."
+PRED: b' Over the mantelpiece had been charcoaled Roscoe. Over the pier table, abolishnest.'
+------------------------------------------------------
+REF: b"Bakan then pursued a master's degree at Harvard Law School."
+PRED: b" Bakhan then pursued a master's degree at Harvard Law School."
+------------------------------------------------------
+REF: b'He was promoted to the rank of captain general for his efforts.'
+PRED: b' He was promoted to the rank of Captain General for his efforts.'
+------------------------------------------------------
+REF: b'It is also defined as the study of crude drugs.'
+PRED: b' It is also defined as a study of crude drugs.'
+------------------------------------------------------
+REF: b'Bakersfield is located in southeastern Franklin County, bordered by Lamoille County to the southeast.'
+PRED: b' Bakersfield is located in southern eastern Franklin County, bordered by Lamoille County to the southeast.'
+------------------------------------------------------
+REF: b'The Force played their initial season at Pleasant Valley High School.'
+PRED: b' The Force played their initial season at Pleasant Valley High School.'
+------------------------------------------------------
+REF: b'It refers to both the boat and the conflict won by Cuban government forces.'
+PRED: b' It reflects both the bold and the conflict on by Cuban government forces.'
+------------------------------------------------------
+REF: b"Regardless of the writers' intentions, ratings continued to fall."
+PRED: b" Regardless of the writer's intentions, ratings continued to fall."
+------------------------------------------------------
+REF: b'It is located on the outskirts of Perth.'
+PRED: b' It is located on the outskirts of Perth.'
+------------------------------------------------------
+REF: b'The Danube crosses the district in its westernmost part from south to north.'
+PRED: b' The Danube crosses the district in its westernmost part from south to north.'
+------------------------------------------------------
+REF: b'Nouns are marked for number and case.'
+PRED: b' Nouns are marked for number and case.'
+------------------------------------------------------
+REF: b'Shakespeare was a world-famous playwright.'
+PRED: b' Shakespeare was a world famous playwright.'
+------------------------------------------------------
+REF: b'His next three appearances did not go so well.'
+PRED: b' His next three appearances did not go so well.'
+------------------------------------------------------
+REF: b'Wings for the Amiga was well received by critics.'
+PRED: b' Wings for the Amiga was well received by critics.'
+------------------------------------------------------
+REF: b'There he spent twenty more years.'
+PRED: b' There he spent 20 more years.'
+------------------------------------------------------
+REF: b'They had a son.'
+PRED: b' They hid a son.'
+------------------------------------------------------
+REF: b'Nothing is known about his youth.'
+PRED: b' Nothing is known about his youth.'
+------------------------------------------------------
+REF: b'It was closed in early December.'
+PRED: b' It was closed in early December.'
+------------------------------------------------------
+REF: b'Support of community and public projects was an important objective of the bank.'
+PRED: b' Support of community and public projects was an important objective of the bank.'
+------------------------------------------------------
+REF: b'Many of these species have only been described in recent years.'
+PRED: b' Many of these species have only been described in recent years.'
+------------------------------------------------------
+REF: b'They also took from Scotism many propositions concerning the doctrine of the angels.'
+PRED: b' They also took from Scottism many propositions concerning the doctrine of the angels.'
+------------------------------------------------------
+REF: b'Together, these pickups are often referred to as the S-series.'
+PRED: b' Together these pickups are often referred to as the S-series.'
+------------------------------------------------------
+REF: b'Her brother Samuel and sister Anastasia are also marathon runners.'
+PRED: b' Her brother Samuel and sister Anastasia are also marathon runners.'
+------------------------------------------------------
+REF: b'This figurine and others were scanned to test methods of range scanning physical objects.'
+PRED: b' This figurine and others were scanned to test methods of range scanning physical objects.'
+------------------------------------------------------
+REF: b'Marshall scored one try from four appearances in his debut season.'
+PRED: b' Marshall scored one try from four appearances in the debut season.'
+------------------------------------------------------
+REF: b'All five men were British.'
+PRED: b' All five men were British'
+------------------------------------------------------
+REF: b'Both Churchills were keen amateur painters, as well as writers.'
+PRED: b' Both Churchills were keen amateur painters as well as writers.'
+------------------------------------------------------
+REF: b'The band is still working.'
+PRED: b' The band is still working.'
+------------------------------------------------------
+REF: b'His nickname was "Eagle".'
+PRED: b' His nickname was Iggy.'
+------------------------------------------------------
+REF: b'He summers in Northport Point, a posh community just outside the village.'
+PRED: b' He summers in North Port Point, a posh community just outside the village.'
+------------------------------------------------------
+REF: b'I never wanted texture to be texture, or images to become shapes.'
+PRED: b' I never wanted texture to be texture or images to become shapes'
+------------------------------------------------------
+REF: b'Shortly afterwards, Raymond-Roupen even quarreled with Leon.'
+PRED: b' Shortly afterwards Raymond Rupin even quarreled with Leon.'
+------------------------------------------------------
+REF: b'Assisted by tourists, most businesses were up and running within a few days.'
+PRED: b' Assisted by tourists, most businesses were up and running within a few days.'
+------------------------------------------------------
+REF: b'June is the cloudiest month while October is the least cloudiest month.'
+PRED: b' June is the cloudiest month while October is the least cloudiest month.'
+------------------------------------------------------
+REF: b'Then I am two hundred and thirty-three years old!'
+PRED: b' Then I am 233 years old'
+------------------------------------------------------
+REF: b'He expects them to carry messages for him to their kindred.'
+PRED: b' you'
+------------------------------------------------------
+REF: b'A smokescreen was used to hide the Mongol movements and confuse the Europeans.'
+PRED: b' A smoke screen was used to hide the Mughal movement and confuse the Europeans.'
+------------------------------------------------------
+REF: b'In addition, the Arboretum was designated a National Historic Site the same year.'
+PRED: b" in addition to the uproar that is ignited on National History Society's scene here."
+------------------------------------------------------
+REF: b'He went to school in Cowbridge and then to Jesus College, Oxford.'
+PRED: b' He went to school in Coalbridge and then to Jesus College, Oxford.'
+------------------------------------------------------
+REF: b'This version is based on the engine of The Secret Files.'
+PRED: b' This vision is based on the engine of the circuit files.'
+------------------------------------------------------
+REF: b'The book won several awards.'
+PRED: b' The book won several awards.'
+------------------------------------------------------
+REF: b'The destroyers and "Nicholas" both stayed behind to rescue survivors from "Helena".'
+PRED: b' The destroyers and Nikolas both stayed behind to rescue survivors from Helena.'
+------------------------------------------------------
+REF: b'He was the third-string quarterback on the team behind Carson Palmer and Jon Kitna.'
+PRED: b' He was the third-string quarterback on the team behind cousin Parmine Jotgitna.'
+------------------------------------------------------
+REF: b'The city is named after a large boulder.'
+PRED: b' The city is named after a large boulder.'
+------------------------------------------------------
+REF: b'The gas works closed and the land redeveloped into the Breakfast Point residential development.'
+PRED: b' The gas works closed and the land redeveloped into the Breakfast Point residential development.'
+------------------------------------------------------
+REF: b'Hundreds of live concerts were recorded, many heralded as landmark performances.'
+PRED: b' Hundreds of live concerts were recorded, many heralded as landmark performances.'
+------------------------------------------------------
+REF: b'I might have taken leave of my senses.'
+PRED: b' I might have taken leave of my senses.'
+------------------------------------------------------
+REF: b'Willie followed his brother into the Irish Volunteers and the Republican movement.'
+PRED: b' Willie followed his brother into the Irish Volunteers and the Republican movement.'
+------------------------------------------------------
+REF: b'The burning cotton-clad drifted downstream for several hours before running aground and exploding.'
+PRED: b' The burning cotton thread drifted downstream for several hours before running aground and exploding.'
+------------------------------------------------------
+REF: b'He died a week after returning home.'
+PRED: b' He died a week after returning home.'
+------------------------------------------------------
+REF: b'While Bucher finished the race in fifth place, Longo was later disqualified.'
+PRED: b' While Buczef finished the race in 5th place, Lange was later disqualified.'
+------------------------------------------------------
+REF: b'The program has cut mortality rates from heart attack in Ottawa by half.'
+PRED: b' The program has cut mortality rates from heart attack in Ottawa by half.'
+------------------------------------------------------
+REF: b'However, the necessary funding could not be raised in time.'
+PRED: b' However, the necessary funding could not be raised in time.'
+------------------------------------------------------
+REF: b'Rajib is the assistant pastor of our church.'
+PRED: b' Rajib is the assistant pastor of our church.'
+------------------------------------------------------
+REF: b'Phishing is a technique of fraudulently obtaining private information.'
+PRED: b' Phishing is a technique of fraudulently obtaining private information.'
+------------------------------------------------------
+REF: b"The nurses' station was operational; there were hot showers and charging stations for electronics."
+PRED: b' The nurses station was operational. There were hot showers and charging stations for electronics.'
+------------------------------------------------------
+REF: b'There is a European cemetery to the southeast of the fort.'
+PRED: b' There is a European cemetery to the southeast of the fort.'
+------------------------------------------------------
+REF: b'Both the branches work together.'
+PRED: b' Both the branches work together'
+------------------------------------------------------
+REF: b'Every day, apart from Sundays, activities take place after classes have finished.'
+PRED: b' Every day apart from Sundays, activities take place after classes have finished.'
+------------------------------------------------------
+REF: b'The hull is of thermoplastic sandwich construction, providing strength, stiffness, and built-in buoyancy.'
+PRED: b' The hull is of thermoplastic sandwich construction, providing strength, stiffness and built-in buoyancy.'
+------------------------------------------------------
+REF: b'They had three children: Josephine, Lou and Dan.'
+PRED: b' They had three children, Josephine, Luke, and Dan.'
+------------------------------------------------------
+REF: b'It is located on the southern coast of the krai.'
+PRED: b' It is located on the southern coast of the Grand.'
+------------------------------------------------------
+REF: b'The Afrotropical realm is home to a number of endemic plant families.'
+PRED: b' The Afro-tropical realm is home to a number of endemic plant families.'
+------------------------------------------------------
+REF: b'She wanted me to be Dolores.'
+PRED: b' She wanted me to be Dolores.'
+------------------------------------------------------
+REF: b'They also are an integral part of the military grid reference system.'
+PRED: b' They also are an integral part of the military grid reference system.'
+------------------------------------------------------
+REF: b'The team colours were switched from red and black to predominantly blue and black.'
+PRED: b' The theme colors were switched from red and black to predominantly blue and black.'
+------------------------------------------------------
+REF: b'Little remains at the original townsite.'
+PRED: b' Look through the rings at the horizontal side.'
+------------------------------------------------------
+REF: b'He described himself as "a Tory in the old tradition".'
+PRED: b' He described himself as a Tory in the old tradition.'
+------------------------------------------------------
+REF: b'Fielding was born in Philadelphia and raised in Mechanicsville, Pennsylvania.'
+PRED: b' Fielding was born in Philadelphia and raised in Mechanicsville, Pennsylvania.'
+------------------------------------------------------
+REF: b'The inevitable conflict which followed is called the Cimbrian War.'
+PRED: b' The inevitable conflict which follows is called the Kim-Brenn War.'
+------------------------------------------------------
+REF: b'This was the last attack.'
+PRED: b' This was the last attack'
+------------------------------------------------------
+REF: b'This is the second or third time I have had it.'
+PRED: b' This is the second or third time I have had it'
+------------------------------------------------------
+REF: b'The score was by Bill Conti.'
+PRED: b' The score was by Bill Conti.'
+------------------------------------------------------
+REF: b'The ball mouse has two freely rotating rollers.'
+PRED: b' The ball mass has two freely rotating rollers.'
+------------------------------------------------------
+REF: b'He has no formal tertiary qualifications.'
+PRED: b' He has no formalities or qualifications.'
+------------------------------------------------------

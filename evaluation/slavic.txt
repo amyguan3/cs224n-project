@@ -1,0 +1,8 @@
+ACCENT: Slavic
+
+WER: 9.090909090909092
+
+NORMALIZED WER: 9.090909090909092
+REF: b'It is still presented by the American Lung Association of Virginia.'
+PRED: b' It is still presented by the American Lang Association of Virginia.'
+------------------------------------------------------

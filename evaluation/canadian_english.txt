@@ -1,0 +1,8 @@
+ACCENT: Canadian English
+
+WER: 0.0
+
+NORMALIZED WER: 0.0
+REF: b'He was also involved in the politics of his time.'
+PRED: b' He was also involved in the politics of his time.'
+------------------------------------------------------

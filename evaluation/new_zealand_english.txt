@@ -1,0 +1,113 @@
+ACCENT: New Zealand English
+
+WER: 10.43956043956044
+
+NORMALIZED WER: 6.301369863013699
+REF: b'The Convocation Center also hosts numerous other functions including the winter commencement ceremony.'
+PRED: b' The Convocation Centre also hosts numerous other functions including the Winter Commencement Ceremony.'
+------------------------------------------------------
+REF: b'It is the debut film directed by him.'
+PRED: b' It is the Daibu film directed by him.'
+------------------------------------------------------
+REF: b'He was credited with the destruction of ten enemy aircraft.'
+PRED: b' He was credited with the destruction of 10 enemy aircraft.'
+------------------------------------------------------
+REF: b'It is being expanded to include some of the neighbouring dryland farming areas.'
+PRED: b' It is being expanded to include some of the neighbouring dry land farming areas.'
+------------------------------------------------------
+REF: b'Former pupils are known as Old Riponians.'
+PRED: b' Former pupils are known as Old Rappanians.'
+------------------------------------------------------
+REF: b'Child with curly hair laying in a field holding a dandelion.'
+PRED: b' Child with curly hair laying in a field holding a dandelion.'
+------------------------------------------------------
+REF: b'OpenT, a project to develop a compiler for Turing, is no longer in development.'
+PRED: b' OpenT, a project to develop a compiler for Turing, is no longer in development.'
+------------------------------------------------------
+REF: b'The song also alludes to Barry White.'
+PRED: b' The song also alludes to Barry White.'
+------------------------------------------------------
+REF: b'The team colours remained the same throughout; black, gold, red and white.'
+PRED: b' The team colours remained the same throughout. Black, gold, red and white.'
+------------------------------------------------------
+REF: b'The wagons were available with or without brakes as required.'
+PRED: b' The Wacons were available with or without brakes as required.'
+------------------------------------------------------
+REF: b'Two years later, Frank Packer died, and his son Kerry took over the company.'
+PRED: b' Two years later Frank Packard died and his son Kerry took over the company.'
+------------------------------------------------------
+REF: b'To the south-southeast is the crater Mariotte.'
+PRED: b' To the south-southeast is the crater Marriott.'
+------------------------------------------------------
+REF: b'She served on the board of directors at the Gerstein Centre in Toronto.'
+PRED: b' She served on the board of directors at the Gerstein Centre in Toronto.'
+------------------------------------------------------
+REF: b'The townspeople reportedly objected to his proposal, naming the town after his wife, Kristine.'
+PRED: b' The townspeople reportedly objected to his proposal, naming the town after his wife, Christine.'
+------------------------------------------------------
+REF: b'He then proceeded to invade Arzanene again.'
+PRED: b' He then proceeded to invade Arzunine again.'
+------------------------------------------------------
+REF: b'He won the bout via knockout in the second round.'
+PRED: b' He won the bout by a knockout in the second round.'
+------------------------------------------------------
+REF: b'Gerry tries to tell Alfie but he thinks that Gerry has helped.'
+PRED: b' Jerry tries to tell Alfie but he thinks that Jerry has helped.'
+------------------------------------------------------
+REF: b'He then attended the University of Maryland.'
+PRED: b' He then attended the University of Maryland.'
+------------------------------------------------------
+REF: b'The move was deemed primarily due to the influence of majority Buddhist population.'
+PRED: b' The move was deemed primarily due to the influence of majority Buddhist population.'
+------------------------------------------------------
+REF: b'Some victims have their elbows and ankles shot as well.'
+PRED: b' Some victims have their elbows and ankles shot as well.'
+------------------------------------------------------
+REF: b'The unemployment rate in Consett became double the national average.'
+PRED: b' the unemployment rate in concert became double the national average.'
+------------------------------------------------------
+REF: b'Stainback believed Communists were plotting to take over the Hawaiian Islands.'
+PRED: b' Steinbeck believed communists were plotting to take over the Hawaiian island.'
+------------------------------------------------------
+REF: b'Ravi fails to recollect about the mobile.'
+PRED: b' Revi fails to recollect about the mobile.'
+------------------------------------------------------
+REF: b"She reprised her role in the last two episodes of the show's fifth season."
+PRED: b" She reprised her role in the last two episodes of the show's fifth season."
+------------------------------------------------------
+REF: b'\xe2\x80\x98Nobody said you did,\xe2\x80\x99 said the Red Queen.'
+PRED: b' Nobody said you did, said the Red Queen.'
+------------------------------------------------------
+REF: b'It is not a council estate however.'
+PRED: b' It is not a council estate, however.'
+------------------------------------------------------
+REF: b'He won the bout via armbar submission in the first round.'
+PRED: b' He won the bout via armbar submission in the first round.'
+------------------------------------------------------
+REF: b'Kennedy is from Limerick.'
+PRED: b' Kennedy is from Limerick.'
+------------------------------------------------------
+REF: b'They asked for the "freedom to fly" from Love Field to any destination.'
+PRED: b' They asked for the freedom to fly from Love Field to any destination.'
+------------------------------------------------------
+REF: b"I'm not over strong, he repeated."
+PRED: b" I'm not over strong, he repeated."
+------------------------------------------------------
+REF: b'Melby was personally nominated for three of these Emmys (for hosting and producing).'
+PRED: b' Melby was personally nominated for three of these Emmys for hosting and producing.'
+------------------------------------------------------
+REF: b'Gartner clients include large corporations, government agencies, technology companies and the investment community.'
+PRED: b' Gartner clients include large corporations, government agencies, technology companies, and the investment community.'
+------------------------------------------------------
+REF: b'The mansions were known as the Twin Palaces.'
+PRED: b' The mansions were known as the Twin Palaces.'
+------------------------------------------------------
+REF: b"Don't let the title fool you."
+PRED: b" Don't let the title fool you."
+------------------------------------------------------
+REF: b'Although he was a consultant to Gillette, he refused to use its products.'
+PRED: b' Although he was a consultant to Gillette, he refused to use its products.'
+------------------------------------------------------
+REF: b'Normally colorless, they are stained purplish-red by trichrome.'
+PRED: b' Normally colorless, they are stained purplish red by trichrome.'
+------------------------------------------------------

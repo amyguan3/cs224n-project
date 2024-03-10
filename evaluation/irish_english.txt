@@ -1,0 +1,116 @@
+ACCENT: Irish English
+
+WER: 14.358974358974358
+
+NORMALIZED WER: 6.852791878172589
+REF: b'It was named for Garret Hobart, the twenty-fourth Vice President of the United States.'
+PRED: b' It was named for Garrett Hobart, the 24th Vice President of the United States.'
+------------------------------------------------------
+REF: b"It is the region's first cultural, entertainment, family and shopping destination."
+PRED: b" It is the region's first cultural entertainment family and shopping destination."
+------------------------------------------------------
+REF: b'Critics of comparative education refer to it as Policy Borrowing.'
+PRED: b' Critics of comparative education refer to it as policy borrowing.'
+------------------------------------------------------
+REF: b'The green, ovate leaves grow in opposite pairs.'
+PRED: b' The green, who bait leaves, grow in opposite pairs.'
+------------------------------------------------------
+REF: b'The following year he began doctoral studies in Systems theory under David Held.'
+PRED: b' The following year he began doctoral studies in systems theory under David Held.'
+------------------------------------------------------
+REF: b'Cuthred inherited the kingdom while Mercia was at its peak.'
+PRED: b' Cuthbert inherited the kingdom while Mercia was at its peak.'
+------------------------------------------------------
+REF: b'He has been "fragged".'
+PRED: b' He has been fragged.'
+------------------------------------------------------
+REF: b'Mr. Jarndyce without further ceremony entered a room there, and we followed.'
+PRED: b' Mr. Jarnas, without further ceremony, entered a room there and we followed.'
+------------------------------------------------------
+REF: b'When they landed in the Libyan Desert they could feel a northwesterly breeze.'
+PRED: b' When they landed in the Libyan desert, they could feel the Northwesternly breeze.'
+------------------------------------------------------
+REF: b'They are sweet scented indeed.'
+PRED: b' They are sweet scented indeed.'
+------------------------------------------------------
+REF: b'The "Southeastern Old Threshers Reunion" is held every year at the Denton Farmpark.'
+PRED: b" The Southeastern Old Threshers' Reunion is held every year at the Denton Farm Park."
+------------------------------------------------------
+REF: b"With Waronker's investment, the staff was able to make the team a success."
+PRED: b' With Wurunkers investment the staff was able to make the team a success.'
+------------------------------------------------------
+REF: b'He was a switch hitter and threw right-handed.'
+PRED: b' He was a switch hitter and three right handed.'
+------------------------------------------------------
+REF: b"We've met once - on the sidewalk at night."
+PRED: b" We've met once on the sidewalk at night."
+------------------------------------------------------
+REF: b'Ocean crust consists of basic igneous rock, containing significant amounts of magnetite.'
+PRED: b' Ocean crust consists of basic igneous rock containing significant amounts of magnetite.'
+------------------------------------------------------
+REF: b'Secondary security devices are detectable by a machine.'
+PRED: b' Secondary security devices are detectable by machine.'
+------------------------------------------------------
+REF: b'The track was closed for about six months after the hurricane.'
+PRED: b' The track was closed for about six months after the hurricane.'
+------------------------------------------------------
+REF: b'She lived at one time in York Street, Covent Garden.'
+PRED: b' She lived at one time in York Street, Covent Garden.'
+------------------------------------------------------
+REF: b'They played Rolling Stones and Black Crowes covers as well as many original songs.'
+PRED: b' They played Rolling Stones and Black Cruise covers as well as many original songs.'
+------------------------------------------------------
+REF: b'While traveling with her family, Hill often explored rivers by campgrounds.'
+PRED: b' While travelling with her family, Hale often explored rivers by campgrounds.'
+------------------------------------------------------
+REF: b'Odo attacked Baldwin at Bruges but was unable to prevail.'
+PRED: b' Odo attacked Baldwin at Bruges but was unable to prevail.'
+------------------------------------------------------
+REF: b'The viaduct was widened at this point by five feet to accommodate the platform.'
+PRED: b' The viaduct was widened at this point by 5 feet to accommodate the platform.'
+------------------------------------------------------
+REF: b'It is bounded to the south by Swansea Bay.'
+PRED: b' It is bound into the South by Swansea Bay.'
+------------------------------------------------------
+REF: b'Steve and Vickie find opportunities to meet secretly.'
+PRED: b' Steve and Vicki find opportunities to meet secretly.'
+------------------------------------------------------
+REF: b'Julia died the following year, leaving her children orphaned and dependent on their uncle.'
+PRED: b' Julia died the following year, leaving her children orphaned and dependent on their uncle.'
+------------------------------------------------------
+REF: b'Operating expenses must be met through user and program fees.'
+PRED: b' Operating expenses must be met through user and program fees.'
+------------------------------------------------------
+REF: b'Hurley came from Hurley in Berkshire.'
+PRED: b' Hurley came from Hurley in Berkshire.'
+------------------------------------------------------
+REF: b'Wyndham married twice.'
+PRED: b' Wyndham marries twice.'
+------------------------------------------------------
+REF: b'Also, on the campus of Midland College, it offers a physician assistant program.'
+PRED: b' Also, on the campus of Midland College, it offers a physician assistant program.'
+------------------------------------------------------
+REF: b'Many of the Gretna Girls lived in group hostels which were staffed by matrons.'
+PRED: b' Many of the Gretna girls lived in group hostels which were staffed by matrons.'
+------------------------------------------------------
+REF: b'\xe2\x80\x9cCome on, then, and have first go,\xe2\x80\x9d he said to the girl.'
+PRED: b' Come on then and have a first go, he said to the girl.'
+------------------------------------------------------
+REF: b'Ferreira moved to Bolama when she was only three months old.'
+PRED: b' Ferreira moved to Bolama when she was only three months old.'
+------------------------------------------------------
+REF: b'Alstoe was the name of a hundred.'
+PRED: b' Astor was the name of a hundred.'
+------------------------------------------------------
+REF: b'Respiratory Therapists are able to fulfill the role of Perfusionist with appropriate training.'
+PRED: b' Respiratory therapists are able to fulfill the role of perfusionist with appropriate training.'
+------------------------------------------------------
+REF: b"Bunimovich is a Regents' Professor of Mathematics at the Georgia Institute of Technology."
+PRED: b' Bonumovich is a Regents Professor of Mathematics at the Georgia Institute of Technology.'
+------------------------------------------------------
+REF: b'However the determined villagers fought the Category "D" notice tooth and nail.'
+PRED: b' However, the determined villagers bought the category D, notice, tooth and nail.'
+------------------------------------------------------
+REF: b'Both his parents encouraged him to pursue acting as a professional career.'
+PRED: b' Both his parents encouraged him to pursue acting as a professional career.'
+------------------------------------------------------

@@ -1,0 +1,86 @@
+ACCENT: Filipino
+
+WER: 7.722007722007722
+
+NORMALIZED WER: 3.435114503816794
+REF: b'One of the two sequences is used to control the internal synthesiser.'
+PRED: b' One of the two sequences is used to control the internal synthesizer.'
+------------------------------------------------------
+REF: b'Several bonus features were also included on both discs.'
+PRED: b' Several bonus features were also included on both discs.'
+------------------------------------------------------
+REF: b'So who are the losers?'
+PRED: b' So who are the losers?'
+------------------------------------------------------
+REF: b'Lancaster County is governed by a five-member board of supervisors.'
+PRED: b' Lancaster County is governed by a five-member board of supervisors.'
+------------------------------------------------------
+REF: b'There are no open sights for rough laying of the piece.'
+PRED: b' There are no open sites for rough laying of the piece.'
+------------------------------------------------------
+REF: b'An octopus has eight legs.'
+PRED: b' An octopus has eight legs.'
+------------------------------------------------------
+REF: b'Alexander Belov is entrusted with the work of their wardrobe by world famous people.'
+PRED: b' Alexander Belov is entrusted with the work of their wardrobe by world-famous people.'
+------------------------------------------------------
+REF: b'I make movies.'
+PRED: b' I make movies.'
+------------------------------------------------------
+REF: b'He subsequently apologized after both incidents.'
+PRED: b' He subsequently apologized after both incidents.'
+------------------------------------------------------
+REF: b'Neville regularly topped the poll in her three-member constituency.'
+PRED: b' Neville regularly topped the poll in her three-member constituency.'
+------------------------------------------------------
+REF: b'They also depart from the colony before dawn.'
+PRED: b' They also depart from the colony before dawn.'
+------------------------------------------------------
+REF: b'The play is a protest against arranged marriage.'
+PRED: b' The play is a protest against arranged marriage'
+------------------------------------------------------
+REF: b'Narrabeen is opposite on the southern shore of the lagoon.'
+PRED: b' Maripin is opposite of the southern shore of the lagoon.'
+------------------------------------------------------
+REF: b'Soon after she moved in with Ippei, her brother and then her mother died.'
+PRED: b' Soon after she moved in with Ipe, her brother and then her mother died.'
+------------------------------------------------------
+REF: b'She handed him the contents of her purse.'
+PRED: b' She handed him the contents of her purse.'
+------------------------------------------------------
+REF: b'Because of its scenic beauty, Harpswell is today a favorite with artists and tourists.'
+PRED: b' Because of its scenic beauty, Harpswell is today a favorite with artists and tourists.'
+------------------------------------------------------
+REF: b'The Catholic church of Iecava belongs to the diocese of Jelgava.'
+PRED: b' The Catholic Church of Lekava belongs to the Diocese of Jelgava.'
+------------------------------------------------------
+REF: b'Apart from working as abbreviations, these cliches also become definitive terms.'
+PRED: b' Apart from working as abbreviations, these clich\xc3\xa9s also become definitive terms.'
+------------------------------------------------------
+REF: b'At night, the different programs are heard.'
+PRED: b' At night, the different programs are heard.'
+------------------------------------------------------
+REF: b'He also played for the Arizona Cardinals, Virginia Destroyers and Toronto Argonauts.'
+PRED: b' He also played for the Arizona Cardinals, Virginia Destroyers, and Toronto Argonauts.'
+------------------------------------------------------
+REF: b'After a brief tour with Nuclear Assault, they broke up.'
+PRED: b' After a brief tour with nuclear assault, they broke up.'
+------------------------------------------------------
+REF: b'In Ecuador, a variant known as yahuarlocro is popular.'
+PRED: b' In Ecuador, a variet known as yaguarloco is popular.'
+------------------------------------------------------
+REF: b'He stated, "I think I\'m gonna write more songs".'
+PRED: b" He stated, I think I'm gonna write more songs."
+------------------------------------------------------
+REF: b'Where have they put my clothes?'
+PRED: b' Where have they put my clothes?'
+------------------------------------------------------
+REF: b'The general contractor works with subcontractors to ensure quality standards.'
+PRED: b' The general contractor works with subcontractors to ensure quality standards'
+------------------------------------------------------
+REF: b'The plague did not spare the town, neither did the fire nor political agitations.'
+PRED: b' The plague did not spare the town, neither did the fire nor political agitations.'
+------------------------------------------------------
+REF: b'The railroad remains today, though the station is not used for its original purpose.'
+PRED: b' The railroad remains today, though the station is not used for its original purpose.'
+------------------------------------------------------

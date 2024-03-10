@@ -1,0 +1,29 @@
+ACCENT: 
+
+WER: 45.88235294117647
+
+NORMALIZED WER: 42.04545454545455
+REF: b'Aluminium salt lakes are usually coloured blue-white, whereas ferric salt lakes are coloured blue-black.'
+PRED: b" I'll make some soft lakes usually colored blue white whereas for a soft lake, white and white."
+------------------------------------------------------
+REF: b'He was educated at Wellington College and Balliol College, Oxford.'
+PRED: b' He was educated at Wellington College and Bale College Oxford.'
+------------------------------------------------------
+REF: b'Listed in alphabetical order by surname.'
+PRED: b' Listen in alphabetical order by surname.'
+------------------------------------------------------
+REF: b'Casino chip collecting is a variety of exonumia, or coin collecting.'
+PRED: b' Cassinic chocolactic is a variety of xenophobia.'
+------------------------------------------------------
+REF: b'A total of forty teams competed in the second round.'
+PRED: b' A total of 40 teams competed in the second round.'
+------------------------------------------------------
+REF: b'The focus of the small community was based around its local town hall.'
+PRED: b' The focus of the small community was based on local town hall.'
+------------------------------------------------------
+REF: b'The cars utilized rheostat circuits and were four cars long.'
+PRED: b' The car utilized rear circuits and rear four car form.'
+------------------------------------------------------
+REF: b'Following the demotion, Blais-Grenier became increasingly critical of the Mulroney government.'
+PRED: b" Following the debotion of Lai's Grenier became increasingly critical of the Bomb Rune government."
+------------------------------------------------------
