@@ -43,10 +43,10 @@ def main():
     # TODO: FILTER THE DATASET["TRAIN"] FOR JUST THE LANGUAGES YOU WANT HERE
 
     print('EVALUATING')
-    # metrics = evaluate_asr(model, processor, dataset["train"], True)
-    metrics = evaluate_asr_alt(pipe, dataset, True)
+    metrics = evaluate_asr(model, processor, dataset["train"], True)
+    # metrics = evaluate_asr_alt(pipe, dataset, True)
     print(metrics)
 
 if __name__ == "__main__":
-    get_cv_split_mini()
-    # main()
+    # get_cv_split_mini()
+    main()
