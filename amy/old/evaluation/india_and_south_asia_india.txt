@@ -1,0 +1,194 @@
+ACCENT: India and South Asia (India
+
+WER: 26.550079491255964
+
+NORMALIZED WER: 22.776911076443056
+REF: b'The screenplay was by Leora Barish and Henry Bean.'
+PRED: b' This screen player was very Lyrica, Bitesh and Draper.'
+------------------------------------------------------
+REF: b'He named fellow ex-Middlesbrough player Craig Hignett as his assistant manager.'
+PRED: b' He named fellow X-Middle Spro player Craig Haynet as his assistant manager.'
+------------------------------------------------------
+REF: b'Doctor Alfonso Mendieta, among others.'
+PRED: b' Dr. Elfonso Mendeda Amangardas'
+------------------------------------------------------
+REF: b'Actual user account management should be done through System Preferences.'
+PRED: b' Actual User Account Management should be done through system preferences.'
+------------------------------------------------------
+REF: b'Packages and metadata were not verified for authenticity by pacman during the download-install process.'
+PRED: b' Packages and metadata were not verified for an Indicity by Pac-Man during the download install process.'
+------------------------------------------------------
+REF: b'Many miners were arrested.'
+PRED: b' Many miners are for arrested.'
+------------------------------------------------------
+REF: b'Two people are looking out of a storefront window.'
+PRED: b' Two people are looking out of a storefront window.'
+------------------------------------------------------
+REF: b'Seventeen students admired that Sam and Sally are both the smartest in their class.'
+PRED: b' 17 students admired that salmon sari are both the smartest in their class.'
+------------------------------------------------------
+REF: b'Blue Vinney goes well with Dorset Knobs, another traditional product from Dorset.'
+PRED: b' Blue Viny goes well with Dorset knobs, another traditional product from Dorset.'
+------------------------------------------------------
+REF: b'Her mother had plans to take control over Danish Scania, next to her duchy.'
+PRED: b' Her mother had plans to take control over Dan Sheskanya next to her due cheek.'
+------------------------------------------------------
+REF: b'All use different mechanisms to cleave the peptide bonds to begin protein degradation.'
+PRED: b' All these different mechanisms to cleave the peptide bonds to begin to degrade.'
+------------------------------------------------------
+REF: b'A young boy splashes in the pool.'
+PRED: b' A young boy splashes in the pool.'
+------------------------------------------------------
+REF: b'Italy saw relevant examples of party switches during its republican history.'
+PRED: b' Italy saw relevant examples of parties switches during its republican history.'
+------------------------------------------------------
+REF: b'He is sometimes called the first Zionist artist.'
+PRED: b" He's sometimes called the first Zionist artist."
+------------------------------------------------------
+REF: b'Finally, he fell into a coma and died.'
+PRED: b' Finally, he fell into a coma and died.'
+------------------------------------------------------
+REF: b'In the winter it is popular with ice-climbers.'
+PRED: b' In the winter it is popular with ice climbers.'
+------------------------------------------------------
+REF: b'The company was recognized by Kaizen Institute for its continuous improvement.'
+PRED: b' The company was recognized by Kaisen Institute for his continuous improvement.'
+------------------------------------------------------
+REF: b'After extensive modifications, the three warbirds flew the arduous transatlantic crossing to England.'
+PRED: b' After extensive modifications, the three wallboards used the Ordunals transplant take cross into wing line.'
+------------------------------------------------------
+REF: b'This young girl is enjoying the innocence of childhood and warm weather.'
+PRED: b' This young girl is enjoying the innocence of childhood and warm weather.'
+------------------------------------------------------
+REF: b'There is a direct correspondence between arithmetic on Iverson brackets, logic, and set operations.'
+PRED: b' There is a direct correspondence between arithmetic on I-Vasin brackets, logic and set operations.'
+------------------------------------------------------
+REF: b"NextEnsemble is another recent addition to Ogden's growing music scene."
+PRED: b" Next Ensemble is another recent edition to Ogden's growing music scene."
+------------------------------------------------------
+REF: b'The workshop has now moved to Gludsted School.'
+PRED: b' The workshop has now moved to good state school.'
+------------------------------------------------------
+REF: b'A docent qualification is required of all head doctoral student supervisors.'
+PRED: b' Adores and qualification is required of all-hand doctoral student supervisors.'
+------------------------------------------------------
+REF: b'Henceforth, his own reputation and fame grew.'
+PRED: b' Hence both his own reputation and fame crew.'
+------------------------------------------------------
+REF: b'Jeremy Jaynes attended high school in Baton Rouge, Louisiana.'
+PRED: b' Jeremy Chains attended high school in Baton Rouge, Louisiana.'
+------------------------------------------------------
+REF: b'Individuals can also write brief comments on their experiences with the teachers.'
+PRED: b' Individuals can also write brief comments on their experiences with the teacher.'
+------------------------------------------------------
+REF: b"It also borders Burma's Shan State."
+PRED: b" It also borders Burma's Shand State."
+------------------------------------------------------
+REF: b'The distinction had perhaps been felt too strongly.'
+PRED: b' The distinction had perhaps been felt too strongly.'
+------------------------------------------------------
+REF: b'A man in a business suit walking on the sidewalk.'
+PRED: b' A man in a business suit walking on the sidewalk.'
+------------------------------------------------------
+REF: b'Outside of this, he built a fourth pylon and another enclosure wall.'
+PRED: b' Outset of Tails, Headbilt, Trafford, Pylon and another Inclusive War.'
+------------------------------------------------------
+REF: b'"Meillionen" is the only non-eponymous album in the set.'
+PRED: b' Melion and ST only known eponymous album in the set.'
+------------------------------------------------------
+REF: b'They called themselves the Mad Dogs.'
+PRED: b' Reforge and sell the mad dogs.'
+------------------------------------------------------
+REF: b'Belize is represented in Slovenia through its embassy in Vienna.'
+PRED: b' Belize is represented in Slovenia through its embassy in Vienna.'
+------------------------------------------------------
+REF: b'Cavendish and his wife had six children, three of whom died in infancy.'
+PRED: b' Cavendish and his wife had six children, three of whom died in Inventy.'
+------------------------------------------------------
+REF: b'Mazatepec is a town located in Morelos.'
+PRED: b' Mysterbick is a town located in Morales.'
+------------------------------------------------------
+REF: b'A young boy with his tongue hanging out playing at the beach.'
+PRED: b' A young boy with a stung hanging out playing at the beach.'
+------------------------------------------------------
+REF: b'Flem started his career in the amateur club Clausenengen.'
+PRED: b" Flam started as good as you're in the amateur club, class and ending game."
+------------------------------------------------------
+REF: b'The European lamps were legal in Canada, including the directional headlamps.'
+PRED: b' The European Lamps were legal in Canada, including the direct snout headlamps.'
+------------------------------------------------------
+REF: b'This insertion causes the generation of more telomeric sequences and eventual truncation.'
+PRED: b' This insertion causes the generation of more telemeric sequences and eventual truncation.'
+------------------------------------------------------
+REF: b'It would take later prime ministers to do that.'
+PRED: b' If it takes later prime ministers to do that.'
+------------------------------------------------------
+REF: b'Later, these locomotives were named "Super Mastodon\'s.'
+PRED: b' Later, these locomotives were named Super Mastered Ones.'
+------------------------------------------------------
+REF: b"Under Duesterberg's leadership, the Stahlhelm became Germany's largest para-military groups."
+PRED: b" Under Doisterberg's leadership, the stalemate became Germany's largest paramilitary group."
+------------------------------------------------------
+REF: b'One dog is standing on the beach as another dog runs into the ocean.'
+PRED: b' One dog is standing on the beach as another dog runs into the ocean.'
+------------------------------------------------------
+REF: b'Bolsonaro already had four sons when his first daughter was born.'
+PRED: b" Both sonata already had four sons, but it's first daughter of barn."
+------------------------------------------------------
+REF: b'Williams relied heavily on the Bible for his arguments.'
+PRED: b' William Thurlade heavily on the Bible for his arguments.'
+------------------------------------------------------
+REF: b'A man jumping on a skiing board.'
+PRED: b' A man jumping on a skiing board.'
+------------------------------------------------------
+REF: b'Author Mignon Holland Anderson was born in Cheriton.'
+PRED: b' Alter minion holend Anderson was born in Shoeitern.'
+------------------------------------------------------
+REF: b'The Fund morphed into New Visions Schools and is engaged in implementing that work.'
+PRED: b' The fund morphed into new vision schools and is engaged in implementing that work.'
+------------------------------------------------------
+REF: b"City used Cranleigh's ground while these changes were being made."
+PRED: b' City used Grand Leagues ground file these changes were being made.'
+------------------------------------------------------
+REF: b'However, their proposed structure was accepted subsequently.'
+PRED: b' However, the proposed structure was accepted subsequently.'
+------------------------------------------------------
+REF: b'Dareios, however, soon grew tired of his life.'
+PRED: b' Dereos, however, son grudd tired of his life.'
+------------------------------------------------------
+REF: b'The approach from the ferry jetty is decorated with Tibetan flags and stupas.'
+PRED: b' The approach from the Paris jetty is decorated with divotined flags and stupas.'
+------------------------------------------------------
+REF: b'There is a large diaspora in North America, South America, Europe, Australia and Africa.'
+PRED: b' There is a large diaspora in North America, South America, Europe, Australia and Africa.'
+------------------------------------------------------
+REF: b'No conclusive evidence supports either statement.'
+PRED: b' No composing ignorance supports either statement.'
+------------------------------------------------------
+REF: b'It was the second longest parliament in Canadian history.'
+PRED: b' It was a second longest parliament in Canadian history.'
+------------------------------------------------------
+REF: b'An end office switch connects directly to the stations.'
+PRED: b' and end of a switch connects directly to the sections.'
+------------------------------------------------------
+REF: b'These are the same videos which were released on the "Hits!'
+PRED: b' These are the same videos which were released on the hits.'
+------------------------------------------------------
+REF: b'an overhead view of a painter working on a scaffold.'
+PRED: b' An overhead view of a painter working on a scaffold.'
+------------------------------------------------------
+REF: b'This allows typists to enter text without having to learn a new layout.'
+PRED: b' This allows typists to enter text without having to learn and do their out.'
+------------------------------------------------------
+REF: b'He admits he loves her as well, but the timing stinks.'
+PRED: b' He admits he loves her as well, with the timing stains.'
+------------------------------------------------------
+REF: b'It was later modified south from Mattersburg.'
+PRED: b' It was later modified south from Matastur.'
+------------------------------------------------------
+REF: b'As a senior, he started every game at right guard.'
+PRED: b' As a senior, he started every game at RideCord.'
+------------------------------------------------------
+REF: b"His growing involvement in New York's abolitionist movement separated him from his family."
+PRED: b" His growing involvement in New York's abolitionist movement separated him from his family."
+------------------------------------------------------

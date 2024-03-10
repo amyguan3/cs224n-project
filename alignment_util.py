@@ -13,12 +13,6 @@ os.system("pip3 install -q transformers librosa datasets==2.14.6 evaluate jiwer 
 os.system("pip3 install -q git+https://github.com/huggingface/peft.git@main")
 print("Print installs done!")
 
-import json
-import random
-import numpy as np
-from dataclasses import dataclass, field
-from typing import Optional
-import evaluate
 from datasets import load_dataset, DatasetDict
 from transformers import (WhisperFeatureExtractor, 
                           WhisperTokenizer, 
@@ -44,18 +38,11 @@ from peft import (prepare_model_for_int8_training,
                   get_peft_model)
 from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
 from transformers.utils import check_min_version
-from tqdm import tqdm
-import re
-
 from trainer_utils import AlignmentSeq2SeqTrainer
 from data_utils import (DataCollatorSpeechSeq2SeqWithPadding, 
                         load_sd_qa_dataset, 
                         filter_data)
-
-import csv
 import matplotlib.pyplot as plt
-from amy.old.eval_utils import (evaluate_asr,
-                    get_mini_cv)
 
 
 current = os.path.dirname(os.path.realpath(__file__))  # name of this directory
@@ -66,8 +53,6 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # use first gpu on machine
 
 logger = logging.getLogger(__name__)
 check_min_version("4.21.0")  # calls an error if minimal version of Transformers is not installed. 
-
-
 
 class SavePeftCallback(TrainerCallback):
     def __init__(self):
@@ -108,7 +93,7 @@ class SavePeftCallback(TrainerCallback):
         return control
 
 
-def main():
+def get_embeddings(mini=False):
     # log in to huggingface with huggingface-cli login
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
     print("Torch cuda is available?", torch.cuda.is_available())
@@ -144,6 +129,8 @@ def main():
     target_dialect = 'gbr'
     source_dialect = 'ind_n'
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
+    if mini:
+        sd_qa['dev'] = sd_qa['dev'].select(range(24))
     print(sd_qa['dev'][0])
 
     # prepare data
@@ -172,99 +159,74 @@ def main():
     sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source dialect"
                       ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
 
-
-    # define an evaluation function !!!
-    # metric = evaluate.load("wer")
-
     print(sd_qa)
     sd_qa.remove_columns('id')
-    data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
+    return sd_qa
+
+
+def train_adapter(processor, data_collator, sd_qa, param_config):
     #------------------------------------#
     #--------------TRAINING--------------#
     #------------------------------------#
 
-    hyperparameters = [  #(learning_rate, batch_size, rank)
-        (.001, 16, 32), (.001, 16, 64), (.001, 16, 128),
-        (.005, 16, 32), (.005, 16, 64), (.005, 16, 32),
-        (.01, 16, 32), (.01, 16, 64), (.01, 16, 128)
-    ]
+    print("Load 8bit model...")
+    print("Start training...")
+    model_path = "openai/whisper-large-v2"
+    model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True, device_map="auto")
+    model.config.forced_decoder_ids = None  # possibly this needs editing
+    model.config.suppress_tokens = []
+    model = prepare_model_for_int8_training(model)
 
-    for test_i in range(9):
-        print("Running training process", test_i, "...")
-        print("Hyperparameters are", hyperparameters[test_i]) 
-        lr_i, batch_i, rank_i = hyperparameters[test_i]
-
-        print("Load 8bit model...")
-        print("Start training...")
-        model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True, device_map="auto")
-        model.config.forced_decoder_ids = None  # possibly this needs editing
-        model.config.suppress_tokens = []
-        model = prepare_model_for_int8_training(model)
-
-        def make_inputs_require_grad(module, input, output):
-            output.requires_grad_(True)
-        model.model.encoder.conv1.register_forward_hook(make_inputs_require_grad)
+    def make_inputs_require_grad(module, input, output):
+        output.requires_grad_(True)
+    model.model.encoder.conv1.register_forward_hook(make_inputs_require_grad)
 
 
-        target_modules = ['k_proj', 'v_proj', 'q_proj', 'out_proj', 'fc1', 'fc2']
-        config = LoraConfig(r=rank_i, # rank, adjust this
-                        lora_alpha=64, 
-                        target_modules = target_modules, 
-                        lora_dropout=0.05, 
-                        bias="none",
-                        # task_type=TaskType.FEATURE_EXTRACTION,  # check this???
-                        )  
-        model = get_peft_model(model, config)
-        model.print_trainable_parameters()
+    target_modules = ['k_proj', 'v_proj', 'q_proj', 'out_proj', 'fc1', 'fc2']
+    config = LoraConfig(r=param_config.rank, # rank, adjust this
+                    lora_alpha=64, 
+                    target_modules = target_modules, 
+                    lora_dropout=0.05, 
+                    bias="none",
+                    # task_type=TaskType.FEATURE_EXTRACTION,  # check this???
+                    )  
+    model = get_peft_model(model, config)
+    # model.config.gradient_checkpointing = True
 
-        # Define training configuration
-        training_args = Seq2SeqTrainingArguments(
-            output_dir="model_checkpoints",  
-            per_device_train_batch_size=batch_i,
-            gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
-            learning_rate=lr_i,
-            warmup_steps=50,
-            # gradient_checkpointing=True, # just added
-            num_train_epochs=3,
-            # evaluation_strategy="steps",  # disregard since using commonvoice to eval
-            # per_device_eval_batch_size=8,
-            fp16=True,  # don't think we need this
-            generation_max_length=128,
-            logging_steps=20,
-            remove_unused_columns=False, 
-        )
-        peftcallback = SavePeftCallback()
-        trainer = AlignmentSeq2SeqTrainer(
-            args=training_args,
-            model=model,
-            train_dataset=sd_qa['dev'],
-            eval_dataset=sd_qa['dev'],
-            data_collator=data_collator,
-            tokenizer=processor.feature_extractor,
-            callbacks=[peftcallback],
-        )
+    model.print_trainable_parameters()
 
-        trainer.train()
-        # peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
-        print("Done with training! Pushing to hub...")
-        peft_model_id = f"asyzhou/224n-whisper-large-overnight-{test_i}"
-        print(peft_model_id)
-        model.push_to_hub(peft_model_id)
-        peftcallback.plot_loss()
+    # Define training configuration
+    training_args = Seq2SeqTrainingArguments(
+        output_dir="model_checkpoints",  
+        per_device_train_batch_size=param_config.batch_size,
+        gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
+        learning_rate=param_config.learning_rate,
+        warmup_steps=50,
+        # gradient_checkpointing=True, # just added
+        num_train_epochs=3,
+        # evaluation_strategy="steps",  # disregard since using commonvoice to eval
+        # per_device_eval_batch_size=8,
+        fp16=True,  # don't think we need this
+        generation_max_length=128,
+        logging_steps=20,
+        remove_unused_columns=False, 
+    )
+    peftcallback = SavePeftCallback()
+    trainer = AlignmentSeq2SeqTrainer(
+        args=training_args,
+        model=model,
+        train_dataset=sd_qa['dev'],
+        eval_dataset=sd_qa['dev'],
+        data_collator=data_collator,
+        tokenizer=processor.feature_extractor,
+        callbacks=[peftcallback],
+    )
 
-    # peft_config = PeftConfig.from_pretrained(peft_model_id)
-    # model = WhisperForConditionalGeneration.from_pretrained(
-    #     peft_config.base_model_name_or_path, device_map="auto"
-    # )
-    # model = PeftModel.from_pretrained(model, peft_model_id) # attaches the PEFT module to the Whisper model
-    # model.config.use_cache = True
+    trainer.train()
+    # DELETE LATER
+    print("Done with training! Pushing to hub...")
+    peft_model_id = "amyguan/large-tune-test"
+    model.push_to_hub(peft_model_id)
 
-    # dataset = get_mini_cv() # .to(device)
-    # metrics = evaluate_asr(model, processor, dataset, True)
-    # print(metrics)
-
-    
-
-if __name__ == "__main__":
-    main()
+    peftcallback.plot_loss()

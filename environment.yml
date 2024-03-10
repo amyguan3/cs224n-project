@@ -14,6 +14,7 @@ dependencies:
   - docopt
   - nltk
   - torchvision
+  - torchaudio
   - pip
   - ipykernel
   - ipywidgets

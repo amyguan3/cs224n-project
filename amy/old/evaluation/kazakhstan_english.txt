@@ -1,0 +1,8 @@
+ACCENT: Kazakhstan English
+
+WER: 8.333333333333332
+
+NORMALIZED WER: 0.0
+REF: b'The Tulsa recording studio was housed in the historic The Church Studio.'
+PRED: b' The Tulsa recording studio was housed in the historic The Church studio.'
+------------------------------------------------------

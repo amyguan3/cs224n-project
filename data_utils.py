@@ -34,7 +34,7 @@ class DataCollatorSpeechSeq2SeqWithPadding:
 def load_sd_qa_dataset():
     sd_qa = DatasetDict()
     sd_qa["dev"] = load_dataset("WillHeld/SD-QA", split="dev", token=True)
-    sd_qa["test"] = load_dataset("WillHeld/SD-QA", split="test", token=True)
+    # sd_qa["test"] = {} # load_dataset("WillHeld/SD-QA", split="test", token=True)
     return sd_qa
 
 def filter_data(data, source, target):

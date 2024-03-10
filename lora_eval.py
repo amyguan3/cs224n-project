@@ -6,10 +6,8 @@ from transformers import (WhisperProcessor,
 import torch
 from peft import (PeftModel, 
                   PeftConfig)
-from eval_utils_new import (model_pipeline,
-                            evaluate_asr,
-                            evaluate_asr_alt,
-                        get_cv_split_mini)
+from amy.old.eval_utils import (evaluate_asr,
+                        get_mini_cv)
 
 # os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
 # os.system("pip install -q git+https://github.com/huggingface/peft.git@main")

@@ -1,0 +1,89 @@
+ACCENT: United States English
+
+WER: 15.436241610738255
+
+NORMALIZED WER: 10.299003322259136
+REF: b'All lyrics by Stefano Fiori.'
+PRED: b' All the Rick Spice, Stefano Fiori.'
+------------------------------------------------------
+REF: b'Spanish colonizers later subjugated its people and denominated the area into two distinct aggrupations.'
+PRED: b' Spanish colonizers later subjugated its people and denominated the area into two distinct agrupations.'
+------------------------------------------------------
+REF: b'Helpful and polite, Kawamura Takashi is the perfect example of a faithful friend.'
+PRED: b' Helpful and polite Kawamura Takeshi is the perfect example of a faithful friend.'
+------------------------------------------------------
+REF: b'Tedious as a twice-told tale'
+PRED: b' tedious as a twice-told tale.'
+------------------------------------------------------
+REF: b'Initially, Pullman service was only offered between New Orleans and Shreveport, Louisiana.'
+PRED: b" Initially, Pullman's service was only offered between New Orleans and Shreveport, Louisiana."
+------------------------------------------------------
+REF: b'Yet he chattered away with his mother.'
+PRED: b' Yet he chatted away with his mother.'
+------------------------------------------------------
+REF: b'He was married to the actress Ang\xc3\xa9lique Mesnier, known as Mademoiselle Desmarest.'
+PRED: b' He was married to the actress Angelique Menier, known as Mademoiselle de Marais.'
+------------------------------------------------------
+REF: b'The best known Munro is Ben Nevis, the highest mountain in the British Isles.'
+PRED: b' The best known Monroe is Ben Nevis, the highest mountain in the British Isles.'
+------------------------------------------------------
+REF: b'His mother lives in Lanai.'
+PRED: b' His mother lives in Linnai.'
+------------------------------------------------------
+REF: b"Wearing the tab is permitted for the remainder of a soldier's military career."
+PRED: b" Wearing the tab is permitted for the remainder of a soldier's military career."
+------------------------------------------------------
+REF: b'As with other cyclones, their rotation is driven by the Coriolis effect.'
+PRED: b' As with other cyclones, the rotation is driven by the Coriolis effect.'
+------------------------------------------------------
+REF: b'"Ay" means "moon" in Turkish, so that "Ayla" means the "halo around the moon.'
+PRED: b' A means moon in Turkish, so that aila means the halo around the moon.'
+------------------------------------------------------
+REF: b'His inventions had a great impact on the watchmaking industry in general.'
+PRED: b' His inventions had a great impact on the watchmaking industry in general.'
+------------------------------------------------------
+REF: b'It forms an important document for the history of these movements.'
+PRED: b' It forms an important document for the history of this movement.'
+------------------------------------------------------
+REF: b'Other sources claim the real murderer fled to England where he died years later.'
+PRED: b' Other sources claim the real murderer fled to England where he died years later.'
+------------------------------------------------------
+REF: b'During this period the school was directed by Brigadier General Jean Richard.'
+PRED: b' During this period, the school was directed by Brigadier General Jean Richard.'
+------------------------------------------------------
+REF: b'Cranston was later married to Norma Weintraub.'
+PRED: b' Cranston was later married to Norma Wintrow.'
+------------------------------------------------------
+REF: b'Together, the couple had a daughter.'
+PRED: b' Together the couple had a daughter.'
+------------------------------------------------------
+REF: b'It was originally designed as a black powder cartridge.'
+PRED: b' It was originally designed as a black powder cartridge.'
+------------------------------------------------------
+REF: b'The parish includes the hamlet of Thornhill and the farming hamlet of Cotmarsh.'
+PRED: b' Paris includes the helmet of Throne Hill and the farming helmet of Court March.'
+------------------------------------------------------
+REF: b'Some were held in concentration camps and some simply disappeared.'
+PRED: b' Some were held in concentration camps and some simply disappeared.'
+------------------------------------------------------
+REF: b'Use of sindoor is frequently mentioned in the puranas "Lalitha Sahasranama" and "Soundarya Lahari".'
+PRED: b' Use of Sindhur is frequently mentioned in the Puranas, Lalita Sahasranama and Saundariya Lahari.'
+------------------------------------------------------
+REF: b'Jeffra was born on in Baltimore, Maryland.'
+PRED: b' Jeffra was born in Baltimore, Maryland.'
+------------------------------------------------------
+REF: b'Hardware memory coherence mechanisms are typically used to implement the migration.'
+PRED: b' Hardware memory coherence mechanisms are typically used to implement the migration.'
+------------------------------------------------------
+REF: b'He died of prostate cancer and lymphoma.'
+PRED: b' He died of prostate cancer and lymphoma.'
+------------------------------------------------------
+REF: b'He established the reckoning by which the dates of fasting were determined.'
+PRED: b' He established the reckoning by which the dates of fasting were determined.'
+------------------------------------------------------
+REF: b'These are southeast Asian forest species principally associated with mountain forests and streams.'
+PRED: b' These are Southeast Asian forest species, principally associated with mountain, forests, and streams.'
+------------------------------------------------------
+REF: b'Kim\'s second album, "Breakaway", was not a commercial success and had a limited release.'
+PRED: b" Kim's second album, Breakaway, was not a commercial success and had a limited release."
+------------------------------------------------------

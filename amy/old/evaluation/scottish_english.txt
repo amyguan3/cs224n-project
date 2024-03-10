@@ -1,0 +1,8 @@
+ACCENT: Scottish English
+
+WER: 0.0
+
+NORMALIZED WER: 0.0
+REF: b'It passed through what a few weeks later became the town of Kelsey.'
+PRED: b' It passed through what a few weeks later became the town of Kelsey.'
+------------------------------------------------------
