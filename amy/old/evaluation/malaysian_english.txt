@@ -1,0 +1,11 @@
+ACCENT: Malaysian English
+
+WER: 66.66666666666666
+
+NORMALIZED WER: 58.333333333333336
+REF: b'Fordham finished fifth in the Patriot League.'
+PRED: b' 4 of them finish 5th in the Patriot League.'
+------------------------------------------------------
+REF: b'Friedl has three older sisters.'
+PRED: b' Friday has 3 older sisters'
+------------------------------------------------------

@@ -93,14 +93,7 @@ class SavePeftCallback(TrainerCallback):
         return control
 
 
-class ParamConfig:
-    def __init__(self, learning_rate, batch_size, rank):
-        self.learning_rate = learning_rate
-        self.batch_size = batch_size
-        self.rank = rank
-
-
-def trainAdapter(param_config):
+def get_embeddings():
     # log in to huggingface with huggingface-cli login
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
     print("Torch cuda is available?", torch.cuda.is_available())
@@ -164,20 +157,20 @@ def trainAdapter(param_config):
     sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source dialect"
                       ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
 
-
-    # define an evaluation function !!!
-    # metric = evaluate.load("wer")
-
     print(sd_qa)
     sd_qa.remove_columns('id')
-    data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
+    return sd_qa
+
+
+def train_adapter(processor, data_collator, sd_qa, param_config):
     #------------------------------------#
     #--------------TRAINING--------------#
     #------------------------------------#
 
     print("Load 8bit model...")
     print("Start training...")
+    model_path = "openai/whisper-large-v2"
     model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True, device_map="auto")
     model.config.forced_decoder_ids = None  # possibly this needs editing
     model.config.suppress_tokens = []
@@ -229,4 +222,9 @@ def trainAdapter(param_config):
     )
 
     trainer.train()
+    # DELETE LATER
+    # print("Done with training! Pushing to hub...")
+    # peft_model_id = "amyguan/large-tune-test"
+    # model.push_to_hub(peft_model_id)
+
     peftcallback.plot_loss()

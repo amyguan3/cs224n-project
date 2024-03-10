@@ -1,0 +1,11 @@
+ACCENT: German
+
+WER: 20.0
+
+NORMALIZED WER: 20.0
+REF: b'Many neighbourhoods became entirely Irish nationalist or entirely unionist.'
+PRED: b' Many neighborhoods became entirely Irish nationalists or entirely unionists.'
+------------------------------------------------------
+REF: b'She was succeeded by Jim Browder.'
+PRED: b' She was succeeded by Jim Browder.'
+------------------------------------------------------

@@ -1,0 +1,41 @@
+ACCENT: England English
+
+WER: 30.64516129032258
+
+NORMALIZED WER: 19.047619047619047
+REF: b'Three new barangays were added to the municipality: San Isidro, Paroyhog, and Sto.'
+PRED: b' Three new baron gays were added to the municipality, San Isidro, Paroi Hogg and Stowe.'
+------------------------------------------------------
+REF: b'It was based on the Howard Fast short story "Rachel".'
+PRED: b' It was based on the Howard Fast, Short Story, Rachel.'
+------------------------------------------------------
+REF: b'The Wendish religious centre shifted to Arkona thereafter.'
+PRED: b' The Wendish Religious Center shifted to Arcona thereafter.'
+------------------------------------------------------
+REF: b'A single dune may have up to six species of "Ctenotus".'
+PRED: b' A single dune may have up to six species of stenoctus.'
+------------------------------------------------------
+REF: b'The song is three minutes and five seconds long.'
+PRED: b' The song is three minutes and five seconds long.'
+------------------------------------------------------
+REF: b'Fordham finished fifth in the Patriot League.'
+PRED: b' 4 of them finish 5th in the Patriot League.'
+------------------------------------------------------
+REF: b'The closest hospital is Hereford County Hospital at Hereford.'
+PRED: b' The closest hospital is Headford County Hospital at Headford.'
+------------------------------------------------------
+REF: b'A curious fact is that these desert-bound vehicles retained the Norwegian ski-racks.'
+PRED: b' A curious fact is that these desert-bound vehicles retained the Norwegian ski racks.'
+------------------------------------------------------
+REF: b'Use of sindoor is frequently mentioned in the puranas "Lalitha Sahasranama" and "Soundarya Lahari".'
+PRED: b' Use of Sindhur is frequently mentioned in the Puranas, Lalita Sahasranama and Saundariya Lahari.'
+------------------------------------------------------
+REF: b'It can be referred to as "Helles", "Spezial", "Landbier", "Munich Lager", or "Export".'
+PRED: b" It can be referred to as hell's, spechal, land beer, Munich Lager or export."
+------------------------------------------------------
+REF: b'Malyshovka is the nearest rural locality.'
+PRED: b' Malyshovka is the nearest rural area.'
+------------------------------------------------------
+REF: b'The Bolivian Army did not have enough troops to maintain the occupation.'
+PRED: b' The Bolivian army did not have enough troops to maintain the occupation.'
+------------------------------------------------------
