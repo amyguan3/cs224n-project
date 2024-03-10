@@ -1,0 +1,14 @@
+ACCENT: International Indian Accent
+
+WER: 45.83333333333333
+
+NORMALIZED WER: 45.83333333333333
+REF: b'Many miners were arrested.'
+PRED: b' Many miners are for arrested.'
+------------------------------------------------------
+REF: b'Bolsonaro already had four sons when his first daughter was born.'
+PRED: b" Both sonata already had four sons, but it's first daughter of barn."
+------------------------------------------------------
+REF: b'Williams relied heavily on the Bible for his arguments.'
+PRED: b' William Thurlade heavily on the Bible for his arguments.'
+------------------------------------------------------

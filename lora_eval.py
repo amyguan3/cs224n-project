@@ -6,7 +6,7 @@ from transformers import (WhisperProcessor,
 import torch
 from peft import (PeftModel, 
                   PeftConfig)
-from eval_utils import (evaluate_asr,
+from amy.old.eval_utils import (evaluate_asr,
                         get_mini_cv)
 
 os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
