@@ -7,8 +7,6 @@ from eval_utils_new import (model_pipeline,
 import torch
 
 def main():
-    device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
-
     # load whisper feature extractor, tokenizer, processor
     model_path = "openai/whisper-large-v2"
     model = WhisperForConditionalGeneration.from_pretrained(model_path)
@@ -17,7 +15,7 @@ def main():
     pipe = model_pipeline(model, processor, baseline=True, verbose=True)
 
     print('GETTING DATASET')
-    dataset = get_cv_split().to(device)
+    dataset = get_cv_split()
 
     print('EVALUATING')
     metrics = evaluate_asr_alt(pipe, dataset["train"], verbose=True)
