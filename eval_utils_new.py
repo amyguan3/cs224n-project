@@ -101,7 +101,7 @@ def get_cv_split_mini():
     # print(f'Length of: {len(cv_all)}')
 
     # data split
-    cv_split = cv_all.train_test_split(test_size=0.9, seed=42)
+    cv_split = cv_all.train_test_split(test_size=0.999, seed=42)
     cv_split["train"] = cv_split["train"].map(normalise)
     # cv = cv_split["train"]
 
