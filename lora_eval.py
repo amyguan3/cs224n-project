@@ -11,8 +11,8 @@ from eval_utils_new import (model_pipeline,
                             evaluate_asr_alt,
                         get_cv_split_mini)
 
-os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
-os.system("pip install -q git+https://github.com/huggingface/peft.git@main")
+# os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
+# os.system("pip install -q git+https://github.com/huggingface/peft.git@main")
 
 def main():
     # device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
@@ -48,5 +48,5 @@ def main():
     print(metrics)
 
 if __name__ == "__main__":
-    get_cv_split_mini()
-    # main()
+    # get_cv_split_mini()
+    main()
