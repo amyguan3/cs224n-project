@@ -44,7 +44,7 @@ def main():
 
     print('EVALUATING')
     # metrics = evaluate_asr(model, processor, dataset["train"], True)
-    metrics = evaluate_asr_alt(pipe, dataset["train"], True)
+    metrics = evaluate_asr_alt(pipe, dataset, True)
     print(metrics)
 
 if __name__ == "__main__":
