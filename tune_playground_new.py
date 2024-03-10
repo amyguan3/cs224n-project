@@ -70,7 +70,8 @@ class ParamConfig:
 def tune(accents):
     processor = WhisperProcessor.from_pretrained("openai/whisper-large-v2", task="transcribe")
 
-    sd_qa = get_embeddings()
+    # for testing purposes
+    sd_qa = get_embeddings(mini=True)
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
     eval_dataset = get_cv_split(accents=accents)
@@ -82,7 +83,7 @@ def tune(accents):
 
         # Define hyperparameters to optimize
         learning_rate = trial.suggest_uniform('learning_rate', 0.001, 0.1)
-        batch_size = trial.suggest_categorical('batch_size', [4, 8, 16]) # TODO: FIX THIS
+        batch_size = trial.suggest_categorical('batch_size', [8, 16]) # TODO: FIX THIS
         rank = trial.suggest_categorical('rank', [32, 64, 128]) # TODO: FIX THIS
         param_config = ParamConfig(learning_rate=learning_rate, batch_size=batch_size, rank=rank)
         print(f'Hyperparameters for trial {trial.number}:\nlearning rate: {learning_rate}, batch size: {batch_size}, rank: {rank}')
@@ -94,9 +95,9 @@ def tune(accents):
         # Evaluate the model
         # TODO: FIX THIS ask azure how to get name of model
         # TODO: just use the model?????
-        checkpoint_folder = os.path.join(args.output_dir, f"{PREFIX_CHECKPOINT_DIR}-{state.global_step}")
-        peft_model_path = os.path.join(checkpoint_folder, "adapter_model")
-        # peft_model_path = "amyguan/large-tune-test"
+        # checkpoint_folder = os.path.join(args.output_dir, f"{PREFIX_CHECKPOINT_DIR}-{state.global_step}")
+        # peft_model_path = os.path.join(checkpoint_folder, "adapter_model")
+        peft_model_path = "amyguan/large-tune-test"
 
         peft_config = PeftConfig.from_pretrained(peft_model_path)
         model = WhisperForConditionalGeneration.from_pretrained(
@@ -123,7 +124,7 @@ def tune(accents):
 
     # Define Optuna study
     study = optuna.create_study(direction='minimize')
-    study.optimize(objective, n_trials=2)
+    study.optimize(objective, n_trials=3)
 
     # Get the best hyperparameters
     best_params = study.best_params

@@ -93,7 +93,7 @@ class SavePeftCallback(TrainerCallback):
         return control
 
 
-def get_embeddings():
+def get_embeddings(mini=False):
     # log in to huggingface with huggingface-cli login
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
     print("Torch cuda is available?", torch.cuda.is_available())
@@ -129,6 +129,8 @@ def get_embeddings():
     target_dialect = 'gbr'
     source_dialect = 'ind_n'
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
+    if mini:
+        sd_qa['dev'] = sd_qa['dev'].select(range(24))
     print(sd_qa['dev'][0])
 
     # prepare data
@@ -223,8 +225,8 @@ def train_adapter(processor, data_collator, sd_qa, param_config):
 
     trainer.train()
     # DELETE LATER
-    # print("Done with training! Pushing to hub...")
-    # peft_model_id = "amyguan/large-tune-test"
-    # model.push_to_hub(peft_model_id)
+    print("Done with training! Pushing to hub...")
+    peft_model_id = "amyguan/large-tune-test"
+    model.push_to_hub(peft_model_id)
 
     peftcallback.plot_loss()
