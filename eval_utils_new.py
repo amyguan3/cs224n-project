@@ -98,8 +98,10 @@ def get_cv_split_mini():
     cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
 
     # data split
-    cv_split = cv_all.train_test_split(test_size=0.999, seed=42)
+    cv_split = cv_all.train_test_split(test_size=0.9995, seed=42) # 28 samples in train
+    print('casting audio column')
     cv_split["train"] = cv_split["train"].cast_column("audio", Audio(sampling_rate=16000))
+    print('normalizing')
     cv_split["train"] = cv_split["train"].map(normalise) # , num_proc=2
     cv_split["train"] = cv_split["train"].filter(is_target_text_in_range, input_columns=["sentence"]) # , num_proc=2
     # cv = cv_split["train"]
