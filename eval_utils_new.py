@@ -112,6 +112,11 @@ def reformat_audio(row):
     row["audio"]["array"] = np.asarray(row["audio"]["array"])
     return row
 
+def reformat_audio_alt(row):
+    audio = row["audio"]
+    audio = Audio(audio_array=np.asarray(audio["array"]),path=audio["path"],sampling_rate=audio["sampling_rate"])
+    return row
+
 def get_cv_split_mini(accents=ACCENTS):
     # iterable dataset
     # dataset_total = load_dataset("mozilla-foundation/common_voice_16_1", "en", split="train", token=True, streaming=True)
@@ -128,9 +133,9 @@ def get_cv_split_mini(accents=ACCENTS):
     #     print(f'AUDIO TYPE BEFORE: {type(row["audio"]["array"])}')
     #     break
     # dataset_total = dataset_total.select(range(24))
-    # dataset_total = dataset_total.map(reformat_audio)
+    dataset_total = dataset_total.map(reformat_audio_alt)
     audio = dataset_total["audio"]
-    audio.cast_column("array", "numpy.ndarray")
+    # audio.cast_column("array", "numpy.ndarray")
     # dataset_total = dataset_total.cast_column("audio", Audio(sampling_rate=16000))
     # dataset_total = dataset_total.map(normalise) # , num_proc=2
     print(f'AUDIO TYPE AFTER: {type(dataset_total[0]["audio"]["array"])}')
