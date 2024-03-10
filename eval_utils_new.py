@@ -123,7 +123,7 @@ def get_cv_split_mini(accents=ACCENTS):
     dataset_total = dataset_total.cast_column("audio", Audio(sampling_rate=16000))
     dataset_total = dataset_total.map(normalise) # , num_proc=2
     dataset_total = dataset_total.filter(is_target_text_in_range, input_columns=[text_column_name]) # , num_proc=2
-    dataset_total = dataset_total.filter(lambda example: example['accents'] in accents)
+    # dataset_total = dataset_total.filter(lambda example: example['accents'] in accents)
 
     print("HALF CV DATASET LOADED")
     return dataset_total
