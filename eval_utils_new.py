@@ -40,6 +40,8 @@ def get_text(sample):
 def get_accents(sample):
     if "accents" in sample:
         return sample["accents"]
+    elif "accent" in sample:
+        return sample["accent"]
     else:
         raise ValueError(
             f"Expected transcript column of accent. Ensure an accent column is present in the dataset."
