@@ -184,64 +184,74 @@ def main():
     #--------------TRAINING--------------#
     #------------------------------------#
 
-    print("Load 8bit model...")
-    print("Start training...")
-    model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True, device_map="auto")
-    model.config.forced_decoder_ids = None  # possibly this needs editing
-    model.config.suppress_tokens = []
-    model = prepare_model_for_int8_training(model)
+    hyperparameters = [  #(learning_rate, batch_size, rank)
+        (.001, 16, 32), (.001, 16, 64), (.001, 16, 128),
+        (.005, 16, 32), (.005, 16, 64), (.005, 16, 32),
+        (.01, 16, 32), (.01, 16, 64), (.01, 16, 128)
+    ]
 
-    def make_inputs_require_grad(module, input, output):
-        output.requires_grad_(True)
-    model.model.encoder.conv1.register_forward_hook(make_inputs_require_grad)
+    for test_i in range(9):
+        print("Running training process", test_i, "...")
+        print("Hyperparameters are", hyperparameters[test_i]) 
+        lr_i, batch_i, rank_i = hyperparameters[test_i]
+
+        print("Load 8bit model...")
+        print("Start training...")
+        model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True, device_map="auto")
+        model.config.forced_decoder_ids = None  # possibly this needs editing
+        model.config.suppress_tokens = []
+        model = prepare_model_for_int8_training(model)
+
+        def make_inputs_require_grad(module, input, output):
+            output.requires_grad_(True)
+        model.model.encoder.conv1.register_forward_hook(make_inputs_require_grad)
 
 
-    target_modules = ['k_proj', 'v_proj', 'q_proj', 'out_proj', 'fc1', 'fc2']
-    config = LoraConfig(r=32, # rank, adjust this
-                    lora_alpha=64, 
-                    target_modules = target_modules, 
-                    lora_dropout=0.05, 
-                    bias="none",
-                    # task_type=TaskType.FEATURE_EXTRACTION,  # check this???
-                    )  
-    model = get_peft_model(model, config)
-    # model.config.gradient_checkpointing = True
+        target_modules = ['k_proj', 'v_proj', 'q_proj', 'out_proj', 'fc1', 'fc2']
+        config = LoraConfig(r=rank_i, # rank, adjust this
+                        lora_alpha=64, 
+                        target_modules = target_modules, 
+                        lora_dropout=0.05, 
+                        bias="none",
+                        # task_type=TaskType.FEATURE_EXTRACTION,  # check this???
+                        )  
+        model = get_peft_model(model, config)
+        model.print_trainable_parameters()
 
-    model.print_trainable_parameters()
+        # Define training configuration
+        training_args = Seq2SeqTrainingArguments(
+            output_dir="model_checkpoints",  
+            per_device_train_batch_size=batch_i,
+            gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
+            learning_rate=lr_i,
+            warmup_steps=50,
+            # gradient_checkpointing=True, # just added
+            num_train_epochs=3,
+            # evaluation_strategy="steps",  # disregard since using commonvoice to eval
+            # per_device_eval_batch_size=8,
+            fp16=True,  # don't think we need this
+            generation_max_length=128,
+            logging_steps=20,
+            remove_unused_columns=False, 
+        )
+        peftcallback = SavePeftCallback()
+        trainer = AlignmentSeq2SeqTrainer(
+            args=training_args,
+            model=model,
+            train_dataset=sd_qa['dev'],
+            eval_dataset=sd_qa['dev'],
+            data_collator=data_collator,
+            tokenizer=processor.feature_extractor,
+            callbacks=[peftcallback],
+        )
 
-    # Define training configuration
-    training_args = Seq2SeqTrainingArguments(
-        output_dir="model_checkpoints",  
-        per_device_train_batch_size=8,
-        gradient_accumulation_steps=1,  # increase by 2x for every 2x decrease in batch size
-        learning_rate=1e-3,
-        warmup_steps=50,
-        # gradient_checkpointing=True, # just added
-        num_train_epochs=3,
-        # evaluation_strategy="steps",  # disregard since using commonvoice to eval
-        # per_device_eval_batch_size=8,
-        fp16=True,  # don't think we need this
-        generation_max_length=128,
-        logging_steps=20,
-        remove_unused_columns=False, 
-    )
-    peftcallback = SavePeftCallback()
-    trainer = AlignmentSeq2SeqTrainer(
-        args=training_args,
-        model=model,
-        train_dataset=sd_qa['dev'],
-        eval_dataset=sd_qa['dev'],
-        data_collator=data_collator,
-        tokenizer=processor.feature_extractor,
-        callbacks=[peftcallback],
-    )
-
-    trainer.train()
-    # peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
-    print("Done with training! Pushing to hub...")
-    peft_model_id = "asyzhou/224n-whisper-large-alignment-test"
-    model.push_to_hub(peft_model_id)
-    peftcallback.plot_loss()
+        trainer.train()
+        # peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
+        print("Done with training! Pushing to hub...")
+        peft_model_id = f"asyzhou/224n-whisper-large-overnight-{test_i}"
+        print(peft_model_id)
+        model.push_to_hub(peft_model_id)
+        peftcallback.plot_loss()
 
     # peft_config = PeftConfig.from_pretrained(peft_model_id)
     # model = WhisperForConditionalGeneration.from_pretrained(
