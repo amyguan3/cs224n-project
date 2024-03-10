@@ -36,15 +36,15 @@ def main():
     model = PeftModel.from_pretrained(model, peft_model_id) # attaches the PEFT module to the Whisper model
     model.config.use_cache = True
 
-    pipe = model_pipeline(model, processor, baseline=False, verbose=True)
+    pipe = model_pipeline(model, processor, verbose=True)
 
     print('GETTING DATASET')
     dataset = get_cv_split_mini() # .to(device)
     # TODO: FILTER THE DATASET["TRAIN"] FOR JUST THE LANGUAGES YOU WANT HERE
 
     print('EVALUATING')
-    metrics = evaluate_asr(model, processor, dataset["train"], True)
-    # metrics = evaluate_asr_alt(pipe, dataset, True)
+    # metrics = evaluate_asr(model, processor, dataset["train"], True)
+    metrics = evaluate_asr_alt(pipe, dataset["train"], True)
     print(metrics)
 
 if __name__ == "__main__":
