@@ -110,6 +110,7 @@ ACCENTS = ["Filipino",
 
 def reformat_audio(row):
     row["audio"]["array"] = np.array(row["audio"]["array"])
+    print(type(row["audio"]["array"]))
     return row
 
 def get_cv_split_mini(accents=ACCENTS):
