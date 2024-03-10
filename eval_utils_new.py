@@ -54,7 +54,7 @@ def normalise(batch):
 def data(dataset):
     # MODIFY THIS FOR SD-QA SINCE GET_ACCENTS WON'T WORK
     for i, item in enumerate(dataset):
-        yield {**item["audio"], "reference": get_text(item), "norm_reference": item["norm_text"], "accents": get_accents(item)}
+        yield {"array": np.asarray(item["audio"]["array"]), "reference": get_text(item), "norm_reference": item["norm_text"], "accents": get_accents(item)}
 
 def model_pipeline(model, processor, baseline=False, verbose=True):
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
@@ -124,29 +124,22 @@ def get_cv_split_mini(accents=ACCENTS):
     dataset_total = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357") # , streaming=True
     print(f'FEATURES: {dataset_total.features}')
     print(f'AUDIO TYPE BEFORE: {type(dataset_total[0]["audio"]["array"])}')
-    # text_column_name = "sentence"
+    text_column_name = "sentence"
 
-    # dataset_total = dataset_total.shuffle(seed=42, buffer_size=10_000)
-    # # dataset_total = dataset_total.take(28_432) # half of total dataset
+    dataset_total = dataset_total.shuffle(seed=42, buffer_size=10_000)
+    # dataset_total = dataset_total.take(28_432) # half of total dataset
     # dataset_total = dataset_total.take(24)
-    # for row in dataset_total:
-    #     print(f'AUDIO TYPE BEFORE: {type(row["audio"]["array"])}')
-    #     break
-    # dataset_total = dataset_total.select(range(24))
-    dataset_total = dataset_total.map(reformat_audio_alt)
-    audio = dataset_total["audio"]
+    dataset_total = dataset_total.select(range(24))
+    # audio = dataset_total["audio"]
     # audio.cast_column("array", "numpy.ndarray")
     # dataset_total = dataset_total.cast_column("audio", Audio(sampling_rate=16000))
-    # dataset_total = dataset_total.map(normalise) # , num_proc=2
+    dataset_total = dataset_total.map(normalise) # , num_proc=2
     print(f'AUDIO TYPE AFTER: {type(dataset_total[0]["audio"]["array"])}')
-    # dataset_total = dataset_total.filter(is_target_text_in_range, input_columns=[text_column_name]) # , num_proc=2
-    # # dataset_total = dataset_total.filter(lambda example: example['accents'] in accents)
-    # for row in dataset_total:
-    #     print(f'AUDIO TYPE AFTER: {type(row["audio"]["array"])}')
-    #     break
+    dataset_total = dataset_total.filter(is_target_text_in_range, input_columns=[text_column_name]) # , num_proc=2
+    dataset_total = dataset_total.filter(lambda example: example['accents'] in accents)
 
-    # print("HALF CV DATASET LOADED")
-    # return dataset_total
+    print("MINI CV DATASET LOADED")
+    return dataset_total
 
     # cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
 
