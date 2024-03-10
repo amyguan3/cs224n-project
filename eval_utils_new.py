@@ -126,7 +126,7 @@ def get_cv_split_mini(accents=ACCENTS):
     print(f'AUDIO TYPE BEFORE: {type(dataset_total[0]["audio"]["array"])}')
     text_column_name = "sentence"
 
-    dataset_total = dataset_total.shuffle(seed=42, buffer_size=10_000)
+    # dataset_total = dataset_total.shuffle(seed=42, buffer_size=10_000)
     # dataset_total = dataset_total.take(28_432) # half of total dataset
     # dataset_total = dataset_total.take(24)
     dataset_total = dataset_total.select(range(24))
