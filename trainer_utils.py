@@ -4,6 +4,7 @@ from transformers import (Seq2SeqTrainer,
                           TrainingArguments, 
                           TrainerState)
 from geomloss import SamplesLoss
+import sys
 
 class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
   """
@@ -21,10 +22,11 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
 
     # Get first (source) hidden representation
     # print("input features", inputs["input_features"].shape)
-    # print("target embeddings", inputs["target_embeddings"].shape)
-    output = model(input_features = inputs["input_features"], decoder_input_ids=decoder_input_ids, output_hidden_states=True)
-    source_hidden_state = output.encoder_hidden_states[-1]
-    # print("source hidden state", source_hidden_state.shape)
+    print("target embeddings", inputs["target_embeddings"].shape)
+    output = model(input_features = inputs["input_features"], decoder_input_ids=decoder_input_ids)
+    source_hidden_state = output.encoder_last_hidden_state
+    print("source hidden state", source_hidden_state.shape)
+    sys.exit()
 
     # # Get second (target) hidden_representation
     # input_2 = {"input_features": inputs["input_features"][1:]}  # Remove first element
