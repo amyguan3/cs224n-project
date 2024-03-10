@@ -1,0 +1,245 @@
+ACCENT: Scottish English
+
+WER: 38.059701492537314
+
+NORMALIZED WER: 34.149326805385556
+REF: b'Frizelle began his hair coloring with red, in honor of the Boston Red Sox.'
+PRED: b' Friseau began his hair coloring with red in honor of the Boston Red Sox.'
+------------------------------------------------------
+REF: b'For anglers, Chenango Lake includes trout, bass, perch and bullhead.'
+PRED: b' Four anglers to enter the lake include trout, bass, perch and bullhead.'
+------------------------------------------------------
+REF: b"His childhood was marred by his father's heavy drinking."
+PRED: b" His childhood was married by his father's heavy drinking."
+------------------------------------------------------
+REF: b'Tuuri has also translated some Icelandic sagas.'
+PRED: b' Toy has also translated some respective sagas.'
+------------------------------------------------------
+REF: b'Above that elevation, they are in the antenna blind cone.'
+PRED: b' Above that animation, there is an extra-light blind cone.'
+------------------------------------------------------
+REF: b'Some of the main agricultural exports include: cotton, peanuts, sorghum, and ginger.'
+PRED: b' Some of the main other choice sold is mostly classic peanuts, sunflower and ginger.'
+------------------------------------------------------
+REF: b'The object, the location of the object, and the viewer.'
+PRED: b' the object, the location of the object and the viewer'
+------------------------------------------------------
+REF: b"Cadman's musical education, unlike that of most of his American contemporaries, was completely American."
+PRED: b" Caden's musical education, unlike that of most of his American contemporaries, was completely American."
+------------------------------------------------------
+REF: b'John is extremely intelligent, even if he is retarded in his physical development.'
+PRED: b' Zoran is very intelligent. He will leave his hospital and get his best quality treatment.'
+------------------------------------------------------
+REF: b'Gloria stamped her foot on the platform.'
+PRED: b' Go ahead and subscribe to vote on the platform.'
+------------------------------------------------------
+REF: b'What do you say about that?'
+PRED: b' What do you say about that?'
+------------------------------------------------------
+REF: b'He is survived by his wife, Jeanne Desaulniers, and five children.'
+PRED: b" Here's the fact that I have 5, and it does not mean I have 5 cheaters."
+------------------------------------------------------
+REF: b'Boutique brokerage can also refer to a real estate brokerage firm.'
+PRED: b' Boutique brokerage can also refer to a real estate brokerage firm.'
+------------------------------------------------------
+REF: b'Its capital was the town of Glatz.'
+PRED: b" It's kept in a watertight glass."
+------------------------------------------------------
+REF: b'He was again cleared, but the experience affected him badly.'
+PRED: b' He was again cleared but the experience affected him badly.'
+------------------------------------------------------
+REF: b'Concept albums were still created, but not as frequently and on a smaller scale.'
+PRED: b' Constant effort must be created by nice and frequently, not on a smaller scale.'
+------------------------------------------------------
+REF: b'Lab then decided to publish "Fluxx" in house instead of finding another publisher.'
+PRED: b' Lab then decided to publish Phlox in-house instead of finding another publisher.'
+------------------------------------------------------
+REF: b'The bonbon tongs had an immense success.'
+PRED: b' The robot tunnels have seen mass success.'
+------------------------------------------------------
+REF: b'He then opened the campaign by besieging the different posts held by the insurgents.'
+PRED: b' He then opened the campaign by besieging the different posts held by the insurgents.'
+------------------------------------------------------
+REF: b'Drums are also traditionally handmade.'
+PRED: b' Drums are also traditionally handmade.'
+------------------------------------------------------
+REF: b"The court, in doubt, referred him to the Department's Board of Directors."
+PRED: b" The coach, in doubt, refers him to the department's board of directors."
+------------------------------------------------------
+REF: b"Several rail yards are located along the river's banks in this stretch, as well."
+PRED: b" Several rail yards are located along the river's banks in this stretch as well."
+------------------------------------------------------
+REF: b'While in Canada, he married his sister-in-law, a leason forbidden by the British Methodists.'
+PRED: b' While in Canada, he went to study law, a lesson forbidden by the British Resistance.'
+------------------------------------------------------
+REF: b'This is made from the local Savagnin grape variety.'
+PRED: b' This is made from the local Savannah grape variety.'
+------------------------------------------------------
+REF: b'The pantomime in January and February plays over three weekends.'
+PRED: b' The path of opportunity at the library at February could solve three weekends.'
+------------------------------------------------------
+REF: b'A naval engagement ensues in which the "Alma" is sunk.'
+PRED: b' A level that gives her a suit in which the armor is sunk.'
+------------------------------------------------------
+REF: b'All three books are predominantly set in and around Garnethill, Glasgow, and its environs.'
+PRED: b' All three books are predominantly set in and around Garnet Hill, Glasgow and its environs.'
+------------------------------------------------------
+REF: b'The Redfield Reds were noted to have played home games at College Park.'
+PRED: b' The red thread led Swindle to have played home games at College Park.'
+------------------------------------------------------
+REF: b'The British launched an attack on the palace and other locations around the city.'
+PRED: b' The British noted attack on the palace and other locations around the city.'
+------------------------------------------------------
+REF: b'However, students are not permitted to discuss the test.'
+PRED: b' However, students are not permitted to discuss the test.'
+------------------------------------------------------
+REF: b'It also has a reputation for its sports teams in South Auckland.'
+PRED: b' It also has a reputation for its sports team in South Auckland.'
+------------------------------------------------------
+REF: b'It is one of the largest primary schools in the area.'
+PRED: b' It is one of the largest primary schools in the area.'
+------------------------------------------------------
+REF: b'A ground frame controlled access to these.'
+PRED: b' I grant FaveCulture access to these.'
+------------------------------------------------------
+REF: b'Verso Books was originally known as New Left Books.'
+PRED: b' Bustle Books was originally known as New Life Books.'
+------------------------------------------------------
+REF: b'It is also her last album for Elektra Records.'
+PRED: b' It is also her last ever full-length song record.'
+------------------------------------------------------
+REF: b'Roncalli College is located in Timaru, New Zealand.'
+PRED: b' My Canada card shows a kid in a team with New Zealand.'
+------------------------------------------------------
+REF: b"It was famed for the manufacture of trumps or Jew's harps."
+PRED: b" It was famed for the manufacture of Trump's or Jew's harps."
+------------------------------------------------------
+REF: b'Boats can easily be launched from or landed on the beach.'
+PRED: b' Bugs can easily be launched from all natural enemies.'
+------------------------------------------------------
+REF: b'This reportedly halted the advance of the fire and was hailed as a miracle.'
+PRED: b' This reportedly halted the advance of the fire and was hailed as a miracle.'
+------------------------------------------------------
+REF: b'Pang was born in Malacca, Malaysia.'
+PRED: b' PENG was born in Malaysia.'
+------------------------------------------------------
+REF: b'Pods can be destroyed by shooting them.'
+PRED: b" Pass character's story by shooting them."
+------------------------------------------------------
+REF: b"She has a pet rock, Rocco, much to Elmo's constant dismay."
+PRED: b' He has a pet bug. Welcome March to Eros Cosplay Dismay.'
+------------------------------------------------------
+REF: b'Drinker was married to Katherine Rotan Drinker.'
+PRED: b' Thank you for listening to Kathleen Barton Drinker.'
+------------------------------------------------------
+REF: b'Rosas and his henchmen stand for barbarism, the slain young man for civilization.'
+PRED: b' Roses and his henchmen stand for barbarism, a slain young man for civilization.'
+------------------------------------------------------
+REF: b"I couldn't do that."
+PRED: b" I couldn't do that"
+------------------------------------------------------
+REF: b'The local district council is Forest of Dean, based in Coleford.'
+PRED: b' The local district council is Forest of Dean, based in Colford.'
+------------------------------------------------------
+REF: b'It is in the East of India, primarily in the state of Assam.'
+PRED: b' It is the east of India, formerly the state of Assam.'
+------------------------------------------------------
+REF: b'All songs written and performed by Marko Laiho.'
+PRED: b' All songs written and performed by Marco Ulloa'
+------------------------------------------------------
+REF: b'The community was named for its early cement industry.'
+PRED: b' The community was named for its early cement industry.'
+------------------------------------------------------
+REF: b'The next morning is foggy.'
+PRED: b' The next morning is foggy.'
+------------------------------------------------------
+REF: b'The album was produced by the Family Stand.'
+PRED: b' The ever was purchased by the family stand.'
+------------------------------------------------------
+REF: b'The electoral ward of Ely falls within the parliamentary constituency of Cardiff West.'
+PRED: b' The Ladsall Award of Ellie Falls, President of Parliamentary Constituency of Cardiff West.'
+------------------------------------------------------
+REF: b'As the throttle is opened, the engine speed increases rapidly.'
+PRED: b' As the throttle is opened, the engine speed increases rapidly.'
+------------------------------------------------------
+REF: b'The band\'s albums have been reviewed at "Spin Magazine", AllMusic, and PopMatters.'
+PRED: b' The best album of 7th EP, 3, 3, 3, magazine, all music and pop matters.'
+------------------------------------------------------
+REF: b'He was an active freemason.'
+PRED: b' He was an active boomerang.'
+------------------------------------------------------
+REF: b'It was directed by Irving Rapper.'
+PRED: b' It was crafted by RVWrapper.'
+------------------------------------------------------
+REF: b'Historically, Canada has had two liberal phases.'
+PRED: b' Historically, Canada has had two different phases.'
+------------------------------------------------------
+REF: b'Tamblyn also produced the majority of the tracks on the album.'
+PRED: b' Tamblyn also produced the majority of the tracks on the album.'
+------------------------------------------------------
+REF: b"Occasionally, they are aided by the ship's partially functioning computer system."
+PRED: b' Occasionally, the interface is partially boxed in the computer system.'
+------------------------------------------------------
+REF: b'He became director of numerous other companies, and acted as a mining agent.'
+PRED: b' Here we give it 12 Neurosonic Compensation and add it as a Mining Agent.'
+------------------------------------------------------
+REF: b'Erie and Johnstown both have junior ice hockey teams as well.'
+PRED: b' Erie and Johnston both have junior ice hockey teams as well.'
+------------------------------------------------------
+REF: b"He was a member of the Roman School, and succeeded Palestrina at Saint Peter's."
+PRED: b" He was a member of the Roman school and succeeded Palestrina at St. Peter's."
+------------------------------------------------------
+REF: b'Government ministers and military officials became frequent targets.'
+PRED: b' Government municipalities and military officials became frequent targets.'
+------------------------------------------------------
+REF: b"Nongshim's headquarter is located in Seoul, South Korea."
+PRED: b" Longstream's headquarters is located in Seoul, South Korea."
+------------------------------------------------------
+REF: b'It was named for William B. Fordyce, a railroad dispatcher.'
+PRED: b' It was named for William B. Fordyce, a railroad dispatcher.'
+------------------------------------------------------
+REF: b'It remained in the opposition.'
+PRED: b' It remained in our possession.'
+------------------------------------------------------
+REF: b'He held this post until his death.'
+PRED: b' He had just passed out of his bed.'
+------------------------------------------------------
+REF: b'The campus is located in the area of Pance, south of the city.'
+PRED: b' The campus is located in the area of Plains Pounds, south of the city.'
+------------------------------------------------------
+REF: b'They have been observed hunting finches and house sparrows at bird feeders.'
+PRED: b' They have been observed hunting finches and house sparrows at bird feeders.'
+------------------------------------------------------
+REF: b'Odebolt Creek arises near here, flows through Ida Grove, then into the Maple River.'
+PRED: b' Only both Quick Alvars stay here. Those 3 exact rows then they may prove ever.'
+------------------------------------------------------
+REF: b'With the secession of Georgia from the Union, he resigned from Congress.'
+PRED: b' With his succession of Georgia from the Union, he resigned from Congress.'
+------------------------------------------------------
+REF: b'There were two vehicles at the location of the fire.'
+PRED: b' There were two vehicles at the location of the fire.'
+------------------------------------------------------
+REF: b'She said she had no sympathy with the rebellion whatsoever.'
+PRED: b' She said she had no sympathy with the rebellion whatsoever.'
+------------------------------------------------------
+REF: b'He and Lincoln seem to have consulted each other about married life.'
+PRED: b' Me and Nicole seem to have consulted each other about married life.'
+------------------------------------------------------
+REF: b'He was nicknamed "Peerless Pennington".'
+PRED: b' He was nicknamed Peleus the Pelican.'
+------------------------------------------------------
+REF: b'He is a councillor in the London Borough of Havering.'
+PRED: b' He is a councillor in the London Borough of Havering.'
+------------------------------------------------------
+REF: b'Some manufacturers and resellers incorrectly call them "magnesium" rods.'
+PRED: b" So I've done it by choice, I look like this incredibly, what are the next steps?"
+------------------------------------------------------
+REF: b'All the departments have their own computer laboratories and departmental libraries.'
+PRED: b' One of the proudest hearts of Capital Laboratories are the public pen and libraries.'
+------------------------------------------------------
+REF: b'There are also reports that this species occurs in Iraq.'
+PRED: b' There are also reports that this species occurs in Iraq.'
+------------------------------------------------------
+REF: b'They play their home games at Culverden Stadium.'
+PRED: b' The Tater Home Games has covered the stadium.'
+------------------------------------------------------

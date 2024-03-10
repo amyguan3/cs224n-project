@@ -1,0 +1,14 @@
+ACCENT: England English
+
+WER: 41.935483870967744
+
+NORMALIZED WER: 38.70967741935484
+REF: b'Three new barangays were added to the municipality: San Isidro, Paroyhog, and Sto.'
+PRED: b' 3 new barangays were added to the municipality, San Jose, Paro,'
+------------------------------------------------------
+REF: b'It was based on the Howard Fast short story "Rachel".'
+PRED: b' It was based on Howard for short story ratio.'
+------------------------------------------------------
+REF: b'The Wendish religious centre shifted to Arkona thereafter.'
+PRED: b' The Wendish religious center shifted to Ocona the Rathla.'
+------------------------------------------------------

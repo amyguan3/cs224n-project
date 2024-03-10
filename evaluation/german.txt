@@ -1,0 +1,8 @@
+ACCENT: German
+
+WER: 55.55555555555556
+
+NORMALIZED WER: 55.55555555555556
+REF: b'Many neighbourhoods became entirely Irish nationalist or entirely unionist.'
+PRED: b' Many neighborhoods became entirely nationalists entirely unites.'
+------------------------------------------------------
