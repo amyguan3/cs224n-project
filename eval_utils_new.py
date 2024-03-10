@@ -55,14 +55,14 @@ def data(dataset):
 
 def model_pipeline(model, processor, baseline=False, verbose=True):
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
-    if baseline:
-        whisper_asr = pipeline(
-            "automatic-speech-recognition", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor, device=device
-        )
-    else:
+    if baseline == False:
         whisper_asr = pipeline(
             "automatic-speech-recognition", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor
         ) # , device=device
+    else:
+        whisper_asr = pipeline(
+            "automatic-speech-recognition", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor, device=device
+        )
     whisper_asr.model.config.forced_decoder_ids = (
         whisper_asr.tokenizer.get_decoder_prompt_ids(
             language="english", task="transcribe"
@@ -169,11 +169,39 @@ def save_metrics(metrics, references, predictions, accent, wer, norm_wer):
         result_file.write("------------------------------------------------------" + '\n')
     result_file.close()
 
+def evaluate_asr_alt(whisper_asr, dataset, verbose=True):
+    wer_metric = evaluate.load("wer")
+
+    # RUN INFERENCE
+    predictions, references, norm_predictions, norm_references, all_accents = get_preds(whisper_asr, dataset, verbose)
+    pickle_dump(predictions, references, norm_predictions, norm_references)
+
+    if verbose:
+        print('\n ASR COMPLETED\n')
+
+    # COMPUTE METRICS
+    wer_metric = evaluate.load("wer")
+    metrics = {}
+
+    for accent in all_accents:
+        wer = 100 * wer_metric.compute(references=references[accent], predictions=predictions[accent])
+        norm_wer = 100 * wer_metric.compute(references=norm_references[accent], predictions=norm_predictions[accent])
+        save_metrics(metrics, references, predictions, accent, wer, norm_wer)
+        
+    if verbose:
+        print(f'\n DONE CALCULATING METRICS \n')
+
+    os.system(f"mkdir -p pickles")
+    with open('pickles/metrics.pkl', 'wb') as f:
+        pickle.dump(metrics, f)
+
+    return metrics
+
 
 def evaluate_asr(model, processor, dataset, verbose=True):
     wer_metric = evaluate.load("wer")
 
-    whisper_asr = model_pipeline(model, processor, verbose)
+    whisper_asr = model_pipeline(model, processor, verbose, baseline=False)
 
     # RUN INFERENCE
     predictions, references, norm_predictions, norm_references, all_accents = get_preds(whisper_asr, dataset, verbose)

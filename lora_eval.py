@@ -6,7 +6,9 @@ from transformers import (WhisperProcessor,
 import torch
 from peft import (PeftModel, 
                   PeftConfig)
-from eval_utils_new import (evaluate_asr,
+from eval_utils_new import (model_pipeline,
+                            evaluate_asr,
+                            evaluate_asr_alt,
                         get_cv_split_mini)
 
 os.system("pip install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
@@ -34,11 +36,15 @@ def main():
     model = PeftModel.from_pretrained(model, peft_model_id) # attaches the PEFT module to the Whisper model
     model.config.use_cache = True
 
+    pipe = model_pipeline(model, processor, baseline=False, verbose=True)
+
     print('GETTING DATASET')
     dataset = get_cv_split_mini() # .to(device)
+    # TODO: FILTER THE DATASET["TRAIN"] FOR JUST THE LANGUAGES YOU WANT HERE
 
     print('EVALUATING')
-    metrics = evaluate_asr(model, processor, dataset["train"], True)
+    # metrics = evaluate_asr(model, processor, dataset["train"], True)
+    metrics = evaluate_asr_alt(pipe, dataset["train"], True)
     print(metrics)
 
 if __name__ == "__main__":
