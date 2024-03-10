@@ -128,11 +128,11 @@ def main():
     processor = WhisperProcessor.from_pretrained(model_path, task=task)
 
     # load pre-trained model checkpoint
-    model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True, device_map="auto")
+    model = WhisperForConditionalGeneration.from_pretrained(model_path)
     model.config.forced_decoder_ids = None  # possibly this needs editing
     model.config.suppress_tokens = []
-    # model = model.to(device)  # doesn't work with 8bit
-    print("Model saved to device:", device)
+    model = model.to(device)  # doesn't work with 8bit
+    print("Model probably saved to device:", device)
 
     #------------------------------------#
     #----------------DATA----------------#
@@ -183,7 +183,11 @@ def main():
     #--------------TRAINING--------------#
     #------------------------------------#
 
-    print("Starting training...")
+    print("Load 8bit model...")
+    print("Start training...")
+    model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True, device_map="auto")
+    model.config.forced_decoder_ids = None  # possibly this needs editing
+    model.config.suppress_tokens = []
     model = prepare_model_for_int8_training(model, output_embedding_layer_name="proj_out")
 
     def make_inputs_require_grad(module, input, output):
