@@ -109,7 +109,7 @@ ACCENTS = ["Filipino",
            ]
 
 def reformat_audio(row):
-    row["audio"]["array"] = np.array(row["audio"]["array"])
+    row["audio"]["array"] = np.asarray(row["audio"]["array"])
     print(type(row["audio"]["array"]))
     return row
 
