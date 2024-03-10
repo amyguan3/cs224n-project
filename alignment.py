@@ -80,7 +80,8 @@ class SavePeftCallback(TrainerCallback):
         control: TrainerControl,
         **kwargs,
     ):
-        self.training_losses.append([state.global_step, state.log_history[-1]["loss"]])
+        if "loss" in state.log_history[-1].keys():
+            self.training_losses.append([state.global_step, state.log_history[-1]["loss"]])
 
     
     def plot_loss(self):
