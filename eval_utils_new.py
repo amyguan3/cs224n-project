@@ -114,7 +114,7 @@ def reformat_audio(row):
 
 def reformat_audio_alt(row):
     audio = row["audio"]
-    audio = Audio(audio_array=np.asarray(audio["array"]),path=audio["path"],sampling_rate=audio["sampling_rate"])
+    audio = Audio(array=np.asarray(audio["array"]),path=audio["path"],sampling_rate=audio["sampling_rate"])
     return row
 
 def get_cv_split_mini(accents=ACCENTS):
