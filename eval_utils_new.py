@@ -98,6 +98,8 @@ cv["test]
 """
 def get_cv_split(accents=ACCENTS):
     cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
+    cv_all = cv_all.shuffle(seed=42)
+    cv_all.select(range(10_000))
 
     # data split
     cv_split = cv_all.train_test_split(test_size=0.5, seed=42) # 28 samples in train
@@ -111,6 +113,7 @@ def get_cv_split(accents=ACCENTS):
 
 def get_cv_split_mini(accents=ACCENTS):
     cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
+    cv_all = cv_all.shuffle(seed=42)
     cv_all = cv_all.select(range(32))
 
     # data split
