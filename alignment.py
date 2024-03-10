@@ -188,7 +188,7 @@ def main():
     model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True, device_map="auto")
     model.config.forced_decoder_ids = None  # possibly this needs editing
     model.config.suppress_tokens = []
-    model = prepare_model_for_int8_training(model, output_embedding_layer_name="proj_out")
+    model = prepare_model_for_int8_training(model)
 
     def make_inputs_require_grad(module, input, output):
         output.requires_grad_(True)
