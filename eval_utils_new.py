@@ -110,13 +110,14 @@ ACCENTS = ["Filipino",
 
 def reformat_audio(row):
     row["audio"]["array"] = np.asarray(row["audio"]["array"])
-    print(type(row["audio"]["array"]))
     return row
 
 def get_cv_split_mini(accents=ACCENTS):
     # iterable dataset
     # dataset_total = load_dataset("mozilla-foundation/common_voice_16_1", "en", split="train", token=True, streaming=True)
-    dataset_total = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357") # , streaming=True
+    dataset_total = load_dataset("mozilla-foundation/common_voice_16_1", "bas", split="validation", token=True)
+    # dataset_total = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357") # , streaming=True
+    print(f'FEATURES: {dataset_total.features}')
     print(f'AUDIO TYPE BEFORE: {type(dataset_total[0]["audio"]["array"])}')
     # text_column_name = "sentence"
 
@@ -126,8 +127,10 @@ def get_cv_split_mini(accents=ACCENTS):
     # for row in dataset_total:
     #     print(f'AUDIO TYPE BEFORE: {type(row["audio"]["array"])}')
     #     break
-    dataset_total = dataset_total.select(range(24))
-    dataset_total = dataset_total.map(reformat_audio)
+    # dataset_total = dataset_total.select(range(24))
+    # dataset_total = dataset_total.map(reformat_audio)
+    # audio = dataset_total["audio"]
+    # audio.cast_column("array", "numpy.ndarray")
     # dataset_total = dataset_total.cast_column("audio", Audio(sampling_rate=16000))
     # dataset_total = dataset_total.map(normalise) # , num_proc=2
     print(f'AUDIO TYPE AFTER: {type(dataset_total[0]["audio"]["array"])}')
