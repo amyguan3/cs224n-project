@@ -119,7 +119,7 @@ def get_cv_split_mini(accents=ACCENTS):
     cv_split = cv_split.map(normalise) # , num_proc=2
     cv_split = cv_split.filter(is_target_text_in_range, input_columns=["sentence"]) # , num_proc=2
     cv_split = cv_split.filter(lambda example: example['accents'] in accents)
-    
+
     print("MINI CV DATASET LOADED")
     return cv_split
 
@@ -145,7 +145,7 @@ def get_preds(asr_model, dataset_total, verbose):
 
     i = 0
 
-    for out in tqdm(asr_model(data(dataset_total), batch_size=16), desc='Decode Progress'):
+    for out in tqdm(asr_model(data(dataset_total), batch_size=4), desc='Decode Progress'):
         # print(out)
         accent = out["accents"][0]
         if accent not in all_accents:
