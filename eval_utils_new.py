@@ -14,6 +14,7 @@ from tqdm import tqdm
 import os
 import torch
 import pickle
+import pandas as pd
 
 # modified from a github repo: https://github.com/vasistalodagala/whisper-finetune/tree/master
 whisper_norm = BasicTextNormalizer()
@@ -97,7 +98,9 @@ def get_cv_split():
 def get_cv_split_mini(accents=[]):
     # iterable dataset
     dataset_total = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357") # , streaming=True)
-    print(dataset_total["accents"].unique())
+    accents = dataset_total["accents"]
+    df = pd.Series(accents)
+    print(df.unique())
     # text_column_name = "sentence"
 
     # dataset_total = dataset_total.shuffle(seed=42, buffer_size=10_000)
