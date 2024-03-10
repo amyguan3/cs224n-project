@@ -104,7 +104,7 @@ def get_cv_split(accents=ACCENTS):
     cv_split = cv_all.train_test_split(test_size=0.5, seed=42) # 28 samples in train
     cv_split = cv_split.map(normalise) # , num_proc=2
     cv_split = cv_split.filter(is_target_text_in_range, input_columns=["sentence"]) # , num_proc=2
-    dataset_total = dataset_total.filter(lambda example: example['accents'] in accents)
+    cv_split = cv_split.filter(lambda example: example['accents'] in accents)
 
     print("CV DATASET LOADED")
 
@@ -118,7 +118,8 @@ def get_cv_split_mini(accents=ACCENTS):
     cv_split = cv_all.train_test_split(test_size=0.5, seed=42) # 28 samples in train
     cv_split = cv_split.map(normalise) # , num_proc=2
     cv_split = cv_split.filter(is_target_text_in_range, input_columns=["sentence"]) # , num_proc=2
-    dataset_total = dataset_total.filter(lambda example: example['accents'] in accents)
+    cv_split = cv_split.filter(lambda example: example['accents'] in accents)
+    
     print("MINI CV DATASET LOADED")
     return cv_split
 
