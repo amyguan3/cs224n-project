@@ -28,7 +28,7 @@ def main():
     print('LOADING MODEL')
     peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
     peft_config = PeftConfig.from_pretrained(peft_model_id)
-    print('DONE CONFIG')
+    print('DONE LOADING CONFIG')
     # TODO: verify that these are on the GPU
     model = WhisperForConditionalGeneration.from_pretrained(
         peft_config.base_model_name_or_path, device_map="auto"
