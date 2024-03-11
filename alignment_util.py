@@ -229,7 +229,9 @@ def train_adapter(processor, data_collator, sd_qa, param_config):
     # DELETE LATER
     print("Done with training! Pushing to hub...")
     # TODO: CUSTOMIZE THIS WHEN WE RUN THINGS CONCURRENTLY
-    peft_model_id = "amyguan/large-tune-test"
+    peft_model_id = "asyzhou/224n-large-tune-test"
     model.push_to_hub(peft_model_id)
 
     peftcallback.plot_loss()
+
+    return peft_model_id

@@ -371,24 +371,23 @@ cv["test]
 import pandas as pd
 
 def get_cv_split(accents=ACCENTS):
+    print("LOADING CV DATASET")
     cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
     cv_all = cv_all.shuffle(seed=42)
-    cv_all = cv_all.select(range(10_000)) # TODO: fix
+    cv_all = cv_all.select(range(10_000))
 
     # data split
     cv_split = cv_all.train_test_split(test_size=0.5, seed=42) # 28 samples in train
-    df = pd.DataFrame(cv_split["train"]["accents"])
-    with pd.option_context('display.max_rows', None):
-        print(df.value_counts())
-    # cv_split = cv_split.map(normalise) # , num_proc=2
-    # cv_split = cv_split.filter(is_target_text_in_range, input_columns=["sentence"]) # , num_proc=2
-    # cv_split = cv_split.filter(lambda example: example['accents'] in accents)
+    cv_split = cv_split.map(normalise) # , num_proc=2
+    cv_split = cv_split.filter(is_target_text_in_range, input_columns=["sentence"]) # , num_proc=2
+    cv_split = cv_split.filter(lambda example: example['accents'] in accents)
 
     print("CV DATASET LOADED")
 
     return cv_split
 
 def get_cv_split_mini(accents=ACCENTS):
+    print("LOADING MINI CV DATASET")
     cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
     cv_all = cv_all.shuffle(seed=42)
     cv_all = cv_all.select(range(32))

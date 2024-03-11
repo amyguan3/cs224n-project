@@ -84,13 +84,13 @@ def tune(sources, target):
     cv_accents = [SDQA_TO_CV[accent] for accent in sources]
     cv_accents.append(SDQA_TO_CV[target])
 
-    # TODO: fix this
+    # TODO: fix this to full cv
     eval_dataset = get_cv_split_mini(accents=cv_accents)
 
     ######################### HYPERPARAMETER TUNING ############################
 
     def objective(trial):
-        print(f'==================TRIAL {trial.number}==================')
+        print(f'\n=================================TRIAL {trial.number}=================================')
 
         # Define hyperparameters to optimize
         learning_rate = trial.suggest_uniform('learning_rate', 0.001, 0.005)
@@ -102,10 +102,10 @@ def tune(sources, target):
 
         wandb.init(project="large_test", config={"learning_rate": learning_rate, "batch_size": batch_size, "rank": rank})
 
-        train_adapter(processor, data_collator, sd_qa, param_config)
+        peft_model_path = train_adapter(processor, data_collator, sd_qa, param_config)
 
         # Evaluate the model
-        peft_model_path = "amyguan/large-tune-test"
+        # peft_model_path = "amyguan/large-tune-test"
 
         peft_config = PeftConfig.from_pretrained(peft_model_path)
         model = WhisperForConditionalGeneration.from_pretrained(
