@@ -3,11 +3,11 @@ import logging
 import os
 import sys
 
-# Setup 
-print("Executing pip installs ...")
-os.system("pip3 install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
-os.system("pip3 install -q git+https://github.com/huggingface/peft.git@main")
-print("Print installs done!")
+# # Setup : already in alignment_util
+# print("Executing pip installs ...")
+# os.system("pip3 install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
+# os.system("pip3 install -q git+https://github.com/huggingface/peft.git@main")
+# print("Print installs done!")
 
 from datasets import load_dataset, DatasetDict
 from transformers import (WhisperFeatureExtractor, 
@@ -42,7 +42,8 @@ from data_utils import (DataCollatorSpeechSeq2SeqWithPadding,
 import matplotlib.pyplot as plt
 from eval_utils import (model_pipeline,
                             evaluate_asr_alt,
-                            get_cv_split)
+                            get_cv_split,
+                            get_cv_split_mini)
 import optuna
 import wandb
 from alignment_util import (SavePeftCallback,
@@ -83,7 +84,8 @@ def tune(sources, target):
     cv_accents = [SDQA_TO_CV[accent] for accent in sources]
     cv_accents.append(SDQA_TO_CV[target])
 
-    eval_dataset = get_cv_split(accents=cv_accents)
+    # TODO: fix this
+    eval_dataset = get_cv_split_mini(accents=cv_accents)
 
     ######################### HYPERPARAMETER TUNING ############################
 
