@@ -1,10 +1,3 @@
-"""
-EXAMPLE USAGE: (on common voice, iterable dataset ver)
-dataset = get_half_cv()
-metrics = evaluate_asr(model, processor, dataset)
-
-note: handles the accent column very specifically, so on SD-QA, either want to reformat to match with CV, or modify this code
-"""
 from huggingface_hub import interpreter_login
 from datasets import load_dataset, Audio
 from transformers import WhisperProcessor, WhisperForConditionalGeneration, WhisperFeatureExtractor, WhisperTokenizer, pipeline
@@ -20,6 +13,7 @@ from torch.utils.data import DataLoader
 import gc
 from peft import (PeftModel,
                   PeftConfig)
+from collections import defaultdict
 
 # modified from a github repo: https://github.com/vasistalodagala/whisper-finetune/tree/master
 whisper_norm = BasicTextNormalizer()
@@ -37,8 +31,11 @@ def attach_peft(peft_model_id):
 
 """
 Note: need to split metric by dialect for many-to-one.
+assumes dataset is already filtered to only include intended accents, one per row
+sd-qa: question, audio (source) // or question, accent, audio
+cv: sentence, audio
 """
-def new_evaluate(model, dataset):
+def new_evaluate(model, dataset, one_to_one=True):
     print("================================Beginning Evaluation================================")
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
     metric = evaluate.load("wer")
@@ -52,31 +49,34 @@ def new_evaluate(model, dataset):
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
     def prepare_features(data):
-        # NOTE: UNSURE IF THE NP.ARRAY WORKS -- might need to troubleshoot
-        data["source_input_features"] = feature_extractor(np.asarray(data["audio"]["array"]), sampling_rate=data["audio"]["sampling_rate"]).input_features[0]
-        # data["target_input_features"] = feature_extractor(np.asarray(data["audio"]["array"]), sampling_rate=data["audio"]["sampling_rate"]).input_features[0]
-        
         # encode question text to label ids
-        if "sentence" in data: # CV (one to one)
+        data["source_input_features"] = feature_extractor(np.asarray(data["audio"]["array"]), sampling_rate=data["audio"]["sampling_rate"]).input_features[0]
+        
+        if "sentence" in data: # CV
+            data["accent"] = data["accents"]
             data["labels"] = tokenizer(data["sentence"]).input_ids
-        else: #  SD-QA
-            # will need to pass in source(s), maybe keep a column for dialect so that i can separate 
-            raise NotImplementedError("Have not implemented for SD-QA yet.")
+        elif "question" in data: # SD-QA
+            data["labels"] = tokenizer(data["question"]).input_ids
+        else:
+            raise ValueError("Expected either CV or SD-QA dataset.")
+
         return data
     
     dataset = dataset.map(prepare_features, desc="Extract features")
 
-    eval_dataloader = DataLoader(dataset, batch_size=4, collate_fn=data_collator)
+    batch_size = 4
+    eval_dataloader = DataLoader(dataset, batch_size=batch_size, collate_fn=data_collator)
     # forced_decoder_ids = processor.get_decoder_prompt_ids(language="english", task="transcribe")
     model.config.forced_decoder_ids = tokenizer.get_decoder_prompt_ids(language="english", task="transcribe")
     normalizer = BasicTextNormalizer()
 
-    predictions = []
-    references = []
-    normalized_predictions = []
-    normalized_references = []
+    if one_to_one:
+        predictions, references, normalized_predictions, normalized_references = [], [], [], []
+    else:
+        predictions, references, normalized_predictions, normalized_references = defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list)
 
     model.eval()
+
     for step, batch in enumerate(tqdm(eval_dataloader)):
         with torch.cuda.amp.autocast():
             with torch.no_grad(): # inference
@@ -93,149 +93,37 @@ def new_evaluate(model, dataset):
                 labels = np.where(labels != -100, labels, processor.tokenizer.pad_token_id)
                 decoded_preds = processor.tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
                 decoded_labels = processor.tokenizer.batch_decode(labels, skip_special_tokens=True)
-                predictions.extend(decoded_preds)
-                references.extend(decoded_labels)
-                normalized_predictions.extend([normalizer(pred).strip() for pred in decoded_preds])
-                normalized_references.extend([normalizer(label).strip() for label in decoded_labels])
+
+                if one_to_one:
+                    predictions.extend(decoded_preds)
+                    references.extend(decoded_labels)
+                    normalized_predictions.extend([normalizer(pred).strip() for pred in decoded_preds])
+                    normalized_references.extend([normalizer(label).strip() for label in decoded_labels])
+                else: # many to one
+                    for i in range(batch_size):
+                        accent = batch["accent"]
+                        predictions[accent].append(decoded_preds[i])
+                        references[accent].append(decoded_labels[i])
+                        normalized_predictions[accent].append(normalizer(decoded_preds[i]).strip())
+                        normalized_references[accent].extend(normalizer(decoded_labels[i]).strip())
             del generated_tokens, labels, batch
         gc.collect()
 
-    wer = 100 * metric.compute(predictions=predictions, references=references)
-    normalized_wer = 100 * metric.compute(predictions=normalized_predictions, references=normalized_references)
-    eval_metrics = {"wer": wer, "normalized_wer": normalized_wer}
+    if one_to_one:
+        wer = 100 * metric.compute(predictions=predictions, references=references)
+        normalized_wer = 100 * metric.compute(predictions=normalized_predictions, references=normalized_references)
+        eval_metrics = {"wer": wer, "normalized_wer": normalized_wer}
+        total_wer = wer
+    else:
+        eval_metrics = {}
+        total_wer = 0
+        for accent in predictions:
+            wer = 100 * metric.compute(predictions=predictions, references=references)
+            normalized_wer = 100 * metric.compute(predictions=normalized_predictions, references=normalized_references)
+            eval_metrics[accent] = {"wer": wer, "normalized_wer": normalized_wer}
+            total_wer += wer
+        total_wer /= len(predictions)
 
-    print(f"EVAL METRICS:\nWER: {wer}\nNORM_WER: {normalized_wer}")
     print(eval_metrics)
-
-    return wer
-
-
-"""
-OLD VERSION BELOW THAT I ORIGINALLY WROTE FOR ITERABLE DATASET
-"""
-def get_text(sample):
-    # can replace with just return sample["sentence"]?
-    if "sentence" in sample:
-        return sample["sentence"]
-    elif "question" in sample:
-        return sample["question"]
-    else:
-        raise ValueError(
-            f"Expected transcript column of either 'text', 'sentence', 'normalized_text' or 'transcript'. Got sample of "
-            ".join{sample.keys()}. Ensure a text column name is present in the dataset."
-        )
-    
-
-def get_accents(sample):
-    if "accents" in sample:
-        return sample["accents"]
-    elif "accent" in sample:
-        return sample["accent"]
-    else:
-        raise ValueError(
-            f"Expected transcript column of accent. Ensure an accent column is present in the dataset."
-        )
-
-
-def data(dataset):
-    # MODIFY THIS FOR SD-QA SINCE GET_ACCENTS WON'T WORK
-    for i, item in enumerate(dataset):
-        yield {"raw": np.asarray(item["audio"]["array"]), "sampling_rate": item["audio"]["sampling_rate"], "reference": get_text(item), "accents": get_accents(item)}
-
-
-def model_pipeline(model, processor, baseline=False, verbose=True):
-    device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
-    if baseline == False: # ADAPTER VER, USES ACCELERATOR
-        whisper_asr = pipeline(
-            "automatic-speech-recognition", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor
-        ) # , device=device
-    else:
-        whisper_asr = pipeline(
-            "automatic-speech-recognition", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor, device=device
-        )
-    whisper_asr.model.config.forced_decoder_ids = (
-        whisper_asr.tokenizer.get_decoder_prompt_ids(
-            language="english", task="transcribe"
-        )
-    )
-    whisper_asr.model.generation_config.forced_decoder_ids = processor.tokenizer.get_decoder_prompt_ids(
-        language="english", task="transcribe"
-    )
-    if verbose:
-        print("MODEL PIPELINE SET UP")
-    return whisper_asr
-
-
-def get_preds(asr_model, dataset_total, verbose):
-    predictions = {}
-    references = {}
-    all_accents = []
-
-    i = 0
-
-    with torch.cuda.amp.autocast():
-        for out in tqdm(asr_model(data(dataset_total), batch_size=4), desc='Decode Progress'):
-            accent = out["accents"][0]
-            if accent not in all_accents:
-                all_accents.append(accent)
-                predictions[accent] = []
-                references[accent] = []
-
-            predictions[accent].append(out["text"])
-            references[accent].append(out["reference"][0])
-
-            i += 1
-            if i % 100 == 0:
-                if verbose:
-                    print(f'\niteration: {i}')
-
-    return predictions, references, all_accents
-
-
-def save_metrics(metrics, references, predictions, accent, wer):
-    acc_name = whisper_norm(accent).strip().replace(' ', '_')
-
-    metrics[acc_name] = {'wer': wer}
-
-    os.system(f"mkdir -p evaluation")
-    op_file = f"evaluation/{acc_name}.txt"
-    result_file = open(op_file, 'w')
-    result_file.write('ACCENT: ' + str(accent) + '\n')
-    result_file.write('\nWER: ' + str(wer) + '\n')
-
-    for ref, pred in zip(references[accent], predictions[accent]):
-        result_file.write(f"REF: {ref.encode('utf-8')}\n")
-        result_file.write(f"PRED: {pred.encode('utf-8')}\n")
-        result_file.write("------------------------------------------------------" + '\n')
-    result_file.close()
-
-
-def evaluate_asr_alt(whisper_asr, dataset, verbose=True):
-    wer_metric = evaluate.load("wer")
-
-    # RUN INFERENCE
-    predictions, references, all_accents = get_preds(whisper_asr, dataset, verbose)
-
-    if verbose:
-        print('\n ASR COMPLETED\n')
-
-    # COMPUTE METRICS
-    wer_metric = evaluate.load("wer")
-    metrics = {}
-
-    for accent in all_accents:
-        wer = 100 * wer_metric.compute(references=references[accent], predictions=predictions[accent])
-        save_metrics(metrics, references, predictions, accent, wer)
-        
-    if verbose:
-        print(f'\n DONE CALCULATING METRICS \n')
-
-    return metrics
-
-
-def main():
-    pass
-
-
-if __name__ == "__main__":
-   main()
+    print(f'(AVERAGED) WER: {total_wer}')
+    return total_wer

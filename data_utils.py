@@ -1,7 +1,7 @@
 import torch
 from dataclasses import dataclass
 from typing import Any, Dict, List, Union
-from datasets import load_dataset, DatasetDict
+from datasets import load_dataset, DatasetDict, Dataset
 import sys
 import pandas as pd
 
@@ -66,17 +66,24 @@ def load_sd_qa_dataset():
     # sd_qa["test"] = {} # load_dataset("WillHeld/SD-QA", split="test", token=True)
     return sd_qa
 
-
+"""
+note: casts source dialect col to "audio" (including in 1-1 case)
+"""
 def filter_data(data, source, target):
     dialect_options = ['aus', 'gbr', 'ind_n', 'ind_s', 'irl', 'kenya', 'nga', 'nzl', 'phl', 'usa', 'zaf']
     if source == 'all':
-        print("Error: not yet implemented.")
-        sys.exit(1) 
+        # explode across source dialects
+        dialect_options.remove(target)
+        df = pd.DataFrame(data)
+        df = pd.melt(df, id_vars=['id', 'question', target], value_vars=dialect_options, var_name='accent', value_name="audio")
+        return Dataset.from_pandas(df)
     elif source not in dialect_options or target not in dialect_options:
         print("Error: source or target language not found in dialect options.")
         sys.exit(1) 
-    data = data.select_columns(['id', source, target])
-    return data
+    else:
+        data = data.select_columns(['id', 'question', source, target])
+        data.rename_column(source, "audio")
+        return data
 
 
 """
@@ -118,6 +125,6 @@ def get_counts():
     cv = get_cv_split()
 
     # val = pd.DataFrame(cv["train"]["accents"])
-    test = pd.DataFrame(cv["train"]["accents"])
+    test = pd.DataFrame(cv["test"]["accents"])
     pd.set_option('display.max_rows', None)
     print(test.value_counts())

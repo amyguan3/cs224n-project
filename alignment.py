@@ -142,14 +142,14 @@ def main():
 
     # load data
     target_dialect = 'usa'
-    source_dialect = 'ind_n'
+    source_dialect = 'ind_n' # or "all" for many to one
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
     print(sd_qa['dev'][0])
 
     # prepare data
     def prepare_source_data(data):
         # compute log-Mel input features from audio arrays
-        data["source_input_features"] = feature_extractor(data[source_dialect]["array"], sampling_rate=data[source_dialect]["sampling_rate"]).input_features[0]
+        data["source_input_features"] = feature_extractor(data["audio"]["array"], sampling_rate=data["audio"]["sampling_rate"]).input_features[0]
         data["target_input_features"] = feature_extractor(data[target_dialect]["array"], sampling_rate=data[target_dialect]["sampling_rate"]).input_features[0]
         
         # encode question text to label ids
