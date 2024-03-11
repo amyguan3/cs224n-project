@@ -1,6 +1,6 @@
 import gradio as gr
 import argparse
-from model import SALMONN
+from salmonn import SALMONN
 
 class ff:
     def generate(self, wav_path, prompt, prompt_pattern, num_beams, temperature, top_p):
