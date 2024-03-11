@@ -14,7 +14,7 @@ SDQA_TO_CV = {
               "nzl": "New Zealand English",
               "irl": "Irish English",
               "kenya": "Kenyan English",
-              "nga": ""
+              "nga": "nigeria english"
               }
 
 

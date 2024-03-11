@@ -9,35 +9,12 @@ import sys
 # os.system("pip3 install -q git+https://github.com/huggingface/peft.git@main")
 # print("Print installs done!")
 
-from datasets import load_dataset, DatasetDict
-from transformers import (WhisperFeatureExtractor, 
-                          WhisperTokenizer, 
-                          WhisperProcessor,
-                          WhisperModel,
-                          WhisperForConditionalGeneration, 
-                          Seq2SeqTrainingArguments, 
-                          Seq2SeqTrainer, 
-                          TrainerCallback, 
-                          TrainingArguments, 
-                          TrainerState, 
-                          TrainerControl)
-import torch
-from dataclasses import dataclass
-from typing import Any, Dict, List, Union
-from peft import (prepare_model_for_int8_training,
-                  LoraConfig, 
-                  PeftModel,
-                  PeftConfig, 
-                  LoraModel, 
-                  LoraConfig, 
-                  TaskType,
-                  get_peft_model)
-from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
+from transformers import (WhisperProcessor,
+                          WhisperForConditionalGeneration)
+from peft import (PeftModel,
+                  PeftConfig)
 from transformers.utils import check_min_version
-from trainer_utils import AlignmentSeq2SeqTrainer
 from data_utils import (DataCollatorSpeechSeq2SeqWithPadding, 
-                        load_sd_qa_dataset, 
-                        filter_data,
                         SDQA_TO_CV)
 import matplotlib.pyplot as plt
 from eval_utils import (model_pipeline,
@@ -46,8 +23,7 @@ from eval_utils import (model_pipeline,
                             get_cv_split_mini)
 import optuna
 import wandb
-from alignment_util import (SavePeftCallback,
-                            get_embeddings,
+from alignment_util import (get_embeddings,
                             train_adapter)
 from optuna.visualization import plot_optimization_history
 from optuna.visualization import plot_parallel_coordinate
@@ -70,21 +46,26 @@ class ParamConfig:
 
 
 """
-THINGS TO MODIFY:
+THINGS TO MODIFY INDIVIDUALLY:
 - num trials in tuning
+- each person running should modify the peft_model_id (from alignment_util)
+    - make sure to initialize on your own huggingface hub beforehand
+- maybe also make ur own wandb project page and replace the project name
 
-pass in accents according to sdqa labeling
-ex: source = ["zaf"], or source = ["zaf", "gbr"]
-target = "usa"
+- pass in your own sources and target
+    pass in accents according to sdqa labeling
+    ex: source = ["zaf"], or source = ["zaf", "gbr"]
+    target = "usa"
 """
 def tune(sources, target):
+    print(f'\n================================= TUNING FOR {sources} TO {target}=================================')
     processor = WhisperProcessor.from_pretrained("openai/whisper-large-v2", task="transcribe")
 
     sd_qa = get_embeddings(sources, target)
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
     cv_accents = [SDQA_TO_CV[accent] for accent in sources]
-    # cv_accents.append(SDQA_TO_CV[target])
+    # cv_accents.append(SDQA_TO_CV[target]) # don't include the target dialect
 
     eval_dataset = get_cv_split(accents=cv_accents)
 
@@ -155,7 +136,8 @@ def tune(sources, target):
     except:
         print('ERROR GENERATING PLOTS')
 
-    # best model??
+    # rn just save best hyperparameters from terminal..???
+    # and then rerun
 
 
 def main():
