@@ -81,7 +81,7 @@ def tune(sources, target):
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
     cv_accents = [SDQA_TO_CV[accent] for accent in sources]
-    cv_accents.append(SDQA_TO_CV[target])
+    # cv_accents.append(SDQA_TO_CV[target])
 
     eval_dataset = get_cv_split(accents=cv_accents)
 
