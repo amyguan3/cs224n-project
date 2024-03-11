@@ -42,13 +42,14 @@ def new_evaluate(model, dataset):
     print("================================Beginning Evaluation================================")
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
     metric = evaluate.load("wer")
-    data_collator = DataCollatorSpeechSeq2SeqWithPadding()
 
     model_path = "openai/whisper-large-v2"
     task = "transcribe"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_path)
     tokenizer = WhisperTokenizer.from_pretrained(model_path, task=task)
     processor = WhisperProcessor.from_pretrained(model_path, task=task)
+
+    data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
     def prepare_features(data):
         # NOTE: UNSURE IF THE NP.ARRAY WORKS -- might need to troubleshoot
