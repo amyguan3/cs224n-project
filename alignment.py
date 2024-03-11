@@ -141,7 +141,7 @@ def main():
     print("Loading data...")
 
     # load data
-    target_dialect = 'gbr'
+    target_dialect = 'usa'
     source_dialect = 'ind_n'
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
     print(sd_qa['dev'][0])
@@ -186,8 +186,8 @@ def main():
 
     hyperparameters = [  #(learning_rate, batch_size, rank)
         (.001, 16, 32), (.001, 16, 64), (.001, 16, 128),
-        (.005, 16, 32), (.005, 16, 64), (.005, 16, 32),
-        (.01, 16, 32), (.01, 16, 64), (.01, 16, 128)
+        (.005, 16, 32), (.005, 16, 64), (.005, 16, 128),
+        (.001, 32, 32), (.001, 32, 64), (.001, 32, 128)
     ]
 
     for test_i in range(9):
