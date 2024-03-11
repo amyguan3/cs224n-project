@@ -69,7 +69,8 @@ def new_evaluate(model, dataset):
     print(dataset)
 
     eval_dataloader = DataLoader(dataset, batch_size=4, collate_fn=data_collator)
-    forced_decoder_ids = processor.get_decoder_prompt_ids(language="english", task="transcribe")
+    # forced_decoder_ids = processor.get_decoder_prompt_ids(language="english", task="transcribe")
+    model.config.forced_decoder_ids = tokenizer.get_decoder_prompt_ids(language="english", task="transcribe")
     normalizer = BasicTextNormalizer()
 
     predictions = []
@@ -84,7 +85,7 @@ def new_evaluate(model, dataset):
                 generated_tokens = (
                     model.generate(
                         input_features=batch["input_features"].to(device), # check that this works
-                        forced_decoder_ids=forced_decoder_ids,
+                        # forced_decoder_ids=forced_decoder_ids,
                         max_new_tokens=255,
                     )
                     .cpu()
