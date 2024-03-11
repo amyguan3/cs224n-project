@@ -2,8 +2,8 @@
 from transformers import (WhisperProcessor,
                           WhisperForConditionalGeneration)
 from eval_utils import (model_pipeline,
-                            evaluate_asr_alt,
-                            get_cv_split)
+                            evaluate_asr_alt)
+from data_utils import get_cv_split
 import torch
 
 def main():
