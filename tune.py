@@ -77,7 +77,6 @@ target = "usa"
 def tune(sources, target):
     processor = WhisperProcessor.from_pretrained("openai/whisper-large-v2", task="transcribe")
 
-    # for testing purposes
     sd_qa = get_embeddings(sources, target)
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
@@ -98,7 +97,7 @@ def tune(sources, target):
         param_config = ParamConfig(learning_rate=learning_rate, batch_size=batch_size, rank=rank)
         print(f'Hyperparameters for trial {trial.number}:\nlearning rate: {learning_rate}, batch size: {batch_size}, rank: {rank}')
 
-        wandb.init(project="large_test", config={"learning_rate": learning_rate, "batch_size": batch_size, "rank": rank})
+        wandb.init(project="224n-large-r1", config={"learning_rate": learning_rate, "batch_size": batch_size, "rank": rank})
 
         peft_model_path = train_adapter(processor, data_collator, sd_qa, param_config)
 
