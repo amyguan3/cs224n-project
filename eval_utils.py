@@ -423,26 +423,27 @@ def get_preds(asr_model, dataset_total, verbose):
 
     i = 0
 
-    for out in tqdm(asr_model(data(dataset_total), batch_size=4), desc='Decode Progress'):
-        # print(out)
-        accent = out["accents"][0]
-        if accent not in all_accents:
-            all_accents.append(accent)
-            predictions[accent] = []
-            references[accent] = []
-            norm_predictions[accent] = []
-            norm_references[accent] = []
+    with torch.cuda.amp.autocast():
+        for out in tqdm(asr_model(data(dataset_total), batch_size=4), desc='Decode Progress'):
+            # print(out)
+            accent = out["accents"][0]
+            if accent not in all_accents:
+                all_accents.append(accent)
+                predictions[accent] = []
+                references[accent] = []
+                norm_predictions[accent] = []
+                norm_references[accent] = []
 
-        predictions[accent].append(out["text"])
-        references[accent].append(out["reference"][0])
-        norm_predictions[accent].append(whisper_norm(out["text"]))
-        norm_references[accent].append(out["norm_reference"][0])
+            predictions[accent].append(out["text"])
+            references[accent].append(out["reference"][0])
+            norm_predictions[accent].append(whisper_norm(out["text"]))
+            norm_references[accent].append(out["norm_reference"][0])
 
-        i += 1
-        if i % 100 == 0:
-            if verbose:
-                print(f'\niteration: {i}')
-            pickle_dump(predictions, references, norm_predictions, norm_references)
+            i += 1
+            if i % 100 == 0:
+                if verbose:
+                    print(f'\niteration: {i}')
+                pickle_dump(predictions, references, norm_predictions, norm_references)
 
     return predictions, references, norm_predictions, norm_references, all_accents
 
