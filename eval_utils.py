@@ -65,6 +65,7 @@ def new_evaluate(model, dataset):
         return data
     
     dataset.map(prepare_features, desc="Extract features")
+    print(dataset.features)
 
     eval_dataloader = DataLoader(dataset, batch_size=4, collate_fn=data_collator)
     forced_decoder_ids = processor.get_decoder_prompt_ids(language="english", task="transcribe")
