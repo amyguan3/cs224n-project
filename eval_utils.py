@@ -105,6 +105,7 @@ def new_evaluate(model, dataset):
     print(f"EVAL METRICS:\nWER: {wer}\nNORM_WER: {normalized_wer}")
     print(eval_metrics)
 
+    return eval_metrics["eval/wer"]
 
 
 """

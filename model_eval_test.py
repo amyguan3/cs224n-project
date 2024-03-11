@@ -22,8 +22,8 @@ def main():
     dataset = get_cv_split(["India and South Asia (India, Pakistan, Sri Lanka)"]) # pass in cv sources
 
     print('EVALUATING')
-    metrics = new_evaluate(model, dataset["train"])
-    print(metrics)
+    wer = new_evaluate(model, dataset["train"])
+    print(wer)
 
 
 if __name__ == "__main__":
