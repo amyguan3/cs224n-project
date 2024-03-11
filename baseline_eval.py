@@ -1,8 +1,6 @@
 # Import libraries
-from transformers import (WhisperProcessor,
-                          WhisperForConditionalGeneration)
-from eval_utils import (model_pipeline,
-                            evaluate_asr_alt)
+from transformers import WhisperForConditionalGeneration
+from eval_utils import new_evaluate
 from data_utils import get_cv_split
 import torch
 
@@ -10,16 +8,14 @@ def main():
     # load whisper feature extractor, tokenizer, processor
     model_path = "openai/whisper-large-v2"
     model = WhisperForConditionalGeneration.from_pretrained(model_path)
-    processor = WhisperProcessor.from_pretrained(model_path, language="English", task="transcribe", load_in_8bit=True, device_map="auto")
-
-    pipe = model_pipeline(model, processor, baseline=True, verbose=True)
 
     print('GETTING DATASET')
-    dataset = get_cv_split()
+    dataset = get_cv_split(["India and South Asia (India, Pakistan, Sri Lanka)"])
 
     print('EVALUATING')
-    metrics = evaluate_asr_alt(pipe, dataset["train"], verbose=True)
-    print(f'METRICS:\n{metrics}')
+    wer = new_evaluate(model, dataset["train"])
+    print(f'BASELINE INDIA WER: {wer}\n')
+
 
 if __name__ == "__main__":
     main()
