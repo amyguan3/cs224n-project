@@ -65,8 +65,6 @@ def new_evaluate(model, dataset):
         return data
     
     dataset = dataset.map(prepare_features, desc="Extract features")
-    print(dataset.features)
-    print(dataset)
 
     eval_dataloader = DataLoader(dataset, batch_size=4, collate_fn=data_collator)
     # forced_decoder_ids = processor.get_decoder_prompt_ids(language="english", task="transcribe")
@@ -104,12 +102,12 @@ def new_evaluate(model, dataset):
 
     wer = 100 * metric.compute(predictions=predictions, references=references)
     normalized_wer = 100 * metric.compute(predictions=normalized_predictions, references=normalized_references)
-    eval_metrics = {"eval/wer": wer, "eval/normalized_wer": normalized_wer}
+    eval_metrics = {"wer": wer, "normalized_wer": normalized_wer}
 
     print(f"EVAL METRICS:\nWER: {wer}\nNORM_WER: {normalized_wer}")
     print(eval_metrics)
 
-    return eval_metrics["eval/wer"]
+    return wer
 
 
 """

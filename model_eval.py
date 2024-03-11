@@ -15,15 +15,21 @@ from data_utils import get_cv_split
 
 def main():
     # NOTE: MAYBE SWITCH THE ID
-    model = attach_peft("asyzhou/224n-whisper-large-overnight-0")
-    print('MODEL LOADED')
+    wers = [14.514391257503464] # model 0
+    for i in range(1, 9):
+        print(f'\n======================== MODEL NUMBER {i}========================')
+        model = attach_peft(f"asyzhou/224n-whisper-large-overnight-{i}")
+        print('MODEL LOADED')
 
-    print('GETTING (FILTERED) DATASET')
-    dataset = get_cv_split(["India and South Asia (India, Pakistan, Sri Lanka)"]) # pass in cv sources
+        print('GETTING (FILTERED) DATASET')
+        dataset = get_cv_split(["India and South Asia (India, Pakistan, Sri Lanka)"]) # pass in cv sources
 
-    print('EVALUATING')
-    wer = new_evaluate(model, dataset["train"])
-    print(wer)
+        print('EVALUATING')
+        wer = new_evaluate(model, dataset["train"])
+        print(f'MODEL {i} WER: {wer}\n')
+        wers.append(wer)
+
+    print(f'TOTAL WERS FOR MODEL 0 to 8: {wers}')
 
 
 if __name__ == "__main__":
