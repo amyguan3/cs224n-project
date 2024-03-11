@@ -57,8 +57,8 @@ def new_evaluate(model, dataset):
         data["target_input_features"] = feature_extractor(np.asarray(data["audio"]["array"]), sampling_rate=data["audio"]["sampling_rate"]).input_features[0]
         
         # encode question text to label ids
-        if "audio" in data: # CV (one to one)
-            data["labels"] = tokenizer(data["audio"]["sentence"]).input_ids
+        if "sentence" in data: # CV (one to one)
+            data["labels"] = tokenizer(data["sentence"]).input_ids
         else: #  SD-QA
             # will need to pass in source(s), maybe keep a column for dialect so that i can separate 
             raise NotImplementedError("Have not implemented for SD-QA yet.")
