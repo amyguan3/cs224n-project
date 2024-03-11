@@ -378,7 +378,8 @@ def get_cv_split(accents=ACCENTS):
     # data split
     cv_split = cv_all.train_test_split(test_size=0.5, seed=42) # 28 samples in train
     df = pd.DataFrame(cv_split["train"]["accents"])
-    print(df.value_counts().head(20))
+    with pd.option_context('display.max_rows', None):
+        print(df.value_counts())
     # cv_split = cv_split.map(normalise) # , num_proc=2
     # cv_split = cv_split.filter(is_target_text_in_range, input_columns=["sentence"]) # , num_proc=2
     # cv_split = cv_split.filter(lambda example: example['accents'] in accents)
