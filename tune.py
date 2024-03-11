@@ -70,6 +70,9 @@ class ParamConfig:
 
 
 """
+THINGS TO MODIFY:
+- num trials in tuning
+
 pass in accents according to sdqa labeling
 ex: source = ["zaf"], or source = ["zaf", "gbr"]
 target = "usa"
@@ -130,7 +133,7 @@ def tune(sources, target):
     # Define Optuna study
     study = optuna.create_study(direction='minimize')
     # can increase number of trials later
-    study.optimize(objective, n_trials=3)
+    study.optimize(objective, n_trials=2)
 
     # Get the best hyperparameters
     best_params = study.best_params
