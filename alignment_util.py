@@ -95,7 +95,7 @@ class SavePeftCallback(TrainerCallback):
 ### TODO: MOVE TARGET AND SOURCE TO PARAMETERS OF GET EMBEDDINGS ###
 ### with default of usa and ind_n
 ### define a mapping of sd-qa to cv names in data_utils
-def get_embeddings(mini=False):
+def get_embeddings(sources, target, mini=False):
     # log in to huggingface with huggingface-cli login
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
     print("Torch cuda is available?", torch.cuda.is_available())
@@ -128,8 +128,8 @@ def get_embeddings(mini=False):
     print("Loading data...")
 
     # load data
-    target_dialect = 'gbr'
-    source_dialect = 'ind_n'
+    target_dialect = target
+    source_dialect = sources[0] # TODO: fix for many to one
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
     if mini:
         sd_qa['dev'] = sd_qa['dev'].select(range(24))

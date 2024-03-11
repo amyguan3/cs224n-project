@@ -4,6 +4,20 @@ from typing import Any, Dict, List, Union
 from datasets import load_dataset, DatasetDict
 import sys
 
+SDQA_TO_CV = {
+              "phl": "Filipino",
+              "usa": "United States English",
+              "gbr": "Scottish English",
+              "zaf": "Southern African (South Africa, Zimbabwe, Namibia)",
+              "ind_n": "India and South Asia (India, Pakistan, Sri Lanka)",
+              "aus": "Australian English",
+              "nzl": "New Zealand English",
+              "irl": "Irish English",
+              "kenya": "Kenyan English",
+              "nga": ""
+              }
+
+
 @dataclass
 class DataCollatorSpeechSeq2SeqWithPadding:
     processor: Any
