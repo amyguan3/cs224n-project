@@ -6,7 +6,7 @@ from transformers import (WhisperProcessor,
 import torch
 from peft import (PeftModel, 
                   PeftConfig)
-from eval_utils_new import (new_evaluate,
+from eval_utils import (new_evaluate,
                             attach_peft)
 from data_utils import get_cv_split
 
