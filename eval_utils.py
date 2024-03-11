@@ -368,8 +368,6 @@ cv["test]
 50% each
 """
 
-import pandas as pd
-
 def get_cv_split(accents=ACCENTS):
     print("LOADING CV DATASET")
     cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")

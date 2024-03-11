@@ -78,14 +78,13 @@ def tune(sources, target):
     processor = WhisperProcessor.from_pretrained("openai/whisper-large-v2", task="transcribe")
 
     # for testing purposes
-    sd_qa = get_embeddings(sources, target, mini=True)
+    sd_qa = get_embeddings(sources, target)
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
     cv_accents = [SDQA_TO_CV[accent] for accent in sources]
     cv_accents.append(SDQA_TO_CV[target])
 
-    # TODO: fix this to full cv
-    eval_dataset = get_cv_split_mini(accents=cv_accents)
+    eval_dataset = get_cv_split(accents=cv_accents)
 
     ######################### HYPERPARAMETER TUNING ############################
 
@@ -94,9 +93,8 @@ def tune(sources, target):
 
         # Define hyperparameters to optimize
         learning_rate = trial.suggest_uniform('learning_rate', 0.001, 0.005)
-        # batch_size = trial.suggest_categorical('batch_size', [16, 32, 64])
-        batch_size = 16
-        rank = trial.suggest_categorical('rank', [32, 64]) # , 128
+        batch_size = trial.suggest_categorical('batch_size', [16, 32, 64])
+        rank = trial.suggest_categorical('rank', [32, 64, 128])
         param_config = ParamConfig(learning_rate=learning_rate, batch_size=batch_size, rank=rank)
         print(f'Hyperparameters for trial {trial.number}:\nlearning rate: {learning_rate}, batch size: {batch_size}, rank: {rank}')
 
@@ -142,15 +140,16 @@ def tune(sources, target):
     # extra stuff below
     try:
         importances = optuna.importance.get_param_importances(study)
-        print("Importances: {importances}")
+        print(f"Importances: {importances}")
 
         params_sorted = list(importances.keys())
-        print("Sorted params: {params_sorted}")
-        fig = plot_parallel_coordinate(study)
-        os.system(f"mkdir -p tune_plots")
-        fig.savefig('tune_plots/parallel.png')
-        fig = plot_optimization_history(study)
-        fig.savefig('tune_plots/history.png')
+        print(f"Sorted params: {params_sorted}")
+
+        # fig = plot_parallel_coordinate(study)
+        # os.system(f"mkdir -p tune_plots")
+        # fig.savefig('tune_plots/parallel.png')
+        # fig = plot_optimization_history(study)
+        # fig.savefig('tune_plots/history.png')
     except:
         print('ERROR GENERATING PLOTS')
 
