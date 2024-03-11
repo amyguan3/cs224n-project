@@ -194,7 +194,7 @@ def evaluate_asr_alt(whisper_asr, dataset, verbose=True):
 
     # RUN INFERENCE
     predictions, references, norm_predictions, norm_references, all_accents = get_preds(whisper_asr, dataset, verbose)
-    pickle_dump(predictions, references, norm_predictions, norm_references)
+    # pickle_dump(predictions, references, norm_predictions, norm_references)
 
     if verbose:
         print('\n ASR COMPLETED\n')
