@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Union
 from datasets import load_dataset, DatasetDict
 import sys
+import pandas as pd
 
 SDQA_TO_CV = {
               "phl": "Filipino",
@@ -111,3 +112,12 @@ def get_cv_split_mini(accents=CV_ACCENTS):
 
     print("MINI CV DATASET LOADED")
     return cv_split
+
+
+def get_counts():
+    cv = get_cv_split()
+
+    # val = pd.DataFrame(cv["train"]["accents"])
+    test = pd.DataFrame(cv["train"]["accents"])
+    pd.set_option('display.max_rows', None)
+    print(test.value_counts())
