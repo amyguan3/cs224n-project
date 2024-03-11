@@ -54,7 +54,7 @@ def new_evaluate(model, dataset):
     def prepare_features(data):
         # NOTE: UNSURE IF THE NP.ARRAY WORKS -- might need to troubleshoot
         data["source_input_features"] = feature_extractor(np.asarray(data["audio"]["array"]), sampling_rate=data["audio"]["sampling_rate"]).input_features[0]
-        data["target_input_features"] = feature_extractor(np.asarray(data["audio"]["array"]), sampling_rate=data["audio"]["sampling_rate"]).input_features[0]
+        # data["target_input_features"] = feature_extractor(np.asarray(data["audio"]["array"]), sampling_rate=data["audio"]["sampling_rate"]).input_features[0]
         
         # encode question text to label ids
         if "sentence" in data: # CV (one to one)
@@ -64,8 +64,9 @@ def new_evaluate(model, dataset):
             raise NotImplementedError("Have not implemented for SD-QA yet.")
         return data
     
-    dataset.map(prepare_features, desc="Extract features")
+    dataset = dataset.map(prepare_features, desc="Extract features")
     print(dataset.features)
+    print(dataset)
 
     eval_dataloader = DataLoader(dataset, batch_size=4, collate_fn=data_collator)
     forced_decoder_ids = processor.get_decoder_prompt_ids(language="english", task="transcribe")

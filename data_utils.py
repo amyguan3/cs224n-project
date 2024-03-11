@@ -39,19 +39,21 @@ class DataCollatorSpeechSeq2SeqWithPadding:
         input_features = [{"input_features": example["source_input_features"]} for example in data]
         batch = self.processor.feature_extractor.pad(input_features, return_tensors="pt")
         
-        # format target embeddings
-        target_embeddings = torch.cat([torch.tensor(example["target_embeddings"]) for example in data], axis = 0)
-        batch["target_embeddings"] = target_embeddings
+        # format target embeddings # training
+        if "target_embeddings" in data[0]:
+            target_embeddings = torch.cat([torch.tensor(example["target_embeddings"]) for example in data], axis = 0)
+            batch["target_embeddings"] = target_embeddings
 
-        # format labels
-        label_features = [{"input_ids": example["labels"]} for example in data]
-        labels_batch = self.processor.tokenizer.pad(label_features, return_tensors="pt")
-        # replace padding with -100 to ignore loss
-        labels = labels_batch["input_ids"].masked_fill(labels_batch.attention_mask.ne(1), -100)
-        # check beginning-of-sequence-token
-        if (labels[:, 0] == self.processor.tokenizer.bos_token_id).all().cpu().item():
-            labels = labels[:, 1:]
-        batch["labels"] = labels
+        # format labels # inference
+        if "labels" in data[0]:
+            label_features = [{"input_ids": example["labels"]} for example in data]
+            labels_batch = self.processor.tokenizer.pad(label_features, return_tensors="pt")
+            # replace padding with -100 to ignore loss
+            labels = labels_batch["input_ids"].masked_fill(labels_batch.attention_mask.ne(1), -100)
+            # check beginning-of-sequence-token
+            if (labels[:, 0] == self.processor.tokenizer.bos_token_id).all().cpu().item():
+                labels = labels[:, 1:]
+            batch["labels"] = labels
 
         return batch
 
