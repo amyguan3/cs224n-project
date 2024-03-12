@@ -9,9 +9,9 @@ import sys
 
 # Setup 
 print("Executing pip installs ...")
-os.system("pip3 install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
-os.system("pip3 install -q git+https://github.com/huggingface/peft.git@main")
-print("Print installs done!")
+# os.system("pip3 install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
+# os.system("pip3 install -q git+https://github.com/huggingface/peft.git@main")
+print("[Skipped] Print installs done!")
 
 import json
 import random
@@ -121,8 +121,8 @@ def main():
     print("Loading model...")
 
     # load whisper feature extractor, tokenizer, processor
-    # model_path = "openai/whisper-base"
-    model_path = "openai/whisper-large-v2"
+    model_path = "openai/whisper-base"
+    # model_path = "openai/whisper-large-v2"
     task = "transcribe"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_path)
     tokenizer = WhisperTokenizer.from_pretrained(model_path, task=task)
@@ -180,9 +180,9 @@ def main():
             raise ValueError("Expected CV dataset.")
         return data
     
-    sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source dialect"
+    sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source/target dialect"
                       ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
-    eval_dataset = eval_dataset.map(prepare_eval_features, desc="Extract features")
+    eval_dataset = eval_dataset.map(prepare_eval_features, desc="Extract features for eval dataset")
 
     print("sd_qa", sd_qa)
     print("eval_dataset", eval_dataset)

@@ -93,7 +93,7 @@ cv["test]
 50% each
 """
 def get_cv_split(accents=CV_ACCENTS):
-    print("LOADING CV DATASET")
+    print("[get_cv_split] Loading CV dataset...")
     cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
     cv_all = cv_all.shuffle(seed=42)
     cv_all = cv_all.select(range(10_000))
@@ -102,7 +102,7 @@ def get_cv_split(accents=CV_ACCENTS):
     cv_split = cv_all.train_test_split(test_size=0.5, seed=42)
     cv_split = cv_split.filter(lambda example: example['accents'] in accents)
 
-    print("CV DATASET LOADED")
+    print("[get_cv_split] CV dataset loaded!")
 
     return cv_split
 

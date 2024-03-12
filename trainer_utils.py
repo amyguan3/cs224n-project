@@ -19,10 +19,13 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     print("Evaluating....")
     if eval_dataset:
       raise ValueError("Need an eval_dataset to evaluate.")
+    print(eval_dataset)
+    print(len(eval_dataset))
     eval_predictions = super().evaluate(eval_dataset["train"])
     print(eval_predictions)
     sys.exit()
-    wer = new_evaluate(self.model, eval_dataset["train"], one_to_one=True)
+
+    with torch
     
 
 
