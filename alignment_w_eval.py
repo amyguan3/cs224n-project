@@ -147,7 +147,10 @@ def main():
     
     sd_qa_to_cv = {'ind_n':"India and South Asia (India, Pakistan, Sri Lanka)", 'zaf': "Southern African (South Africa, Zimbabwe, Namibia)"}
     eval_dataset = get_cv_split([sd_qa_to_cv[source_dialect]])
+    eval_dataset.pop("test")
 
+    print(eval_dataset)
+    sys.exit()
     # prepare data
     def prepare_source_data(data):
         # compute log-Mel input features from audio arrays
@@ -183,7 +186,7 @@ def main():
     sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source/target dialect"
                       ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
     eval_dataset = eval_dataset.map(prepare_eval_features, desc="Extract features for eval dataset")
-    eval_dataset.pop("test")
+    
 
     print("sd_qa", sd_qa)
     print("eval_dataset", eval_dataset)
