@@ -16,6 +16,7 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     self.sinkhorn_loss = SamplesLoss(loss="sinkhorn", p=2)
   
   def evaluate(self, eval_dataset, ignore_keys= None, metric_key_prefix='eval'):
+    print("Evaluating....")
     if eval_dataset:
       raise ValueError("Need an eval_dataset to evaluate.")
     eval_predictions = super().evaluate(eval_dataset["train"])
