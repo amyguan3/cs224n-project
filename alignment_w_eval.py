@@ -242,9 +242,9 @@ def main():
             num_train_epochs=3,
             evaluation_strategy="steps",  # disregard since using commonvoice to eval
             per_device_eval_batch_size=8,
-            fp16=True,  # don't think we need this
+            fp16=True,  
             generation_max_length=128,
-            logging_steps=20,
+            logging_steps=20,  # this is what eval steps will default to
             remove_unused_columns=False, 
         )
         peftcallback = SavePeftCallback()

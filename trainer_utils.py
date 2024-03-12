@@ -18,14 +18,15 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
   
   def evaluate(self, eval_dataset, ignore_keys= None, metric_key_prefix='eval'):
     print("Evaluating....")
-    if eval_dataset:
-      raise ValueError("Need an eval_dataset to evaluate.")
+    eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
+    eval_dataloader = self.get_eval_dataloader(eval_dataset)
+    
     print(eval_dataset)
     print(len(eval_dataset))
     eval_predictions = super().evaluate(eval_dataset["train"])
     print(eval_predictions)
     sys.exit()
-    
+
     metric = evaluate.load("wer")
     wer = 100 * metric.compute(predictions=predictions, references=references)
     return wer
