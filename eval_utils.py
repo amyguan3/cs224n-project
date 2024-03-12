@@ -19,8 +19,11 @@ from collections import defaultdict
 whisper_norm = BasicTextNormalizer()
 
 
-def attach_peft(peft_model_id):
-    peft_config = PeftConfig.from_pretrained(peft_model_id)
+def attach_peft(peft_model_id, commit=""):
+    if commit:
+        peft_config = PeftConfig.from_pretrained(peft_model_id, revision=commit)
+    else:
+        peft_config = PeftConfig.from_pretrained(peft_model_id)
     model = WhisperForConditionalGeneration.from_pretrained(
         peft_config.base_model_name_or_path, load_in_8bit=True, device_map="auto"
     )
