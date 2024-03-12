@@ -22,9 +22,8 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
     eval_dataloader = self.get_eval_dataloader(eval_dataset)
 
-    print(eval_dataset)
-    print(len(eval_dataset))
-    eval_predictions = super().evaluate(eval_dataset["train"], metric_for_compute=wer_metric)
+    eval_predictions = super().evaluate(eval_dataset, metric_for_compute=wer_metric)
+    print("printprintgah", eval_predictions)
     sys.exit()
     predictions, labels = eval_predictions.predictions, eval_predictions.label_ids
     print(predictions.shape)
