@@ -5,6 +5,7 @@ from transformers import (Seq2SeqTrainer,
                           TrainerState)
 from geomloss import SamplesLoss
 import sys
+import evaluate
 from eval_utils import new_evaluate
 
 class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
@@ -24,8 +25,10 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     eval_predictions = super().evaluate(eval_dataset["train"])
     print(eval_predictions)
     sys.exit()
-
-    with torch
+    
+    metric = evaluate.load("wer")
+    wer = 100 * metric.compute(predictions=predictions, references=references)
+    return wer
     
 
 
