@@ -16,7 +16,7 @@ from data_utils import get_cv_split
 def main():
     # NOTE: MAYBE SWITCH THE ID
     wers = [14.514391257503464] # model 0, 1: 15.05310143142989, 2: 14.26812374942281
-    for i in range(3, 9):
+    for i in [6, 7, 8, 3, 4, 5]:
         print(f'\n======================== MODEL NUMBER {i}========================')
         model = attach_peft(f"asyzhou/224n-whisper-large-overnight-{i}")
         print('MODEL LOADED')
