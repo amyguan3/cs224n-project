@@ -24,11 +24,13 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     print(eval_dataset)
     print(len(eval_dataset))
     eval_predictions = super().evaluate(eval_dataset["train"])
-    print(eval_predictions)
-    sys.exit()
-
+    predictions, labels = eval_predictions.predictions, eval_predictions.label_ids
+    print(predictions.shape)
+    print(labels.shape)
     metric = evaluate.load("wer")
-    wer = 100 * metric.compute(predictions=predictions, references=references)
+    wer = 100 * metric.compute(predictions=predictions, references=labels)
+    print(wer)
+    sys.exit()
     return wer
     
 
