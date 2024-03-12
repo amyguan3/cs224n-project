@@ -183,6 +183,7 @@ def main():
     sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source/target dialect"
                       ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
     eval_dataset = eval_dataset.map(prepare_eval_features, desc="Extract features for eval dataset")
+    eval_dataset.pop("test")
 
     print("sd_qa", sd_qa)
     print("eval_dataset", eval_dataset)
@@ -252,7 +253,7 @@ def main():
             args=training_args,
             model=model,
             train_dataset=sd_qa['dev'],
-            eval_dataset=eval_dataset,
+            eval_dataset=eval_dataset['train'],
             data_collator=data_collator,
             tokenizer=processor.feature_extractor,
             callbacks=[peftcallback],
