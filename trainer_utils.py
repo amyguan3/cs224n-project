@@ -16,11 +16,11 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     super().__init__(*args, **kwargs)
     self.sinkhorn_loss = SamplesLoss(loss="sinkhorn", p=2)
   
-  def evaluate(self, eval_dataset, ignore_keys= None, metric_key_prefix='eval'):
+  def evaluate(self, eval_dataset=None, ignore_keys= None, metric_key_prefix='eval'):
     print("Evaluating....")
     eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
     eval_dataloader = self.get_eval_dataloader(eval_dataset)
-    
+
     print(eval_dataset)
     print(len(eval_dataset))
     eval_predictions = super().evaluate(eval_dataset["train"])

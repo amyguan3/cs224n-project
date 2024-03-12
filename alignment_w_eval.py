@@ -144,7 +144,7 @@ def main():
     target_dialect = 'usa'
     source_dialect = 'ind_n'  # 'ind_n', 'zaf'
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
-    print(sd_qa['dev'][0])
+    
     sd_qa_to_cv = {'ind_n':"India and South Asia (India, Pakistan, Sri Lanka)", 'zaf': "Southern African (South Africa, Zimbabwe, Namibia)"}
     eval_dataset = get_cv_split([sd_qa_to_cv[source_dialect]])
 
@@ -244,7 +244,7 @@ def main():
             per_device_eval_batch_size=8,
             fp16=True,  
             generation_max_length=128,
-            logging_steps=20,  # this is what eval steps will default to
+            logging_steps=1,  # this is what eval steps will default to, change this in a lil bit
             remove_unused_columns=False, 
         )
         peftcallback = SavePeftCallback()
