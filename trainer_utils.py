@@ -23,13 +23,13 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     eval_dataloader = self.get_eval_dataloader(eval_dataset)
 
     eval_predictions = super().evaluate(eval_dataset, metric_for_compute=wer_metric)
-    print("printprintgah", eval_predictions)
-    sys.exit()
     predictions, labels = eval_predictions.predictions, eval_predictions.label_ids
-    print(predictions.shape)
+    print(predictions)
+    print(labels)
+    print(len(predictions))
     print(labels.shape)
     
-    wer = 100 * metric.compute(predictions=predictions, references=labels)
+    wer = 100 * wer_metric.compute(predictions=predictions, references=labels)
     print(wer)
     sys.exit()
     return wer
