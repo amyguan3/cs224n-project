@@ -153,9 +153,6 @@ def main():
         # compute log-Mel input features from audio arrays
         data["source_input_features"] = feature_extractor(data[source_dialect]["array"], sampling_rate=data[source_dialect]["sampling_rate"]).input_features[0]
         data["target_input_features"] = feature_extractor(data[target_dialect]["array"], sampling_rate=data[target_dialect]["sampling_rate"]).input_features[0]
-        
-        # encode question text to label ids
-        # data["labels"] = tokenizer(data[source_dialect]["question"]).input_ids
         return data
 
     # prepare targets
@@ -171,15 +168,24 @@ def main():
         data["target_embeddings"] = [embedding for embedding in last_hidden_state]
         return data
     
+    def prepare_eval_features(data):
+        # encode question text to label ids
+        data["source_input_features"] = feature_extractor(np.asarray(data["audio"]["array"]), sampling_rate=data["audio"]["sampling_rate"]).input_features[0]
+        if "sentence" in data: # CV
+            data["accent"] = data["accents"]
+            data["labels"] = tokenizer(data["sentence"]).input_ids
+        # elif "question" in data: # SD-QA
+        #    data["labels"] = tokenizer(data["question"]).input_ids
+        else:
+            raise ValueError("Expected CV dataset.")
+        return data
+    
     sd_qa = sd_qa.map(prepare_source_data, desc="Extract features for source dialect"
                       ).map(prepare_target_embeddings, desc="Original hidden embeddings for target dialect")
+    eval_dataset = eval_dataset.map(prepare_eval_features, desc="Extract features")
 
-
-    # define an evaluation function !!!
-    # metric = evaluate.load("wer")
-
-    print(sd_qa)
-    sd_qa.remove_columns('id')
+    print("sd_qa", sd_qa)
+    print("eval_dataset", eval_dataset)
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
     #------------------------------------#
@@ -205,7 +211,7 @@ def main():
         print("Load 8bit model...")
         print("Start training...")
         model = WhisperForConditionalGeneration.from_pretrained(model_path, load_in_8bit=True, device_map="auto")
-        model.config.forced_decoder_ids = None  # possibly this needs editing
+        model.config.forced_decoder_ids = tokenizer.get_decoder_prompt_ids(language="english", task="transcribe")
         model.config.suppress_tokens = []
         model = prepare_model_for_int8_training(model)
 
