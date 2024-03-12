@@ -50,7 +50,7 @@ import re
 from trainer_utils import AlignmentSeq2SeqTrainer
 from data_utils import (DataCollatorSpeechSeq2SeqWithPadding, 
                         load_sd_qa_dataset, 
-                        filter_data)
+                        filter_data, get_cv_split)
 
 import csv
 import matplotlib.pyplot as plt
@@ -121,8 +121,8 @@ def main():
     print("Loading model...")
 
     # load whisper feature extractor, tokenizer, processor
-    model_path = "openai/whisper-base"
-    # model_path = "openai/whisper-large-v2"
+    # model_path = "openai/whisper-base"
+    model_path = "openai/whisper-large-v2"
     task = "transcribe"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_path)
     tokenizer = WhisperTokenizer.from_pretrained(model_path, task=task)
@@ -142,9 +142,11 @@ def main():
 
     # load data
     target_dialect = 'usa'
-    source_dialect = 'zaf'  # 'ind_n'
+    source_dialect = 'ind_n'  # 'ind_n', 'zaf'
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
     print(sd_qa['dev'][0])
+    sd_qa_to_cv = {'ind_n':"India and South Asia (India, Pakistan, Sri Lanka)", 'zaf': "Southern African (South Africa, Zimbabwe, Namibia)"}
+    eval_dataset = get_cv_split([sd_qa_to_cv[source_dialect]])
 
     # prepare data
     def prepare_source_data(data):
@@ -232,8 +234,8 @@ def main():
             warmup_steps=50,
             # gradient_checkpointing=True, # just added
             num_train_epochs=3,
-            # evaluation_strategy="steps",  # disregard since using commonvoice to eval
-            # per_device_eval_batch_size=8,
+            evaluation_strategy="steps",  # disregard since using commonvoice to eval
+            per_device_eval_batch_size=8,
             fp16=True,  # don't think we need this
             generation_max_length=128,
             logging_steps=20,
@@ -244,7 +246,7 @@ def main():
             args=training_args,
             model=model,
             train_dataset=sd_qa['dev'],
-            eval_dataset=sd_qa['dev'],
+            eval_dataset=eval_dataset,
             data_collator=data_collator,
             tokenizer=processor.feature_extractor,
             callbacks=[peftcallback],
