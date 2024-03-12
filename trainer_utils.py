@@ -18,16 +18,18 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
   
   def evaluate(self, eval_dataset=None, ignore_keys= None, metric_key_prefix='eval'):
     print("Evaluating....")
+    wer_metric = evaluate.load("wer")
     eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
     eval_dataloader = self.get_eval_dataloader(eval_dataset)
 
     print(eval_dataset)
     print(len(eval_dataset))
-    eval_predictions = super().evaluate(eval_dataset["train"])
+    eval_predictions = super().evaluate(eval_dataset["train"], metric_for_compute=wer_metric)
+    sys.exit()
     predictions, labels = eval_predictions.predictions, eval_predictions.label_ids
     print(predictions.shape)
     print(labels.shape)
-    metric = evaluate.load("wer")
+    
     wer = 100 * metric.compute(predictions=predictions, references=labels)
     print(wer)
     sys.exit()
