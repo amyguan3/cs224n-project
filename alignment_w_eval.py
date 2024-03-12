@@ -149,8 +149,6 @@ def main():
     eval_dataset = get_cv_split([sd_qa_to_cv[source_dialect]])
     eval_dataset.pop("test")
 
-    print(eval_dataset)
-    sys.exit()
     # prepare data
     def prepare_source_data(data):
         # compute log-Mel input features from audio arrays
