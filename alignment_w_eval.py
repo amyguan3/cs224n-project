@@ -9,8 +9,8 @@ import sys
 
 # Setup 
 print("Executing pip installs ...")
-# os.system("pip3 install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
-# os.system("pip3 install -q git+https://github.com/huggingface/peft.git@main")
+os.system("pip3 install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
+os.system("pip3 install -q git+https://github.com/huggingface/peft.git@main")
 print("[Skipped] Print installs done!")
 
 import json
@@ -147,7 +147,7 @@ def main():
 
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
     eval_dataset = load_cv_phl_dataset()
-    
+
     # prepare data
     def prepare_source_data(data):
         # compute log-Mel input features from audio arrays
