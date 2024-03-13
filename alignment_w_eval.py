@@ -121,9 +121,9 @@ def main():
     
 
     # load whisper feature extractor, tokenizer, processor
-    model_path = "openai/whisper-small"
+    # model_path = "openai/whisper-small"
+    model_path = "openai/whisper-large-v2"
     print(f"Loading model {model_path}...")
-    # model_path = "openai/whisper-large-v2"
     task = "transcribe"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_path)
     tokenizer = WhisperTokenizer.from_pretrained(model_path, task=task)
