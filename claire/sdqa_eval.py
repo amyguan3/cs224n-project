@@ -33,7 +33,7 @@ dials = [
 ]
 
 
-@torch.no_grad
+@torch.no_grad()
 def get_response_pipeline(asr_model, model, audio, dial):
     value = audio[dial]
     text = asr_model(value)["text"]
@@ -75,7 +75,7 @@ def get_response_pipeline(asr_model, model, audio, dial):
     return response, max(scores)
 
 
-@torch.no_grad
+@torch.no_grad()
 def get_response_pipeline_qwen(asr_model, model, audio, dial):
     value = audio[dial]
     text = asr_model(value)["text"]
@@ -96,7 +96,7 @@ def get_response_pipeline_qwen(asr_model, model, audio, dial):
     return response, max(scores)
 
 
-@torch.no_grad
+@torch.no_grad()
 def get_response_end_to_end_s(model, audio, dial):
     value = audio[dial]
     sf.write("tmp.wav", value["array"], value["sampling_rate"], format="wav")
@@ -118,7 +118,7 @@ def get_response_end_to_end_s(model, audio, dial):
     return response, max(scores)
 
 
-@torch.no_grad
+@torch.no_grad()
 def get_response_end_to_end_q(model, audio, dial):
     value = audio[dial]
     sf.write("tmp.wav", value["array"], value["sampling_rate"], format="wav")
