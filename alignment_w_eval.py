@@ -49,7 +49,7 @@ import re
 
 from trainer_utils import AlignmentSeq2SeqTrainer
 from data_utils import (DataCollatorSpeechSeq2SeqWithPadding, 
-                        load_sd_qa_dataset, 
+                        load_sd_qa_dataset, load_cv_india_dataset,
                         filter_data, get_cv_split)
 
 import csv
@@ -144,10 +144,10 @@ def main():
     target_dialect = 'usa'
     source_dialect = 'ind_n'  # 'ind_n', 'zaf'
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
-    
-    sd_qa_to_cv = {'ind_n':"India and South Asia (India, Pakistan, Sri Lanka)", 'zaf': "Southern African (South Africa, Zimbabwe, Namibia)"}
-    eval_dataset = get_cv_split([sd_qa_to_cv[source_dialect]])
-    eval_dataset.pop("test")
+    eval_dataset = load_cv_india_dataset()
+    # sd_qa_to_cv = {'ind_n':"India and South Asia (India, Pakistan, Sri Lanka)", 'zaf': "Southern African (South Africa, Zimbabwe, Namibia)"}
+    # eval_dataset = get_cv_split([sd_qa_to_cv[source_dialect]])
+    # eval_dataset.pop("test")
 
     # prepare data
     def prepare_source_data(data):
@@ -264,7 +264,8 @@ def main():
         # peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
         print("Done with training! Pushing to hub...")
         # peft_model_id = f"asyzhou/224n-whisper-large-overnight-{test_i}"
-        peft_model_id = "asyzhou/224n-whisper-large-overnight-zaf"
+        # peft_model_id = "asyzhou/224n-whisper-large-overnight-zaf"
+        peft_model_id = "empty"
         print(peft_model_id)
         model.push_to_hub(peft_model_id)
         peftcallback.plot_loss()

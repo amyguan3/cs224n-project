@@ -66,6 +66,11 @@ def load_sd_qa_dataset():
     # sd_qa["test"] = {} # load_dataset("WillHeld/SD-QA", split="test", token=True)
     return sd_qa
 
+def load_cv_india_dataset():
+    cv = DatasetDict()
+    cv['train'] = load_dataset("WillHeld/india_accent_cv", split='train[:10%]', token=True)
+    return cv
+
 """
 note: casts source dialect col to "audio" (including in 1-1 case)
 """
