@@ -272,7 +272,7 @@ def main():
         trainer.train()
         # peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
         print("Done with training! Pushing to hub...")
-        peft_model_id = f"asyzhou/224n-whisper-small-overnight-n_ind-fr"
+        peft_model_id = f"asyzhou/224n-whisper-large-filipino-final"
         # peft_model_id = "asyzhou/224n-whisper-large-overnight-zaf"
         # peft_model_id = "empty"
         print(peft_model_id)
