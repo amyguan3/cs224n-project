@@ -68,7 +68,7 @@ def load_sd_qa_dataset():
 
 def load_cv_india_dataset():
     cv = DatasetDict()
-    cv['train'] = load_dataset("WillHeld/india_accent_cv", split='train[:10%]', token=True)
+    cv['train'] = load_dataset("WillHeld/india_accent_cv", split='train[:1%]', token=True)
     return cv
 
 """

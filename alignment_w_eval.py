@@ -118,10 +118,11 @@ def main():
     #------------------------------------#
     #---------------MODEL----------------#
     #------------------------------------#
-    print("Loading model...")
+    
 
     # load whisper feature extractor, tokenizer, processor
-    model_path = "openai/whisper-base"
+    model_path = "openai/whisper-small"
+    print(f"Loading model {model_path}...")
     # model_path = "openai/whisper-large-v2"
     task = "transcribe"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_path)
@@ -200,15 +201,21 @@ def main():
     #     (.001, 32, 32), (.001, 32, 64), (.001, 32, 128)
     # ]
     hyperparameters = [  #(learning_rate, batch_size, rank)
-        (.001, 16, 32), (.001, 16, 64), (.001, 16, 128),
-        (.001, 32, 32), (.001, 32, 64), (.001, 32, 128),
-        (.001, 64, 32), (.001, 64, 64), (.001, 64, 128)
+        # (.001, 16, 32), 
+        # (.001, 16, 64), 
+        # (.001, 16, 128),
+        (.001, 32, 32, 100), 
+        (.001, 32, 64, 100), 
+        (.001, 32, 128, 100),
+        (.001, 64, 32, 50), 
+        (.001, 64, 64, 50), 
+        (.001, 64, 128, 50)
     ]
 
     for test_i in range(9):
         print("Running training process", test_i, "...")
         print("Hyperparameters are", hyperparameters[test_i]) 
-        lr_i, batch_i, rank_i = hyperparameters[test_i]
+        lr_i, batch_i, rank_i, logging_i = hyperparameters[test_i]
 
         print("Load 8bit model...")
         print("Start training...")
@@ -241,13 +248,16 @@ def main():
             learning_rate=lr_i,
             warmup_steps=50,
             # gradient_checkpointing=True, # just added
-            num_train_epochs=3,
-            evaluation_strategy="steps",  # disregard since using commonvoice to eval
-            per_device_eval_batch_size=8,
+            num_train_epochs=15,
+            evaluation_strategy="steps",  # disregard since using commonvoice to eval CHANGE THIS ONE
+            per_device_eval_batch_size=batch_i,
             fp16=True,  
             generation_max_length=128,
-            logging_steps=1,  # this is what eval steps will default to, change this in a lil bit
+            logging_steps=logging_i,  # this is what eval steps will default to, change this in a lil bit
             remove_unused_columns=False, 
+            save_strategy="steps",
+            metric_for_best_model='wer',
+            load_best_model_at_end = True
         )
         peftcallback = SavePeftCallback()
         trainer = AlignmentSeq2SeqTrainer(
@@ -263,9 +273,9 @@ def main():
         trainer.train()
         # peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
         print("Done with training! Pushing to hub...")
-        # peft_model_id = f"asyzhou/224n-whisper-large-overnight-{test_i}"
+        peft_model_id = f"asyzhou/224n-whisper-small-overnight-n_ind-fr"
         # peft_model_id = "asyzhou/224n-whisper-large-overnight-zaf"
-        peft_model_id = "empty"
+        # peft_model_id = "empty"
         print(peft_model_id)
         model.push_to_hub(peft_model_id)
         peftcallback.plot_loss()

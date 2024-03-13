@@ -1,0 +1,106 @@
+
+Load 8bit model...
+Start training...
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please submit your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+trainable params: 57,671,680 || all params: 1,600,976,640 || trainable%: 3.602281167575312
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/peft/utils/other.py:145: FutureWarning: prepare_model_for_int8_training is deprecated and will be removed in a future version. Use prepare_model_for_kbit_training instead.
+  warnings.warn(
+  0%|                                                                                                     | 0/6 [00:00<?, ?it/s]/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/bitsandbytes/autograd/_functions.py:298: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+`use_cache = True` is incompatible with gradient checkpointing. Setting `use_cache = False`...
+
+
+
+
+ 83%|█████████████████████████████████████████████████████████████████████████████▌               | 5/6 [01:52<00:23, 23.35s/it]
+{'train_runtime': 115.5823, 'train_samples_per_second': 0.623, 'train_steps_per_second': 0.052, 'train_loss': 66.80540466308594, 'epoch': 3.0}
+100%|█████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:55<00:00, 19.26s/it]
+README.md: 100%|███████████████████████████████████████████████████████████████████████████| 5.18k/5.18k [00:00<00:00, 2.96MB/s]
+
+
+
+adapter_model.safetensors: 100%|█████████████████████████████████████████████████████████████| 231M/231M [00:05<00:00, 39.6MB/s]
+adapter_config.json: 100%|██████████████████████████████████████████████████████████████████████| 794/794 [00:00<00:00, 457kB/s]
+
+adapter_model.safetensors:  91%|███████████████████████████████████████████████████████▍     | 210M/231M [00:02<00:00, 98.5MB/s]
+adapter_model.safetensors: 100%|██████████████████████████████████████████████████████████████| 231M/231M [00:02<00:00, 101MB/s]
+
+
+Decode Progress: 5it [00:12,  2.27s/it]
+ ASR COMPLETED
+ DONE CALCULATING METRICS
+metrics: {'united_states_english': {'wer': 9.195402298850574, 'norm_wer': 4.444444444444445}, 'india_and_south_asia': {'wer': 11.11111111111111, 'norm_wer': 7.4074074074074066}}
+Average WER: 10.153256704980842
+=================================TRIAL 1=================================
+Hyperparameters for trial 1:
+learning rate: 0.0023009131259438763, batch size: 16, rank: 32
+Load 8bit model...
+Decode Progress: 10it [00:19,  1.96s/it]
+[32m[I 2024-03-11 01:13:43,981][39m Trial 0 finished with value: 10.153256704980842 and parameters: {'learning_rate': 0.0028597330203064073, 'rank': 32}. Best is trial 0 with value: 10.153256704980842.
+/home/amyzhou/cs224n-project/tune.py:96: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+  learning_rate = trial.suggest_uniform('learning_rate', 0.001, 0.005)
+trainable params: 57,671,680 || all params: 1,600,976,640 || trainable%: 3.602281167575312
+
+
+
+
+
+ 83%|█████████████████████████████████████████████████████████████████████████████▌               | 5/6 [01:51<00:23, 23.11s/it]
+{'train_runtime': 114.6735, 'train_samples_per_second': 0.628, 'train_steps_per_second': 0.052, 'train_loss': 66.80540466308594, 'epoch': 3.0}
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:54<00:00, 19.11s/it]
+
+
+
+adapter_model.safetensors: 100%|█████████████████████████████████████████████████████████████| 231M/231M [00:05<00:00, 40.6MB/s]
+adapter_model.safetensors:  36%|██████████████████████▏                                      | 83.9M/231M [00:00<00:01, 100MB/s]
+
+adapter_model.safetensors: 100%|██████████████████████████████████████████████████████████████| 231M/231M [00:02<00:00, 102MB/s]
+
+
+Decode Progress: 5it [00:10,  1.96s/it]
+ ASR COMPLETED
+ DONE CALCULATING METRICS
+metrics: {'united_states_english': {'wer': 10.344827586206897, 'norm_wer': 5.555555555555555}, 'india_and_south_asia': {'wer': 11.11111111111111, 'norm_wer': 7.4074074074074066}}
+Average WER: 10.727969348659004
+=================================TRIAL 2=================================
+Hyperparameters for trial 2:
+learning rate: 0.0048979114519547284, batch size: 16, rank: 64
+Load 8bit model...
+Decode Progress: 10it [00:16,  1.64s/it]
+[32m[I 2024-03-11 01:16:18,369][39m Trial 1 finished with value: 10.727969348659004 and parameters: {'learning_rate': 0.0023009131259438763, 'rank': 32}. Best is trial 0 with value: 10.153256704980842.
+trainable params: 115,343,360 || all params: 1,658,648,320 || trainable%: 6.9540576268753584
+
+
+
+
+
+ 83%|█████████████████████████████████████████████████████████████████████████████▌               | 5/6 [01:51<00:23, 23.13s/it]
+{'train_runtime': 114.6818, 'train_samples_per_second': 0.628, 'train_steps_per_second': 0.052, 'train_loss': 66.40675862630208, 'epoch': 3.0}
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:54<00:00, 19.11s/it]
+
+
+
+
+adapter_model.safetensors: 100%|█████████████████████████████████████████████████████████████| 462M/462M [00:10<00:00, 43.7MB/s]
+adapter_config.json: 100%|██████████████████████████████████████████████████████████████████████| 794/794 [00:00<00:00, 457kB/s]
+
+adapter_model.safetensors:  84%|███████████████████████████████████████████████████▎         | 388M/462M [00:03<00:00, 99.7MB/s]
+adapter_model.safetensors: 100%|██████████████████████████████████████████████████████████████| 462M/462M [00:04<00:00, 101MB/s]
+
+
+Decode Progress: 5it [00:11,  2.00s/it]
+ ASR COMPLETED
+ DONE CALCULATING METRICS
+metrics: {'united_states_english': {'wer': 10.344827586206897, 'norm_wer': 5.555555555555555}, 'india_and_south_asia': {'wer': 14.814814814814813, 'norm_wer': 7.4074074074074066}}
+Average WER: 12.579821200510855
+Best hyperparameters: {'learning_rate': 0.0028597330203064073, 'rank': 32}
+Importances: {importances}
+Sorted params: {params_sorted}
+Decode Progress: 10it [00:16,  1.69s/it]
+[32m[I 2024-03-11 01:19:02,385][39m Trial 2 finished with value: 12.579821200510855 and parameters: {'learning_rate': 0.0048979114519547284, 'rank': 64}. Best is trial 0 with value: 10.153256704980842.

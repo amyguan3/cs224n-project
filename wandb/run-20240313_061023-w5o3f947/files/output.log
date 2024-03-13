@@ -1,0 +1,206 @@
+
+  0%|                                                                                                                                  | 0/1260 [00:00<?, ?it/s]/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/bitsandbytes/autograd/_functions.py:298: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+`use_cache = True` is incompatible with gradient checkpointing. Setting `use_cache = False`...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 10%|███████████▋                                                                                                          | 125/1260 [31:15<4:05:36, 12.98s/it]
+{'loss': 83.0836, 'learning_rate': 0.0009413223140495868, 'epoch': 1.98}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 13%|███████████████▋                                                                                                      | 168/1260 [44:42<4:34:32, 15.08s/it]Traceback (most recent call last):
+  File "/home/amyzhou/cs224n-project/alignment_w_eval.py", line 291, in <module>
+    # metrics = evaluate_asr(model, processor, dataset, True)
+  File "/home/amyzhou/cs224n-project/alignment_w_eval.py", line 267, in main
+    eval_dataset=eval_dataset['train'],
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1836, in _inner_training_loop
+    for step, inputs in enumerate(epoch_iterator):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/data_loader.py", line 462, in __iter__
+    next_batch = next(dataloader_iter)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 2807, in __getitems__
+    batch = self.__getitem__(keys)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 2803, in __getitem__
+    return self._getitem(key)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 2788, in _getitem
+    formatted_output = format_table(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/datasets/formatting/formatting.py", line 629, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/datasets/formatting/formatting.py", line 400, in __call__
+    return self.format_batch(pa_table)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/datasets/formatting/formatting.py", line 448, in format_batch
+    batch = self.python_arrow_extractor().extract_batch(pa_table)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/datasets/formatting/formatting.py", line 150, in extract_batch
+    return pa_table.to_pydict()
+KeyboardInterrupt

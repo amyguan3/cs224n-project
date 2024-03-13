@@ -9,6 +9,7 @@ import evaluate
 from eval_utils import new_evaluate
 import numpy as np
 import gc
+import time
 
 class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
   """
@@ -19,14 +20,19 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     self.sinkhorn_loss = SamplesLoss(loss="sinkhorn", p=2)
   
   def evaluate(self, eval_dataset=None, ignore_keys= None, metric_key_prefix: str = "eval"):
-    print("Evaluating....")
+    # print("Evaluating....")
     metric = evaluate.load("wer")
     eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
-    eval_dataloader = self.get_eval_dataloader(eval_dataset)
+    sampled_dataset = eval_dataset.train_test_split(test_size=0.3, seed=42)
+    subset_eval_dataset = sampled_dataset['test']
+
+    eval_dataloader = self.get_eval_dataloader(subset_eval_dataset)
     self.model.eval()
     predictions = []
     references = []
 
+    start_time = time.time()
+    # super().evaluate(eval_dataset, ignore_keys, metric_key_prefix)
     for batch in eval_dataloader:
       with torch.cuda.amp.autocast():
         with torch.no_grad(): 
@@ -44,8 +50,11 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
           del generated_tokens, labels, batch
         gc.collect()
 
+    end_time = time.time()
+    eval_time = end_time - start_time
+
     wer = 100 * metric.compute(predictions=predictions, references=references)
-    self.log({f"{metric_key_prefix}_wer": wer})
+    self.log({f"{metric_key_prefix}_wer": wer, f"{metric_key_prefix}_time": eval_time})
 
     return {"wer": wer}    
 

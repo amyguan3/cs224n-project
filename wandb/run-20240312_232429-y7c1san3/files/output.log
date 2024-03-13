@@ -1,0 +1,79 @@
+
+  0%|                                                                                            | 0/189 [00:00<?, ?it/s]/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/bitsandbytes/autograd/_functions.py:298: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+`use_cache = True` is incompatible with gradient checkpointing. Setting `use_cache = False`...
+  1%|▍                                                                                 | 1/189 [00:22<1:09:50, 22.29s/it]
+{'loss': 60.0554, 'learning_rate': 0.0, 'epoch': 0.02}
+Evaluating....
+DatasetDict({
+    train: Dataset({
+        features: ['path', 'accents', 'sentence', 'up_votes', 'down_votes', 'age', 'gender', 'audio', 'source_input_features', 'accent', 'labels'],
+        num_rows: 627
+    })
+    test: Dataset({
+        features: ['path', 'accents', 'sentence', 'up_votes', 'down_votes', 'age', 'gender', 'audio', 'source_input_features', 'accent', 'labels'],
+        num_rows: 617
+    })
+})
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  File "/home/amyzhou/cs224n-project/alignment_w_eval.py", line 284, in <module>
+    main()
+  File "/home/amyzhou/cs224n-project/alignment_w_eval.py", line 261, in main
+    trainer.train()
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1929, in _inner_training_loop
+    self._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_eval)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 2291, in _maybe_log_save_evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "/home/amyzhou/cs224n-project/trainer_utils.py", line 27, in evaluate
+    predictions, labels = eval_predictions.predictions, eval_predictions.label_ids
+AttributeError: 'dict' object has no attribute 'predictions'
+{'eval_runtime': 95.8552, 'eval_samples_per_second': 6.541, 'eval_steps_per_second': 0.824, 'epoch': 0.02}

@@ -1,0 +1,145 @@
+
+  0%|                                                                                                                            | 0/1890 [00:00<?, ?it/s]/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/bitsandbytes/autograd/_functions.py:298: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+`use_cache = True` is incompatible with gradient checkpointing. Setting `use_cache = False`...
+  0%|                                                                                                                 | 1/1890 [00:20<10:58:11, 20.91s/it]
+
+  0%|                                                                                                                  | 2/1890 [00:31<7:44:32, 14.76s/it]
+
+  0%|▏                                                                                                                 | 3/1890 [00:41<6:41:09, 12.76s/it]
+{'loss': 59.2394, 'learning_rate': 0.0, 'epoch': 0.05}
+
+
+  0%|▎                                                                                                                 | 5/1890 [01:02<5:59:20, 11.44s/it]
+
+  0%|▎                                                                                                                 | 6/1890 [01:13<5:47:42, 11.07s/it]
+
+  0%|▍                                                                                                                 | 7/1890 [01:23<5:39:31, 10.82s/it]
+
+  0%|▍                                                                                                                 | 8/1890 [01:33<5:35:01, 10.68s/it]
+{'loss': 52.4631, 'learning_rate': 8e-05, 'epoch': 0.13}
+
+
+  1%|▌                                                                                                                | 10/1890 [01:54<5:29:01, 10.50s/it]
+
+  1%|▋                                                                                                                | 11/1890 [02:05<5:32:31, 10.62s/it]
+
+  1%|▋                                                                                                                | 12/1890 [02:15<5:30:54, 10.57s/it]
+{'loss': 50.3412, 'learning_rate': 0.00016, 'epoch': 0.19}
+
+
+  1%|▊                                                                                                                | 14/1890 [02:36<5:27:31, 10.48s/it]
+
+  1%|▉                                                                                                                | 15/1890 [02:47<5:26:58, 10.46s/it]
+
+  1%|▉                                                                                                                | 16/1890 [02:57<5:25:56, 10.44s/it]
+
+  1%|█                                                                                                                | 17/1890 [03:08<5:28:49, 10.53s/it]
+{'loss': 49.2588, 'learning_rate': 0.00026000000000000003, 'epoch': 0.27}
+
+
+  1%|█▏                                                                                                               | 19/1890 [03:28<5:25:16, 10.43s/it]
+
+  1%|█▏                                                                                                               | 20/1890 [03:39<5:25:03, 10.43s/it]
+
+  1%|█▎                                                                                                               | 21/1890 [03:49<5:25:01, 10.43s/it]
+{'loss': 43.4464, 'learning_rate': 0.00034, 'epoch': 0.33}
+
+
+  1%|█▍                                                                                                               | 23/1890 [04:11<5:28:28, 10.56s/it]
+
+  1%|█▍                                                                                                               | 24/1890 [04:21<5:26:57, 10.51s/it]
+
+  1%|█▍                                                                                                               | 25/1890 [04:31<5:25:04, 10.46s/it]
+{'loss': 32.1304, 'learning_rate': 0.00042, 'epoch': 0.4}
+
+  1%|█▌                                                                                                               | 26/1890 [04:42<5:23:45, 10.42s/it]
+
+
+  1%|█▋                                                                                                               | 28/1890 [05:02<5:22:00, 10.38s/it]
+
+  2%|█▋                                                                                                               | 29/1890 [05:13<5:25:22, 10.49s/it]
+
+  2%|█▊                                                                                                               | 30/1890 [05:24<5:24:33, 10.47s/it]
+{'loss': 34.3644, 'learning_rate': 0.0005200000000000001, 'epoch': 0.48}
+
+
+  2%|█▉                                                                                                               | 32/1890 [05:44<5:22:50, 10.43s/it]
+
+  2%|█▉                                                                                                               | 33/1890 [05:55<5:22:16, 10.41s/it]
+
+  2%|██                                                                                                               | 34/1890 [06:05<5:21:53, 10.41s/it]
+
+  2%|██                                                                                                               | 35/1890 [06:16<5:22:02, 10.42s/it]
+
+  2%|██▏                                                                                                              | 36/1890 [06:26<5:25:52, 10.55s/it]
+
+  2%|██▏                                                                                                              | 37/1890 [06:37<5:24:10, 10.50s/it]
+
+  2%|██▎                                                                                                              | 38/1890 [06:47<5:23:13, 10.47s/it]
+
+  2%|██▎                                                                                                              | 39/1890 [06:58<5:22:42, 10.46s/it]
+{'loss': 38.9292, 'learning_rate': 0.0007, 'epoch': 0.62}
+
+  2%|██▍                                                                                                              | 40/1890 [07:08<5:21:07, 10.42s/it]
+
+
+  2%|██▌                                                                                                              | 42/1890 [07:29<5:22:24, 10.47s/it]
+
+  2%|██▌                                                                                                              | 43/1890 [07:39<5:21:33, 10.45s/it]
+
+  2%|██▋                                                                                                              | 44/1890 [07:50<5:20:50, 10.43s/it]
+{'loss': 39.124, 'learning_rate': 0.0008, 'epoch': 0.7}
+
+  2%|██▋                                                                                                              | 45/1890 [08:00<5:19:46, 10.40s/it]
+
+
+  2%|██▊                                                                                                              | 47/1890 [08:21<5:17:47, 10.35s/it]
+
+  3%|██▊                                                                                                              | 48/1890 [08:31<5:20:35, 10.44s/it]
+
+  3%|██▉                                                                                                              | 49/1890 [08:42<5:19:50, 10.42s/it]
+{'loss': 38.8094, 'learning_rate': 0.0009000000000000001, 'epoch': 0.78}
+
+  3%|██▉                                                                                                              | 50/1890 [08:52<5:18:28, 10.39s/it]
+
+
+  3%|███                                                                                                              | 52/1890 [09:13<5:17:52, 10.38s/it]
+
+  3%|███▏                                                                                                             | 53/1890 [09:23<5:17:16, 10.36s/it]
+
+  3%|███▏                                                                                                             | 54/1890 [09:34<5:19:14, 10.43s/it]
+{'loss': 32.5497, 'learning_rate': 0.001, 'epoch': 0.86}
+
+  3%|███▎                                                                                                             | 55/1890 [09:44<5:18:42, 10.42s/it]
+
+
+  3%|███▍                                                                                                             | 57/1890 [10:05<5:17:43, 10.40s/it]
+
+  3%|███▍                                                                                                             | 58/1890 [10:15<5:17:47, 10.41s/it]
+
+  3%|███▌                                                                                                             | 59/1890 [10:25<5:16:54, 10.39s/it]
+{'loss': 39.8837, 'learning_rate': 0.0009972826086956522, 'epoch': 0.94}
+
+
+  3%|███▋                                                                                                             | 61/1890 [10:47<5:19:16, 10.47s/it]
+{'loss': 30.2545, 'learning_rate': 0.000996195652173913, 'epoch': 0.97}
+{'loss': 31.6595, 'learning_rate': 0.0009956521739130436, 'epoch': 0.98}
+
+  3%|███▊                                                                                                             | 63/1890 [43:53<3:14:13,  6.38s/it]Traceback (most recent call last):
+  File "/home/amyzhou/cs224n-project/alignment_w_eval.py", line 290, in <module>
+    main()
+  File "/home/amyzhou/cs224n-project/alignment_w_eval.py", line 266, in main
+    trainer.train()
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1944, in _inner_training_loop
+    self._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_eval)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 2302, in _maybe_log_save_evaluate
+    self._save_checkpoint(model, trial, metrics=metrics)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 2391, in _save_checkpoint
+    metric_value = metrics[metric_to_check]
+KeyError: 'eval_wer'
+{'eval_wer': 45.25823780719936, 'epoch': 1.0}

@@ -1,0 +1,179 @@
+Load 8bit model...
+Start training...
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please submit your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/peft/utils/other.py:145: FutureWarning: prepare_model_for_int8_training is deprecated and will be removed in a future version. Use prepare_model_for_kbit_training instead.
+  warnings.warn(
+  0%|                                                                                                     | 0/6 [00:00<?, ?it/s]
+  0%|                                                                                                     | 0/6 [00:00<?, ?it/s]/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/bitsandbytes/autograd/_functions.py:298: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+`use_cache = True` is incompatible with gradient checkpointing. Setting `use_cache = False`...
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [01:52<00:00, 18.77s/it]
+{'train_runtime': 112.634, 'train_samples_per_second': 0.639, 'train_steps_per_second': 0.053, 'train_loss': 66.44498189290364, 'epoch': 3.0}
+Done with training! Pushing to hub...
+
+
+
+
+
+
+adapter_model.safetensors: 100%|█████████████████████████████████████████████████████████████| 462M/462M [00:11<00:00, 41.8MB/s]
+adapter_config.json: 100%|██████████████████████████████████████████████████████████████████████| 794/794 [00:00<00:00, 424kB/s]
+
+
+adapter_model.safetensors: 100%|██████████████████████████████████████████████████████████████| 462M/462M [00:04<00:00, 100MB/s]
+Downloading builder script: 100%|██████████████████████████████████████████████████████████| 4.49k/4.49k [00:00<00:00, 9.76MB/s]
+Decode Progress: 0it [00:00, ?it/s]
+[33m[W 2024-03-11 00:54:53,264][39m Trial 0 failed with parameters: {'learning_rate': 0.004445000315304861, 'rank': 64} because of the following error: RuntimeError('Input type (float) and bias type (c10::Half) should be the same').
+Traceback (most recent call last):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/amyzhou/cs224n-project/tune.py", line 118, in objective
+    eval_result = evaluate_asr_alt(pipe, eval_dataset["train"], True)
+  File "/home/amyzhou/cs224n-project/eval_utils.py", line 472, in evaluate_asr_alt
+    predictions, references, norm_predictions, norm_references, all_accents = get_preds(whisper_asr, dataset, verbose)
+  File "/home/amyzhou/cs224n-project/eval_utils.py", line 426, in get_preds
+    for out in tqdm(asr_model(data(dataset_total), batch_size=4), desc='Decode Progress'):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/tqdm/std.py", line 1178, in __iter__
+    for obj in iterable:
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/pt_utils.py", line 266, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/base.py", line 1068, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 505, in _forward
+    generate_kwargs["encoder_outputs"] = encoder(inputs, attention_mask=attention_mask)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 1175, in forward
+    inputs_embeds = nn.functional.gelu(self.conv1(input_features))
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 310, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 306, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+[33m[W 2024-03-11 00:54:53,273][39m Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "/home/amyzhou/cs224n-project/tune.py", line 167, in <module>
+    main()
+  File "/home/amyzhou/cs224n-project/tune.py", line 163, in main
+    tune(sources, target)
+  File "/home/amyzhou/cs224n-project/tune.py", line 136, in tune
+    study.optimize(objective, n_trials=3)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 66, in _optimize
+    _optimize_sequential(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 163, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 251, in _run_trial
+    raise func_err
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/amyzhou/cs224n-project/tune.py", line 118, in objective
+    eval_result = evaluate_asr_alt(pipe, eval_dataset["train"], True)
+  File "/home/amyzhou/cs224n-project/eval_utils.py", line 472, in evaluate_asr_alt
+    predictions, references, norm_predictions, norm_references, all_accents = get_preds(whisper_asr, dataset, verbose)
+  File "/home/amyzhou/cs224n-project/eval_utils.py", line 426, in get_preds
+    for out in tqdm(asr_model(data(dataset_total), batch_size=4), desc='Decode Progress'):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/tqdm/std.py", line 1178, in __iter__
+    for obj in iterable:
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/pt_utils.py", line 266, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/base.py", line 1068, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 505, in _forward
+    generate_kwargs["encoder_outputs"] = encoder(inputs, attention_mask=attention_mask)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 1175, in forward
+    inputs_embeds = nn.functional.gelu(self.conv1(input_features))
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 310, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 306, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+Traceback (most recent call last):
+  File "/home/amyzhou/cs224n-project/tune.py", line 167, in <module>
+    main()
+  File "/home/amyzhou/cs224n-project/tune.py", line 163, in main
+    tune(sources, target)
+  File "/home/amyzhou/cs224n-project/tune.py", line 136, in tune
+    study.optimize(objective, n_trials=3)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 66, in _optimize
+    _optimize_sequential(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 163, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 251, in _run_trial
+    raise func_err
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/amyzhou/cs224n-project/tune.py", line 118, in objective
+    eval_result = evaluate_asr_alt(pipe, eval_dataset["train"], True)
+  File "/home/amyzhou/cs224n-project/eval_utils.py", line 472, in evaluate_asr_alt
+    predictions, references, norm_predictions, norm_references, all_accents = get_preds(whisper_asr, dataset, verbose)
+  File "/home/amyzhou/cs224n-project/eval_utils.py", line 426, in get_preds
+    for out in tqdm(asr_model(data(dataset_total), batch_size=4), desc='Decode Progress'):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/tqdm/std.py", line 1178, in __iter__
+    for obj in iterable:
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/pt_utils.py", line 266, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/base.py", line 1068, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 505, in _forward
+    generate_kwargs["encoder_outputs"] = encoder(inputs, attention_mask=attention_mask)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 1175, in forward
+    inputs_embeds = nn.functional.gelu(self.conv1(input_features))
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 310, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 306, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+MODEL PIPELINE SET UP
