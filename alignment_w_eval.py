@@ -200,16 +200,16 @@ def main():
     #     (.005, 16, 32), (.005, 16, 64), (.005, 16, 128),
     #     (.001, 32, 32), (.001, 32, 64), (.001, 32, 128)
     # ]
-    hyperparameters = [  #(learning_rate, batch_size, rank)
+    hyperparameters = [  #(learning_rate, batch_size, rank, logging steps)
         # (.001, 16, 32), 
         # (.001, 16, 64), 
         # (.001, 16, 128),
-        (.001, 32, 32, 100), 
-        (.001, 32, 64, 100), 
-        (.001, 32, 128, 100),
-        (.001, 64, 32, 50), 
-        (.001, 64, 64, 50), 
-        (.001, 64, 128, 50)
+        (.001, 32, 32, 250), 
+        # (.001, 32, 64, 100), 
+        # (.001, 32, 128, 100),
+        # (.001, 64, 32, 50), 
+        # (.001, 64, 64, 50), 
+        # (.001, 64, 128, 50)
     ]
 
     for test_i in range(9):
@@ -248,7 +248,7 @@ def main():
             learning_rate=lr_i,
             warmup_steps=50,
             # gradient_checkpointing=True, # just added
-            num_train_epochs=15,
+            num_train_epochs=30,
             evaluation_strategy="steps",  # disregard since using commonvoice to eval CHANGE THIS ONE
             per_device_eval_batch_size=batch_i,
             fp16=True,  
