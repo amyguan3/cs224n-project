@@ -211,11 +211,12 @@ else:
         temperature=1.0,
     )
 
-ds = load_dataset("WillHeld/SD-QA")["dev"].filter(lambda example: example["answers"])
+# ds = load_dataset("WillHeld/SD-QA")["dev"].filter(lambda example: example["answers"])
+ds = load_dataset("WillHeld/SD-QA")["test"].filter(lambda example: example["answers"])  # eval on test set
 dial_scores = {}
 for dial in dials:
     scores = []
-    with open(f"./sdqa-res/salmonn_7b/{dial}_outs.txt", "w") as f:
+    with open(f"./salmonn_7b/{dial}_outs.txt", "w") as f:
         for idx, ex in enumerate(tqdm(ds)):
             try:
                 id = ex["id"]
