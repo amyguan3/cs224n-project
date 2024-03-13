@@ -30,12 +30,12 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     for batch in eval_dataloader:
       with torch.cuda.amp.autocast():
         with torch.no_grad(): 
-          inputs = self._prepare_inputs(batch)
+          # inputs = self._prepare_inputs(batch)
           generated_tokens = (self.model.generate(
-             input_features=inputs["input_features"], max_new_tokens=255)
+             input_features=batch["input_features"], max_new_tokens=255)
              )
           labels = batch["labels"]
-          labels = np.where(labels != -100, labels, self.tokenizer.pad_token_id)
+          #labels = np.where(labels != -100, labels, self.tokenizer.pad_token_id) #unnecessary
           decoded_preds = self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
           decoded_labels = self.tokenizer.batch_decode(labels, skip_special_tokens=True)
 
