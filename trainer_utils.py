@@ -7,6 +7,8 @@ from geomloss import SamplesLoss
 import sys
 import evaluate
 from eval_utils import new_evaluate
+import numpy as np
+import gc
 
 class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
   """
@@ -16,25 +18,35 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     super().__init__(*args, **kwargs)
     self.sinkhorn_loss = SamplesLoss(loss="sinkhorn", p=2)
   
-  def evaluate(self, eval_dataset=None, ignore_keys= None, metric_key_prefix='eval'):
+  def evaluate(self, eval_dataset=None, ignore_keys= None, metric_key_prefix: str = "eval"):
     print("Evaluating....")
-    wer_metric = evaluate.load("wer")
+    metric = evaluate.load("wer")
     eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
     eval_dataloader = self.get_eval_dataloader(eval_dataset)
+    self.model.eval()
+    predictions = []
+    references = []
 
-    eval_predictions = super().evaluate(eval_dataset, metric_for_compute=wer_metric)
-    predictions, labels = eval_predictions.predictions, eval_predictions.label_ids
-    print(predictions)
-    print(labels)
-    print(len(predictions))
-    print(labels.shape)
-    
-    wer = 100 * wer_metric.compute(predictions=predictions, references=labels)
-    print(wer)
-    sys.exit()
-    return wer
-    
+    for batch in eval_dataloader:
+      with torch.cuda.amp.autocast():
+        with torch.no_grad(): 
+          generated_tokens = (self.model.generate(
+             input_features=batch["input_features"], max_new_tokens=255,).cpu().numpy()
+             )
+          labels = batch["labels"].cpu().numpy()
+          labels = np.where(labels != -100, labels, self.processor.tokenizer.pad_token_id)
+          decoded_preds = self.processor.tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
+          decoded_labels = self.processor.tokenizer.batch_decode(labels, skip_special_tokens=True)
 
+          predictions.extend(decoded_preds)
+          references.extend(decoded_labels)
+          del generated_tokens, labels, batch
+        gc.collect()
+
+    wer = 100 * metric.compute(predictions=predictions, references=references)
+    self.log({f"{metric_key_prefix}_wer": wer})
+
+    return {"wer": wer}    
 
   def compute_loss(self, model, inputs, return_outputs=False):
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
