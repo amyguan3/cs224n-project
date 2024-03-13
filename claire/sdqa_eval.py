@@ -163,11 +163,12 @@ if m_type == "e2e":
         )
     elif "salmonn" in model_name:
         model = SALMONN(
-            ckpt="./SALMONN_PATHS/SALMONN-7B/salmonn_7b_v0.pth",
+            ckpt="./SALMONN_PATHS/salmonn_7b_v0.pth",
             # whisper_path="./SALMONN_PATHS/whisper-large-v2",
             whisper_path="openai/whisper-large-v2",  # NEW
             beats_path="./SALMONN_PATHS/BEATs_iter3_plus_AS2M_finetuned_on_AS2M_cpt2.pt",
-            vicuna_path="./SALMONN_PATHS/vicuna-7b-v1.5",
+            # vicuna_path="./SALMONN_PATHS/vicuna-7b-v1.5",
+            vicuna_path="lmsys/vicuna-13b-v1.1",  # NEW
             low_resource=False,
         )
 

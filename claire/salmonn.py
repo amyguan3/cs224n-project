@@ -25,10 +25,8 @@ from transformers import (
     LlamaTokenizer
 )
 import librosa
-# from beats.BEATs import BEATsConfig, BEATs
-from BEATs import BEATsConfig, BEATs
-# from qformer.Qformer import BertConfig, BertLMHeadModel
-from Qformer import BertConfig, BertLMHeadModel
+from beats.BEATs import BEATsConfig, BEATs
+from qformer.Qformer import BertConfig, BertLMHeadModel
 
 
 class SALMONN(nn.Module):
