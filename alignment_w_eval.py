@@ -212,7 +212,7 @@ def main():
         # (.001, 64, 128, 50)
     ]
 
-    for test_i in range(9):
+    for test_i in range(len(hyperparameters)):
         print("Running training process", test_i, "...")
         print("Hyperparameters are", hyperparameters[test_i]) 
         lr_i, batch_i, rank_i, logging_i = hyperparameters[test_i]
