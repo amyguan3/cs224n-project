@@ -49,7 +49,7 @@ import re
 
 from trainer_utils import AlignmentSeq2SeqTrainer
 from data_utils import (DataCollatorSpeechSeq2SeqWithPadding, 
-                        load_sd_qa_dataset, load_cv_india_dataset,
+                        load_sd_qa_dataset, load_cv_india_dataset, load_cv_phl_dataset,
                         filter_data, get_cv_split)
 
 import csv
@@ -139,17 +139,15 @@ def main():
     #------------------------------------#
     #----------------DATA----------------#
     #------------------------------------#
-    print("Loading data...")
-
+    
     # load data
     target_dialect = 'usa'
-    source_dialect = 'ind_n'  # 'ind_n', 'zaf'
-    sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
-    eval_dataset = load_cv_india_dataset()
-    # sd_qa_to_cv = {'ind_n':"India and South Asia (India, Pakistan, Sri Lanka)", 'zaf': "Southern African (South Africa, Zimbabwe, Namibia)"}
-    # eval_dataset = get_cv_split([sd_qa_to_cv[source_dialect]])
-    # eval_dataset.pop("test")
+    source_dialect = 'phl'  # 'ind_n', 'zaf'
+    print(f"Loading data from {source_dialect} to {target_dialect}...")
 
+    sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
+    eval_dataset = load_cv_phl_dataset()
+    
     # prepare data
     def prepare_source_data(data):
         # compute log-Mel input features from audio arrays
