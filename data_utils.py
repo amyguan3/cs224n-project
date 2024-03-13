@@ -71,6 +71,11 @@ def load_cv_india_dataset():
     cv['train'] = load_dataset("WillHeld/india_accent_cv", split='train[:10%]', token=True)
     return cv
 
+def load_cv_zaf_dataset():
+    cv = DatasetDict()
+    cv['train'] = load_dataset("WillHeld/india_accent_cv", split='train[:10%]', token=True)
+    return cv
+
 """
 note: casts source dialect col to "audio" (including in 1-1 case)
 """
