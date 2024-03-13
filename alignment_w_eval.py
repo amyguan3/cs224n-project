@@ -249,11 +249,12 @@ def main():
             warmup_steps=50,
             # gradient_checkpointing=True, # just added
             num_train_epochs=30,
+            eval_steps=logging_i,
             evaluation_strategy="steps",  # disregard since using commonvoice to eval CHANGE THIS ONE
             per_device_eval_batch_size=batch_i,
             fp16=True,  
             generation_max_length=128,
-            logging_steps=logging_i,  # this is what eval steps will default to, change this in a lil bit
+            logging_steps=100,  # this is what eval steps will default to, change this in a lil bit
             remove_unused_columns=False, 
             save_strategy="steps",
             metric_for_best_model='wer',
