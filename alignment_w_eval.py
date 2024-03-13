@@ -256,7 +256,7 @@ def main():
             train_dataset=sd_qa['dev'],
             eval_dataset=eval_dataset['train'],
             data_collator=data_collator,
-            tokenizer=processor.feature_extractor,
+            tokenizer=processor.tokenizer,
             callbacks=[peftcallback],
         )
 
