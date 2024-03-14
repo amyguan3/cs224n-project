@@ -25,7 +25,7 @@ def main():
 
     print('GETTING (FILTERED) DATASET')
     # dataset = load_cv_india_dataset() # pass in cv sources
-    source = "n_ind"
+    source = "ind_n"
     target = "usa"
     dataset = filter_data(load_sd_qa_test_dataset(), source=source, target=target)
 
