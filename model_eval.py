@@ -29,6 +29,7 @@ def main():
     target = "usa"
     dataset = filter_data(load_sd_qa_test_dataset(), source=source, target=target)
     dataset['test'] = dataset['test'].rename_column(source, "audio")
+    dataset['test'] = dataset['test'].filter(lambda x: x['question'] != "")
     print(dataset)
 
     print('EVALUATING')
