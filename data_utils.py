@@ -84,7 +84,7 @@ def filter_data(data, source, target):
     if source == 'all':
         # explode across source dialects
         dialect_options.remove(target)
-        df = pd.DataFrame(data)
+        df = pd.DataFrame(data['dev'])
         df = pd.melt(df, id_vars=['id', 'question', target], value_vars=dialect_options, var_name='accent', value_name="audio")
         return Dataset.from_pandas(df)
     elif source not in dialect_options or target not in dialect_options:
