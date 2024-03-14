@@ -66,6 +66,12 @@ def load_sd_qa_dataset():
     # sd_qa["test"] = {} # load_dataset("WillHeld/SD-QA", split="test", token=True)
     return sd_qa
 
+# Functions for loading, processing data
+def load_sd_qa_test_dataset():
+    sd_qa = DatasetDict()
+    sd_qa["test"] = load_dataset("WillHeld/SD-QA", split="test", token=True)
+    return sd_qa
+
 def load_cv_india_dataset():
     cv = DatasetDict()
     cv['train'] = load_dataset("WillHeld/india_accent_cv", split='train[:1%]', token=True)
