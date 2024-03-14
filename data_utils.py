@@ -86,6 +86,13 @@ def load_cv_india_dataset():
     cv = cv.train_test_split(test_size=0.3, seed=42)
     return cv
 
+
+def load_cv_phl_dataset():
+    cv = load_dataset("WillHeld/phl_accent_cv", split='train[:25%]', token=True)
+    cv = cv.train_test_split(test_size=0.3, seed=42)
+    return cv
+
+
 """
 note: casts source dialect col to "audio" (including in 1-1 case)
 """

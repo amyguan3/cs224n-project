@@ -23,8 +23,8 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     # print("Evaluating....")
     metric = evaluate.load("wer")
     eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
-    sampled_dataset = eval_dataset.train_test_split(test_size=0.3, seed=42)
-    subset_eval_dataset = sampled_dataset['test']
+    # sampled_dataset = eval_dataset.train_test_split(test_size=0.3, seed=42)
+    subset_eval_dataset = eval_dataset['test'] # 30%, ~300 samples
 
     eval_dataloader = self.get_eval_dataloader(subset_eval_dataset)
     self.model.eval()

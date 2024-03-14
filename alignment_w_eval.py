@@ -143,7 +143,7 @@ def main():
 
     # load data
     target_dialect = 'usa'
-    source_dialect = 'ind_n'  # 'ind_n', 'zaf'
+    source_dialect = 'phl'  # 'ind_n', 'zaf'
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
     eval_dataset = load_cv_india_dataset()
     # sd_qa_to_cv = {'ind_n':"India and South Asia (India, Pakistan, Sri Lanka)", 'zaf': "Southern African (South Africa, Zimbabwe, Namibia)"}
@@ -204,7 +204,7 @@ def main():
         # (.001, 16, 32), 
         # (.001, 16, 64), 
         # (.001, 16, 128),
-        (.001, 32, 32, 250), 
+        (.001, 32, 32, 60), 
         # (.001, 32, 64, 100), 
         # (.001, 32, 128, 100),
         # (.001, 64, 32, 50), 
@@ -249,15 +249,16 @@ def main():
             warmup_steps=50,
             # gradient_checkpointing=True, # just added
             num_train_epochs=15,
-            eval_steps=logging_i,
+            eval_steps=logging_i, # 60
             evaluation_strategy="steps",  # disregard since using commonvoice to eval CHANGE THIS ONE
             per_device_eval_batch_size=batch_i,
             fp16=True,  
             generation_max_length=128,
-            logging_steps=100,  # this is what eval steps will default to, change this in a lil bit
+            logging_steps=5,  # this is what eval steps will default to, change this in a lil bit
             remove_unused_columns=False, 
             save_strategy="steps",
             metric_for_best_model='wer',
+            save_steps=60,
             load_best_model_at_end = True
         )
         peftcallback = SavePeftCallback()
