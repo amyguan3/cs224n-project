@@ -27,7 +27,15 @@ CV_ACCENTS = ["Filipino",
            "Australian English",
            "New Zealand English",
            "Irish English",
-           "Kenyan English"
+           "Kenyan English",
+           "nigeria english"
+           ]
+
+CV_ACCENTS_SDQA = ["Filipino",
+           "United States English",
+           "Southern African (South Africa, Zimbabwe, Namibia)",
+           "India and South Asia (India, Pakistan, Sri Lanka)",
+           "Irish English"
            ]
 
 
@@ -67,15 +75,17 @@ def load_sd_qa_dataset():
     return sd_qa
 
 def load_cv_india_dataset():
-    cv = DatasetDict()
-    cv['train'] = load_dataset("WillHeld/india_accent_cv", split='train[:1%]', token=True)
+    # cv = DatasetDict()
+    cv = load_dataset("WillHeld/india_accent_cv", split='train[:1%]', token=True)
+    cv = cv.train_test_split(test_size=0.3, seed=42)
     return cv
 
 """
 note: casts source dialect col to "audio" (including in 1-1 case)
 """
 def filter_data(data, source, target):
-    dialect_options = ['aus', 'gbr', 'ind_n', 'ind_s', 'irl', 'kenya', 'nga', 'nzl', 'phl', 'usa', 'zaf']
+    # dialect_options = ['aus', 'gbr', 'ind_n', 'ind_s', 'irl', 'kenya', 'nga', 'nzl', 'phl', 'usa', 'zaf']
+    dialect_options = ['ind_n', 'irl', 'phl', 'usa', 'zaf']
     if source == 'all':
         # explode across source dialects
         dialect_options.remove(target)
