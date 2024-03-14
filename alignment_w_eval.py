@@ -248,7 +248,7 @@ def main():
             learning_rate=lr_i,
             warmup_steps=50,
             # gradient_checkpointing=True, # just added
-            num_train_epochs=30,
+            num_train_epochs=15,
             eval_steps=logging_i,
             evaluation_strategy="steps",  # disregard since using commonvoice to eval CHANGE THIS ONE
             per_device_eval_batch_size=batch_i,
@@ -274,7 +274,7 @@ def main():
         trainer.train()
         # peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
         print("Done with training! Pushing to hub...")
-        peft_model_id = f"asyzhou/224n-whisper-small-overnight-n_ind-fr"
+        peft_model_id = f"amyguan/224n-whisper-large-n_ind"
         # peft_model_id = "asyzhou/224n-whisper-large-overnight-zaf"
         # peft_model_id = "empty"
         print(peft_model_id)
