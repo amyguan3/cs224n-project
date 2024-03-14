@@ -23,12 +23,13 @@ import soundfile as sf
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from peft import LoraConfig, TaskType, get_peft_model, PeftModel
+from peft import LoraConfig, TaskType, get_peft_model, PeftModel, PeftConfig
 from transformers import (
     LlamaForCausalLM,
     LlamaTokenizer,
     WhisperFeatureExtractor,
     WhisperModel,
+    WhisperForConditionalGeneration,
 )
 
 from beats.BEATs import BEATs, BEATsConfig
@@ -60,13 +61,20 @@ class SALMONN(nn.Module):
 
         # whisper
         ####### LORA ADAPTER IMPLEMENTATION #########
+        peft_model_id = "amyguan/224n-whisper-large-n_ind"
+        peft_config = PeftConfig.from_pretrained(peft_model_id)
+        model = WhisperForConditionalGeneration.from_pretrained(peft_config.base_model_name_or_path, load_in_8bit=True, device_map="auto")
+        model = PeftModel.from_pretrained(model, peft_model_id)
+
+        """
         base_model = WhisperModel.from_pretrained(whisper_path)
         peft_model_id = "amyguan/224n-whisper-large-n_ind"
         model = PeftModel.from_pretrained(base_model, peft_model_id)
         merged_model = model.merge_and_unload()
+        """
         ####### LORA ADAPTER IMPLEMENTATION #########
 
-        self.speech_encoder = merged_model.encoder.to("cuda:0")
+        self.speech_encoder = model.encoder.to("cuda:0")
         self.ln_speech = nn.LayerNorm(self.speech_encoder.config.d_model).to("cuda:0")
 
         # beats
