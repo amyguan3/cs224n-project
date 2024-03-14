@@ -23,7 +23,7 @@ import soundfile as sf
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from peft import LoraConfig, TaskType, get_peft_model
+from peft import LoraConfig, TaskType, get_peft_model, PeftModel
 from transformers import (
     LlamaForCausalLM,
     LlamaTokenizer,
@@ -62,7 +62,7 @@ class SALMONN(nn.Module):
         ####### LORA ADAPTER IMPLEMENTATION #########
         base_model = WhisperModel.from_pretrained(whisper_path)
         peft_model_id = "amyguan/224n-whisper-large-n_ind"
-        model = get_peft_model.from_pretrained(base_model, peft_model_id)
+        model = PeftModel.from_pretrained(base_model, peft_model_id)
         merged_model = model.merge_and_unload()
         ####### LORA ADAPTER IMPLEMENTATION #########
 
