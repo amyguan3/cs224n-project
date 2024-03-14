@@ -28,7 +28,7 @@ def main():
     source = "ind_n"
     target = "usa"
     dataset = filter_data(load_sd_qa_test_dataset(), source=source, target=target)
-    dataset['test'].rename_column(source, "audio")
+    dataset['test'] = dataset['test'].rename_column(source, "audio")
     print(dataset)
 
     print('EVALUATING')
