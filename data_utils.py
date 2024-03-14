@@ -80,6 +80,12 @@ def load_sd_qa_test_dataset():
     sd_qa["test"] = load_dataset("WillHeld/SD-QA", split="test", token=True)
     return sd_qa
 
+def load_cv_us_dataset():
+    # cv = DatasetDict()
+    cv = load_dataset("WillHeld/us_accent_cv", split='train[:1%]', token=True) # 5k samples
+    cv = cv.train_test_split(test_size=0.2, seed=42) # 1k, 4k
+    return cv
+
 def load_cv_india_dataset():
     # cv = DatasetDict()
     cv = load_dataset("WillHeld/india_accent_cv", split='train[:1%]', token=True)

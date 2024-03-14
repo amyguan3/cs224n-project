@@ -16,21 +16,15 @@ from data_utils import (load_cv_india_dataset, load_sd_qa_test_dataset, filter_d
 def main():
     wers = []
 
-    i = 0
-    # for commit in commits:
-    print(f'\n======================== MODEL NUMBER {i}========================')
     model_path = "amyguan/224n-whisper-large-n_ind"
     model = attach_peft(model_path)
     print(f'MODEL LOADED {model_path}')
 
-    print('GETTING (FILTERED) DATASET')
+    print(f'========================MODEL: {model_path}========================')
+    print(f'------GETTING CV INDIA DATASET------')
     # CV
     dataset = load_cv_india_dataset() # cv: train = 10%, ~ 900; test = 90%, ~ 9k
     dataset1k = dataset["test"].select(range(1000))
-
-    # US (later)
-    # dataset = load_cv_us_dataset() # cv: train = 10%, ~ 900; test = 90%, ~ 9k
-    # dataset1k = dataset["test"]
 
     # SD-QA TEST
     # source = "ind_n"
@@ -40,15 +34,22 @@ def main():
     # dataset['test'] = dataset['test'].filter(lambda x: x['question'] is not None)
     # print(dataset)
 
-    print('EVALUATING')
+    print('EVALUATING INDIA')
     # wer = new_evaluate(model, dataset["test"])
     wer = new_evaluate(model, dataset_1k)
-    print(f'MODEL {i} WER: {wer}\n')
+    print(f'INDIA WER: {wer}\n')
     wers.append(wer)
 
-    i += 1
+    print(f'\n------GETTING CV US DATASET------')
+    dataset = load_cv_us_dataset() # cv: train = 10%, ~ 900; test = 90%, ~ 9k
+    dataset1k = dataset["test"]
 
-    print(f'TOTAL WER: {wers}')
+    print('EVALUATING US')
+    wer = new_evaluate(model, dataset_1k)
+    print(f'US WER: {wer}\n')
+    wers.append(wer)
+
+    print(f'\nTOTAL WERS:\n{wers}')
 
 
 if __name__ == "__main__":
