@@ -56,6 +56,11 @@ class SALMONN(nn.Module):
 
         super().__init__()
 
+        device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
+        print("Torch cuda is available?", torch.cuda.is_available())
+        if torch.cuda.is_available():
+            print("Torch cuda current device?", torch.cuda.current_device())
+
         # feature_extractor
         self.feature_extractor = WhisperFeatureExtractor.from_pretrained(whisper_path)
 
