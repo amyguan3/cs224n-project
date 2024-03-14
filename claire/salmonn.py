@@ -28,7 +28,6 @@ import librosa
 from beats.BEATs import BEATsConfig, BEATs
 from qformer.Qformer import BertConfig, BertLMHeadModel
 
-
 class SALMONN(nn.Module):
     def __init__(
         self,
@@ -124,7 +123,7 @@ class SALMONN(nn.Module):
         prompt,
         prompt_pattern="USER: <Speech><SpeechHere></Speech> {}\nASSISTANT:",
         device='cuda:0',
-        max_length=200,
+        max_length=150,
         num_beams=4,
         do_sample=True,
         min_length=1,
