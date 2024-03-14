@@ -33,7 +33,7 @@ dials = [
 ]
 
 
-@torch.no_grad
+@torch.no_grad()
 def get_response_pipeline(asr_model, model, audio, dial):
     value = audio[dial]
     text = asr_model(value)["text"]
@@ -75,7 +75,7 @@ def get_response_pipeline(asr_model, model, audio, dial):
     return response, max(scores)
 
 
-@torch.no_grad
+@torch.no_grad()
 def get_response_pipeline_qwen(asr_model, model, audio, dial):
     value = audio[dial]
     text = asr_model(value)["text"]
@@ -96,7 +96,7 @@ def get_response_pipeline_qwen(asr_model, model, audio, dial):
     return response, max(scores)
 
 
-@torch.no_grad
+@torch.no_grad()
 def get_response_end_to_end_s(model, audio, dial):
     value = audio[dial]
     sf.write("tmp.wav", value["array"], value["sampling_rate"], format="wav")
@@ -118,7 +118,7 @@ def get_response_end_to_end_s(model, audio, dial):
     return response, max(scores)
 
 
-@torch.no_grad
+@torch.no_grad()
 def get_response_end_to_end_q(model, audio, dial):
     value = audio[dial]
     sf.write("tmp.wav", value["array"], value["sampling_rate"], format="wav")
@@ -163,11 +163,12 @@ if m_type == "e2e":
         )
     elif "salmonn" in model_name:
         model = SALMONN(
-            ckpt="./SALMONN_PATHS/SALMONN-7B/salmonn_7b_v0.pth",
+            ckpt="./SALMONN_PATHS/salmonn_7b_v0.pth",
             # whisper_path="./SALMONN_PATHS/whisper-large-v2",
             whisper_path="openai/whisper-large-v2",  # NEW
             beats_path="./SALMONN_PATHS/BEATs_iter3_plus_AS2M_finetuned_on_AS2M_cpt2.pt",
-            vicuna_path="./SALMONN_PATHS/vicuna-7b-v1.5",
+            # vicuna_path="./SALMONN_PATHS/vicuna-7b-v1.5",
+            vicuna_path="lmsys/vicuna-7b-v1.5",  # NEW
             low_resource=False,
         )
 
@@ -210,11 +211,12 @@ else:
         temperature=1.0,
     )
 
-ds = load_dataset("WillHeld/SD-QA")["dev"].filter(lambda example: example["answers"])
+# ds = load_dataset("WillHeld/SD-QA")["dev"].filter(lambda example: example["answers"])
+ds = load_dataset("WillHeld/SD-QA")["test"].filter(lambda example: example["answers"])  # eval on test set
 dial_scores = {}
 for dial in dials:
     scores = []
-    with open(f"./sdqa-res/salmonn_7b/{dial}_outs.txt", "w") as f:
+    with open(f"./salmonn_7b/{dial}_outs.txt", "w") as f:
         for idx, ex in enumerate(tqdm(ds)):
             try:
                 id = ex["id"]

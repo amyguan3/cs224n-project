@@ -13,7 +13,7 @@ import torch.nn as nn
 from torch.nn import LayerNorm
 import torchaudio.compliance.kaldi as ta_kaldi
 
-from backbone import (
+from beats.backbone import (
     TransformerEncoder,
 )
 
@@ -136,8 +136,9 @@ class BEATs(nn.Module):
             padding_mask: Optional[torch.Tensor] = None,
             fbank_mean: float = 15.41663,
             fbank_std: float = 6.55582,
+            feature_only=False,
     ):
-        fbank = self.preprocess(source, fbank_mean=fbank_mean, fbank_std=fbank_std)
+        fbank = self.preprocess(source, fbank_mean=fbank_mean, fbank_std=fbank_std).to(torch.float32)
 
         if padding_mask is not None:
             padding_mask = self.forward_padding_mask(fbank, padding_mask)
@@ -161,7 +162,7 @@ class BEATs(nn.Module):
             padding_mask=padding_mask,
         )
 
-        if self.predictor is not None:
+        if not feature_only and self.predictor is not None:
             x = self.predictor_dropout(x)
             logits = self.predictor(x)
 
