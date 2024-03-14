@@ -88,9 +88,9 @@ def load_cv_india_dataset():
 
 
 def load_cv_phl_dataset():
-    cv = load_dataset("WillHeld/phl_accent_cv", split='train[:25%]', token=True)
-    cv = cv.train_test_split(test_size=0.3, seed=42)
-    return cv
+    sd_qa = DatasetDict()
+    sd_qa["train"] = load_dataset("WillHeld/phl_accent_cv", split="train[:8%]", token=True) # 300 ish
+    return sd_qa
 
 
 """
@@ -155,3 +155,7 @@ def get_counts():
     test = pd.DataFrame(cv["test"]["accents"])
     pd.set_option('display.max_rows', None)
     print(test.value_counts())
+
+
+if __name__ == "__main__":
+    print(load_cv_phl_dataset()["test"])

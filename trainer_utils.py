@@ -24,9 +24,9 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     metric = evaluate.load("wer")
     eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
     # sampled_dataset = eval_dataset.train_test_split(test_size=0.3, seed=42)
-    subset_eval_dataset = eval_dataset['test'] # 30%, ~300 samples
+    # 30%, ~300 samples
 
-    eval_dataloader = self.get_eval_dataloader(subset_eval_dataset)
+    eval_dataloader = self.get_eval_dataloader(eval_dataset)
     self.model.eval()
     predictions = []
     references = []
@@ -56,7 +56,7 @@ class AlignmentSeq2SeqTrainer(Seq2SeqTrainer):
     wer = 100 * metric.compute(predictions=predictions, references=references)
     self.log({f"{metric_key_prefix}_wer": wer, f"{metric_key_prefix}_time": eval_time})
 
-    return {"wer": wer}    
+    return {f"{metric_key_prefix}_wer": wer}    
 
   def compute_loss(self, model, inputs, return_outputs=False):
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'

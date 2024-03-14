@@ -50,7 +50,8 @@ import re
 from trainer_utils import AlignmentSeq2SeqTrainer
 from data_utils import (DataCollatorSpeechSeq2SeqWithPadding, 
                         load_sd_qa_dataset, load_cv_india_dataset,
-                        filter_data, get_cv_split)
+                        filter_data, get_cv_split,
+                        load_cv_phl_dataset)
 
 import csv
 import matplotlib.pyplot as plt
@@ -145,7 +146,7 @@ def main():
     target_dialect = 'usa'
     source_dialect = 'phl'  # 'ind_n', 'zaf'
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
-    eval_dataset = load_cv_india_dataset()
+    eval_dataset = load_cv_phl_dataset()
     # sd_qa_to_cv = {'ind_n':"India and South Asia (India, Pakistan, Sri Lanka)", 'zaf': "Southern African (South Africa, Zimbabwe, Namibia)"}
     # eval_dataset = get_cv_split([sd_qa_to_cv[source_dialect]])
     # eval_dataset.pop("test")
@@ -249,16 +250,16 @@ def main():
             warmup_steps=50,
             # gradient_checkpointing=True, # just added
             num_train_epochs=15,
-            eval_steps=logging_i, # 60
+            eval_steps=1, # 60 # logging_i
             evaluation_strategy="steps",  # disregard since using commonvoice to eval CHANGE THIS ONE
             per_device_eval_batch_size=batch_i,
             fp16=True,  
             generation_max_length=128,
-            logging_steps=5,  # this is what eval steps will default to, change this in a lil bit
+            logging_steps=1,  # 5
             remove_unused_columns=False, 
             save_strategy="steps",
-            metric_for_best_model='wer',
-            save_steps=60,
+            metric_for_best_model='eval_wer',
+            save_steps=1, # 60
             load_best_model_at_end = True
         )
         peftcallback = SavePeftCallback()
