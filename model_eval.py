@@ -27,7 +27,8 @@ def main():
     # dataset = load_cv_india_dataset() # pass in cv sources
     source = "ind_n"
     target = "usa"
-    dataset = filter_data(load_sd_qa_test_dataset(), source=source, target=target, rename=True)
+    dataset = filter_data(load_sd_qa_test_dataset(), source=source, target=target)
+    dataset['test'].rename_column(source, "audio")
     print(dataset)
 
     print('EVALUATING')

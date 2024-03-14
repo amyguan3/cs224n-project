@@ -80,7 +80,7 @@ def load_cv_india_dataset():
 """
 note: casts source dialect col to "audio" (including in 1-1 case)
 """
-def filter_data(data, source, target, rename=False):
+def filter_data(data, source, target):
     dialect_options = ['aus', 'gbr', 'ind_n', 'ind_s', 'irl', 'kenya', 'nga', 'nzl', 'phl', 'usa', 'zaf']
     if source == 'all':
         # explode across source dialects
@@ -93,8 +93,6 @@ def filter_data(data, source, target, rename=False):
         sys.exit(1) 
     else:
         data = data.select_columns(['id', 'question', source, target])
-        if rename:
-            data['test'].rename_column(source, "audio")
         return data
 
 
