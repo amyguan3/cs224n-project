@@ -63,7 +63,8 @@ class SALMONN(nn.Module):
         ####### LORA ADAPTER IMPLEMENTATION #########
         peft_model_id = "amyguan/224n-whisper-large-n_ind"
         peft_config = PeftConfig.from_pretrained(peft_model_id)
-        model = WhisperForConditionalGeneration.from_pretrained(peft_config.base_model_name_or_path, load_in_8bit=True, device_map="auto")
+        # model = WhisperForConditionalGeneration.from_pretrained(peft_config.base_model_name_or_path, load_in_8bit=True, device_map="auto")
+        model = WhisperForConditionalGeneration.from_pretrained(peft_config.base_model_name_or_path, load_in_8bit=True, device_map="auto", use_safetensors=True)
         model = PeftModel.from_pretrained(model, peft_model_id)
 
         """
@@ -72,8 +73,8 @@ class SALMONN(nn.Module):
         model = PeftModel.from_pretrained(base_model, peft_model_id)
         merged_model = model.merge_and_unload()
         """
-        ####### LORA ADAPTER IMPLEMENTATION #########
 
+        # self.speech_encoder = merged_model.encoder.to("cuda:0")
         self.speech_encoder = model.encoder.to("cuda:0")
         self.ln_speech = nn.LayerNorm(self.speech_encoder.config.d_model).to("cuda:0")
 
