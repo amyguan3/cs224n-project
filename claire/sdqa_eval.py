@@ -13,7 +13,8 @@ from transformers import (
 )
 from transformers.generation import GenerationConfig
 
-from salmonn_will import SALMONN  # testing
+# from salmonn_will import SALMONN  # BASELINE TESTING (NO ADAPTER)
+from salmonn_lora_adapter import SALMONN  # INTEGRATION WITH LORA ADAPTER
 # from salmonn import SALMONN
 
 torch.manual_seed(1234)
