@@ -211,8 +211,8 @@ else:
         temperature=1.0,
     )
 
-# ds = load_dataset("WillHeld/SD-QA")["dev"].filter(lambda example: example["answers"])
-ds = load_dataset("WillHeld/SD-QA")["test"].filter(lambda example: example["answers"])  # eval on test set
+ds = load_dataset("WillHeld/SD-QA")["dev"].filter(lambda example: example["answers"])
+# ds = load_dataset("WillHeld/SD-QA")["test"].filter(lambda example: example["answers"])  # eval on test set
 dial_scores = {}
 for dial in dials:
     scores = []
