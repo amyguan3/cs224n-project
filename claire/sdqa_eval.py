@@ -13,7 +13,8 @@ from transformers import (
 )
 from transformers.generation import GenerationConfig
 
-from salmonn import SALMONN
+from salmonn_will import SALMONN  # testing
+# from salmonn import SALMONN
 
 torch.manual_seed(1234)
 cfm = CFMatcher()
