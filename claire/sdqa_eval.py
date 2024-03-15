@@ -21,17 +21,17 @@ torch.manual_seed(1234)
 cfm = CFMatcher()
 
 dials = [
-    "aus",
-    "gbr",
+    # "aus",
+    # "gbr",
     "ind_n",
-    "ind_s",
-    "irl",
-    "kenya",
-    "nga",
-    "nzl",
+    # "ind_s",
+    # "irl",
+    # "kenya",
+    # "nga",
+    # "nzl",
     "phl",
     "usa",
-    "zaf",
+    # "zaf",
 ]
 
 
