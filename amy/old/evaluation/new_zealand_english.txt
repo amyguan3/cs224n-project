@@ -1,8 +1,0 @@
-ACCENT: New Zealand English
-
-WER: 0.0
-
-NORMALIZED WER: 0.0
-REF: b"It's not exclusively the parents' fault every time a youngster commits suicide."
-PRED: b" It's not exclusively the parents' fault every time a youngster commits suicide."
-------------------------------------------------------
