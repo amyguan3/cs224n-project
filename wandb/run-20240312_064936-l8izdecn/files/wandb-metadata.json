@@ -1,0 +1,108 @@
+{
+    "os": "Linux-5.10.0-28-cloud-amd64-x86_64-with-glibc2.31",
+    "python": "3.9.18",
+    "heartbeatAt": "2024-03-12T06:49:36.780606",
+    "startedAt": "2024-03-12T06:49:36.222392",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/amyzhou/cs224n-project/alignment.py",
+    "codePathLocal": "alignment.py",
+    "codePath": "alignment.py",
+    "git": {
+        "remote": "git@github.com:amyguan3/cs224n-project.git",
+        "commit": "d99e1a245ad37fabed7adadd455805911ebf4222"
+    },
+    "email": null,
+    "root": "/home/amyzhou/cs224n-project",
+    "host": "instance-20240309-163442",
+    "username": "amyzhou",
+    "executable": "/opt/conda/envs/cs224n-project-env/bin/python3",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2200.212,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2200.212,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.212,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.212,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.212,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.212,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.212,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.212,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.212,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.212,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.212,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.212,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.212,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 393.4685516357422,
+            "used": 292.0850028991699
+        }
+    },
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA A100-SXM4-40GB",
+            "memory_total": 42949672960
+        }
+    ],
+    "memory": {
+        "total": 83.48264694213867
+    }
+}

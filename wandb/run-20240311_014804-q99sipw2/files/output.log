@@ -1,0 +1,840 @@
+Load 8bit model...
+Start training...
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please submit your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/peft/utils/other.py:145: FutureWarning: prepare_model_for_int8_training is deprecated and will be removed in a future version. Use prepare_model_for_kbit_training instead.
+  warnings.warn(
+trainable params: 230,686,720 || all params: 1,773,991,680 || trainable%: 13.0038219795935
+  0%|                                                                                                   | 0/189 [00:00<?, ?it/s]/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/bitsandbytes/autograd/_functions.py:298: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+`use_cache = True` is incompatible with gradient checkpointing. Setting `use_cache = False`...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 11%|█████████▎                                                                              | 20/189 [08:48<1:11:26, 25.36s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 21%|██████████████████▌                                                                     | 40/189 [17:16<1:02:58, 25.36s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 32%|████████████████████████████▌                                                             | 60/189 [25:45<54:48, 25.49s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 42%|██████████████████████████████████████                                                    | 80/189 [34:01<46:21, 25.52s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 52%|███████████████████████████████████████████████▏                                          | 99/189 [42:04<38:02, 25.36s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 63%|████████████████████████████████████████████████████████                                 | 119/189 [50:33<29:43, 25.48s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 74%|█████████████████████████████████████████████████████████████████▍                       | 139/189 [58:49<21:08, 25.36s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 85%|█████████████████████████████████████████████████████████████████████████▋             | 160/189 [1:07:48<12:26, 25.75s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 95%|██████████████████████████████████████████████████████████████████████████████████▍    | 179/189 [1:15:56<04:16, 25.65s/it]
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████| 189/189 [1:19:39<00:00, 25.29s/it]
+{'train_runtime': 4779.7904, 'train_samples_per_second': 0.628, 'train_steps_per_second': 0.04, 'train_loss': 56.920530611875826, 'epoch': 3.0}
+Done with training! Pushing to hub...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+adapter_model.safetensors: 100%|█████████████████████████████████████████████████████████████| 923M/923M [00:47<00:00, 19.6MB/s]
+adapter_config.json: 100%|██████████████████████████████████████████████████████████████████████| 795/795 [00:00<00:00, 194kB/s]
+
+
+
+
+adapter_model.safetensors: 100%|██████████████████████████████████████████████████████████████| 923M/923M [00:09<00:00, 100MB/s]
+MODEL PIPELINE SET UP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 93it [02:14,  1.32s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 193it [04:33,  1.37s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 293it [06:51,  1.33s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 397it [09:11,  1.35s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 493it [11:26,  1.34s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 593it [13:41,  1.38s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 697it [16:03,  1.41s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 793it [18:17,  1.37s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 893it [20:32,  1.35s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 993it [22:50,  1.54s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 1093it [25:08,  1.36s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 1193it [27:20,  1.28s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 1297it [29:44,  1.41s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decode Progress: 1392it [31:54,  1.38s/it]
+[33m[W 2024-03-11 03:41:00,911][39m Trial 0 failed with parameters: {'learning_rate': 0.0017911268824238901, 'batch_size': 16, 'rank': 128} because of the following error: KeyboardInterrupt().
+Traceback (most recent call last):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/amyzhou/cs224n-project/tune.py", line 115, in objective
+    eval_result = evaluate_asr_alt(pipe, eval_dataset["train"], True)
+  File "/home/amyzhou/cs224n-project/eval_utils.py", line 471, in evaluate_asr_alt
+    predictions, references, norm_predictions, norm_references, all_accents = get_preds(whisper_asr, dataset, verbose)
+  File "/home/amyzhou/cs224n-project/eval_utils.py", line 425, in get_preds
+    for out in tqdm(asr_model(data(dataset_total), batch_size=4), desc='Decode Progress'):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/tqdm/std.py", line 1178, in __iter__
+    for obj in iterable:
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/pt_utils.py", line 266, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/base.py", line 1068, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 507, in _forward
+    tokens = self.model.generate(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/generation_whisper.py", line 543, in generate
+    outputs = super().generate(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/generation/utils.py", line 1479, in generate
+    return self.greedy_search(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/generation/utils.py", line 2340, in greedy_search
+    outputs = self(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 1754, in forward
+    outputs = self.model(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 1628, in forward
+    decoder_outputs = self.decoder(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 1444, in forward
+    layer_outputs = decoder_layer(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 870, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 676, in forward
+    key_states = torch.cat([past_key_value[0], key_states], dim=2)
+KeyboardInterrupt
+[33m[W 2024-03-11 03:41:00,923][39m Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "/home/amyzhou/cs224n-project/tune.py", line 165, in <module>
+    main()
+  File "/home/amyzhou/cs224n-project/tune.py", line 161, in main
+    tune(sources, target)
+  File "/home/amyzhou/cs224n-project/tune.py", line 133, in tune
+    study.optimize(objective, n_trials=3)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 66, in _optimize
+    _optimize_sequential(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 163, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 251, in _run_trial
+    raise func_err
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/amyzhou/cs224n-project/tune.py", line 115, in objective
+    eval_result = evaluate_asr_alt(pipe, eval_dataset["train"], True)
+  File "/home/amyzhou/cs224n-project/eval_utils.py", line 471, in evaluate_asr_alt
+    predictions, references, norm_predictions, norm_references, all_accents = get_preds(whisper_asr, dataset, verbose)
+  File "/home/amyzhou/cs224n-project/eval_utils.py", line 425, in get_preds
+    for out in tqdm(asr_model(data(dataset_total), batch_size=4), desc='Decode Progress'):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/tqdm/std.py", line 1178, in __iter__
+    for obj in iterable:
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/pt_utils.py", line 266, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/base.py", line 1068, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 507, in _forward
+    tokens = self.model.generate(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/generation_whisper.py", line 543, in generate
+    outputs = super().generate(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/generation/utils.py", line 1479, in generate
+    return self.greedy_search(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/generation/utils.py", line 2340, in greedy_search
+    outputs = self(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 1754, in forward
+    outputs = self.model(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 1628, in forward
+    decoder_outputs = self.decoder(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 1444, in forward
+    layer_outputs = decoder_layer(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 870, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 676, in forward
+    key_states = torch.cat([past_key_value[0], key_states], dim=2)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/amyzhou/cs224n-project/tune.py", line 165, in <module>
+    main()
+  File "/home/amyzhou/cs224n-project/tune.py", line 161, in main
+    tune(sources, target)
+  File "/home/amyzhou/cs224n-project/tune.py", line 133, in tune
+    study.optimize(objective, n_trials=3)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 66, in _optimize
+    _optimize_sequential(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 163, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 251, in _run_trial
+    raise func_err
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/amyzhou/cs224n-project/tune.py", line 115, in objective
+    eval_result = evaluate_asr_alt(pipe, eval_dataset["train"], True)
+  File "/home/amyzhou/cs224n-project/eval_utils.py", line 471, in evaluate_asr_alt
+    predictions, references, norm_predictions, norm_references, all_accents = get_preds(whisper_asr, dataset, verbose)
+  File "/home/amyzhou/cs224n-project/eval_utils.py", line 425, in get_preds
+    for out in tqdm(asr_model(data(dataset_total), batch_size=4), desc='Decode Progress'):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/tqdm/std.py", line 1178, in __iter__
+    for obj in iterable:
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/pt_utils.py", line 266, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/base.py", line 1068, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/pipelines/automatic_speech_recognition.py", line 507, in _forward
+    tokens = self.model.generate(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/generation_whisper.py", line 543, in generate
+    outputs = super().generate(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/generation/utils.py", line 1479, in generate
+    return self.greedy_search(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/generation/utils.py", line 2340, in greedy_search
+    outputs = self(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 1754, in forward
+    outputs = self.model(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 1628, in forward
+    decoder_outputs = self.decoder(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 1444, in forward
+    layer_outputs = decoder_layer(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 870, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/models/whisper/modeling_whisper.py", line 676, in forward
+    key_states = torch.cat([past_key_value[0], key_states], dim=2)
+KeyboardInterrupt

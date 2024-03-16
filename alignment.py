@@ -9,9 +9,9 @@ import sys
 
 # Setup 
 print("Executing pip installs ...")
-os.system("pip3 install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
-os.system("pip3 install -q git+https://github.com/huggingface/peft.git@main")
-print("Print installs done!")
+# os.system("pip3 install -q transformers librosa datasets==2.14.6 evaluate jiwer gradio bitsandbytes==0.37 accelerate geomloss gradio torchaudio")
+# os.system("pip3 install -q git+https://github.com/huggingface/peft.git@main")
+print("[Skipped] Print installs done!")
 
 import json
 import random
@@ -121,8 +121,8 @@ def main():
     print("Loading model...")
 
     # load whisper feature extractor, tokenizer, processor
-    # model_path = "openai/whisper-base"
-    model_path = "openai/whisper-large-v2"
+    model_path = "openai/whisper-base"
+    # model_path = "openai/whisper-large-v2"
     task = "transcribe"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_path)
     tokenizer = WhisperTokenizer.from_pretrained(model_path, task=task)
@@ -142,14 +142,14 @@ def main():
 
     # load data
     target_dialect = 'usa'
-    source_dialect = 'ind_n' # or "all" for many to one
+    source_dialect = 'zaf'  # 'ind_n'
     sd_qa = filter_data(load_sd_qa_dataset(), source=source_dialect, target=target_dialect)
     print(sd_qa['dev'][0])
 
     # prepare data
     def prepare_source_data(data):
         # compute log-Mel input features from audio arrays
-        data["source_input_features"] = feature_extractor(data["audio"]["array"], sampling_rate=data["audio"]["sampling_rate"]).input_features[0]
+        data["source_input_features"] = feature_extractor(data[source_dialect]["array"], sampling_rate=data[source_dialect]["sampling_rate"]).input_features[0]
         data["target_input_features"] = feature_extractor(data[target_dialect]["array"], sampling_rate=data[target_dialect]["sampling_rate"]).input_features[0]
         
         # encode question text to label ids
@@ -184,10 +184,15 @@ def main():
     #--------------TRAINING--------------#
     #------------------------------------#
 
+    # hyperparameters = [  #(learning_rate, batch_size, rank)
+    #     (.001, 16, 32), (.001, 16, 64), (.001, 16, 128),
+    #     (.005, 16, 32), (.005, 16, 64), (.005, 16, 128),
+    #     (.001, 32, 32), (.001, 32, 64), (.001, 32, 128)
+    # ]
     hyperparameters = [  #(learning_rate, batch_size, rank)
         (.001, 16, 32), (.001, 16, 64), (.001, 16, 128),
-        (.005, 16, 32), (.005, 16, 64), (.005, 16, 128),
-        (.001, 32, 32), (.001, 32, 64), (.001, 32, 128)
+        (.001, 32, 32), (.001, 32, 64), (.001, 32, 128),
+        (.001, 64, 32), (.001, 64, 64), (.001, 64, 128)
     ]
 
     for test_i in range(9):
@@ -248,7 +253,8 @@ def main():
         trainer.train()
         # peft_model_id = "asyzhou/224n-whisper-base-alignment-milestone"
         print("Done with training! Pushing to hub...")
-        peft_model_id = f"asyzhou/224n-whisper-large-overnight-{test_i}"
+        # peft_model_id = f"asyzhou/224n-whisper-large-overnight-{test_i}"
+        peft_model_id = "asyzhou/224n-whisper-large-overnight-zaf"
         print(peft_model_id)
         model.push_to_hub(peft_model_id)
         peftcallback.plot_loss()

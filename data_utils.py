@@ -27,7 +27,15 @@ CV_ACCENTS = ["Filipino",
            "Australian English",
            "New Zealand English",
            "Irish English",
-           "Kenyan English"
+           "Kenyan English",
+           "nigeria english"
+           ]
+
+CV_ACCENTS_SDQA = ["Filipino",
+           "United States English",
+           "Southern African (South Africa, Zimbabwe, Namibia)",
+           "India and South Asia (India, Pakistan, Sri Lanka)",
+           "Irish English"
            ]
 
 
@@ -66,23 +74,48 @@ def load_sd_qa_dataset():
     # sd_qa["test"] = {} # load_dataset("WillHeld/SD-QA", split="test", token=True)
     return sd_qa
 
+# Functions for loading, processing data
+def load_sd_qa_test_dataset():
+    sd_qa = DatasetDict()
+    sd_qa["test"] = load_dataset("WillHeld/SD-QA", split="test", token=True)
+    return sd_qa
+
+def load_cv_us_dataset():
+    # cv = DatasetDict()
+    cv = load_dataset("WillHeld/us_accent_cv", split='train[:1%]', token=True) # 5k samples
+    cv = cv.train_test_split(test_size=0.2, seed=42) # 1k, 4k
+    return cv
+
+def load_cv_india_dataset():
+    # cv = DatasetDict()
+    cv = load_dataset("WillHeld/india_accent_cv", split='train[:1%]', token=True)
+    cv = cv.train_test_split(test_size=0.3, seed=42)
+    return cv
+
+
+def load_cv_phl_dataset():
+    sd_qa = DatasetDict()
+    sd_qa["train"] = load_dataset("WillHeld/phl_accent_cv", split="train[:8%]", token=True) # 300 ish
+    return sd_qa
+
+
 """
 note: casts source dialect col to "audio" (including in 1-1 case)
 """
 def filter_data(data, source, target):
-    dialect_options = ['aus', 'gbr', 'ind_n', 'ind_s', 'irl', 'kenya', 'nga', 'nzl', 'phl', 'usa', 'zaf']
+    # dialect_options = ['aus', 'gbr', 'ind_n', 'ind_s', 'irl', 'kenya', 'nga', 'nzl', 'phl', 'usa', 'zaf']
+    dialect_options = ['ind_n', 'irl', 'phl', 'usa', 'zaf']
     if source == 'all':
         # explode across source dialects
         dialect_options.remove(target)
-        df = pd.DataFrame(data)
-        df = pd.melt(df, id_vars=['id', 'question', target], value_vars=dialect_options, var_name='accent', value_name="audio")
+        df = pd.DataFrame(data['dev'])
+        df = pd.melt(df, id_vars=['id', 'question', target], value_vars=dialect_options, var_name='accent', value_name="all")
         return Dataset.from_pandas(df)
     elif source not in dialect_options or target not in dialect_options:
         print("Error: source or target language not found in dialect options.")
         sys.exit(1) 
     else:
         data = data.select_columns(['id', 'question', source, target])
-        data.rename_column(source, "audio")
         return data
 
 
@@ -93,7 +126,7 @@ cv["test]
 50% each
 """
 def get_cv_split(accents=CV_ACCENTS):
-    print("LOADING CV DATASET")
+    print("[get_cv_split] Loading CV dataset...")
     cv_all = load_dataset("WillHeld/accented_common_voice", split="train", token=True, revision="e5b7f595177ccdb4a599f3589ce01957b0330357")
     cv_all = cv_all.shuffle(seed=42)
     cv_all = cv_all.select(range(10_000))
@@ -102,7 +135,7 @@ def get_cv_split(accents=CV_ACCENTS):
     cv_split = cv_all.train_test_split(test_size=0.5, seed=42)
     cv_split = cv_split.filter(lambda example: example['accents'] in accents)
 
-    print("CV DATASET LOADED")
+    print("[get_cv_split] CV dataset loaded!")
 
     return cv_split
 
@@ -128,3 +161,7 @@ def get_counts():
     test = pd.DataFrame(cv["test"]["accents"])
     pd.set_option('display.max_rows', None)
     print(test.value_counts())
+
+
+if __name__ == "__main__":
+    print(load_cv_phl_dataset()["test"])

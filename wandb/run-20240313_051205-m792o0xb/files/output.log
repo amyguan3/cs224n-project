@@ -1,0 +1,93 @@
+
+  0%|                                                                                                                                    | 0/35 [00:00<?, ?it/s]/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/bitsandbytes/autograd/_functions.py:298: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+`use_cache = True` is incompatible with gradient checkpointing. Setting `use_cache = False`...
+
+
+
+
+
+
+
+
+
+ 29%|███████████████████████████████████▏                                                                                       | 10/35 [02:26<05:56, 14.25s/it]
+{'loss': 127.4953, 'learning_rate': 0.00012, 'epoch': 1.43}
+
+
+
+
+
+
+
+
+
+
+
+ 57%|██████████████████████████████████████████████████████████████████████▎                                                    | 20/35 [05:03<02:55, 11.73s/it]
+
+ 57%|██████████████████████████████████████████████████████████████████████▎                                                    | 20/35 [05:38<02:55, 11.73s/it]
+
+
+
+
+
+
+
+
+
+
+ 86%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▍                 | 30/35 [07:50<01:12, 14.43s/it]
+{'loss': 93.5849, 'learning_rate': 0.0005200000000000001, 'epoch': 4.29}
+
+
+
+
+ 94%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉       | 33/35 [09:36<00:47, 23.62s/it]
+{'train_runtime': 586.1484, 'train_samples_per_second': 0.853, 'train_steps_per_second': 0.06, 'train_loss': 106.46307896205357, 'epoch': 5.0}
+Done with training! Pushing to hub...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 35/35 [09:41<00:00, 16.61s/it]
+
+adapter_model.safetensors: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 52.0M/52.0M [00:01<00:00, 32.1MB/s]
+Running training process 1 ...
+Hyperparameters are (0.001, 16, 64)
+Load 8bit model...
+Start training...
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/peft/utils/other.py:145: FutureWarning: prepare_model_for_int8_training is deprecated and will be removed in a future version. Use prepare_model_for_kbit_training instead.
+  warnings.warn(
+trainable params: 25,952,256 || all params: 267,687,168 || trainable%: 9.694994419754929
+  0%|                                                                                                                                    | 0/35 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/feature_extraction_utils.py", line 182, in convert_to_tensors
+    tensor = as_tensor(value)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/feature_extraction_utils.py", line 140, in as_tensor
+    value = np.array(value)
+KeyboardInterrupt
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/amyzhou/cs224n-project/alignment_w_eval.py", line 291, in <module>
+    main()
+  File "/home/amyzhou/cs224n-project/alignment_w_eval.py", line 267, in main
+    trainer.train()
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1836, in _inner_training_loop
+    for step, inputs in enumerate(epoch_iterator):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/data_loader.py", line 462, in __iter__
+    next_batch = next(dataloader_iter)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+  File "/home/amyzhou/cs224n-project/data_utils.py", line 41, in __call__
+    batch = self.processor.feature_extractor.pad(input_features, return_tensors="pt")
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/feature_extraction_sequence_utils.py", line 224, in pad
+    return BatchFeature(batch_outputs, tensor_type=return_tensors)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/feature_extraction_utils.py", line 78, in __init__
+    self.convert_to_tensors(tensor_type=tensor_type)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/feature_extraction_utils.py", line 188, in convert_to_tensors
+    raise ValueError(
+ValueError: Unable to create tensor, you should probably activate padding with 'padding=True' to have batched tensors with the same length.

@@ -1,0 +1,30 @@
+
+  0%|                                                                       | 0/189 [00:00<?, ?it/s]/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/bitsandbytes/autograd/_functions.py:298: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+`use_cache = True` is incompatible with gradient checkpointing. Setting `use_cache = False`...
+
+
+  2%|█▎                                                                                 | 3/189 [00:42<40:53, 13.19s/it]Traceback (most recent call last):
+  File "/home/amyzhou/cs224n-project/alignment.py", line 276, in <module>
+    main()
+  File "/home/amyzhou/cs224n-project/alignment.py", line 253, in main
+    trainer.train()
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1836, in _inner_training_loop
+    for step, inputs in enumerate(epoch_iterator):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/data_loader.py", line 462, in __iter__
+    next_batch = next(dataloader_iter)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+  File "/home/amyzhou/cs224n-project/data_utils.py", line 45, in __call__
+    target_embeddings = torch.cat([torch.tensor(example["target_embeddings"]) for example in data], axis = 0)
+  File "/home/amyzhou/cs224n-project/data_utils.py", line 45, in <listcomp>
+    target_embeddings = torch.cat([torch.tensor(example["target_embeddings"]) for example in data], axis = 0)
+KeyboardInterrupt

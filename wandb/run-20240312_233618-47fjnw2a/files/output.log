@@ -1,0 +1,35 @@
+
+  0%|                                                                                            | 0/189 [00:00<?, ?it/s]/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/bitsandbytes/autograd/_functions.py:298: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+`use_cache = True` is incompatible with gradient checkpointing. Setting `use_cache = False`...
+  1%|▍                                                                                 | 1/189 [00:22<1:10:03, 22.36s/it]Traceback (most recent call last):
+  File "/home/amyzhou/cs224n-project/alignment_w_eval.py", line 286, in <module>
+    main()
+  File "/home/amyzhou/cs224n-project/alignment_w_eval.py", line 263, in main
+    trainer.train()
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1929, in _inner_training_loop
+    self._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_eval)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 2291, in _maybe_log_save_evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "/home/amyzhou/cs224n-project/trainer_utils.py", line 27, in evaluate
+    eval_predictions = super().evaluate(eval_dataset["train"], metric_for_compute=wer_metric)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 2803, in __getitem__
+    return self._getitem(key)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 2787, in _getitem
+    pa_subtable = query_table(self._data, key, indices=self._indices if self._indices is not None else None)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/datasets/formatting/formatting.py", line 580, in query_table
+    _check_valid_column_key(key, table.column_names)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/datasets/formatting/formatting.py", line 520, in _check_valid_column_key
+    raise KeyError(f"Column {key} not in the dataset. Current columns in the dataset: {columns}")
+KeyError: "Column train not in the dataset. Current columns in the dataset: ['path', 'accents', 'sentence', 'up_votes', 'down_votes', 'age', 'gender', 'audio', 'source_input_features', 'accent', 'labels']"
+{'loss': 60.0554, 'learning_rate': 0.0, 'epoch': 0.02}
+Evaluating....
+Dataset({
+    features: ['path', 'accents', 'sentence', 'up_votes', 'down_votes', 'age', 'gender', 'audio', 'source_input_features', 'accent', 'labels'],
+    num_rows: 627
+})
+627

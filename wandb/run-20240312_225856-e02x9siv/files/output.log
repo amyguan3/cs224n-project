@@ -1,0 +1,23 @@
+
+  0%|                                                                                           | 0/189 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/home/amyzhou/cs224n-project/alignment_w_eval.py", line 284, in <module>
+    main()
+  File "/home/amyzhou/cs224n-project/alignment_w_eval.py", line 261, in main
+    trainer.train()
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/transformers/trainer.py", line 1836, in _inner_training_loop
+    for step, inputs in enumerate(epoch_iterator):
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/accelerate/data_loader.py", line 452, in __iter__
+    current_batch = next(dataloader_iter)
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+  File "/home/amyzhou/cs224n-project/data_utils.py", line 45, in __call__
+    target_embeddings = torch.cat([torch.tensor(example["target_embeddings"]) for example in data], axis = 0)
+  File "/home/amyzhou/cs224n-project/data_utils.py", line 45, in <listcomp>
+    target_embeddings = torch.cat([torch.tensor(example["target_embeddings"]) for example in data], axis = 0)
+KeyboardInterrupt

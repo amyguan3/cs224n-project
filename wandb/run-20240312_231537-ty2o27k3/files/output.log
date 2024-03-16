@@ -1,0 +1,72 @@
+
+  0%|                                                                                            | 0/189 [00:00<?, ?it/s]/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/torch/utils/checkpoint.py:460: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/cs224n-project-env/lib/python3.9/site-packages/bitsandbytes/autograd/_functions.py:298: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+`use_cache = True` is incompatible with gradient checkpointing. Setting `use_cache = False`...
+{'loss': 60.0554, 'learning_rate': 0.0, 'epoch': 0.02}
+Evaluating....
+DatasetDict({
+    train: Dataset({
+        features: ['path', 'accents', 'sentence', 'up_votes', 'down_votes', 'age', 'gender', 'audio', 'source_input_features', 'accent', 'labels'],
+        num_rows: 627
+    })
+    test: Dataset({
+        features: ['path', 'accents', 'sentence', 'up_votes', 'down_votes', 'age', 'gender', 'audio', 'source_input_features', 'accent', 'labels'],
+        num_rows: 617
+    })
+})
+2
+  1%|▍                                                                                 | 1/189 [00:23<1:14:57, 23.92s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 97%|█████████████████████████████████████████████████████████████████████████████████▊  | 77/79 [01:39<00:02,  1.32s/it]
+{'eval_runtime': 102.5441, 'eval_samples_per_second': 6.114, 'eval_steps_per_second': 0.77, 'epoch': 0.02}
+
+{'eval_runtime': 102.5441, 'eval_samples_per_second': 6.114, 'eval_steps_per_second': 0.77, 'epoch': 0.02}
